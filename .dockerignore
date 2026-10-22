@@ -1,0 +1,10 @@
+node_modules
+.next
+.git
+.crawl
+coverage
+*.log
+Dockerfile*
+npm-debug.log*
+.env
+.env.local

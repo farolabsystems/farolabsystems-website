@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@import "../website-theme/styles/tokens.css";
+@import "../website-theme/styles/typography.css";
+@import "../website-theme/styles/components.css";
+
+@theme inline {
+  --color-page: var(--tc-page);
+  --color-page-alt: var(--tc-page-alt);
+  --color-ink: var(--tc-text);
+  --color-muted: var(--tc-text-muted);
+  --color-faint: var(--tc-text-faint);
+  --color-primary: var(--tc-primary);
+  --color-primary-hover: var(--tc-primary-hover);
+  --color-primary-active: var(--tc-primary-active);
+  --color-primary-soft: var(--tc-primary-soft);
+  --color-white: var(--tc-white);
+  --color-line: var(--tc-border);
+  --color-danger: var(--tc-danger);
+  --color-footer: var(--tc-footer);
+  --color-footer-text: var(--tc-footer-text);
+  --font-sans: var(--font-work-sans), "Work Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--tc-page);
+  color: var(--tc-text);
+  font-family: var(--tc-font);
+  font-size: var(--tc-body);
+  line-height: var(--tc-leading-body);
+  letter-spacing: var(--tc-tracking-body);
+}
+
+:focus-visible {
+  outline: 2px solid var(--tc-focus);
+  outline-offset: 3px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.prose a {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}

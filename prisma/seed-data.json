@@ -1,0 +1,2737 @@
+{
+  "services": 10,
+  "caseStudies": [
+    {
+      "slug": "40k",
+      "title": "A Web MVP for Mapping Travel Destinations",
+      "summary": "Placeholder summary for A Web MVP for Mapping Travel Destinations. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Travel & Hospitality",
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps",
+        "Web Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for A Web MVP for Mapping Travel Destinations. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-1.png",
+      "gallery": [
+        "/assets/covers/cover-1.png",
+        "/assets/covers/cover-2.png"
+      ],
+      "featured": false,
+      "sortOrder": 100
+    },
+    {
+      "slug": "acumen-ai",
+      "title": "Safeguarding Data with AI-Driven Employee Monitoring",
+      "summary": "Placeholder summary for Safeguarding Data with AI-Driven Employee Monitoring. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Artificial Intelligence"
+      ],
+      "services": [
+        "Custom Software",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Safeguarding Data with AI-Driven Employee Monitoring. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-2.png",
+      "gallery": [
+        "/assets/covers/cover-2.png",
+        "/assets/covers/cover-3.png"
+      ],
+      "featured": false,
+      "sortOrder": 101
+    },
+    {
+      "slug": "ai-for-course-creation",
+      "title": "Automated Document Processing with LLM-Generated Outline",
+      "summary": "Placeholder summary for Automated Document Processing with LLM-Generated Outline. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Artificial Intelligence",
+        "EdTech"
+      ],
+      "services": [
+        "Custom Software",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Automated Document Processing with LLM-Generated Outline. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-3.png",
+      "gallery": [
+        "/assets/covers/cover-3.png",
+        "/assets/covers/cover-4.png"
+      ],
+      "featured": false,
+      "sortOrder": 102
+    },
+    {
+      "slug": "amber-living",
+      "title": "A web app with a furniture catalogue",
+      "summary": "Placeholder summary for A web app with a furniture catalogue. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps",
+        "Web Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for A web app with a furniture catalogue. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-4.png",
+      "gallery": [
+        "/assets/covers/cover-4.png",
+        "/assets/covers/cover-5.png"
+      ],
+      "featured": false,
+      "sortOrder": 103
+    },
+    {
+      "slug": "autopilot",
+      "title": "Automated chatbot solution with a custom workflow builder",
+      "summary": "Placeholder summary for Automated chatbot solution with a custom workflow builder. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "UX/UI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Automated chatbot solution with a custom workflow builder. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-5.png",
+      "gallery": [
+        "/assets/covers/cover-5.png",
+        "/assets/covers/cover-6.png"
+      ],
+      "featured": false,
+      "sortOrder": 104
+    },
+    {
+      "slug": "beat-the-street",
+      "title": "Mobile App & Web User Portal For Street Games",
+      "summary": "Placeholder summary for Mobile App & Web User Portal For Street Games. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps",
+        "Web Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Mobile App & Web User Portal For Street Games. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-6.png",
+      "gallery": [
+        "/assets/covers/cover-6.png",
+        "/assets/covers/cover-1.png"
+      ],
+      "featured": false,
+      "sortOrder": 105
+    },
+    {
+      "slug": "best-utah-real-estate",
+      "title": "Interactive Real Estate App With Custom Map Search",
+      "summary": "Placeholder summary for Interactive Real Estate App With Custom Map Search. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Real Estate"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Interactive Real Estate App With Custom Map Search. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-1.png",
+      "gallery": [
+        "/assets/covers/cover-1.png",
+        "/assets/covers/cover-2.png"
+      ],
+      "featured": false,
+      "sortOrder": 106
+    },
+    {
+      "slug": "bts-admin-panel",
+      "title": "A web admin panel to manage and monitor street games",
+      "summary": "Placeholder summary for A web admin panel to manage and monitor street games. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "Web Apps",
+        "Enterprise"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for A web admin panel to manage and monitor street games. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-2.png",
+      "gallery": [
+        "/assets/covers/cover-2.png",
+        "/assets/covers/cover-3.png"
+      ],
+      "featured": false,
+      "sortOrder": 107
+    },
+    {
+      "slug": "buzzin",
+      "title": "A Touchless Visitor Management Solution",
+      "summary": "Placeholder summary for A Touchless Visitor Management Solution. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for A Touchless Visitor Management Solution. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-3.png",
+      "gallery": [
+        "/assets/covers/cover-3.png",
+        "/assets/covers/cover-4.png"
+      ],
+      "featured": true,
+      "sortOrder": 8
+    },
+    {
+      "slug": "closedwon",
+      "title": "Online platform for outbound marketing campaigns",
+      "summary": "Placeholder summary for Online platform for outbound marketing campaigns. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Artificial Intelligence",
+        "Marketing"
+      ],
+      "services": [
+        "Custom Software",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Online platform for outbound marketing campaigns. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-4.png",
+      "gallery": [
+        "/assets/covers/cover-4.png",
+        "/assets/covers/cover-5.png"
+      ],
+      "featured": false,
+      "sortOrder": 109
+    },
+    {
+      "slug": "deutsche-bildung",
+      "title": "Smart & Secure Student Loan Taking Platform",
+      "summary": "Placeholder summary for Smart & Secure Student Loan Taking Platform. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Smart & Secure Student Loan Taking Platform. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-5.png",
+      "gallery": [
+        "/assets/covers/cover-5.png",
+        "/assets/covers/cover-6.png"
+      ],
+      "featured": false,
+      "sortOrder": 110
+    },
+    {
+      "slug": "edtech-solution-e-learning-platform",
+      "title": "Learning Platform For The Aviation Industry",
+      "summary": "Placeholder summary for Learning Platform For The Aviation Industry. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "EdTech"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Learning Platform For The Aviation Industry. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-6.png",
+      "gallery": [
+        "/assets/covers/cover-6.png",
+        "/assets/covers/cover-1.png"
+      ],
+      "featured": false,
+      "sortOrder": 111
+    },
+    {
+      "slug": "edunugget",
+      "title": "Pilot-ready EdTech platform in 5 months",
+      "summary": "Placeholder summary for Pilot-ready EdTech platform in 5 months. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "EdTech"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Pilot-ready EdTech platform in 5 months. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-1.png",
+      "gallery": [
+        "/assets/covers/cover-1.png",
+        "/assets/covers/cover-2.png"
+      ],
+      "featured": false,
+      "sortOrder": 112
+    },
+    {
+      "slug": "exotic-travel",
+      "title": "Exotic Travel: A Gateway to Enlightening Travels",
+      "summary": "Placeholder summary for Exotic Travel: A Gateway to Enlightening Travels. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Travel & Hospitality"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Exotic Travel: A Gateway to Enlightening Travels. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-2.png",
+      "gallery": [
+        "/assets/covers/cover-2.png",
+        "/assets/covers/cover-3.png"
+      ],
+      "featured": false,
+      "sortOrder": 113
+    },
+    {
+      "slug": "gainspot",
+      "title": "MVP for SEM, SEO & AI-driven Campaigns Optimisation",
+      "summary": "Placeholder summary for MVP for SEM, SEO & AI-driven Campaigns Optimisation. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Artificial Intelligence",
+        "Marketing",
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for MVP for SEM, SEO & AI-driven Campaigns Optimisation. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-3.png",
+      "gallery": [
+        "/assets/covers/cover-3.png",
+        "/assets/covers/cover-4.png"
+      ],
+      "featured": false,
+      "sortOrder": 114
+    },
+    {
+      "slug": "hive",
+      "title": "Web App for Easier Scooter Fleet Management",
+      "summary": "Placeholder summary for Web App for Easier Scooter Fleet Management. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Logistics"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps",
+        "Web Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Web App for Easier Scooter Fleet Management. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-4.png",
+      "gallery": [
+        "/assets/covers/cover-4.png",
+        "/assets/covers/cover-5.png"
+      ],
+      "featured": false,
+      "sortOrder": 115
+    },
+    {
+      "slug": "hocomo",
+      "title": "An e-commerce portal with a visual house configurator",
+      "summary": "Placeholder summary for An e-commerce portal with a visual house configurator. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "eCommerce"
+      ],
+      "services": [
+        "Custom Software",
+        "Web Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for An e-commerce portal with a visual house configurator. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-5.png",
+      "gallery": [
+        "/assets/covers/cover-5.png",
+        "/assets/covers/cover-6.png"
+      ],
+      "featured": false,
+      "sortOrder": 116
+    },
+    {
+      "slug": "icongenie",
+      "title": "AI-driven solution for stunning mobile app icons generation",
+      "summary": "Placeholder summary for AI-driven solution for stunning mobile app icons generation. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Artificial Intelligence"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for AI-driven solution for stunning mobile app icons generation. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-6.png",
+      "gallery": [
+        "/assets/covers/cover-6.png",
+        "/assets/covers/cover-1.png"
+      ],
+      "featured": false,
+      "sortOrder": 117
+    },
+    {
+      "slug": "illumbra",
+      "title": "Comprehensive Solution for Streamlined Aviation Audits",
+      "summary": "Placeholder summary for Comprehensive Solution for Streamlined Aviation Audits. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Comprehensive Solution for Streamlined Aviation Audits. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-1.png",
+      "gallery": [
+        "/assets/covers/cover-1.png",
+        "/assets/covers/cover-2.png"
+      ],
+      "featured": false,
+      "sortOrder": 118
+    },
+    {
+      "slug": "invuai",
+      "title": "AI Brand Visibility Monitoring Platform",
+      "summary": "Placeholder summary for AI Brand Visibility Monitoring Platform. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Artificial Intelligence",
+        "Marketing"
+      ],
+      "services": [
+        "Custom Software",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for AI Brand Visibility Monitoring Platform. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-2.png",
+      "gallery": [
+        "/assets/covers/cover-2.png",
+        "/assets/covers/cover-3.png"
+      ],
+      "featured": false,
+      "sortOrder": 119
+    },
+    {
+      "slug": "meconed",
+      "title": "Educational platform for knowledge-sharing",
+      "summary": "Placeholder summary for Educational platform for knowledge-sharing. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "EdTech"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Educational platform for knowledge-sharing. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-3.png",
+      "gallery": [
+        "/assets/covers/cover-3.png",
+        "/assets/covers/cover-4.png"
+      ],
+      "featured": false,
+      "sortOrder": 120
+    },
+    {
+      "slug": "medicor",
+      "title": "Modern and aesthetic website for a healthcare clinic",
+      "summary": "Placeholder summary for Modern and aesthetic website for a healthcare clinic. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Medtech"
+      ],
+      "services": [
+        "Custom Software",
+        "Web Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Modern and aesthetic website for a healthcare clinic. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-4.png",
+      "gallery": [
+        "/assets/covers/cover-4.png",
+        "/assets/covers/cover-5.png"
+      ],
+      "featured": false,
+      "sortOrder": 121
+    },
+    {
+      "slug": "muzeum-gornictwa",
+      "title": "Turning Mining Archives Into AI-Driven Research Intelligence",
+      "summary": "Placeholder summary for Turning Mining Archives Into AI-Driven Research Intelligence. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Artificial Intelligence"
+      ],
+      "services": [
+        "Custom Software",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Turning Mining Archives Into AI-Driven Research Intelligence. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-5.png",
+      "gallery": [
+        "/assets/covers/cover-5.png",
+        "/assets/covers/cover-6.png"
+      ],
+      "featured": false,
+      "sortOrder": 122
+    },
+    {
+      "slug": "olfasystem",
+      "title": "Scaling industrial sensor data into a cloud-based multi-tenant analytics platform.",
+      "summary": "Placeholder summary for Scaling industrial sensor data into a cloud-based multi-tenant analytics platform.. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Scaling industrial sensor data into a cloud-based multi-tenant analytics platform.. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-6.png",
+      "gallery": [
+        "/assets/covers/cover-6.png",
+        "/assets/covers/cover-1.png"
+      ],
+      "featured": false,
+      "sortOrder": 123
+    },
+    {
+      "slug": "paymi",
+      "title": "Cash-back app with built-in bank integrations",
+      "summary": "Placeholder summary for Cash-back app with built-in bank integrations. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "eCommerce",
+        "Fintech"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps",
+        "UX/UI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Cash-back app with built-in bank integrations. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-1.png",
+      "gallery": [
+        "/assets/covers/cover-1.png",
+        "/assets/covers/cover-2.png"
+      ],
+      "featured": false,
+      "sortOrder": 124
+    },
+    {
+      "slug": "plannin",
+      "title": "A travel planning and booking portal driven by influencers",
+      "summary": "Placeholder summary for A travel planning and booking portal driven by influencers. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Travel & Hospitality"
+      ],
+      "services": [
+        "Custom Software",
+        "Web Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for A travel planning and booking portal driven by influencers. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-2.png",
+      "gallery": [
+        "/assets/covers/cover-2.png",
+        "/assets/covers/cover-3.png"
+      ],
+      "featured": true,
+      "sortOrder": 25
+    },
+    {
+      "slug": "plannin-ai",
+      "title": "Interactive Trip Boards with LLM-Driven Video Analysis",
+      "summary": "Placeholder summary for Interactive Trip Boards with LLM-Driven Video Analysis. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Travel & Hospitality",
+        "Artificial Intelligence"
+      ],
+      "services": [
+        "Custom Software",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Interactive Trip Boards with LLM-Driven Video Analysis. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-3.png",
+      "gallery": [
+        "/assets/covers/cover-3.png",
+        "/assets/covers/cover-4.png"
+      ],
+      "featured": false,
+      "sortOrder": 126
+    },
+    {
+      "slug": "prossto",
+      "title": "Online pilates portal with video training for subscribers",
+      "summary": "Placeholder summary for Online pilates portal with video training for subscribers. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Artificial Intelligence"
+      ],
+      "services": [
+        "Custom Software",
+        "Web Apps",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Online pilates portal with video training for subscribers. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-4.png",
+      "gallery": [
+        "/assets/covers/cover-4.png",
+        "/assets/covers/cover-5.png"
+      ],
+      "featured": false,
+      "sortOrder": 127
+    },
+    {
+      "slug": "proximity-report",
+      "title": "Interactive Geolocation Mapping for AdTech Analytics",
+      "summary": "Placeholder summary for Interactive Geolocation Mapping for AdTech Analytics. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Interactive Geolocation Mapping for AdTech Analytics. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-5.png",
+      "gallery": [
+        "/assets/covers/cover-5.png",
+        "/assets/covers/cover-6.png"
+      ],
+      "featured": false,
+      "sortOrder": 128
+    },
+    {
+      "slug": "reform",
+      "title": "Integrated Solutions for Retail Order Management",
+      "summary": "Placeholder summary for Integrated Solutions for Retail Order Management. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "eCommerce",
+        "Artificial Intelligence"
+      ],
+      "services": [
+        "Custom Software",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Integrated Solutions for Retail Order Management. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-6.png",
+      "gallery": [
+        "/assets/covers/cover-6.png",
+        "/assets/covers/cover-1.png"
+      ],
+      "featured": false,
+      "sortOrder": 129
+    },
+    {
+      "slug": "renoon",
+      "title": "Modern eco clothing web app with sophisticated filters",
+      "summary": "Placeholder summary for Modern eco clothing web app with sophisticated filters. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps",
+        "Web Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Modern eco clothing web app with sophisticated filters. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-1.png",
+      "gallery": [
+        "/assets/covers/cover-1.png",
+        "/assets/covers/cover-2.png"
+      ],
+      "featured": false,
+      "sortOrder": 130
+    },
+    {
+      "slug": "rinno",
+      "title": "Marketplace for purchasing energy resources",
+      "summary": "Placeholder summary for Marketplace for purchasing energy resources. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Marketing"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Marketplace for purchasing energy resources. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-2.png",
+      "gallery": [
+        "/assets/covers/cover-2.png",
+        "/assets/covers/cover-3.png"
+      ],
+      "featured": false,
+      "sortOrder": 131
+    },
+    {
+      "slug": "ruff-pass",
+      "title": "App Connecting Dog Owners with Dog-Friendly Locations",
+      "summary": "Placeholder summary for App Connecting Dog Owners with Dog-Friendly Locations. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for App Connecting Dog Owners with Dog-Friendly Locations. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-3.png",
+      "gallery": [
+        "/assets/covers/cover-3.png",
+        "/assets/covers/cover-4.png"
+      ],
+      "featured": false,
+      "sortOrder": 132
+    },
+    {
+      "slug": "sans",
+      "title": "Mobile App Modernisation for Enhanced Learning",
+      "summary": "Placeholder summary for Mobile App Modernisation for Enhanced Learning. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "EdTech"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Mobile App Modernisation for Enhanced Learning. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-4.png",
+      "gallery": [
+        "/assets/covers/cover-4.png",
+        "/assets/covers/cover-5.png"
+      ],
+      "featured": true,
+      "sortOrder": 33
+    },
+    {
+      "slug": "serious-offer",
+      "title": "A Web App for Finding Houses and Making Offers to Owners",
+      "summary": "Placeholder summary for A Web App for Finding Houses and Making Offers to Owners. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps",
+        "Web Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for A Web App for Finding Houses and Making Offers to Owners. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-5.png",
+      "gallery": [
+        "/assets/covers/cover-5.png",
+        "/assets/covers/cover-6.png"
+      ],
+      "featured": false,
+      "sortOrder": 134
+    },
+    {
+      "slug": "simplified-body",
+      "title": "White-label app for nutrition planning & tracking",
+      "summary": "Placeholder summary for White-label app for nutrition planning & tracking. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for White-label app for nutrition planning & tracking. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-6.png",
+      "gallery": [
+        "/assets/covers/cover-6.png",
+        "/assets/covers/cover-1.png"
+      ],
+      "featured": false,
+      "sortOrder": 135
+    },
+    {
+      "slug": "skydreamer",
+      "title": "Mobile app for matching people into groups for co-travelling",
+      "summary": "Placeholder summary for Mobile app for matching people into groups for co-travelling. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Travel & Hospitality"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Mobile app for matching people into groups for co-travelling. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-1.png",
+      "gallery": [
+        "/assets/covers/cover-1.png",
+        "/assets/covers/cover-2.png"
+      ],
+      "featured": false,
+      "sortOrder": 136
+    },
+    {
+      "slug": "slaapmakend",
+      "title": "Maintenance and Enhancement of a Psychological Treatment System",
+      "summary": "Placeholder summary for Maintenance and Enhancement of a Psychological Treatment System. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Artificial Intelligence"
+      ],
+      "services": [
+        "Custom Software",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Maintenance and Enhancement of a Psychological Treatment System. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-2.png",
+      "gallery": [
+        "/assets/covers/cover-2.png",
+        "/assets/covers/cover-3.png"
+      ],
+      "featured": false,
+      "sortOrder": 137
+    },
+    {
+      "slug": "tbp2",
+      "title": "Modern landing page to promote HR report as a Service",
+      "summary": "Placeholder summary for Modern landing page to promote HR report as a Service. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Modern landing page to promote HR report as a Service. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-3.png",
+      "gallery": [
+        "/assets/covers/cover-3.png",
+        "/assets/covers/cover-4.png"
+      ],
+      "featured": false,
+      "sortOrder": 138
+    },
+    {
+      "slug": "touchcom",
+      "title": "Security system for remote access management",
+      "summary": "Placeholder summary for Security system for remote access management. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Security system for remote access management. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-4.png",
+      "gallery": [
+        "/assets/covers/cover-4.png",
+        "/assets/covers/cover-5.png"
+      ],
+      "featured": false,
+      "sortOrder": 139
+    },
+    {
+      "slug": "trava",
+      "title": "AI-driven trip-planning app with a social network",
+      "summary": "Placeholder summary for AI-driven trip-planning app with a social network. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Travel & Hospitality",
+        "Artificial Intelligence"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for AI-driven trip-planning app with a social network. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-5.png",
+      "gallery": [
+        "/assets/covers/cover-5.png",
+        "/assets/covers/cover-6.png"
+      ],
+      "featured": true,
+      "sortOrder": 40
+    },
+    {
+      "slug": "tribaldata",
+      "title": "Interactive Surveys For Carbon Footprint Reducement",
+      "summary": "Placeholder summary for Interactive Surveys For Carbon Footprint Reducement. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "EdTech"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Interactive Surveys For Carbon Footprint Reducement. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-6.png",
+      "gallery": [
+        "/assets/covers/cover-6.png",
+        "/assets/covers/cover-1.png"
+      ],
+      "featured": false,
+      "sortOrder": 141
+    },
+    {
+      "slug": "vatax",
+      "title": "Marketing Support for a Tax Consultancy Office",
+      "summary": "Placeholder summary for Marketing Support for a Tax Consultancy Office. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Fintech",
+        "Marketing"
+      ],
+      "services": [
+        "Custom Software"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Marketing Support for a Tax Consultancy Office. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-1.png",
+      "gallery": [
+        "/assets/covers/cover-1.png",
+        "/assets/covers/cover-2.png"
+      ],
+      "featured": false,
+      "sortOrder": 142
+    },
+    {
+      "slug": "voicey",
+      "title": "An iOS mobile app for connecting influencers and brands",
+      "summary": "Placeholder summary for An iOS mobile app for connecting influencers and brands. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Marketing"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for An iOS mobile app for connecting influencers and brands. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-2.png",
+      "gallery": [
+        "/assets/covers/cover-2.png",
+        "/assets/covers/cover-3.png"
+      ],
+      "featured": false,
+      "sortOrder": 143
+    },
+    {
+      "slug": "wynikomat",
+      "title": "Interactive kiosk for scanning and printing lab results",
+      "summary": "Placeholder summary for Interactive kiosk for scanning and printing lab results. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Startups"
+      ],
+      "services": [
+        "Custom Software",
+        "Mobile Apps"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Interactive kiosk for scanning and printing lab results. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-3.png",
+      "gallery": [
+        "/assets/covers/cover-3.png",
+        "/assets/covers/cover-4.png"
+      ],
+      "featured": false,
+      "sortOrder": 144
+    },
+    {
+      "slug": "xcellabs",
+      "title": "Turning Lab Data into AI-Powered Health Insights",
+      "summary": "Placeholder summary for Turning Lab Data into AI-Powered Health Insights. Replace it with the problem, what you shipped, and what changed. Do not reuse a client's private numbers.",
+      "industries": [
+        "Artificial Intelligence",
+        "Medtech"
+      ],
+      "services": [
+        "Custom Software",
+        "AI"
+      ],
+      "stats": [
+        {
+          "value": "+00%",
+          "label": "Placeholder metric"
+        },
+        {
+          "value": "00",
+          "label": "Placeholder count"
+        },
+        {
+          "value": "0 wks",
+          "label": "Placeholder time"
+        }
+      ],
+      "body": "## The problem\n\nPlaceholder narrative for Turning Lab Data into AI-Powered Health Insights. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n",
+      "cover": "/assets/covers/cover-4.png",
+      "gallery": [
+        "/assets/covers/cover-4.png",
+        "/assets/covers/cover-5.png"
+      ],
+      "featured": false,
+      "sortOrder": 145
+    }
+  ],
+  "posts": [
+    {
+      "slug": "accommodation-booking-app",
+      "title": "Hotel Booking App Development in 2026: Complete Guide to Features, Process & Cost",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Hotel Booking App Development in 2026: Complete Guide to Features, Process & Cost”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "Hotel Booking App Development in 2026: Complete Guide to Features, Process & Cost",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-28T08:00:00.000Z"
+    },
+    {
+      "slug": "ai-in-hospitality-guest-experience",
+      "title": "AI in Hospitality: A Builder's Guide to What Actually Works in 2026",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “AI in Hospitality: A Builder's Guide to What Actually Works in 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "AI in Hospitality: A Builder's Guide to What Actually Works in 2026",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-27T08:00:00.000Z"
+    },
+    {
+      "slug": "ai-travel-industry-innovation-trends",
+      "title": "How AI Is Transforming the Travel Industry in 2026: From Chatbots to Autonomous Booking",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How AI Is Transforming the Travel Industry in 2026: From Chatbots to Autonomous Booking”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "How AI Is Transforming the Travel Industry in 2026: From Chatbots to Autonomous Booking",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-26T08:00:00.000Z"
+    },
+    {
+      "slug": "app-development-costs",
+      "title": "How Much Does It Cost to Build an App in 2026?",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How Much Does It Cost to Build an App in 2026?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "How Much Does It Cost to Build an App in 2026?",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-25T08:00:00.000Z"
+    },
+    {
+      "slug": "app-monetization-strategies",
+      "title": "How to Choose an Effective Mobile App Monetization Strategy in 2025?",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Choose an Effective Mobile App Monetization Strategy in 2025?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "How to Choose an Effective Mobile App Monetization Strategy in 2025?",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-24T08:00:00.000Z"
+    },
+    {
+      "slug": "app-seasonality",
+      "title": "Leveraging App Seasonality for More Downloads: Trends & Tips for the Holiday Season",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Leveraging App Seasonality for More Downloads: Trends & Tips for the Holiday Season”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "Leveraging App Seasonality for More Downloads: Trends & Tips for the Holiday Season",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-23T08:00:00.000Z"
+    },
+    {
+      "slug": "automation-problems-why-automation-isnt-always-the-answer",
+      "title": "Is Your Automation Dream About to Become an Expensive Nightmare? Why Automation Process Isn’t Always the Answer",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Is Your Automation Dream About to Become an Expensive Nightmare? Why Automation Process Isn’t Always the Answer”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "Is Your Automation Dream About to Become an Expensive Nightmare? Why Automation Process Isn’t Always the Answer",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-22T08:00:00.000Z"
+    },
+    {
+      "slug": "best-mvp-development-agencies",
+      "title": "Top 10 MVP Development Companies & Agencies in 2026",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Top 10 MVP Development Companies & Agencies in 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "Top 10 MVP Development Companies & Agencies in 2026",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-21T08:00:00.000Z"
+    },
+    {
+      "slug": "best-travel-app-development-companies",
+      "title": "10 Best Travel App Development Companies (2026)",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “10 Best Travel App Development Companies (2026)”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "10 Best Travel App Development Companies (2026)",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-20T08:00:00.000Z"
+    },
+    {
+      "slug": "best-travel-software-development-companies",
+      "title": "10 Best Travel Software Development Companies in 2026",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “10 Best Travel Software Development Companies in 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "10 Best Travel Software Development Companies in 2026",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-19T08:00:00.000Z"
+    },
+    {
+      "slug": "building-edunugget",
+      "title": "Building EduNugget: From UX Concept to Scalable EdTech MVP",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Building EduNugget: From UX Concept to Scalable EdTech MVP”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "Building EduNugget: From UX Concept to Scalable EdTech MVP",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-10-13T08:00:00.000Z"
+    },
+    {
+      "slug": "cognitive-psychology-and-emotions-in-user-interface-design",
+      "title": "Cognitive Psychology and Emotions in User Interface Design",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Cognitive Psychology and Emotions in User Interface Design”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "Cognitive Psychology and Emotions in User Interface Design",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-17T08:00:00.000Z"
+    },
+    {
+      "slug": "concierge-minimum-viable-product",
+      "title": "Concierge Minimum Viable Product: How to Validate Your Startup Idea Without Writing a Line of Code",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Concierge Minimum Viable Product: How to Validate Your Startup Idea Without Writing a Line of Code”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "Concierge Minimum Viable Product: How to Validate Your Startup Idea Without Writing a Line of Code",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-16T08:00:00.000Z"
+    },
+    {
+      "slug": "conversational-ai-models",
+      "title": "How Conversational AI Transforms Decision-Making and Customer Experience",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How Conversational AI Transforms Decision-Making and Customer Experience”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "How Conversational AI Transforms Decision-Making and Customer Experience",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-15T08:00:00.000Z"
+    },
+    {
+      "slug": "cybersecurity",
+      "title": "Cybersecurity for Mobile Apps: Best Practices to Secure Sensitive Data",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Cybersecurity for Mobile Apps: Best Practices to Secure Sensitive Data”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "Cybersecurity for Mobile Apps: Best Practices to Secure Sensitive Data",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-14T08:00:00.000Z"
+    },
+    {
+      "slug": "delivery-app-development",
+      "title": "How to Build a Courier Delivery App: The Ultimate Step-by-Step Guide",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Build a Courier Delivery App: The Ultimate Step-by-Step Guide”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "How to Build a Courier Delivery App: The Ultimate Step-by-Step Guide",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-13T08:00:00.000Z"
+    },
+    {
+      "slug": "deploying-your-ml-model-using-aws-lambda",
+      "title": "Deploy Your Tensorflow.js Model Using AWS Lambda",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Deploy Your Tensorflow.js Model Using AWS Lambda”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "Deploy Your Tensorflow.js Model Using AWS Lambda",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-12T08:00:00.000Z"
+    },
+    {
+      "slug": "digital-transformation",
+      "title": "How to Embrace Digital Transformation: Strategies for Success in the Digital Era",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Embrace Digital Transformation: Strategies for Success in the Digital Era”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "How to Embrace Digital Transformation: Strategies for Success in the Digital Era",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-11T08:00:00.000Z"
+    },
+    {
+      "slug": "discovery-phase",
+      "title": "Discovery Phase in Software Development: Definition & Process",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Discovery Phase in Software Development: Definition & Process”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "Discovery Phase in Software Development: Definition & Process",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-10T08:00:00.000Z"
+    },
+    {
+      "slug": "ecommerce-trends",
+      "title": "Top eCommerce Trends to Watch in 2024 and Beyond",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Top eCommerce Trends to Watch in 2024 and Beyond”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "Top eCommerce Trends to Watch in 2024 and Beyond",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-09T08:00:00.000Z"
+    },
+    {
+      "slug": "ecommerce-user-experience-trends",
+      "title": "Navigating the Future: eCommerce User Experience Trends to Boost Your Online Store",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Navigating the Future: eCommerce User Experience Trends to Boost Your Online Store”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "Navigating the Future: eCommerce User Experience Trends to Boost Your Online Store",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-08T08:00:00.000Z"
+    },
+    {
+      "slug": "fixed-price-contract-risks",
+      "title": "Fixed-Price Contract Risks in Software Development: 6 You Need to Know About",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Fixed-Price Contract Risks in Software Development: 6 You Need to Know About”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "Fixed-Price Contract Risks in Software Development: 6 You Need to Know About",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-07T08:00:00.000Z"
+    },
+    {
+      "slug": "food-delivery-app-development",
+      "title": "How to Create a Food Delivery App? Food Delivery App Development Process Explained",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Create a Food Delivery App? Food Delivery App Development Process Explained”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "How to Create a Food Delivery App? Food Delivery App Development Process Explained",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-06T08:00:00.000Z"
+    },
+    {
+      "slug": "fundraising-strategies",
+      "title": "The Founder's Guide to Fundraising That Actually Builds a Business",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “The Founder's Guide to Fundraising That Actually Builds a Business”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "The Founder's Guide to Fundraising That Actually Builds a Business",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-05T08:00:00.000Z"
+    },
+    {
+      "slug": "getting-started-with-next-js",
+      "title": "Getting Started with Next.js",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Getting Started with Next.js”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "Getting Started with Next.js",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-04T08:00:00.000Z"
+    },
+    {
+      "slug": "go-to-market-strategy",
+      "title": "Go-to-Market Strategy – a Step-by-Step Guide to the Successful Digital Product Launch",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Go-to-Market Strategy – a Step-by-Step Guide to the Successful Digital Product Launch”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "Go-to-Market Strategy – a Step-by-Step Guide to the Successful Digital Product Launch",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-03T08:00:00.000Z"
+    },
+    {
+      "slug": "hire-dedicated-full-stack-developer",
+      "title": "How to Hire a Full-Stack Developer for Your Startup",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Hire a Full-Stack Developer for Your Startup”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "How to Hire a Full-Stack Developer for Your Startup",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-02T08:00:00.000Z"
+    },
+    {
+      "slug": "how-personalization-can-double-hotel-conversion-rate",
+      "title": "Hotel Personalization: How to Double Your Booking Conversion Rate [2026 Guide]",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Hotel Personalization: How to Double Your Booking Conversion Rate [2026 Guide]”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "Hotel Personalization: How to Double Your Booking Conversion Rate [2026 Guide]",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-28T08:00:00.000Z"
+    },
+    {
+      "slug": "how-to-build-ai-trip-planner-app",
+      "title": "How to Build an AI Trip Planner App in 2026",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Build an AI Trip Planner App in 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "How to Build an AI Trip Planner App in 2026",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-27T08:00:00.000Z"
+    },
+    {
+      "slug": "how-to-build-an-mvp",
+      "title": "How to Build an MVP: A Step-by-Step Guide for Startup Founders in 2026",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Build an MVP: A Step-by-Step Guide for Startup Founders in 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "How to Build an MVP: A Step-by-Step Guide for Startup Founders in 2026",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-26T08:00:00.000Z"
+    },
+    {
+      "slug": "how-to-build-and-scale-products",
+      "title": "MVP Mindset: How to Build, Validate, and Scale Products That Survive",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “MVP Mindset: How to Build, Validate, and Scale Products That Survive”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "MVP Mindset: How to Build, Validate, and Scale Products That Survive",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-25T08:00:00.000Z"
+    },
+    {
+      "slug": "how-to-choose-the-best-software-development-company",
+      "title": "How to Choose the Best Software Development Company",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Choose the Best Software Development Company”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "How to Choose the Best Software Development Company",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-24T08:00:00.000Z"
+    },
+    {
+      "slug": "how-to-create-buyer-personas",
+      "title": "7 Reasons Why You Need to Create Buyer Personas and How to Do That",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “7 Reasons Why You Need to Create Buyer Personas and How to Do That”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "7 Reasons Why You Need to Create Buyer Personas and How to Do That",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-23T08:00:00.000Z"
+    },
+    {
+      "slug": "how-to-effectively-implement-ai-in-your-company",
+      "title": "Only 5% of Companies Succeed. Here's How to Effectively Implement AI in Your Company [INTERVIEW]",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Only 5% of Companies Succeed. Here's How to Effectively Implement AI in Your Company [INTERVIEW]”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "Only 5% of Companies Succeed. Here's How to Effectively Implement AI in Your Company [INTERVIEW]",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-22T08:00:00.000Z"
+    },
+    {
+      "slug": "how-to-make-a-social-media-app",
+      "title": "How To Make a Social Media App? Business & Development Tips",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How To Make a Social Media App? Business & Development Tips”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "How To Make a Social Media App? Business & Development Tips",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-21T08:00:00.000Z"
+    },
+    {
+      "slug": "how-to-read-a-software-development-cost-estimate",
+      "title": "How to Read a Software Development Cost Estimate in 2026 (And Spot the Red Flags)",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Read a Software Development Cost Estimate in 2026 (And Spot the Red Flags)”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "How to Read a Software Development Cost Estimate in 2026 (And Spot the Red Flags)",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-20T08:00:00.000Z"
+    },
+    {
+      "slug": "implementing-user-feedback",
+      "title": "Implementing User Feedback in Design: Insights from a Head of Product Design",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Implementing User Feedback in Design: Insights from a Head of Product Design”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "Implementing User Feedback in Design: Insights from a Head of Product Design",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-19T08:00:00.000Z"
+    },
+    {
+      "slug": "in-house-vs-outsourcing-software-development",
+      "title": "In-House vs Outsourcing Software Development: A CFO’s Total-Cost Analysis (2026)",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “In-House vs Outsourcing Software Development: A CFO’s Total-Cost Analysis (2026)”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "In-House vs Outsourcing Software Development: A CFO’s Total-Cost Analysis (2026)",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-09-02T08:00:00.000Z"
+    },
+    {
+      "slug": "is-it-worth-using-aws-amplify-as-a-production-solution",
+      "title": "AWS Amplify – Is It Really Worth Using It As a Production Solution?",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “AWS Amplify – Is It Really Worth Using It As a Production Solution?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "AWS Amplify – Is It Really Worth Using It As a Production Solution?",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-17T08:00:00.000Z"
+    },
+    {
+      "slug": "kpis-and-feedback",
+      "title": "The Role of KPIs and Feedback in Effective Product Management",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “The Role of KPIs and Feedback in Effective Product Management”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "The Role of KPIs and Feedback in Effective Product Management",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-16T08:00:00.000Z"
+    },
+    {
+      "slug": "legacy-system-modernization",
+      "title": "Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-15T08:00:00.000Z"
+    },
+    {
+      "slug": "minimum-lovable-product",
+      "title": "Minimum Lovable Product (MLP): When Your MVP Isn't Enough – And When It Is",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Minimum Lovable Product (MLP): When Your MVP Isn't Enough – And When It Is”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "Minimum Lovable Product (MLP): When Your MVP Isn't Enough – And When It Is",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-14T08:00:00.000Z"
+    },
+    {
+      "slug": "minimum-viable-product-development",
+      "title": "What is an MVP? A Founder's Guide to De-Risking Your Dream In a World Where Most Startups Fail",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “What is an MVP? A Founder's Guide to De-Risking Your Dream In a World Where Most Startups Fail”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "What is an MVP? A Founder's Guide to De-Risking Your Dream In a World Where Most Startups Fail",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-13T08:00:00.000Z"
+    },
+    {
+      "slug": "minimum-viable-product-examples",
+      "title": "Minimum Viable Product Examples: 12 MVPs That Worked – And What You Can Steal From Each",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Minimum Viable Product Examples: 12 MVPs That Worked – And What You Can Steal From Each”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "Minimum Viable Product Examples: 12 MVPs That Worked – And What You Can Steal From Each",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-12T08:00:00.000Z"
+    },
+    {
+      "slug": "modern-development",
+      "title": "Integrating Data Science and Agile: A Comprehensive Guide to Modern Development",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Integrating Data Science and Agile: A Comprehensive Guide to Modern Development”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "Integrating Data Science and Agile: A Comprehensive Guide to Modern Development",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-11T08:00:00.000Z"
+    },
+    {
+      "slug": "most-expensive-part-of-it-project",
+      "title": "The Most Expensive Part of an IT Project Is the Questions Nobody Asked [INTERVIEW]",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “The Most Expensive Part of an IT Project Is the Questions Nobody Asked [INTERVIEW]”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "The Most Expensive Part of an IT Project Is the Questions Nobody Asked [INTERVIEW]",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-10-14T08:00:00.000Z"
+    },
+    {
+      "slug": "mvp-development-costs",
+      "title": "How Much Does It Cost to Build an MVP in 2026?",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How Much Does It Cost to Build an MVP in 2026?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "How Much Does It Cost to Build an MVP in 2026?",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-09T08:00:00.000Z"
+    },
+    {
+      "slug": "native-or-cross-platform-what-to-choose",
+      "title": "Native vs. Hybrid App: What Approach and Framework to Choose for Your Mobile App Development?",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Native vs. Hybrid App: What Approach and Framework to Choose for Your Mobile App Development?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "Native vs. Hybrid App: What Approach and Framework to Choose for Your Mobile App Development?",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-08T08:00:00.000Z"
+    },
+    {
+      "slug": "no-code-low-code",
+      "title": "No-Code vs. Low-Code: Choosing the Right Path for Your Business Needs",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “No-Code vs. Low-Code: Choosing the Right Path for Your Business Needs”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "No-Code vs. Low-Code: Choosing the Right Path for Your Business Needs",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-07T08:00:00.000Z"
+    },
+    {
+      "slug": "onshore-nearshore-and-offshore-outsourcing",
+      "title": "How to Choose the Best Outsourcing Strategy: Onshore, Nearshore, Offshore",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Choose the Best Outsourcing Strategy: Onshore, Nearshore, Offshore”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "How to Choose the Best Outsourcing Strategy: Onshore, Nearshore, Offshore",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-06T08:00:00.000Z"
+    },
+    {
+      "slug": "outsourcing-software-development-for-startups",
+      "title": "Outsourcing Software Development for Startups: A Founder's Guide (2026)",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Outsourcing Software Development for Startups: A Founder's Guide (2026)”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "Outsourcing Software Development for Startups: A Founder's Guide (2026)",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-05T08:00:00.000Z"
+    },
+    {
+      "slug": "project-efficiency",
+      "title": "How to Manage Budget Changes and Improve Cost Estimates for Project Efficiency",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Manage Budget Changes and Improve Cost Estimates for Project Efficiency”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "How to Manage Budget Changes and Improve Cost Estimates for Project Efficiency",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-04T08:00:00.000Z"
+    },
+    {
+      "slug": "pros-and-cons-of-outsourcing-software-development",
+      "title": "Benefits of Outsourcing Software Development – And the Cost of Leaving",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Benefits of Outsourcing Software Development – And the Cost of Leaving”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "Benefits of Outsourcing Software Development – And the Cost of Leaving",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-03T08:00:00.000Z"
+    },
+    {
+      "slug": "reducing-ota-dependence-in-hospitality",
+      "title": "How to Reduce OTA Dependence: The 2026 Playbook for Hotels That Want to Keep Their Revenue",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Reduce OTA Dependence: The 2026 Playbook for Hotels That Want to Keep Their Revenue”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "How to Reduce OTA Dependence: The 2026 Playbook for Hotels That Want to Keep Their Revenue",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-02T08:00:00.000Z"
+    },
+    {
+      "slug": "restaurant-app-development",
+      "title": "How to Create a Restaurant App? A Guide to Restaurant App Development",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Create a Restaurant App? A Guide to Restaurant App Development”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "How to Create a Restaurant App? A Guide to Restaurant App Development",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-28T08:00:00.000Z"
+    },
+    {
+      "slug": "social-media-app-development-cost-estimation",
+      "title": "How to Estimate Social Media App Development Cost?",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Estimate Social Media App Development Cost?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "How to Estimate Social Media App Development Cost?",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-27T08:00:00.000Z"
+    },
+    {
+      "slug": "software-development-billing-models",
+      "title": "Software Development Billing Models: What’s Best for Your Project?",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Software Development Billing Models: What’s Best for Your Project?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "Software Development Billing Models: What’s Best for Your Project?",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-26T08:00:00.000Z"
+    },
+    {
+      "slug": "software-development-costs",
+      "title": "Software Development Costs in 2026: What You'll Actually Pay?",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Software Development Costs in 2026: What You'll Actually Pay?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "Software Development Costs in 2026: What You'll Actually Pay?",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-25T08:00:00.000Z"
+    },
+    {
+      "slug": "software-development-for-startups",
+      "title": "Software Development for Startups: Build Less, Ship Faster [2026]",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Software Development for Startups: Build Less, Ship Faster [2026]”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "Software Development for Startups: Build Less, Ship Faster [2026]",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-24T08:00:00.000Z"
+    },
+    {
+      "slug": "software-development-process",
+      "title": "Software Development Process - A Step-By-Step Guide to Creating High-Quality Software",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Software Development Process - A Step-By-Step Guide to Creating High-Quality Software”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "Software Development Process - A Step-By-Step Guide to Creating High-Quality Software",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-23T08:00:00.000Z"
+    },
+    {
+      "slug": "software-development-risks",
+      "title": "What risks can you expect during an app development and how to prepare for them",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “What risks can you expect during an app development and how to prepare for them”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "What risks can you expect during an app development and how to prepare for them",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-22T08:00:00.000Z"
+    },
+    {
+      "slug": "speed-up-your-react-app-using-cloudinary-and-lazy-loading",
+      "title": "Speed Up Your React App Using Cloudinary and Lazy Loading",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Speed Up Your React App Using Cloudinary and Lazy Loading”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "Speed Up Your React App Using Cloudinary and Lazy Loading",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-21T08:00:00.000Z"
+    },
+    {
+      "slug": "startup-product-development-from-first-idea-to-market",
+      "title": "Startup Product Development: From First Idea to Market 2026",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Startup Product Development: From First Idea to Market 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "Startup Product Development: From First Idea to Market 2026",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-20T08:00:00.000Z"
+    },
+    {
+      "slug": "taxi-booking-app-development",
+      "title": "The 2026 Ultimate Playbook to Taxi Mobile App Development: AI, MaaS, and Scalable Architecture",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “The 2026 Ultimate Playbook to Taxi Mobile App Development: AI, MaaS, and Scalable Architecture”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "The 2026 Ultimate Playbook to Taxi Mobile App Development: AI, MaaS, and Scalable Architecture",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-19T08:00:00.000Z"
+    },
+    {
+      "slug": "teacode-client-centric-development-approach",
+      "title": "From Kickoff to Long-Term Growth: TeaCode’s Client-Centric Development Approach",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “From Kickoff to Long-Term Growth: TeaCode’s Client-Centric Development Approach”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "From Kickoff to Long-Term Growth: TeaCode’s Client-Centric Development Approach",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-18T08:00:00.000Z"
+    },
+    {
+      "slug": "tech-startup-pitch-deck-guide",
+      "title": "How to Pitch Investors: The Tech Startup Blueprint That Actually Gets Funded",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Pitch Investors: The Tech Startup Blueprint That Actually Gets Funded”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "How to Pitch Investors: The Tech Startup Blueprint That Actually Gets Funded",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-17T08:00:00.000Z"
+    },
+    {
+      "slug": "top-10-custom-software-development-companies",
+      "title": "Ranking of the Top 10 Custom Software Development Companies 2026: A Guide for Tech Leaders",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Ranking of the Top 10 Custom Software Development Companies 2026: A Guide for Tech Leaders”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "Ranking of the Top 10 Custom Software Development Companies 2026: A Guide for Tech Leaders",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-16T08:00:00.000Z"
+    },
+    {
+      "slug": "travel-app-development",
+      "title": "How to Build a Travel App in 2026: The Complete Guide to Travel App Development",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Build a Travel App in 2026: The Complete Guide to Travel App Development”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "How to Build a Travel App in 2026: The Complete Guide to Travel App Development",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-15T08:00:00.000Z"
+    },
+    {
+      "slug": "travel-legacy-systems-upgrade",
+      "title": "Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-14T08:00:00.000Z"
+    },
+    {
+      "slug": "ui-design-tips",
+      "title": "How to Create an Award-Winning App User Interface Design – An Expert’s Guide for 2024",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Create an Award-Winning App User Interface Design – An Expert’s Guide for 2024”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "How to Create an Award-Winning App User Interface Design – An Expert’s Guide for 2024",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-13T08:00:00.000Z"
+    },
+    {
+      "slug": "ultimate-guide-web-mobile-app-design",
+      "title": "The Ultimate Guide to the Web & Mobile App Design",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “The Ultimate Guide to the Web & Mobile App Design”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "The Ultimate Guide to the Web & Mobile App Design",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-12T08:00:00.000Z"
+    },
+    {
+      "slug": "ux-audit-guide",
+      "title": "How to Conduct a UX Audit: A Step-by-Step Guide",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “How to Conduct a UX Audit: A Step-by-Step Guide”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-6.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "How to Conduct a UX Audit: A Step-by-Step Guide",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-11T08:00:00.000Z"
+    },
+    {
+      "slug": "ux-design-tips",
+      "title": "The importance of User Experience: UX Design Tips from Our Head of Design",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “The importance of User Experience: UX Design Tips from Our Head of Design”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-1.png",
+      "author": "Editorial team",
+      "category": "Outsourcing",
+      "tags": [
+        "outsourcing"
+      ],
+      "seoTitle": "The importance of User Experience: UX Design Tips from Our Head of Design",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-10T08:00:00.000Z"
+    },
+    {
+      "slug": "vibe-coding-prototyping",
+      "title": "Vibe Prototyping: How To Turn Ideas Into Experiences Before Coding",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “Vibe Prototyping: How To Turn Ideas Into Experiences Before Coding”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-2.png",
+      "author": "Editorial team",
+      "category": "Design",
+      "tags": [
+        "design"
+      ],
+      "seoTitle": "Vibe Prototyping: How To Turn Ideas Into Experiences Before Coding",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-09T08:00:00.000Z"
+    },
+    {
+      "slug": "what-is-white-label-application",
+      "title": "What Is a White Label App? The Strategic Guide for Founders and Product Leaders",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “What Is a White Label App? The Strategic Guide for Founders and Product Leaders”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-3.png",
+      "author": "Editorial team",
+      "category": "AI",
+      "tags": [
+        "ai"
+      ],
+      "seoTitle": "What Is a White Label App? The Strategic Guide for Founders and Product Leaders",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-08T08:00:00.000Z"
+    },
+    {
+      "slug": "what-software-teams-can-learn-from-game-dev",
+      "title": "What Software Teams Can Learn from Game Development Processes",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “What Software Teams Can Learn from Game Development Processes”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-4.png",
+      "author": "Editorial team",
+      "category": "Software Development",
+      "tags": [
+        "software development"
+      ],
+      "seoTitle": "What Software Teams Can Learn from Game Development Processes",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-07T08:00:00.000Z"
+    },
+    {
+      "slug": "white-label-vs-custom-app-development",
+      "title": "White Label App Development vs. Custom: The Real Cost of Renting Your Tech",
+      "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
+      "body": "## Why this matters\n\nPlaceholder article for “White Label App Development vs. Custom: The Real Cost of Renting Your Tech”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
+      "coverImage": "/assets/covers/cover-5.png",
+      "author": "Editorial team",
+      "category": "Product",
+      "tags": [
+        "product"
+      ],
+      "seoTitle": "White Label App Development vs. Custom: The Real Cost of Renting Your Tech",
+      "seoDescription": "Placeholder article. Replace before launch.",
+      "publishedAt": "2026-07-06T08:00:00.000Z"
+    }
+  ],
+  "legalNote": "legal pages live in src/website-theme/data/pages.ts"
+}

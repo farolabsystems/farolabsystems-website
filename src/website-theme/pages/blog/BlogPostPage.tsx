@@ -1,0 +1,85 @@
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Locale } from "@/website-theme/config/site.config";
+import { siteConfig, withLocale } from "@/website-theme/config/site.config";
+import { getPost, relatedPosts } from "@/modules/content/content.service";
+import { extractToc, readingTime } from "@/lib/slug";
+import { absoluteUrl } from "@/lib/seo";
+import { Markdown } from "@/website-theme/ui/Markdown";
+import { Container } from "@/website-theme/ui/Container";
+import { JsonLd } from "@/website-theme/ui/JsonLd";
+
+export async function BlogPostPage({ slug, locale = "en" }: { slug: string; locale?: Locale }) {
+  const post = await getPost(slug);
+  if (!post) notFound();
+  const toc = extractToc(post.body);
+  const related = await relatedPosts(post.slug, post.category);
+  const url = absoluteUrl(withLocale(locale, `/blog/${post.slug}`));
+  return (
+    <article className="section" style={{ paddingTop: "var(--tc-space-9)" }}>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: post.title,
+          datePublished: post.publishedAt,
+          author: { "@type": "Person", name: post.author },
+          image: absoluteUrl(post.coverImage),
+          mainEntityOfPage: url,
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl(withLocale(locale, "/")) },
+            { "@type": "ListItem", position: 2, name: "Blog", item: absoluteUrl(withLocale(locale, "/blog")) },
+            { "@type": "ListItem", position: 3, name: post.title, item: url },
+          ],
+        }}
+      />
+      <Container>
+        <p className="caption">
+          {post.category} · {new Date(post.publishedAt).toLocaleDateString("en-GB")} · {readingTime(post.body)} min read
+        </p>
+        <h1 className="heading-2 mt-3 max-w-[20ch]">{post.title}</h1>
+        <p className="body-lg muted mt-4 max-w-[68ch]">{post.excerpt}</p>
+        <Image src={post.coverImage} alt="" width={1200} height={680} priority className="mt-8 w-full rounded-[var(--tc-radius-card-lg)] object-cover" />
+        <div className="mt-10 grid gap-10 lg:grid-cols-[220px_1fr]">
+          {toc.length ? (
+            <nav aria-label="On this page" className="grid content-start gap-2">
+              <p className="caption">On this page</p>
+              {toc.map((item) => (
+                <a key={item.id} href={`#${item.id}`} className="body-sm" style={{ paddingLeft: item.level === 3 ? "var(--tc-space-3)" : 0 }}>
+                  {item.text}
+                </a>
+              ))}
+            </nav>
+          ) : (
+            <div />
+          )}
+          <div>
+            <Markdown source={post.body} />
+            <aside className="card mt-10">
+              <p className="caption">Author</p>
+              <p className="heading-6 mt-2">{post.author}</p>
+              <p className="body-sm muted mt-2">Writing for {siteConfig.name}. Replace this block with a real byline.</p>
+            </aside>
+          </div>
+        </div>
+        <h2 className="heading-4 mt-12">Related</h2>
+        <ul className="mt-4 grid gap-3 md:grid-cols-3">
+          {related.map((item) => (
+            <li key={item.slug}>
+              <Link href={withLocale(locale, `/blog/${item.slug}`)} className="card block">
+                {item.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </article>
+  );
+}

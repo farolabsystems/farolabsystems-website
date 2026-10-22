@@ -1,0 +1,81 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ContentType {
+  POST
+  PAGE
+}
+
+enum PublishStatus {
+  DRAFT
+  PUBLISHED
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  createdAt    DateTime @default(now())
+}
+
+model Content {
+  id             String        @id @default(cuid())
+  type           ContentType
+  slug           String
+  locale         String        @default("en")
+  title          String
+  excerpt        String        @default("")
+  body           String
+  coverImage     String?
+  author         String?
+  category       String?
+  tags           String[]
+  seoTitle       String?
+  seoDescription String?
+  publishedAt    DateTime?
+  status         PublishStatus @default(DRAFT)
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  @@unique([type, slug, locale])
+  @@index([type, status, publishedAt])
+}
+
+model CaseStudy {
+  id          String        @id @default(cuid())
+  slug        String        @unique
+  title       String
+  summary     String
+  industries  String[]
+  services    String[]
+  stats       Json
+  body        String
+  cover       String?
+  gallery     String[]
+  featured    Boolean       @default(false)
+  sortOrder   Int           @default(0)
+  status      PublishStatus @default(PUBLISHED)
+  publishedAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model Lead {
+  id           String   @id @default(cuid())
+  firstName    String
+  email        String
+  startingFrom String?
+  options      String[]
+  message      String
+  newsletter   Boolean  @default(false)
+  ip           String?
+  createdAt    DateTime @default(now())
+}

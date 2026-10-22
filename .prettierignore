@@ -1,0 +1,11 @@
+node_modules
+.next
+.crawl
+public
+prisma/seed-data.json
+package-lock.json
+docs/site-inventory.md
+src/website-theme/data/services.ts
+src/website-theme/data/industries.ts
+src/website-theme/data/case-studies.ts
+src/website-theme/data/posts.ts
