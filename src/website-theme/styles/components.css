@@ -273,6 +273,11 @@
   left: 0;
   right: 0;
   top: var(--tc-header);
+  max-height: calc(100dvh - var(--tc-header));
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   background: var(--tc-white);
   box-shadow: var(--tc-shadow-menu);
   border-top: 1px solid var(--tc-border-strong);
