@@ -1,5 +1,17 @@
 import { z } from "zod";
 import { formatStoredPhone, phoneIssue } from "@/lib/phone";
+import { budgetRanges, timelineOptions } from "@/website-theme/data/contact";
+
+const optionalBudget = z
+  .string()
+  .trim()
+  .max(80)
+  .refine((value) => !value || (budgetRanges as readonly string[]).includes(value), "Select a budget range");
+const optionalTimeline = z
+  .string()
+  .trim()
+  .max(80)
+  .refine((value) => !value || (timelineOptions as readonly string[]).includes(value), "Select a timeline");
 
 export const contactSchema = z
   .object({
@@ -10,8 +22,8 @@ export const contactSchema = z
     country: z.string().trim().max(2).optional(),
     phone: z.string().trim().max(40).optional(),
     startingFrom: z.string().trim().min(1, "Tell us what you are looking for").max(80),
-    budget: z.string().trim().max(80).optional(),
-    timeline: z.string().trim().max(80).optional(),
+    budget: optionalBudget.optional(),
+    timeline: optionalTimeline.optional(),
     message: z.string().trim().min(1, "Tell us about the project").max(5000),
     newsletter: z.boolean().optional(),
     company_website: z.string().max(200).optional(),

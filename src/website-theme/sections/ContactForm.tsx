@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { contactSchema } from "@/lib/validators";
 import { siteConfig } from "@/website-theme/config/site.config";
-import { projectIntents } from "@/website-theme/data/contact";
+import { budgetRanges, projectIntents, timelineOptions } from "@/website-theme/data/contact";
 import { Button } from "@/website-theme/ui/Button";
 import { Input } from "@/website-theme/ui/Input";
 import { PhoneField } from "@/website-theme/ui/PhoneField";
@@ -161,8 +161,50 @@ export function ContactForm() {
         onChange={setMessage}
       />
       <div className="grid gap-4 md:grid-cols-2">
-        <Input id="budget" name="budget" label="Budget" placeholder="Optional" value={budget} error={errors.budget} onChange={setBudget} />
-        <Input id="timeline" name="timeline" label="Timeline" placeholder="Optional" value={timeline} error={errors.timeline} onChange={setTimeline} />
+        <label className="grid gap-2" htmlFor="budget">
+          <span className="body-sm">Budget (USD)</span>
+          <select
+            id="budget"
+            name="budget"
+            className={errors.budget ? "field field-error" : "field"}
+            value={budget}
+            onChange={(event) => setBudget(event.target.value)}
+          >
+            <option value="">Select a range</option>
+            {budgetRanges.map((range) => (
+              <option key={range} value={range}>
+                {range}
+              </option>
+            ))}
+          </select>
+          {errors.budget ? (
+            <span className="body-sm" style={{ color: "var(--tc-danger)" }}>
+              {errors.budget}
+            </span>
+          ) : null}
+        </label>
+        <label className="grid gap-2" htmlFor="timeline">
+          <span className="body-sm">Timeline</span>
+          <select
+            id="timeline"
+            name="timeline"
+            className={errors.timeline ? "field field-error" : "field"}
+            value={timeline}
+            onChange={(event) => setTimeline(event.target.value)}
+          >
+            <option value="">Select a timeline</option>
+            {timelineOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+          {errors.timeline ? (
+            <span className="body-sm" style={{ color: "var(--tc-danger)" }}>
+              {errors.timeline}
+            </span>
+          ) : null}
+        </label>
       </div>
       <label className="flex items-start gap-2 body-sm">
         <input type="checkbox" checked={newsletter} onChange={(event) => setNewsletter(event.target.checked)} />

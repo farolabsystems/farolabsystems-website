@@ -1,4 +1,5 @@
-// TODO: Replace with actual company information — email, phone, address, tax number, social profiles, and meeting link.
+// TODO: Replace with actual company information — email, phone, address, tax number, social profiles.
+// Schedule a meeting uses Cal.com / cal.id via NEXT_PUBLIC_CAL_URL when that value is set.
 
 export type Locale = "en" | "pl";
 
@@ -12,14 +13,16 @@ export const siteConfig = {
   phone: "",
   addressLines: ["TODO: Replace with actual company information"],
   taxNumber: "",
-  meetingUrl: "",
+  /** Cal.com / cal.id booking link, e.g. https://cal.com/your-team/30min */
+  meetingUrl: process.env.NEXT_PUBLIC_CAL_URL?.trim() || "",
+  meetingProvider: "cal.com" as const,
   footerHeadline: "Have a project in mind? Let's build it together.",
   footerCta: "Start a project",
   demoCaseStudyLabel: "Demo case study",
   socials: [] as { label: string; href: string }[],
   directories: [] as { label: string; href: string }[],
   founders: [] as { name: string; role: string; initials: string }[],
-} as const;
+};
 
 export const uiCopy = {
   en: {

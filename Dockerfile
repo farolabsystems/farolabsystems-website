@@ -6,6 +6,10 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 FROM deps AS builder
+ARG NEXT_PUBLIC_SITE_URL=http://localhost:3000
+ARG NEXT_PUBLIC_CAL_URL=
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+ENV NEXT_PUBLIC_CAL_URL=$NEXT_PUBLIC_CAL_URL
 ENV DATABASE_URL="postgresql://app:app@localhost:5432/app"
 COPY . .
 RUN npx prisma generate && npx next build
