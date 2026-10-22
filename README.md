@@ -13,7 +13,7 @@ Open http://localhost:3000. The database migrates and seeds before the app start
 Admin: http://localhost:3000/admin/login
 
 - Email: `admin@example.com`
-- Password: `ChangeMe123!`
+- Password: `Farolab@2026`
 
 ## Run locally
 
