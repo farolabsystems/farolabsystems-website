@@ -3,8 +3,8 @@ import { ConsultationPage } from "@/website-theme/pages/consultation/Consultatio
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Technical consultation",
-  description: "Bring an architecture question or an estimate you want a second look at.",
+  title: "Technical Consultation | ELYVANTA",
+  description: "Discuss architecture, modernization, cloud or product decisions with ELYVANTA and leave with a clearer next step.",
   path: "/technical-consultation",
 });
 

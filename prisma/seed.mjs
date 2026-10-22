@@ -25,16 +25,20 @@ if (typeof hash !== "function") {
 
 async function main() {
   const email = (process.env.ADMIN_EMAIL || "admin@example.com").toLowerCase();
-  const password = process.env.ADMIN_PASSWORD || "ChangeMe123!";
+  const password = process.env.ADMIN_PASSWORD || "Farolab@2026";
+  const passwordHash = await hash(password, 10);
   await prisma.adminUser.upsert({
     where: { email },
-    update: {},
+    update: { passwordHash, name: "Admin" },
     create: {
       email,
       name: "Admin",
-      passwordHash: await hash(password, 10),
+      passwordHash,
     },
   });
+
+  const postSlugs = data.posts.map((post) => post.slug);
+  await prisma.content.deleteMany({ where: { type: "POST", slug: { notIn: postSlugs } } });
 
   for (const post of data.posts) {
     await prisma.content.upsert({
@@ -92,11 +96,14 @@ async function main() {
         seoDescription: page.seoDescription,
         status: "PUBLISHED",
         publishedAt: new Date("2026-01-15T00:00:00.000Z"),
-        author: "COMPANY_NAME",
+        author: "ELYVANTA",
         category: "Legal",
       },
     });
   }
+
+  const studySlugs = data.caseStudies.map((study) => study.slug);
+  await prisma.caseStudy.deleteMany({ where: { slug: { notIn: studySlugs } } });
 
   for (const study of data.caseStudies) {
     await prisma.caseStudy.upsert({

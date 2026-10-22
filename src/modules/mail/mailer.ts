@@ -3,9 +3,13 @@ import { siteConfig } from "@/website-theme/config/site.config";
 
 type LeadMail = {
   firstName: string;
+  lastName: string;
   email: string;
-  startingFrom?: string;
-  options?: string[];
+  company?: string;
+  phone?: string;
+  startingFrom: string;
+  budget?: string;
+  timeline?: string;
   message: string;
   newsletter?: boolean;
 };
@@ -28,12 +32,15 @@ export async function sendLeadEmail(lead: LeadMail) {
     from: process.env.SMTP_FROM || siteConfig.email,
     to: siteConfig.email,
     replyTo: lead.email,
-    subject: `New enquiry from ${lead.firstName}`,
+    subject: `New enquiry from ${lead.firstName} ${lead.lastName}`,
     text: [
-      `Name: ${lead.firstName}`,
+      `Name: ${lead.firstName} ${lead.lastName}`,
       `Email: ${lead.email}`,
-      `Starting from: ${lead.startingFrom || "—"}`,
-      `Options: ${(lead.options ?? []).join(", ") || "—"}`,
+      `Company: ${lead.company || "—"}`,
+      `Phone: ${lead.phone || "—"}`,
+      `Looking for: ${lead.startingFrom}`,
+      `Budget: ${lead.budget || "—"}`,
+      `Timeline: ${lead.timeline || "—"}`,
       `Newsletter: ${lead.newsletter ? "yes" : "no"}`,
       "",
       lead.message,

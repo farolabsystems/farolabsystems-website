@@ -71,8 +71,13 @@ model CaseStudy {
 model Lead {
   id           String   @id @default(cuid())
   firstName    String
+  lastName     String   @default("")
   email        String
+  company      String   @default("")
+  phone        String   @default("")
   startingFrom String?
+  budget       String   @default("")
+  timeline     String   @default("")
   options      String[]
   message      String
   newsletter   Boolean  @default(false)

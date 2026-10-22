@@ -73,7 +73,7 @@
   --tc-section-y-sm: var(--tc-space-9);
   --tc-container: min(85vw, 1088px);
   --tc-container-wide: min(82vw, 1184px);
-  --tc-header: 72px;
+  --tc-header: 88px;
   --tc-gap: var(--tc-space-5);
 
   --tc-radius-pill: 125px;

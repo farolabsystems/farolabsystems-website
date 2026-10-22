@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/website-theme/config/site.config";
 
 export const metadata: Metadata = buildMetadata({
-  title: siteConfig.name,
+  title: `${siteConfig.name} | Software Development & Technology Solutions`,
   description: siteConfig.description,
   path: "/",
 });

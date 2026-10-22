@@ -1,1159 +1,246 @@
 import type { PostRecord } from "@/website-theme/data/types";
 
+const author = "ELYVANTA";
+
 export const posts: PostRecord[] = [
   {
-    "slug": "accommodation-booking-app",
-    "title": "Hotel Booking App Development in 2026: Complete Guide to Features, Process & Cost",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Hotel Booking App Development in 2026: Complete Guide to Features, Process & Cost”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "Hotel Booking App Development in 2026: Complete Guide to Features, Process & Cost",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-28T08:00:00.000Z"
+    slug: "how-ai-is-changing-modern-software-development",
+    title: "How AI Is Changing Modern Software Development",
+    excerpt: "AI is useful in specific parts of the software lifecycle. The teams getting value from it are choosy about where it sits.",
+    seoTitle: "How AI Is Changing Modern Software Development | ELYVANTA",
+    seoDescription:
+      "Where AI helps software teams today, where it still needs a person, and how to introduce it without turning the product into a demo.",
+    author,
+    category: "AI & Automation",
+    tags: ["AI", "engineering"],
+    coverImage: "/assets/covers/banner-1.png",
+    publishedAt: "2026-10-14T00:00:00.000Z",
+    body: `## Start with a job, not a model
+
+AI has changed how software gets written and what software can do. It has not removed the need to know which problem you are solving. A useful starting point is a repeated task: drafting a first version, summarising a long record, classifying incoming requests, or answering a question from documents you already trust.
+
+If you cannot name the person who checks the result, the feature is not ready.
+
+## Where teams are seeing real help
+
+Inside the engineering team, AI assistants are good at first drafts. They speed up tests, migrations, and the boring translation of a ticket into a starting point. They are weaker when the codebase has no clear boundaries, because the assistant then copies the confusion.
+
+Inside the product, the useful features are usually narrow. A support tool that proposes a reply from the last ten similar tickets. A back office that extracts fields from a document and asks a person to confirm them. A search box that can tolerate the way customers actually phrase a question.
+
+These are integrations. They need logs, a limit on what the system is allowed to do, and a path that still works when the model is wrong.
+
+## Where the claims run ahead of the work
+
+AI does not repair an unclear product. If two departments disagree about the workflow, a model will not settle it. It also does not remove responsibility for customer data. Sending a record to an API is a product decision, not a prompt detail.
+
+Training your own model is rarely the first step. Most products should start with an existing AI API, a small evaluation set of real examples, and a human review step. Fine-tuning or a private model is justified when that simpler version has already proved the workflow.
+
+## A practical way to introduce it
+
+Pick one workflow. Write down what a good answer looks like. Run the current process and the AI-assisted process on the same examples. Keep the change if people are faster and the error rate is acceptable. Leave it out if the team spends the saved time checking the model.
+
+That is a slower story than a launch announcement. It is also how AI becomes part of the product instead of a tab nobody opens twice.
+`,
+  },
+  {
+    slug: "building-scalable-web-applications",
+    title: "Building Scalable Web Applications: What to Consider Early",
+    excerpt: "Scale is not a server size. It is the set of decisions that let the next release happen without a rewrite.",
+    seoTitle: "Building Scalable Web Applications | ELYVANTA",
+    seoDescription:
+      "What to decide early in a web application so it can grow: boundaries, data, access, background work and a way to see production.",
+    author,
+    category: "Cloud & DevOps",
+    tags: ["web", "architecture"],
+    coverImage: "/assets/covers/banner-2.png",
+    publishedAt: "2026-10-02T00:00:00.000Z",
+    body: `## Scale is a direction, not a number
+
+A web application does not need the architecture of a global platform on day one. It does need a shape that will not punish you for the second customer, the second team, or the second year. The expensive mistakes are usually structural: data that cannot be queried, permissions painted on at the end, and a deploy that only one person understands.
+
+## Draw the boundaries before the folders multiply
+
+Decide what the application is responsible for, and what it should ask another system to do. A billing provider, an identity provider, and a search index are ordinary neighbours. Copying their jobs into your database is how a small app becomes a private platform nobody wanted.
+
+Inside your own code, keep the user-facing application and the rules of the business distinguishable. When every screen reaches into every table, the next feature has to understand the whole system.
+
+## Treat data and access as product decisions
+
+The data model is the product. Names, statuses and ownership should match the words the business already uses. Add the fields you know you will filter and audit. Leave speculative columns out.
+
+Access belongs in the same conversation. Who can see a record, who can change it, and what happens when someone leaves the company. Retrofitting roles onto a finished app is slower than agreeing them while the first screens are still movable.
+
+## Leave room for work that is not a click
+
+Exports, emails, image processing and integrations should not live inside the request that rendered the page. A simple queue or background job is enough. What matters is that a slow partner does not freeze the interface, and that a failure can be retried without a developer at a keyboard.
+
+## Make production visible
+
+You cannot scale what you cannot see. Logs, a health check, and an alert when the main job fails are part of the first release, not a later hardening project. So is a repeatable deploy. If shipping requires a checklist in someone's head, the application is already harder to grow than its traffic suggests.
+
+None of this requires a large platform team. It requires choosing the few decisions that are costly to reverse, and leaving the rest until the product has earned them.
+`,
+  },
+  {
+    slug: "when-to-modernize-legacy-software",
+    title: "When Should a Business Modernize Its Legacy Software?",
+    excerpt: "Modernization is justified when change has become the bottleneck. A rewrite is not the only way to start.",
+    seoTitle: "When to Modernize Legacy Software | ELYVANTA",
+    seoDescription:
+      "Signals that legacy software is holding a business back, and a practical way to modernize it without stopping the operation.",
+    author,
+    category: "Software Development",
+    tags: ["modernization", "architecture"],
+    coverImage: "/assets/covers/banner-3.png",
+    publishedAt: "2026-09-18T00:00:00.000Z",
+    body: `## The useful question is not "how old is it?"
+
+Age is a weak signal. Plenty of older systems are clear, owned, and cheap to change. The systems that need attention are the ones where a small business change takes a release cycle, or where only one person knows how to ship it safely.
+
+## Signs the software is now the constraint
+
+Look for these, not for a technology fashion:
+
+- A change that the business considers small requires a project.
+- Integrations fail quietly and someone reconciles them by hand.
+- You avoid touching a module because the last change caused an outage.
+- New hires take months to become useful in the codebase.
+- Reporting is a separate, fragile copy of the data.
+
+If none of those are true, modernization can wait. Spend the effort on the product instead.
+
+## Do not start with a rewrite
+
+A full rewrite feels clean and usually arrives late, because the old system contains rules nobody wrote down. Those rules surface as bugs in the new one. The safer pattern is to put a boundary around one capability, build the replacement beside the old path, and move traffic when the new path is boring.
+
+That might be one integration, one customer workflow, or the deploy pipeline itself. The first modernization project is often the thing that makes the next project possible: a test suite around the risky module, a documented deploy, or an API in front of a database that every screen queries differently.
+
+## Decide what "done" means before you fund it
+
+A modernization roadmap should name the risk being removed. Faster changes. Fewer manual reconciliations. A system a new engineer can run. If the goal is only "a modern stack", the project has no finish line.
+
+Write the sequence. Say what stays. Say what is deliberately left in the old system for now. Then staff the first slice, not the imagined end state.
+
+The businesses that modernize well treat it as a series of replacements they can survive, not as a single leap they have to hope for.
+`,
+  },
+  {
+    slug: "mvp-development-what-to-build-first",
+    title: "MVP Development: What to Build First",
+    excerpt: "An MVP is the smallest product that lets a real user finish a real job. Everything else can wait.",
+    seoTitle: "MVP Development: What to Build First | ELYVANTA",
+    seoDescription:
+      "How to choose the first version of a product: one user, one job, and a clear way to know the release taught you something.",
+    author,
+    category: "Product Engineering",
+    tags: ["MVP", "startups"],
+    coverImage: "/assets/covers/banner-4.png",
+    publishedAt: "2026-09-04T00:00:00.000Z",
+    body: `## An MVP is a learning tool that has to work
+
+The point of a first release is not to look finished. It is to put a real workflow in front of the people who have the problem, and to learn whether your guess about that problem was right. A slide deck can test interest. It cannot test whether someone will complete the job when the data is messy and they are in a hurry.
+
+## Choose one user and one job
+
+Write a single sentence: this person can finish this task without help. If the sentence needs three users and a platform, it is not the first release. Secondary roles, admin elegance, and the settings page can wait until someone has used the core.
+
+List what you will not build. That list is as useful as the backlog. It is how the team says no to work that feels productive and does not answer the question.
+
+## Build the path, including the unhappy parts
+
+The first version still needs the pieces that make the job real. Sign-in if the data is private. A way to correct a mistake. An empty state that tells the truth. A record of what happened, so you can see whether people returned.
+
+It does not need every channel, every integration, or a design for an audience you do not have. If a step can be done manually behind the scenes for the first ten customers, do that, and be honest that it is manual.
+
+## Know what you are trying to learn
+
+Before you fund the build, agree the signal. Do people finish the task? Do they come back without being asked? Does the workflow replace the spreadsheet, or sit beside it? A launch without a question is just a release.
+
+## After the MVP
+
+If the signal is weak, change the product or stop. If it is strong, the next release should make the manual parts reliable and give the team a foundation they can keep. That is the moment for the architecture you postponed, not the moment to invent a second product.
+
+Teams that ship a tight first version learn faster than teams that spend the same months making a wide one feel complete.
+`,
+  },
+  {
+    slug: "how-to-choose-a-technology-stack",
+    title: "How to Choose the Right Technology Stack for Your Product",
+    excerpt: "The right stack is the one your team can run, hire for, and change. Novelty is not a requirement.",
+    seoTitle: "How to Choose a Technology Stack | ELYVANTA",
+    seoDescription:
+      "A practical way to choose a product stack: team skill, operational cost, the shape of the problem, and what you can change later.",
+    author,
+    category: "Software Development",
+    tags: ["architecture", "stack"],
+    coverImage: "/assets/covers/banner-5.png",
+    publishedAt: "2026-08-20T00:00:00.000Z",
+    body: `## Choose for the next three years, not for a talk
+
+A technology stack is a set of bets about hiring, operations and change. The safest bet for most business software is a boring one: a typed web frontend, a small API, a relational database, and a cloud a new engineer can learn from the documentation.
+
+At ELYVANTA that often means React or Next.js, TypeScript, Node.js or Python, and PostgreSQL. It is a default, not a rule. The reason to leave it should be the product, not taste.
+
+## Ask four questions
+
+**Who will maintain it?** A stack your team already knows will beat a fashionable one that only the original authors can operate. If you are hiring, prefer technologies with a deep hiring pool over a language you would have to teach from scratch.
+
+**What does the product actually do?** Heavy document workflows, real-time collaboration, mobile device features, and data analysis pull the stack in different directions. Name the hard part. Choose for that, and keep the rest ordinary.
+
+**What does it cost to run?** Managed databases, simple deploys and fewer services are usually cheaper to operate than a diagram with twelve boxes. Add a piece of infrastructure when a measured problem asks for it.
+
+**What is expensive to reverse?** Language and database choices linger. A UI library does not. Spend the debate on the decisions you will still be living with after the first rewrite of the interface.
+
+## When to leave the default
+
+Use Python and FastAPI or Django when the product is close to data work, automation, or a team that already thinks in Python. Use a document database when the data is genuinely document-shaped, not because a tutorial started there. Reach for a specialised mobile stack when the device is the product. Add an AI API when a workflow has earned it, and keep the rest of the system unaware of which vendor you chose, so you can change it.
+
+## Write the choice down
+
+A short architecture note is enough: what you picked, what you rejected, and what would make you revisit it. Future you, and the next engineer, should not have to infer the strategy from the package file.
+
+The right stack is the one that lets the team ship the next change with confidence. Everything else is optional.
+`,
+  },
+  {
+    slug: "from-idea-to-product-roadmap",
+    title: "From Idea to Product: A Practical Software Development Roadmap",
+    excerpt: "A roadmap is a sequence of decisions. Each stage should leave something you can read, try, or ship.",
+    seoTitle: "From Idea to Product: A Software Roadmap | ELYVANTA",
+    seoDescription:
+      "A practical roadmap from idea to a maintained product: discover the problem, shape a slice, build it, release it, and learn.",
+    author,
+    category: "Business & Technology",
+    tags: ["roadmap", "product"],
+    coverImage: "/assets/covers/banner-6.png",
+    publishedAt: "2026-08-06T00:00:00.000Z",
+    body: `## A roadmap should produce evidence
+
+Software projects stall when the plan is a list of features and a date. A more useful roadmap is a sequence of stages, each with an artefact someone can react to. You do not need a heavy process. You need to know what "finished" means before the next stage starts.
+
+## Discover
+
+The goal is a shared description of the problem. Who has it, what they do today, and what would be different if the software existed. Talk to the people who do the work. Read the spreadsheet they actually use. Write the constraints: regulation, integrations, deadlines, and the things you will not solve.
+
+The output is a short brief, not a specification of every screen.
+
+## Shape
+
+Turn the brief into one release. Name the user, the job, and the pieces you are postponing. Sketch the main flow, including failure. Estimate the slice in language a non-engineer can compare with another option. If two stakeholders cannot agree this release, more design will not save the project. The disagreement is the work.
+
+## Build
+
+Design and engineering should move on the same slice. Show working software often enough that a wrong turn is still cheap. Keep a staging environment the business can touch. Do not hide integration work in a final month. The connections to other systems are usually the project.
+
+## Release
+
+A release includes access, monitoring, a way to undo a bad deploy, and a person who owns the first week. Write down what you hoped to learn. Then watch whether users do the job you designed, or route around it.
+
+## Learn, then continue
+
+The next slice should come from what the release taught you. Sometimes that is reliability. Sometimes it is the manual step you hid behind the interface. Sometimes it is a decision to stop.
+
+Teams that treat this as a partnership, rather than a handoff at the end of a contract, keep the context that makes the second release faster than the first. That continuity is the part most roadmaps forget to draw.
+`,
   },
-  {
-    "slug": "ai-in-hospitality-guest-experience",
-    "title": "AI in Hospitality: A Builder's Guide to What Actually Works in 2026",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “AI in Hospitality: A Builder's Guide to What Actually Works in 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "AI in Hospitality: A Builder's Guide to What Actually Works in 2026",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-27T08:00:00.000Z"
-  },
-  {
-    "slug": "ai-travel-industry-innovation-trends",
-    "title": "How AI Is Transforming the Travel Industry in 2026: From Chatbots to Autonomous Booking",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How AI Is Transforming the Travel Industry in 2026: From Chatbots to Autonomous Booking”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "How AI Is Transforming the Travel Industry in 2026: From Chatbots to Autonomous Booking",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-26T08:00:00.000Z"
-  },
-  {
-    "slug": "app-development-costs",
-    "title": "How Much Does It Cost to Build an App in 2026?",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How Much Does It Cost to Build an App in 2026?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "How Much Does It Cost to Build an App in 2026?",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-25T08:00:00.000Z"
-  },
-  {
-    "slug": "app-monetization-strategies",
-    "title": "How to Choose an Effective Mobile App Monetization Strategy in 2025?",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Choose an Effective Mobile App Monetization Strategy in 2025?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "How to Choose an Effective Mobile App Monetization Strategy in 2025?",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-24T08:00:00.000Z"
-  },
-  {
-    "slug": "app-seasonality",
-    "title": "Leveraging App Seasonality for More Downloads: Trends & Tips for the Holiday Season",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Leveraging App Seasonality for More Downloads: Trends & Tips for the Holiday Season”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "Leveraging App Seasonality for More Downloads: Trends & Tips for the Holiday Season",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-23T08:00:00.000Z"
-  },
-  {
-    "slug": "automation-problems-why-automation-isnt-always-the-answer",
-    "title": "Is Your Automation Dream About to Become an Expensive Nightmare? Why Automation Process Isn’t Always the Answer",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Is Your Automation Dream About to Become an Expensive Nightmare? Why Automation Process Isn’t Always the Answer”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "Is Your Automation Dream About to Become an Expensive Nightmare? Why Automation Process Isn’t Always the Answer",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-22T08:00:00.000Z"
-  },
-  {
-    "slug": "best-mvp-development-agencies",
-    "title": "Top 10 MVP Development Companies & Agencies in 2026",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Top 10 MVP Development Companies & Agencies in 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "Top 10 MVP Development Companies & Agencies in 2026",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-21T08:00:00.000Z"
-  },
-  {
-    "slug": "best-travel-app-development-companies",
-    "title": "10 Best Travel App Development Companies (2026)",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “10 Best Travel App Development Companies (2026)”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "10 Best Travel App Development Companies (2026)",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-20T08:00:00.000Z"
-  },
-  {
-    "slug": "best-travel-software-development-companies",
-    "title": "10 Best Travel Software Development Companies in 2026",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “10 Best Travel Software Development Companies in 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "10 Best Travel Software Development Companies in 2026",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-19T08:00:00.000Z"
-  },
-  {
-    "slug": "building-edunugget",
-    "title": "Building EduNugget: From UX Concept to Scalable EdTech MVP",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Building EduNugget: From UX Concept to Scalable EdTech MVP”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "Building EduNugget: From UX Concept to Scalable EdTech MVP",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-10-13T08:00:00.000Z"
-  },
-  {
-    "slug": "cognitive-psychology-and-emotions-in-user-interface-design",
-    "title": "Cognitive Psychology and Emotions in User Interface Design",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Cognitive Psychology and Emotions in User Interface Design”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "Cognitive Psychology and Emotions in User Interface Design",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-17T08:00:00.000Z"
-  },
-  {
-    "slug": "concierge-minimum-viable-product",
-    "title": "Concierge Minimum Viable Product: How to Validate Your Startup Idea Without Writing a Line of Code",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Concierge Minimum Viable Product: How to Validate Your Startup Idea Without Writing a Line of Code”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "Concierge Minimum Viable Product: How to Validate Your Startup Idea Without Writing a Line of Code",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-16T08:00:00.000Z"
-  },
-  {
-    "slug": "conversational-ai-models",
-    "title": "How Conversational AI Transforms Decision-Making and Customer Experience",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How Conversational AI Transforms Decision-Making and Customer Experience”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "How Conversational AI Transforms Decision-Making and Customer Experience",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-15T08:00:00.000Z"
-  },
-  {
-    "slug": "cybersecurity",
-    "title": "Cybersecurity for Mobile Apps: Best Practices to Secure Sensitive Data",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Cybersecurity for Mobile Apps: Best Practices to Secure Sensitive Data”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "Cybersecurity for Mobile Apps: Best Practices to Secure Sensitive Data",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-14T08:00:00.000Z"
-  },
-  {
-    "slug": "delivery-app-development",
-    "title": "How to Build a Courier Delivery App: The Ultimate Step-by-Step Guide",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Build a Courier Delivery App: The Ultimate Step-by-Step Guide”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "How to Build a Courier Delivery App: The Ultimate Step-by-Step Guide",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-13T08:00:00.000Z"
-  },
-  {
-    "slug": "deploying-your-ml-model-using-aws-lambda",
-    "title": "Deploy Your Tensorflow.js Model Using AWS Lambda",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Deploy Your Tensorflow.js Model Using AWS Lambda”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "Deploy Your Tensorflow.js Model Using AWS Lambda",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-12T08:00:00.000Z"
-  },
-  {
-    "slug": "digital-transformation",
-    "title": "How to Embrace Digital Transformation: Strategies for Success in the Digital Era",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Embrace Digital Transformation: Strategies for Success in the Digital Era”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "How to Embrace Digital Transformation: Strategies for Success in the Digital Era",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-11T08:00:00.000Z"
-  },
-  {
-    "slug": "discovery-phase",
-    "title": "Discovery Phase in Software Development: Definition & Process",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Discovery Phase in Software Development: Definition & Process”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "Discovery Phase in Software Development: Definition & Process",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-10T08:00:00.000Z"
-  },
-  {
-    "slug": "ecommerce-trends",
-    "title": "Top eCommerce Trends to Watch in 2024 and Beyond",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Top eCommerce Trends to Watch in 2024 and Beyond”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "Top eCommerce Trends to Watch in 2024 and Beyond",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-09T08:00:00.000Z"
-  },
-  {
-    "slug": "ecommerce-user-experience-trends",
-    "title": "Navigating the Future: eCommerce User Experience Trends to Boost Your Online Store",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Navigating the Future: eCommerce User Experience Trends to Boost Your Online Store”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "Navigating the Future: eCommerce User Experience Trends to Boost Your Online Store",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-08T08:00:00.000Z"
-  },
-  {
-    "slug": "fixed-price-contract-risks",
-    "title": "Fixed-Price Contract Risks in Software Development: 6 You Need to Know About",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Fixed-Price Contract Risks in Software Development: 6 You Need to Know About”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "Fixed-Price Contract Risks in Software Development: 6 You Need to Know About",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-07T08:00:00.000Z"
-  },
-  {
-    "slug": "food-delivery-app-development",
-    "title": "How to Create a Food Delivery App? Food Delivery App Development Process Explained",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Create a Food Delivery App? Food Delivery App Development Process Explained”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "How to Create a Food Delivery App? Food Delivery App Development Process Explained",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-06T08:00:00.000Z"
-  },
-  {
-    "slug": "fundraising-strategies",
-    "title": "The Founder's Guide to Fundraising That Actually Builds a Business",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “The Founder's Guide to Fundraising That Actually Builds a Business”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "The Founder's Guide to Fundraising That Actually Builds a Business",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-05T08:00:00.000Z"
-  },
-  {
-    "slug": "getting-started-with-next-js",
-    "title": "Getting Started with Next.js",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Getting Started with Next.js”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "Getting Started with Next.js",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-04T08:00:00.000Z"
-  },
-  {
-    "slug": "go-to-market-strategy",
-    "title": "Go-to-Market Strategy – a Step-by-Step Guide to the Successful Digital Product Launch",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Go-to-Market Strategy – a Step-by-Step Guide to the Successful Digital Product Launch”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "Go-to-Market Strategy – a Step-by-Step Guide to the Successful Digital Product Launch",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-03T08:00:00.000Z"
-  },
-  {
-    "slug": "hire-dedicated-full-stack-developer",
-    "title": "How to Hire a Full-Stack Developer for Your Startup",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Hire a Full-Stack Developer for Your Startup”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "How to Hire a Full-Stack Developer for Your Startup",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-02T08:00:00.000Z"
-  },
-  {
-    "slug": "how-personalization-can-double-hotel-conversion-rate",
-    "title": "Hotel Personalization: How to Double Your Booking Conversion Rate [2026 Guide]",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Hotel Personalization: How to Double Your Booking Conversion Rate [2026 Guide]”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "Hotel Personalization: How to Double Your Booking Conversion Rate [2026 Guide]",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-28T08:00:00.000Z"
-  },
-  {
-    "slug": "how-to-build-ai-trip-planner-app",
-    "title": "How to Build an AI Trip Planner App in 2026",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Build an AI Trip Planner App in 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "How to Build an AI Trip Planner App in 2026",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-27T08:00:00.000Z"
-  },
-  {
-    "slug": "how-to-build-an-mvp",
-    "title": "How to Build an MVP: A Step-by-Step Guide for Startup Founders in 2026",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Build an MVP: A Step-by-Step Guide for Startup Founders in 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "How to Build an MVP: A Step-by-Step Guide for Startup Founders in 2026",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-26T08:00:00.000Z"
-  },
-  {
-    "slug": "how-to-build-and-scale-products",
-    "title": "MVP Mindset: How to Build, Validate, and Scale Products That Survive",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “MVP Mindset: How to Build, Validate, and Scale Products That Survive”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "MVP Mindset: How to Build, Validate, and Scale Products That Survive",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-25T08:00:00.000Z"
-  },
-  {
-    "slug": "how-to-choose-the-best-software-development-company",
-    "title": "How to Choose the Best Software Development Company",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Choose the Best Software Development Company”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "How to Choose the Best Software Development Company",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-24T08:00:00.000Z"
-  },
-  {
-    "slug": "how-to-create-buyer-personas",
-    "title": "7 Reasons Why You Need to Create Buyer Personas and How to Do That",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “7 Reasons Why You Need to Create Buyer Personas and How to Do That”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "7 Reasons Why You Need to Create Buyer Personas and How to Do That",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-23T08:00:00.000Z"
-  },
-  {
-    "slug": "how-to-effectively-implement-ai-in-your-company",
-    "title": "Only 5% of Companies Succeed. Here's How to Effectively Implement AI in Your Company [INTERVIEW]",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Only 5% of Companies Succeed. Here's How to Effectively Implement AI in Your Company [INTERVIEW]”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "Only 5% of Companies Succeed. Here's How to Effectively Implement AI in Your Company [INTERVIEW]",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-22T08:00:00.000Z"
-  },
-  {
-    "slug": "how-to-make-a-social-media-app",
-    "title": "How To Make a Social Media App? Business & Development Tips",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How To Make a Social Media App? Business & Development Tips”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "How To Make a Social Media App? Business & Development Tips",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-21T08:00:00.000Z"
-  },
-  {
-    "slug": "how-to-read-a-software-development-cost-estimate",
-    "title": "How to Read a Software Development Cost Estimate in 2026 (And Spot the Red Flags)",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Read a Software Development Cost Estimate in 2026 (And Spot the Red Flags)”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "How to Read a Software Development Cost Estimate in 2026 (And Spot the Red Flags)",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-20T08:00:00.000Z"
-  },
-  {
-    "slug": "implementing-user-feedback",
-    "title": "Implementing User Feedback in Design: Insights from a Head of Product Design",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Implementing User Feedback in Design: Insights from a Head of Product Design”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "Implementing User Feedback in Design: Insights from a Head of Product Design",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-19T08:00:00.000Z"
-  },
-  {
-    "slug": "in-house-vs-outsourcing-software-development",
-    "title": "In-House vs Outsourcing Software Development: A CFO’s Total-Cost Analysis (2026)",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “In-House vs Outsourcing Software Development: A CFO’s Total-Cost Analysis (2026)”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "In-House vs Outsourcing Software Development: A CFO’s Total-Cost Analysis (2026)",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-09-02T08:00:00.000Z"
-  },
-  {
-    "slug": "is-it-worth-using-aws-amplify-as-a-production-solution",
-    "title": "AWS Amplify – Is It Really Worth Using It As a Production Solution?",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “AWS Amplify – Is It Really Worth Using It As a Production Solution?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "AWS Amplify – Is It Really Worth Using It As a Production Solution?",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-17T08:00:00.000Z"
-  },
-  {
-    "slug": "kpis-and-feedback",
-    "title": "The Role of KPIs and Feedback in Effective Product Management",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “The Role of KPIs and Feedback in Effective Product Management”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "The Role of KPIs and Feedback in Effective Product Management",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-16T08:00:00.000Z"
-  },
-  {
-    "slug": "legacy-system-modernization",
-    "title": "Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-15T08:00:00.000Z"
-  },
-  {
-    "slug": "minimum-lovable-product",
-    "title": "Minimum Lovable Product (MLP): When Your MVP Isn't Enough – And When It Is",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Minimum Lovable Product (MLP): When Your MVP Isn't Enough – And When It Is”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "Minimum Lovable Product (MLP): When Your MVP Isn't Enough – And When It Is",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-14T08:00:00.000Z"
-  },
-  {
-    "slug": "minimum-viable-product-development",
-    "title": "What is an MVP? A Founder's Guide to De-Risking Your Dream In a World Where Most Startups Fail",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “What is an MVP? A Founder's Guide to De-Risking Your Dream In a World Where Most Startups Fail”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "What is an MVP? A Founder's Guide to De-Risking Your Dream In a World Where Most Startups Fail",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-13T08:00:00.000Z"
-  },
-  {
-    "slug": "minimum-viable-product-examples",
-    "title": "Minimum Viable Product Examples: 12 MVPs That Worked – And What You Can Steal From Each",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Minimum Viable Product Examples: 12 MVPs That Worked – And What You Can Steal From Each”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "Minimum Viable Product Examples: 12 MVPs That Worked – And What You Can Steal From Each",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-12T08:00:00.000Z"
-  },
-  {
-    "slug": "modern-development",
-    "title": "Integrating Data Science and Agile: A Comprehensive Guide to Modern Development",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Integrating Data Science and Agile: A Comprehensive Guide to Modern Development”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "Integrating Data Science and Agile: A Comprehensive Guide to Modern Development",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-11T08:00:00.000Z"
-  },
-  {
-    "slug": "most-expensive-part-of-it-project",
-    "title": "The Most Expensive Part of an IT Project Is the Questions Nobody Asked [INTERVIEW]",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “The Most Expensive Part of an IT Project Is the Questions Nobody Asked [INTERVIEW]”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "The Most Expensive Part of an IT Project Is the Questions Nobody Asked [INTERVIEW]",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-10-14T08:00:00.000Z"
-  },
-  {
-    "slug": "mvp-development-costs",
-    "title": "How Much Does It Cost to Build an MVP in 2026?",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How Much Does It Cost to Build an MVP in 2026?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "How Much Does It Cost to Build an MVP in 2026?",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-09T08:00:00.000Z"
-  },
-  {
-    "slug": "native-or-cross-platform-what-to-choose",
-    "title": "Native vs. Hybrid App: What Approach and Framework to Choose for Your Mobile App Development?",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Native vs. Hybrid App: What Approach and Framework to Choose for Your Mobile App Development?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "Native vs. Hybrid App: What Approach and Framework to Choose for Your Mobile App Development?",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-08T08:00:00.000Z"
-  },
-  {
-    "slug": "no-code-low-code",
-    "title": "No-Code vs. Low-Code: Choosing the Right Path for Your Business Needs",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “No-Code vs. Low-Code: Choosing the Right Path for Your Business Needs”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "No-Code vs. Low-Code: Choosing the Right Path for Your Business Needs",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-07T08:00:00.000Z"
-  },
-  {
-    "slug": "onshore-nearshore-and-offshore-outsourcing",
-    "title": "How to Choose the Best Outsourcing Strategy: Onshore, Nearshore, Offshore",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Choose the Best Outsourcing Strategy: Onshore, Nearshore, Offshore”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "How to Choose the Best Outsourcing Strategy: Onshore, Nearshore, Offshore",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-06T08:00:00.000Z"
-  },
-  {
-    "slug": "outsourcing-software-development-for-startups",
-    "title": "Outsourcing Software Development for Startups: A Founder's Guide (2026)",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Outsourcing Software Development for Startups: A Founder's Guide (2026)”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "Outsourcing Software Development for Startups: A Founder's Guide (2026)",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-05T08:00:00.000Z"
-  },
-  {
-    "slug": "project-efficiency",
-    "title": "How to Manage Budget Changes and Improve Cost Estimates for Project Efficiency",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Manage Budget Changes and Improve Cost Estimates for Project Efficiency”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "How to Manage Budget Changes and Improve Cost Estimates for Project Efficiency",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-04T08:00:00.000Z"
-  },
-  {
-    "slug": "pros-and-cons-of-outsourcing-software-development",
-    "title": "Benefits of Outsourcing Software Development – And the Cost of Leaving",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Benefits of Outsourcing Software Development – And the Cost of Leaving”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "Benefits of Outsourcing Software Development – And the Cost of Leaving",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-03T08:00:00.000Z"
-  },
-  {
-    "slug": "reducing-ota-dependence-in-hospitality",
-    "title": "How to Reduce OTA Dependence: The 2026 Playbook for Hotels That Want to Keep Their Revenue",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Reduce OTA Dependence: The 2026 Playbook for Hotels That Want to Keep Their Revenue”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "How to Reduce OTA Dependence: The 2026 Playbook for Hotels That Want to Keep Their Revenue",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-02T08:00:00.000Z"
-  },
-  {
-    "slug": "restaurant-app-development",
-    "title": "How to Create a Restaurant App? A Guide to Restaurant App Development",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Create a Restaurant App? A Guide to Restaurant App Development”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "How to Create a Restaurant App? A Guide to Restaurant App Development",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-28T08:00:00.000Z"
-  },
-  {
-    "slug": "social-media-app-development-cost-estimation",
-    "title": "How to Estimate Social Media App Development Cost?",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Estimate Social Media App Development Cost?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "How to Estimate Social Media App Development Cost?",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-27T08:00:00.000Z"
-  },
-  {
-    "slug": "software-development-billing-models",
-    "title": "Software Development Billing Models: What’s Best for Your Project?",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Software Development Billing Models: What’s Best for Your Project?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "Software Development Billing Models: What’s Best for Your Project?",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-26T08:00:00.000Z"
-  },
-  {
-    "slug": "software-development-costs",
-    "title": "Software Development Costs in 2026: What You'll Actually Pay?",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Software Development Costs in 2026: What You'll Actually Pay?”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "Software Development Costs in 2026: What You'll Actually Pay?",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-25T08:00:00.000Z"
-  },
-  {
-    "slug": "software-development-for-startups",
-    "title": "Software Development for Startups: Build Less, Ship Faster [2026]",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Software Development for Startups: Build Less, Ship Faster [2026]”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "Software Development for Startups: Build Less, Ship Faster [2026]",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-24T08:00:00.000Z"
-  },
-  {
-    "slug": "software-development-process",
-    "title": "Software Development Process - A Step-By-Step Guide to Creating High-Quality Software",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Software Development Process - A Step-By-Step Guide to Creating High-Quality Software”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "Software Development Process - A Step-By-Step Guide to Creating High-Quality Software",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-23T08:00:00.000Z"
-  },
-  {
-    "slug": "software-development-risks",
-    "title": "What risks can you expect during an app development and how to prepare for them",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “What risks can you expect during an app development and how to prepare for them”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "What risks can you expect during an app development and how to prepare for them",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-22T08:00:00.000Z"
-  },
-  {
-    "slug": "speed-up-your-react-app-using-cloudinary-and-lazy-loading",
-    "title": "Speed Up Your React App Using Cloudinary and Lazy Loading",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Speed Up Your React App Using Cloudinary and Lazy Loading”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "Speed Up Your React App Using Cloudinary and Lazy Loading",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-21T08:00:00.000Z"
-  },
-  {
-    "slug": "startup-product-development-from-first-idea-to-market",
-    "title": "Startup Product Development: From First Idea to Market 2026",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Startup Product Development: From First Idea to Market 2026”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "Startup Product Development: From First Idea to Market 2026",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-20T08:00:00.000Z"
-  },
-  {
-    "slug": "taxi-booking-app-development",
-    "title": "The 2026 Ultimate Playbook to Taxi Mobile App Development: AI, MaaS, and Scalable Architecture",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “The 2026 Ultimate Playbook to Taxi Mobile App Development: AI, MaaS, and Scalable Architecture”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "The 2026 Ultimate Playbook to Taxi Mobile App Development: AI, MaaS, and Scalable Architecture",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-19T08:00:00.000Z"
-  },
-  {
-    "slug": "teacode-client-centric-development-approach",
-    "title": "From Kickoff to Long-Term Growth: TeaCode’s Client-Centric Development Approach",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “From Kickoff to Long-Term Growth: TeaCode’s Client-Centric Development Approach”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "From Kickoff to Long-Term Growth: TeaCode’s Client-Centric Development Approach",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-18T08:00:00.000Z"
-  },
-  {
-    "slug": "tech-startup-pitch-deck-guide",
-    "title": "How to Pitch Investors: The Tech Startup Blueprint That Actually Gets Funded",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Pitch Investors: The Tech Startup Blueprint That Actually Gets Funded”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "How to Pitch Investors: The Tech Startup Blueprint That Actually Gets Funded",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-17T08:00:00.000Z"
-  },
-  {
-    "slug": "top-10-custom-software-development-companies",
-    "title": "Ranking of the Top 10 Custom Software Development Companies 2026: A Guide for Tech Leaders",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Ranking of the Top 10 Custom Software Development Companies 2026: A Guide for Tech Leaders”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "Ranking of the Top 10 Custom Software Development Companies 2026: A Guide for Tech Leaders",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-16T08:00:00.000Z"
-  },
-  {
-    "slug": "travel-app-development",
-    "title": "How to Build a Travel App in 2026: The Complete Guide to Travel App Development",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Build a Travel App in 2026: The Complete Guide to Travel App Development”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "How to Build a Travel App in 2026: The Complete Guide to Travel App Development",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-15T08:00:00.000Z"
-  },
-  {
-    "slug": "travel-legacy-systems-upgrade",
-    "title": "Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "Legacy System Modernization in 2026: Strategies, Costs, and Real Failure Case Studies",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-14T08:00:00.000Z"
-  },
-  {
-    "slug": "ui-design-tips",
-    "title": "How to Create an Award-Winning App User Interface Design – An Expert’s Guide for 2024",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Create an Award-Winning App User Interface Design – An Expert’s Guide for 2024”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "How to Create an Award-Winning App User Interface Design – An Expert’s Guide for 2024",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-13T08:00:00.000Z"
-  },
-  {
-    "slug": "ultimate-guide-web-mobile-app-design",
-    "title": "The Ultimate Guide to the Web & Mobile App Design",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “The Ultimate Guide to the Web & Mobile App Design”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "The Ultimate Guide to the Web & Mobile App Design",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-12T08:00:00.000Z"
-  },
-  {
-    "slug": "ux-audit-guide",
-    "title": "How to Conduct a UX Audit: A Step-by-Step Guide",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “How to Conduct a UX Audit: A Step-by-Step Guide”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-6.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "How to Conduct a UX Audit: A Step-by-Step Guide",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-11T08:00:00.000Z"
-  },
-  {
-    "slug": "ux-design-tips",
-    "title": "The importance of User Experience: UX Design Tips from Our Head of Design",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “The importance of User Experience: UX Design Tips from Our Head of Design”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-1.png",
-    "author": "Editorial team",
-    "category": "Outsourcing",
-    "tags": [
-      "outsourcing"
-    ],
-    "seoTitle": "The importance of User Experience: UX Design Tips from Our Head of Design",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-10T08:00:00.000Z"
-  },
-  {
-    "slug": "vibe-coding-prototyping",
-    "title": "Vibe Prototyping: How To Turn Ideas Into Experiences Before Coding",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “Vibe Prototyping: How To Turn Ideas Into Experiences Before Coding”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-2.png",
-    "author": "Editorial team",
-    "category": "Design",
-    "tags": [
-      "design"
-    ],
-    "seoTitle": "Vibe Prototyping: How To Turn Ideas Into Experiences Before Coding",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-09T08:00:00.000Z"
-  },
-  {
-    "slug": "what-is-white-label-application",
-    "title": "What Is a White Label App? The Strategic Guide for Founders and Product Leaders",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “What Is a White Label App? The Strategic Guide for Founders and Product Leaders”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-3.png",
-    "author": "Editorial team",
-    "category": "AI",
-    "tags": [
-      "ai"
-    ],
-    "seoTitle": "What Is a White Label App? The Strategic Guide for Founders and Product Leaders",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-08T08:00:00.000Z"
-  },
-  {
-    "slug": "what-software-teams-can-learn-from-game-dev",
-    "title": "What Software Teams Can Learn from Game Development Processes",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “What Software Teams Can Learn from Game Development Processes”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-4.png",
-    "author": "Editorial team",
-    "category": "Software Development",
-    "tags": [
-      "software development"
-    ],
-    "seoTitle": "What Software Teams Can Learn from Game Development Processes",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-07T08:00:00.000Z"
-  },
-  {
-    "slug": "white-label-vs-custom-app-development",
-    "title": "White Label App Development vs. Custom: The Real Cost of Renting Your Tech",
-    "excerpt": "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
-    "body": "## Why this matters\n\nPlaceholder article for “White Label App Development vs. Custom: The Real Cost of Renting Your Tech”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n",
-    "coverImage": "/assets/covers/cover-5.png",
-    "author": "Editorial team",
-    "category": "Product",
-    "tags": [
-      "product"
-    ],
-    "seoTitle": "White Label App Development vs. Custom: The Real Cost of Renting Your Tech",
-    "seoDescription": "Placeholder article. Replace before launch.",
-    "publishedAt": "2026-07-06T08:00:00.000Z"
-  }
 ];

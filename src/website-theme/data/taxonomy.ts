@@ -1,22 +1,13 @@
-export const industryFilters = [
-  "eCommerce",
-  "Travel & Hospitality",
-  "Artificial Intelligence",
-  "EdTech",
-  "Startups",
-  "Real Estate",
-  "Logistics",
-  "Fintech",
-  "Medtech",
-  "Marketing"
-] as const;
+export const industryFilters = ["FinTech", "Healthcare", "Logistics", "E-commerce", "Education", "SaaS"] as const;
+
 export const serviceFilters = [
   "Custom Software",
-  "Web Apps",
+  "Web Applications",
   "Mobile Apps",
   "AI",
-  "UX/UI",
-  "Enterprise",
-  "Maintenance",
-  "Offshore"
+  "Product Design",
+  "Cloud & DevOps",
+  "Product Engineering",
+  "Dedicated Teams",
+  "Support",
 ] as const;

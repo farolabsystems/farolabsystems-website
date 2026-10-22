@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/website-theme/config/site.config";
-import { withLocale } from "@/website-theme/config/site.config";
+import { siteConfig, withLocale } from "@/website-theme/config/site.config";
 import { getCaseStudy, listCaseStudies } from "@/modules/case-studies/case-study.service";
 import { Markdown } from "@/website-theme/ui/Markdown";
 import { Container } from "@/website-theme/ui/Container";
@@ -28,7 +28,9 @@ export async function CaseStudyPage({ slug, locale = "en" }: { slug: string; loc
         }}
       />
       <Container>
-        <p className="caption">{study.industries.join(" · ")} · {study.services.join(" · ")}</p>
+        <p className="caption">
+          {siteConfig.demoCaseStudyLabel} · {study.industries.join(" · ")} · {study.services.join(" · ")}
+        </p>
         <h1 className="heading-2 mt-3 max-w-[18ch]">{study.title}</h1>
         <p className="body-lg muted mt-4 max-w-[68ch]">{study.summary}</p>
         <Image src={study.cover} alt="" width={1200} height={720} priority className="mt-8 w-full rounded-[var(--tc-radius-card-lg)] object-cover" />

@@ -11,7 +11,7 @@ export default async function LeadsPage() {
         <table className="w-full text-left" style={{ borderCollapse: "collapse" }}>
           <thead>
             <tr>
-              {["When", "Name", "Email", "Starting", "Message"].map((heading) => (
+              {["When", "Name", "Email", "Looking for", "Message"].map((heading) => (
                 <th key={heading} className="body-sm" style={{ padding: "var(--tc-space-3)", borderBottom: "1px solid var(--tc-border)" }}>
                   {heading}
                 </th>
@@ -25,7 +25,7 @@ export default async function LeadsPage() {
                   {lead.createdAt.toISOString().slice(0, 16).replace("T", " ")}
                 </td>
                 <td className="body-sm" style={{ padding: "var(--tc-space-3)" }}>
-                  {lead.firstName}
+                  {lead.firstName} {lead.lastName}
                 </td>
                 <td className="body-sm" style={{ padding: "var(--tc-space-3)" }}>
                   {lead.email}

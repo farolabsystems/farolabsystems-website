@@ -1,14 +1,22 @@
-export const startingOptions = [
-  {
-    id: "new" as const,
-    label: "Starting something new",
-    hint: "A product, system, or app",
-    chips: ["New product or MVP", "Business system", "Customer app", "New revenue channel"],
-  },
-  {
-    id: "continuation" as const,
-    label: "Something is holding us back",
-    hint: "A rented tool, an old system, or manual work",
-    chips: ["SaaS limits us", "Outdated system", "Team to take over", "Manual work"],
-  },
-];
+export const projectIntents = [
+  "Build a new product",
+  "Improve an existing product",
+  "AI integration",
+  "Hire a development team",
+  "UI/UX design",
+  "Cloud & DevOps",
+  "Support & maintenance",
+  "Something else",
+] as const;
+
+export const contactPage = {
+  eyebrow: "Contact",
+  title: "Let's build something useful.",
+  body: "Have an idea, an existing product or a technology challenge? Tell us what you're working on and we'll explore how we can help.",
+};
+
+export const schedulePage = {
+  eyebrow: "Schedule",
+  title: "Let's talk about your project.",
+  body: "Choose a convenient time to discuss your product, technology requirements and next steps. A scheduling link can be added in site configuration. Until then, send a note with times that work for you.",
+};

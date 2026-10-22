@@ -41,12 +41,16 @@ export async function BlogPostPage({ slug, locale = "en" }: { slug: string; loca
         }}
       />
       <Container>
-        <p className="caption">
-          {post.category} · {new Date(post.publishedAt).toLocaleDateString("en-GB")} · {readingTime(post.body)} min read
-        </p>
-        <h1 className="heading-2 mt-3 max-w-[20ch]">{post.title}</h1>
-        <p className="body-lg muted mt-4 max-w-[68ch]">{post.excerpt}</p>
-        <Image src={post.coverImage} alt="" width={1200} height={680} priority className="mt-8 w-full rounded-[var(--tc-radius-card-lg)] object-cover" />
+        <div className="blog-hero">
+          <Image src={post.coverImage} alt="" width={1600} height={900} priority className="blog-hero-media" />
+          <div className="blog-hero-copy">
+            <p className="caption">
+              {post.category} · {new Date(post.publishedAt).toLocaleDateString("en-GB")} · {readingTime(post.body)} min read
+            </p>
+            <h1 className="heading-3 mt-3 max-w-[18ch]">{post.title}</h1>
+            <p className="body-lg mt-4 max-w-[46ch]">{post.excerpt}</p>
+          </div>
+        </div>
         <div className="mt-10 grid gap-10 lg:grid-cols-[220px_1fr]">
           {toc.length ? (
             <nav aria-label="On this page" className="grid content-start gap-2">
@@ -73,8 +77,11 @@ export async function BlogPostPage({ slug, locale = "en" }: { slug: string; loca
         <ul className="mt-4 grid gap-3 md:grid-cols-3">
           {related.map((item) => (
             <li key={item.slug}>
-              <Link href={withLocale(locale, `/blog/${item.slug}`)} className="card block">
-                {item.title}
+              <Link href={withLocale(locale, `/blog/${item.slug}`)} className="card grid gap-3">
+                <div className="blog-cover">
+                  <Image src={item.coverImage} alt="" width={1600} height={900} className="h-full w-full object-cover" />
+                </div>
+                <span className="heading-6">{item.title}</span>
               </Link>
             </li>
           ))}

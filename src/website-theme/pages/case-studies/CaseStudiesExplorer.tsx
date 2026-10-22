@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
+import { siteConfig } from "@/website-theme/config/site.config";
 import { industryFilters, serviceFilters } from "@/website-theme/data/taxonomy";
 import type { CaseStudyRecord } from "@/website-theme/data/types";
 
@@ -78,6 +79,7 @@ export function CaseStudiesExplorer({ locale, studies }: { locale: Locale; studi
           <li key={study.slug}>
             <Link href={withLocale(locale, `/case-studies/${study.slug}`)} className="card grid gap-3">
               <Image src={study.cover} alt="" width={640} height={400} className="h-40 w-full rounded-[var(--tc-radius-sm)] object-cover" />
+              <p className="caption">{siteConfig.demoCaseStudyLabel}</p>
               <h2 className="heading-6">{study.title}</h2>
               <p className="body-sm muted">{study.summary}</p>
               <p className="caption">{study.industries.join(" · ")}</p>

@@ -3,8 +3,8 @@ import { CaseStudiesPage } from "@/website-theme/pages/case-studies/CaseStudiesP
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Case studies",
-  description: "Selected product work across industries and services.",
+  title: "Demo Case Studies | ELYVANTA",
+  description: "Concept projects that show how ELYVANTA approaches product design and software engineering. These are not client engagements.",
   path: "/case-studies",
 });
 

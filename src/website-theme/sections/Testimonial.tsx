@@ -6,13 +6,11 @@ export function Testimonial() {
   return (
     <Section tone="alt" tight>
       <Container>
-        <blockquote>
-          <p className="heading-4 max-w-[28ch]">“{testimonial.quote}”</p>
-          <footer className="body mt-6">
-            {testimonial.name}
-            <span className="muted"> · {testimonial.role}</span>
-          </footer>
-        </blockquote>
+        <p className="caption" style={{ letterSpacing: "var(--tc-tracking-eyebrow)", textTransform: "uppercase" }}>
+          {testimonial.eyebrow}
+        </p>
+        <h2 className="heading-4 mt-4 max-w-[28ch]">{testimonial.title}</h2>
+        <p className="body-lg mt-4 max-w-[62ch]">{testimonial.body}</p>
       </Container>
     </Section>
   );

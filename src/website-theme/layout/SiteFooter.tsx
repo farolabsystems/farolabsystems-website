@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@/website-theme/ui/Button";
 import type { Locale } from "@/website-theme/config/site.config";
 import { siteConfig, uiCopy, withLocale } from "@/website-theme/config/site.config";
 import { footerColumns, localizeHref } from "@/website-theme/data/navigation";
@@ -8,9 +9,9 @@ import { ScrollTop } from "@/website-theme/layout/ScrollTop";
 
 const columns = [
   { title: "Services", links: footerColumns.services },
-  { title: "Outstaffing", links: footerColumns.outstaffing },
+  { title: "Solutions", links: footerColumns.solutions },
   { title: "Industries", links: footerColumns.industries },
-  { title: "Case studies", links: footerColumns.caseStudies },
+  { title: "Company", links: footerColumns.company },
 ] as const;
 
 export function SiteFooter({ locale }: { locale: Locale }) {
@@ -18,6 +19,12 @@ export function SiteFooter({ locale }: { locale: Locale }) {
   return (
     <footer className="footer">
       <div className="container grid gap-10">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <h2 className="heading-4 max-w-[22ch]" style={{ color: "var(--tc-footer-text)" }}>
+            {siteConfig.footerHeadline}
+          </h2>
+          <Button href={withLocale(locale, "/contact")}>{siteConfig.footerCta}</Button>
+        </div>
         <div className="grid gap-8 lg:grid-cols-[1.1fr_2fr]">
           <div className="grid content-start gap-4">
             <div className="[&_span]:text-[var(--tc-footer-text)]">
@@ -29,19 +36,22 @@ export function SiteFooter({ locale }: { locale: Locale }) {
                   {line}
                 </span>
               ))}
-              <span className="mt-2 block">tax no: {siteConfig.taxNumber}</span>
+              {siteConfig.taxNumber ? <span className="mt-2 block">tax no: {siteConfig.taxNumber}</span> : null}
+              {siteConfig.phone ? <span className="mt-2 block">{siteConfig.phone}</span> : null}
               <a className="mt-2 block" href={`mailto:${siteConfig.email}`}>
                 {siteConfig.email}
               </a>
             </address>
             <Link href={withLocale(locale, "/schedule-meeting")}>{copy.schedule}</Link>
-            <div className="flex flex-wrap gap-2">
-              {siteConfig.directories.map((item) => (
-                <a key={item.label} className="badge" href={item.href} rel="noreferrer">
-                  {item.label}
-                </a>
-              ))}
-            </div>
+            {siteConfig.directories.length ? (
+              <div className="flex flex-wrap gap-2">
+                {siteConfig.directories.map((item) => (
+                  <a key={item.label} className="badge" href={item.href} rel="noreferrer">
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            ) : null}
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {columns.map((column) => (
@@ -59,14 +69,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           </div>
         </div>
         <div className="grid gap-4 border-t border-white/15 pt-6 md:grid-cols-[1fr_auto] md:items-center">
-          <div className="grid gap-2">
-            <Link href={withLocale(locale, "/collaboration")} className="body">
-              {copy.freelancer}
-            </Link>
-            <p className="body-sm">
-              {siteConfig.copyright} © {siteConfig.codedWith}
-            </p>
-          </div>
+          <p className="body-sm">© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-4">
             <Link href={withLocale(locale, "/privacy-policy")} className="body-sm">
               {copy.privacy}
@@ -75,13 +78,15 @@ export function SiteFooter({ locale }: { locale: Locale }) {
               {copy.cookies}
             </Link>
             <LanguageSwitcher />
-            <div className="flex gap-3">
-              {siteConfig.socials.map((item) => (
-                <a key={item.label} href={item.href} rel="noreferrer" aria-label={item.label} className="body-sm">
-                  {item.label}
-                </a>
-              ))}
-            </div>
+            {siteConfig.socials.length ? (
+              <div className="flex gap-3">
+                {siteConfig.socials.map((item) => (
+                  <a key={item.label} href={item.href} rel="noreferrer" aria-label={item.label} className="body-sm">
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

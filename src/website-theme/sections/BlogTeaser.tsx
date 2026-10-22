@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
+import { blogSection } from "@/website-theme/data/home";
 import type { PostRecord } from "@/website-theme/data/types";
 import { Container } from "@/website-theme/ui/Container";
 import { Section } from "@/website-theme/ui/Section";
@@ -11,7 +12,10 @@ export function BlogTeaser({ locale, posts }: { locale: Locale; posts: PostRecor
     <Section>
       <Container>
         <div className="flex items-end justify-between gap-4">
-          <h2 className="heading-2">From our blog</h2>
+          <div>
+            <h2 className="heading-2 max-w-[16ch]">{blogSection.title}</h2>
+            <p className="body muted mt-3 max-w-[52ch]">{blogSection.body}</p>
+          </div>
           <Link href={withLocale(locale, "/blog")} style={{ color: "var(--tc-primary-active)" }}>
             All articles
           </Link>
@@ -19,7 +23,9 @@ export function BlogTeaser({ locale, posts }: { locale: Locale; posts: PostRecor
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {posts.map((post) => (
             <Link key={post.slug} href={withLocale(locale, `/blog/${post.slug}`)} className="card grid gap-3">
-              <Image src={post.coverImage} alt="" width={640} height={400} className="h-40 w-full rounded-[var(--tc-radius-sm)] object-cover" />
+              <div className="blog-cover">
+                <Image src={post.coverImage} alt="" width={1600} height={900} className="h-full w-full object-cover" />
+              </div>
               <p className="caption">
                 {post.category} · {new Date(post.publishedAt).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
               </p>

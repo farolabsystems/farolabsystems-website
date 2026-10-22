@@ -3,8 +3,8 @@ import { LegalPage } from "@/website-theme/pages/legal/LegalPage";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Privacy policy",
-  description: "How we handle personal data sent through this site.",
+  title: "Privacy Policy | ELYVANTA",
+  description: "How ELYVANTA collects, uses and stores personal data submitted through this website contact form.",
   path: "/privacy-policy",
 });
 

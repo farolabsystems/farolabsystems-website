@@ -1,36 +1,24 @@
-// TODO: replace with our own — every brand string in this file is a placeholder.
+// TODO: Replace with actual company information — email, phone, address, tax number, social profiles, and meeting link.
 
 export type Locale = "en" | "pl";
 
 export const siteConfig = {
-  name: "COMPANY_NAME",
-  legalName: "COMPANY_NAME",
+  name: "ELYVANTA",
+  legalName: "ELYVANTA",
   description:
-    "We design and build custom web, mobile, and internal software for teams that have outgrown spreadsheets and rented tools.",
+    "ELYVANTA helps startups and businesses design, build, and scale reliable digital products through software engineering, design, and practical AI.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  email: "inquiry@example.com",
-  phone: "+00 000 000 000",
-  addressLines: ["ADDRESS_LINE_1", "ADDRESS_LINE_2"],
-  taxNumber: "TAX_NUMBER",
-  copyright: "COMPANY_NAME",
-  codedWith: "We code with care and coffee",
-  reviewLabel: "DIRECTORY",
-  reviewScore: "0.0",
-  reviewCount: "00 reviews",
-  socials: [
-    { label: "LinkedIn", href: "https://www.linkedin.com" },
-    { label: "Dribbble", href: "https://dribbble.com" },
-    { label: "GitHub", href: "https://github.com" },
-  ],
-  directories: [
-    { label: "Clutch", href: "https://clutch.co" },
-    { label: "GoodFirms", href: "https://www.goodfirms.co" },
-    { label: "Upwork", href: "https://www.upwork.com" },
-  ],
-  founders: [
-    { name: "FOUNDER_ONE", role: "Co-founder", initials: "F1" },
-    { name: "FOUNDER_TWO", role: "Co-founder", initials: "F2" },
-  ],
+  email: "hello@example.com",
+  phone: "",
+  addressLines: ["TODO: Replace with actual company information"],
+  taxNumber: "",
+  meetingUrl: "",
+  footerHeadline: "Have a project in mind? Let's build it together.",
+  footerCta: "Start a project",
+  demoCaseStudyLabel: "Demo case study",
+  socials: [] as { label: string; href: string }[],
+  directories: [] as { label: string; href: string }[],
+  founders: [] as { name: string; role: string; initials: string }[],
 } as const;
 
 export const uiCopy = {
@@ -45,17 +33,17 @@ export const uiCopy = {
     language: "Site language",
     cookieTitle: "We value your privacy",
     cookieBody:
-      "We use cookies to run the site, remember your choices, and understand which pages help. Read the cookie policy for the details.",
+      "We use cookies to run the site and remember your choices. Read the cookie policy for the details.",
     accept: "Accept all",
     reject: "Reject all",
     customize: "Customize",
     save: "Save choices",
     localeNote: "",
     schedule: "Schedule a meeting",
-    freelancer: "Join us as a freelancer",
     privacy: "Privacy policy",
     cookies: "Cookie policy",
     scrollTop: "Back to top",
+    startProject: "Start a project",
   },
   pl: {
     services: "Usługi",
@@ -75,10 +63,10 @@ export const uiCopy = {
     save: "Zapisz wybór",
     localeNote: "Polskie tłumaczenie treści jest przygotowane jako struktura. Tekst merytoryczny pozostaje po angielsku.",
     schedule: "Umów spotkanie",
-    freelancer: "Dołącz jako freelancer",
     privacy: "Polityka prywatności",
     cookies: "Polityka cookies",
     scrollTop: "Do góry",
+    startProject: "Zacznij projekt",
   },
 } as const;
 

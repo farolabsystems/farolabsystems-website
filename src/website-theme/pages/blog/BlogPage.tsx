@@ -4,6 +4,7 @@ import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
 import { listPosts } from "@/modules/content/content.service";
 import { Container } from "@/website-theme/ui/Container";
+import { blogSection } from "@/website-theme/data/home";
 import { readingTime } from "@/lib/slug";
 
 const PAGE_SIZE = 9;
@@ -36,10 +37,11 @@ export async function BlogPage({
   return (
     <section className="section" style={{ paddingTop: "var(--tc-space-9)" }}>
       <Container>
-        <h1 className="heading-2 max-w-[18ch]">Notes on building software that has to last</h1>
-        <p className="body-lg muted mt-4 max-w-[62ch]">
-          Placeholder articles. Replace them from the admin before you publish this site.
-        </p>
+        <div className="blog-index-banner">
+          <p className="eyebrow">Journal</p>
+          <h1 className="heading-2 max-w-[14ch]">{blogSection.title}</h1>
+          <p className="body-lg mt-4 max-w-[46ch]">{blogSection.body}</p>
+        </div>
         <div className="mt-8 flex flex-wrap gap-2" aria-label="Categories">
           <Link href={hrefFor(1)} className="chip" aria-current={!category ? "page" : undefined}>
             All
@@ -54,7 +56,9 @@ export async function BlogPage({
           {slice.map((post) => (
             <li key={post.slug}>
               <Link href={withLocale(locale, `/blog/${post.slug}`)} className="card grid gap-3">
-                <Image src={post.coverImage} alt="" width={640} height={400} className="h-40 w-full rounded-[var(--tc-radius-sm)] object-cover" />
+                <div className="blog-cover">
+                  <Image src={post.coverImage} alt="" width={1600} height={900} className="h-full w-full object-cover" />
+                </div>
                 <p className="caption">
                   {post.category} · {readingTime(post.body)} min
                 </p>

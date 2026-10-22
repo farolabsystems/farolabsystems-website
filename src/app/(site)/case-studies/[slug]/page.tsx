@@ -13,7 +13,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const study = caseStudies.find((item) => item.slug === slug);
   if (!study) return {};
-  return buildMetadata({ title: study.title, description: study.summary, path: `/case-studies/${slug}` });
+  return buildMetadata({
+    title: `${study.title} | Demo Case Study | ELYVANTA`,
+    description: study.summary,
+    path: `/case-studies/${slug}`,
+  });
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {

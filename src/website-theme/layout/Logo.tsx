@@ -1,16 +1,29 @@
+import Image from "next/image";
 import Link from "next/link";
-import { siteConfig, withLocale, type Locale } from "@/website-theme/config/site.config";
+import { withLocale, type Locale } from "@/website-theme/config/site.config";
+
+const logoStyle = { height: "var(--tc-logo, var(--tc-space-7))", width: "auto" } as const;
 
 export function Logo({ locale = "en" }: { locale?: Locale }) {
   return (
-    <Link href={withLocale(locale, "/")} className="inline-flex items-center gap-3" aria-label={siteConfig.name}>
-      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-        <rect width="32" height="32" rx="10" fill="var(--tc-primary)" />
-        <path d="M10 22V10h7.2a4.6 4.6 0 0 1 0 9.2H14" fill="none" stroke="var(--tc-text)" strokeWidth="2" />
-      </svg>
-      <span className="body" style={{ fontWeight: 600, letterSpacing: "0.04em" }}>
-        {siteConfig.name}
-      </span>
+    <Link href={withLocale(locale, "/")} className="inline-flex items-center" aria-label="Farolab Systems">
+      <Image
+        src="/assets/brand/logo-header.png"
+        alt=""
+        width={942}
+        height={224}
+        priority
+        className="logo-on-light"
+        style={logoStyle}
+      />
+      <Image
+        src="/assets/brand/logo-footer-v2.png"
+        alt=""
+        width={904}
+        height={212}
+        className="logo-on-dark"
+        style={logoStyle}
+      />
     </Link>
   );
 }

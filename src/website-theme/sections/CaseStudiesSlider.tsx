@@ -5,15 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { Locale } from "@/website-theme/config/site.config";
-import { withLocale } from "@/website-theme/config/site.config";
+import { siteConfig, withLocale } from "@/website-theme/config/site.config";
+import { caseStudiesSection } from "@/website-theme/data/home";
 import type { CaseStudyRecord } from "@/website-theme/data/types";
 import { Container } from "@/website-theme/ui/Container";
 import { StatCounter } from "@/website-theme/ui/StatCounter";
 
-const order = ["plannin", "sans", "buzzin", "trava"];
-
 export function CaseStudiesSlider({ locale, studies }: { locale: Locale; studies: CaseStudyRecord[] }) {
-  const slides = order
+  const slides = caseStudiesSection.slugs
     .map((slug) => studies.find((study) => study.slug === slug))
     .filter((study): study is CaseStudyRecord => Boolean(study));
   const [index, setIndex] = useState(0);
@@ -24,7 +23,8 @@ export function CaseStudiesSlider({ locale, studies }: { locale: Locale; studies
   return (
     <section className="section">
       <Container>
-        <h2 className="heading-2 max-w-[16ch]">What we built, and what it changed</h2>
+        <h2 className="heading-2 max-w-[16ch]">{caseStudiesSection.title}</h2>
+        <p className="body-lg muted mt-4 max-w-[62ch]">{caseStudiesSection.body}</p>
         <div className="mt-6 flex flex-wrap gap-2" role="tablist" aria-label="Case studies">
           {slides.map((item, itemIndex) => (
             <button
@@ -50,6 +50,7 @@ export function CaseStudiesSlider({ locale, studies }: { locale: Locale; studies
           >
             <Image src={slide.cover} alt="" width={900} height={640} className="w-full rounded-[var(--tc-radius-card-lg)] object-cover" />
             <div className="grid gap-4">
+              <p className="caption">{siteConfig.demoCaseStudyLabel}</p>
               <h3 className="heading-3">{slide.title}</h3>
               <p className="body muted">{slide.summary}</p>
               <div className="grid grid-cols-3 gap-3">

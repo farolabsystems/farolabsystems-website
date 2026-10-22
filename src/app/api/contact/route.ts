@@ -30,6 +30,6 @@ export async function POST(request: Request) {
     return json({ ok: true });
   } catch (cause) {
     console.error(cause);
-    return error("We couldn't send that. Please try again.", 500);
+    return error("Something went wrong while submitting the form. Please try again.", 500);
   }
 }

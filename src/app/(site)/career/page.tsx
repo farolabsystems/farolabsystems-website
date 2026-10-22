@@ -3,8 +3,8 @@ import { CareerPage } from "@/website-theme/pages/career/CareerPage";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Career",
-  description: "Open roles and how to apply.",
+  title: "Careers at ELYVANTA | Software Engineering Jobs",
+  description: "Join ELYVANTA to work on modern software, learn with a cross-functional team, and build products that matter.",
   path: "/career",
 });
 

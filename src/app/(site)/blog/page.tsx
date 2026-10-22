@@ -3,8 +3,8 @@ import { BlogPage } from "@/website-theme/pages/blog/BlogPage";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blog",
-  description: "Notes on product discovery, design, and software delivery.",
+  title: "Technology Insights & Software Engineering Blog | ELYVANTA",
+  description: "Practical writing from ELYVANTA on software development, AI, product engineering, cloud technology and digital products.",
   path: "/blog",
 });
 

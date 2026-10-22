@@ -2,12 +2,13 @@
 
 import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import { adminDefaults } from "@/lib/admin-defaults";
 import { Button } from "@/website-theme/ui/Button";
 
 export default function LoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState("admin@example.com");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState<string>(adminDefaults.email);
+  const [password, setPassword] = useState<string>(adminDefaults.password);
   const [error, setError] = useState("");
 
   async function onSubmit(event: FormEvent) {

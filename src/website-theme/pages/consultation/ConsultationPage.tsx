@@ -9,11 +9,11 @@ export function ConsultationPage({
   locale?: Locale;
   kind: "technical" | "advisor";
 }) {
-  const title = kind === "technical" ? "A technical consultation" : "Book a consultation";
+  const title = kind === "technical" ? "A technical consultation" : "Let's talk about the decision in front of you";
   const body =
     kind === "technical"
-      ? "Bring the architecture question, the failing release, or the estimate you do not trust. This page is a placeholder."
-      : "Placeholder consultation page. It does not describe a real person. Replace it with your own advisors.";
+      ? "Bring an architecture question, a system you need to modernize, or a release that is getting harder to ship. We will help you see the next practical step."
+      : "This conversation is with ELYVANTA. It is not a profile of a named advisor. Tell us the product decision you need to make.";
   return (
     <>
       <PageHero locale={locale} eyebrow="Consultation" title={title} body={body} />

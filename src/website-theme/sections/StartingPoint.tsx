@@ -12,6 +12,7 @@ export function StartingPoint({ locale }: { locale: Locale }) {
       <Container>
         <Eyebrow>{startingPoint.eyebrow}</Eyebrow>
         <h2 className="heading-2 max-w-[16ch]">{startingPoint.title}</h2>
+        <p className="body-lg muted mt-4 max-w-[62ch]">{startingPoint.intro}</p>
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {startingPoint.columns.map((column) => (
             <article key={column.index} className="card grid gap-4">

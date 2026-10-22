@@ -2,10 +2,14 @@ import { z } from "zod";
 
 export const contactSchema = z.object({
   firstName: z.string().trim().min(1, "Enter your first name").max(80),
+  lastName: z.string().trim().min(1, "Enter your last name").max(80),
   email: z.string().trim().email("Enter a business email").max(160),
-  startingFrom: z.enum(["new", "continuation", ""]).optional(),
-  options: z.array(z.string().trim().min(1).max(80)).max(12).optional(),
-  message: z.string().trim().min(1, "Tell us what this should solve").max(5000),
+  company: z.string().trim().max(120).optional(),
+  phone: z.string().trim().max(40).optional(),
+  startingFrom: z.string().trim().min(1, "Tell us what you are looking for").max(80),
+  budget: z.string().trim().max(80).optional(),
+  timeline: z.string().trim().max(80).optional(),
+  message: z.string().trim().min(1, "Tell us about the project").max(5000),
   newsletter: z.boolean().optional(),
   company_website: z.string().max(200).optional(),
 });

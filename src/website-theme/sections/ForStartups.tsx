@@ -9,6 +9,7 @@ export function ForStartups() {
       <Container>
         <Eyebrow>{forStartups.eyebrow}</Eyebrow>
         <h2 className="heading-2 max-w-[18ch]">{forStartups.title}</h2>
+        <p className="body-lg muted mt-4 max-w-[62ch]">{forStartups.intro}</p>
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {forStartups.cards.map((card) => (
             <article key={card.question} className="card grid gap-3">

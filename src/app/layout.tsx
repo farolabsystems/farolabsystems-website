@@ -12,7 +12,10 @@ const workSans = Work_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },
+  title: {
+    default: `${siteConfig.name} | Software Development & Technology Solutions`,
+    template: "%s",
+  },
   description: siteConfig.description,
 };
 

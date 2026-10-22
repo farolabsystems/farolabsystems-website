@@ -11,8 +11,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   return buildMetadata({
-    title: "Book a consultation",
-    description: "Placeholder consultation page.",
+    title: "Book a Consultation | ELYVANTA",
+    description: "Talk with ELYVANTA about a product idea, an existing system, or a technology decision you need to make.",
     path: `/consultation/${slug}`,
   });
 }

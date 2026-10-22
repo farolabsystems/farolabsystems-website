@@ -5,9 +5,14 @@ export async function createLead(input: ContactInput, ip: string) {
   return prisma.lead.create({
     data: {
       firstName: input.firstName,
+      lastName: input.lastName,
       email: input.email,
-      startingFrom: input.startingFrom || null,
-      options: input.options ?? [],
+      company: input.company || "",
+      phone: input.phone || "",
+      startingFrom: input.startingFrom,
+      budget: input.budget || "",
+      timeline: input.timeline || "",
+      options: [],
       message: input.message,
       newsletter: Boolean(input.newsletter),
       ip,

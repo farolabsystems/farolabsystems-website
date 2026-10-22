@@ -6,6 +6,7 @@ export type ServiceRecord = {
   slug: string;
   navLabel: string;
   group: "Development" | "Design" | "Maintenance" | "Delivery";
+  filter: string;
   title: string;
   seoTitle: string;
   seoDescription: string;

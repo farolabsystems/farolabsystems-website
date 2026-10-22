@@ -1,6 +1,6 @@
 import type { Locale } from "@/website-theme/config/site.config";
 import { siteConfig } from "@/website-theme/config/site.config";
-import { homeFaqs } from "@/website-theme/data/home";
+import { caseStudiesSection, homeFaqs } from "@/website-theme/data/home";
 import { listCaseStudies } from "@/modules/case-studies/case-study.service";
 import { listPosts } from "@/modules/content/content.service";
 import { absoluteUrl } from "@/lib/seo";
@@ -19,7 +19,7 @@ import { Faq } from "@/website-theme/sections/Faq";
 import { LetsTalk } from "@/website-theme/sections/LetsTalk";
 import { JsonLd } from "@/website-theme/ui/JsonLd";
 
-const heroSlugs = ["trava", "beat-the-street", "sans"];
+const heroSlugs = caseStudiesSection.slugs;
 
 export async function HomePage({ locale = "en" }: { locale?: Locale }) {
   const [studies, posts] = await Promise.all([listCaseStudies(), listPosts()]);
@@ -34,8 +34,7 @@ export async function HomePage({ locale = "en" }: { locale?: Locale }) {
           "@type": "Organization",
           name: siteConfig.name,
           url: siteConfig.url,
-          email: siteConfig.email,
-          logo: absoluteUrl("/icon.svg"),
+          logo: absoluteUrl("/assets/brand/mark.png"),
         }}
       />
       <JsonLd

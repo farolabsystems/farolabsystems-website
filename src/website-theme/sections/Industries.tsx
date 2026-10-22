@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
-import { industryTabs } from "@/website-theme/data/home";
+import { industrySection, industryTabs } from "@/website-theme/data/home";
 import type { CaseStudyRecord } from "@/website-theme/data/types";
 import { Container } from "@/website-theme/ui/Container";
 import { Eyebrow } from "@/website-theme/ui/Eyebrow";
@@ -17,8 +17,9 @@ export function Industries({ locale, studies }: { locale: Locale; studies: CaseS
   return (
     <section className="section surface">
       <Container>
-        <Eyebrow>Industries</Eyebrow>
-        <h2 className="heading-2 max-w-[16ch]">Industries we know inside out</h2>
+        <Eyebrow>{industrySection.eyebrow}</Eyebrow>
+        <h2 className="heading-2 max-w-[18ch]">{industrySection.title}</h2>
+        <p className="body-lg muted mt-4 max-w-[62ch]">{industrySection.body}</p>
         <div className="mt-8 flex gap-2 overflow-x-auto" role="tablist" aria-label="Industries">
           {industryTabs.map((item) => (
             <button

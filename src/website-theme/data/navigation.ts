@@ -4,44 +4,45 @@ import { withLocale } from "@/website-theme/config/site.config";
 export type NavLink = { label: string; href: string; description?: string };
 
 export const portfolioIndustries: NavLink[] = [
-  { label: "eCommerce", href: '/case-studies?industries_equal=["eCommerce"]' },
-  { label: "Travel & Hospitality", href: '/case-studies?industries_equal=["Travel & Hospitality"]' },
-  { label: "Artificial Intelligence", href: '/case-studies?industries_equal=["Artificial Intelligence"]' },
-  { label: "EdTech", href: '/case-studies?industries_equal=["EdTech"]' },
-  { label: "Startups", href: '/case-studies?industries_equal=["Startups"]' },
+  { label: "FinTech", href: '/case-studies?industries_equal=["FinTech"]' },
+  { label: "Healthcare", href: '/case-studies?industries_equal=["Healthcare"]' },
+  { label: "Logistics", href: '/case-studies?industries_equal=["Logistics"]' },
+  { label: "E-commerce", href: '/case-studies?industries_equal=["E-commerce"]' },
+  { label: "Education", href: '/case-studies?industries_equal=["Education"]' },
+  { label: "SaaS", href: '/case-studies?industries_equal=["SaaS"]' },
 ];
 
 export const footerColumns = {
   services: [
     { label: "Custom Software Development", href: "/services/custom-software-development" },
-    { label: "Web App Development", href: "/services/web-app-development" },
-    { label: "Mobile App Development", href: "/services/cross-platform-mobile-app-development" },
-    { label: "Enterprise App Development", href: "/services/business-app-development" },
+    { label: "Web Development", href: "/services/web-application-development" },
+    { label: "Mobile Development", href: "/services/mobile-app-development" },
     { label: "AI Development", href: "/services/ai-development" },
-    { label: "UX/UI Design", href: "/services/ux-ui-product-design" },
-    { label: "Support & Maintenance", href: "/services/support-and-maintenance" },
+    { label: "UI/UX Design", href: "/services/ui-ux-product-design" },
+    { label: "Cloud & DevOps", href: "/services/cloud-devops" },
+    { label: "Product Engineering", href: "/services/product-engineering" },
   ],
-  outstaffing: [
-    { label: "Dedicated team", href: "/services/offshore-software-development" },
-    { label: "Team augmentation", href: "/collaboration" },
-    { label: "Staff augmentation", href: "/services/support-and-maintenance" },
+  solutions: [
+    { label: "Dedicated Teams", href: "/services/dedicated-development-teams" },
+    { label: "Team Augmentation", href: "/collaboration" },
+    { label: "Product Development", href: "/services/product-engineering" },
+    { label: "Digital Transformation", href: "/services/custom-software-development" },
+    { label: "AI Automation", href: "/services/ai-development" },
   ],
   industries: [
-    { label: "Travel & Hospitality", href: "/industries/travel-software-development" },
-    { label: "eCommerce", href: "/industries/ecommerce" },
-    { label: "Logistics", href: "/industries/logistics-digital-solutions-development" },
-    { label: "Real Estate", href: "/industries/real-estate-digital-solutions-development" },
-    { label: "Fintech", href: "/industries/fintech" },
-    { label: "Startups", href: "/industries/digital-solutions-for-startups" },
+    { label: "FinTech", href: "/industries/fintech" },
+    { label: "Healthcare", href: "/industries/healthcare" },
+    { label: "Logistics", href: "/industries/logistics" },
+    { label: "E-commerce", href: "/industries/ecommerce" },
+    { label: "Education", href: "/industries/education" },
+    { label: "SaaS", href: "/industries/saas" },
   ],
-  caseStudies: [
-    { label: "Trava", href: "/case-studies/trava" },
-    { label: "Plannin", href: "/case-studies/plannin" },
-    { label: "Beat the Street", href: "/case-studies/beat-the-street" },
-    { label: "Paymi", href: "/case-studies/paymi" },
-    { label: "Deutsche Bildung", href: "/case-studies/deutsche-bildung" },
-    { label: "Buzzin", href: "/case-studies/buzzin" },
-    { label: "More", href: "/case-studies" },
+  company: [
+    { label: "About Us", href: "/about-us" },
+    { label: "Career", href: "/career" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/contact" },
+    { label: "Schedule a Meeting", href: "/schedule-meeting" },
   ],
 } as const;
 

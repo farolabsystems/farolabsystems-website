@@ -49,7 +49,7 @@ export async function IndustryPage({ slug, locale = "en" }: { slug: string; loca
         </Container>
       </Section>
       <Faq locale={locale} items={industry.faqs} />
-      <CtaBanner locale={locale} title={`Building for ${industry.navLabel}?`} body="Tell us the operation the software has to carry." />
+      <CtaBanner locale={locale} title={`Building for ${industry.navLabel}?`} body="Tell us what the product needs to do, and we will help you shape the next step." />
     </>
   );
 }

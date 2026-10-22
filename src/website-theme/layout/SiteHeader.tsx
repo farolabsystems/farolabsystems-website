@@ -58,10 +58,12 @@ export function SiteHeader({ locale }: { locale: Locale }) {
     }))
     .filter((group) => group.items.length > 0);
 
-  const featured = ["plannin", "trava"]
-    .map((slug) => caseStudies.find((study) => study.slug === slug))
-    .filter((study) => study !== undefined)
-    .map((study) => ({ href: `/case-studies/${study.slug}`, title: study.title, summary: study.summary }));
+  const featuredStudies = caseStudies.filter((study) => study.featured).slice(0, 2);
+  const featured = featuredStudies.map((study) => ({
+    href: `/case-studies/${study.slug}`,
+    title: study.title,
+    summary: study.summary,
+  }));
 
   const mobileGroups = [
     ...serviceGroups,
@@ -69,8 +71,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
       title: copy.portfolio,
       items: [
         ...portfolioIndustries,
-        { label: "Plannin", href: "/case-studies/plannin" },
-        { label: "Trava", href: "/case-studies/trava" },
+        ...featuredStudies.map((study) => ({ label: study.title, href: `/case-studies/${study.slug}` })),
         { label: copy.seeAll, href: "/case-studies" },
       ],
     },
@@ -78,7 +79,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
 
   return (
     <header className={`site-header ${scrolled || openMenu || mobile ? "is-solid" : ""}`}>
-      <div className="container header-bar">
+      <div className="header-bar">
         <Logo locale={locale} />
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           <MegaMenu
@@ -115,17 +116,17 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           </span>
           <button
             type="button"
-            className="nav-link lg:hidden"
+            className="menu-toggle lg:hidden"
             aria-expanded={mobile}
             aria-controls="mobile-menu"
             onClick={() => setMobile((value) => !value)}
           >
-            <span className="sr-only">Menu</span>
-            <svg width="22" height="16" viewBox="0 0 22 16" aria-hidden="true">
+            <span className="sr-only">{mobile ? "Close menu" : "Menu"}</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
               {mobile ? (
-                <path d="M2 2 L20 14 M20 2 L2 14" stroke="currentColor" strokeWidth="1.6" />
+                <path d="M6 6 L18 18 M18 6 L6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
               ) : (
-                <path d="M1 1.5 H21 M1 8 H21 M1 14.5 H21" stroke="currentColor" strokeWidth="1.6" />
+                <path d="M4 7 H20 M4 12 H20 M4 17 H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
               )}
             </svg>
           </button>

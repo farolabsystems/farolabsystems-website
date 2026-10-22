@@ -17,9 +17,7 @@ export function getService(slug: string) {
 export async function ServicePage({ slug, locale = "en" }: { slug: string; locale?: Locale }) {
   const service = getService(slug);
   if (!service) notFound();
-  const studies = (await listCaseStudies()).filter((study) =>
-    study.services.some((item) => service.navLabel.toLowerCase().includes(item.toLowerCase()) || item === "Custom Software"),
-  );
+  const studies = (await listCaseStudies()).filter((study) => study.services.includes(service.filter));
   return (
     <>
       <PageHero locale={locale} eyebrow={service.eyebrow} title={service.title} body={service.summary} />
@@ -70,7 +68,7 @@ export async function ServicePage({ slug, locale = "en" }: { slug: string; local
         </Container>
       </Section>
       <Faq locale={locale} items={service.faqs} />
-      <CtaBanner locale={locale} title="Tell us the constraint." body={service.blurb} />
+      <CtaBanner locale={locale} title="Start with the problem." body={service.blurb} />
     </>
   );
 }

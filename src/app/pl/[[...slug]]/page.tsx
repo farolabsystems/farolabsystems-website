@@ -13,7 +13,7 @@ export async function generateMetadata({
   const { slug = [] } = await params;
   const path = slug.length ? `/pl/${slug.join("/")}` : "/pl";
   return buildMetadata({
-    title: siteConfig.name,
+    title: `${siteConfig.name} | Software Development & Technology Solutions`,
     description: siteConfig.description,
     path,
   });
