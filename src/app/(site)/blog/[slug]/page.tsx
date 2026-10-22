@@ -1,24 +1,15 @@
 import type { Metadata } from "next";
+import { BlogPostPage } from "@/website-theme/pages/blog/BlogPostPage";
+import { articleMetadata } from "@/lib/seo";
+import { getPost } from "@/modules/content/content.service";
 
 export const dynamic = "force-dynamic";
-import { posts } from "@/website-theme/data/posts";
-import { BlogPostPage } from "@/website-theme/pages/blog/BlogPostPage";
-import { buildMetadata } from "@/lib/seo";
-
-export function generateStaticParams() {
-  return posts.map((post) => ({ slug: post.slug }));
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const post = posts.find((item) => item.slug === slug);
-  if (!post) return {};
-  return buildMetadata({
-    title: post.seoTitle,
-    description: post.seoDescription,
-    path: `/blog/${slug}`,
-    type: "article",
-  });
+  const post = await getPost(slug);
+  if (!post) return { title: "Article not found", robots: { index: false, follow: false } };
+  return articleMetadata(post, `/blog/${slug}`);
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {

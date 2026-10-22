@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { adminDefaults } from "@/lib/admin-defaults";
 import { Button } from "@/website-theme/ui/Button";
@@ -28,8 +29,11 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="grid min-h-screen place-items-center px-4">
-      <form className="card grid w-full max-w-md gap-4" onSubmit={(event) => void onSubmit(event)}>
+    <main className="admin-login-card">
+      <form className="card grid gap-4" onSubmit={(event) => void onSubmit(event)}>
+        <div className="admin-login-logo">
+          <Image src="/assets/brand/logo-header.png" alt="Farolab Systems" width={942} height={224} priority />
+        </div>
         <h1 className="heading-4">Admin login</h1>
         <label className="grid gap-2 body-sm">
           Email

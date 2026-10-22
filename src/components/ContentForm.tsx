@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Editor } from "@/components/Editor";
+import { ImageDrop, uploadAdminImage } from "@/components/ImageDrop";
 import { Button } from "@/website-theme/ui/Button";
 
 export type ContentDraft = {
@@ -13,6 +14,7 @@ export type ContentDraft = {
   excerpt: string;
   body: string;
   coverImage: string;
+  coverAlt: string;
   author: string;
   category: string;
   tags: string;
@@ -25,6 +27,8 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
   const router = useRouter();
   const [draft, setDraft] = useState(initial);
   const [error, setError] = useState("");
+  const [imageAlt, setImageAlt] = useState("");
+  const [uploading, setUploading] = useState<"" | "cover" | "body">("");
 
   function set<K extends keyof ContentDraft>(key: K, value: ContentDraft[K]) {
     setDraft((current) => ({ ...current, [key]: value }));
@@ -36,6 +40,7 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
       ...draft,
       tags: draft.tags.split(",").map((tag) => tag.trim()).filter(Boolean),
       coverImage: draft.coverImage || undefined,
+      coverAlt: draft.coverAlt || undefined,
       author: draft.author || undefined,
       category: draft.category || undefined,
       seoTitle: draft.seoTitle || undefined,
@@ -53,6 +58,30 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
     }
     router.push(draft.type === "POST" ? "/admin/posts" : "/admin/pages");
     router.refresh();
+  }
+
+  async function uploadImage(file: File, alt: string, kind: "cover" | "body") {
+    const description = alt.trim();
+    if (description.length < 2) {
+      setError("Describe the image before uploading so search engines can read it.");
+      return;
+    }
+    setError("");
+    setUploading(kind);
+    try {
+      const url = await uploadAdminImage(file, description, draft.slug || draft.title || "post");
+      if (kind === "cover") {
+        setDraft((current) => ({ ...current, coverImage: url, coverAlt: description }));
+        return;
+      }
+      const safeAlt = description.replaceAll("[", "").replaceAll("]", "");
+      setDraft((current) => ({ ...current, body: `${current.body.trimEnd()}\n\n![${safeAlt}](${url})\n` }));
+      setImageAlt("");
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "Could not upload the image");
+    } finally {
+      setUploading("");
+    }
   }
 
   async function remove() {
@@ -76,12 +105,39 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
         Excerpt
         <input className="field" value={draft.excerpt} onChange={(event) => set("excerpt", event.target.value)} />
       </label>
+      <label className="grid gap-2 body-sm">
+        Cover description
+        <input className="field" value={draft.coverAlt} onChange={(event) => set("coverAlt", event.target.value)} />
+      </label>
+      <ImageDrop
+        label="Drag a cover image here"
+        hint="16:9 crop, then compressed WebP upload. Add a description first so the image stays searchable."
+        cropTitle="Crop cover image"
+        preview={draft.coverImage}
+        previewAlt={draft.coverAlt || draft.title || "Cover preview"}
+        busy={uploading === "cover"}
+        onFile={(file) => void uploadImage(file, draft.coverAlt || draft.title, "cover")}
+      />
       <Editor id="body" label="Body (markdown)" value={draft.body} onChange={(value) => set("body", value)} />
+      <label className="grid gap-2 body-sm">
+        Image description
+        <input
+          className="field"
+          value={imageAlt}
+          placeholder="What the photo shows"
+          onChange={(event) => setImageAlt(event.target.value)}
+        />
+      </label>
+      <ImageDrop
+        label="Drag an image into the article"
+        hint="16:9 crop and compressed WebP. Inserted with the description above as alt text."
+        cropTitle="Crop article image"
+        maxWidth={1400}
+        busy={uploading === "body"}
+        previewAlt={imageAlt || "Article image"}
+        onFile={(file) => void uploadImage(file, imageAlt, "body")}
+      />
       <div className="grid gap-4 md:grid-cols-2">
-        <label className="grid gap-2 body-sm">
-          Cover image
-          <input className="field" value={draft.coverImage} onChange={(event) => set("coverImage", event.target.value)} />
-        </label>
         <label className="grid gap-2 body-sm">
           Author
           <input className="field" value={draft.author} onChange={(event) => set("author", event.target.value)} />

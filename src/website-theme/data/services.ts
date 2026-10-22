@@ -7,9 +7,9 @@ export const services: ServiceRecord[] = [
     group: "Development",
     filter: "Custom Software",
     title: "Custom software shaped around the way you work",
-    seoTitle: "Software Development Services | ELYVANTA",
+    seoTitle: "Software Development Services | Farolab Systems",
     seoDescription:
-      "ELYVANTA designs and builds custom software for business processes, customer products and the systems that have to keep working.",
+      "Farolab Systems designs and builds custom software for business processes, customer products and the systems that have to keep working.",
     eyebrow: "Development",
     summary: "Build reliable software tailored to your business processes, users and long-term goals.",
     blurb: "Software designed around your operation, not a rented template.",
@@ -41,9 +41,9 @@ export const services: ServiceRecord[] = [
     group: "Development",
     filter: "Web Applications",
     title: "Web applications people can rely on",
-    seoTitle: "Web Application Development | ELYVANTA",
+    seoTitle: "Web Application Development | Farolab Systems",
     seoDescription:
-      "ELYVANTA builds fast, secure web applications with modern engineering practices, clear interfaces and room to grow.",
+      "Farolab Systems builds fast, secure web applications with modern engineering practices, clear interfaces and room to grow.",
     eyebrow: "Development",
     summary: "Create fast, secure and scalable web applications using modern technologies and engineering practices.",
     blurb: "Web products with a clear interface and a backend you can extend.",
@@ -75,9 +75,9 @@ export const services: ServiceRecord[] = [
     group: "Development",
     filter: "Mobile Apps",
     title: "Mobile products with a backend that can keep up",
-    seoTitle: "Mobile App Development | ELYVANTA",
+    seoTitle: "Mobile App Development | Farolab Systems",
     seoDescription:
-      "ELYVANTA builds iOS and Android experiences with scalable backends, practical interfaces and a plan for what happens after launch.",
+      "Farolab Systems builds iOS and Android experiences with scalable backends, practical interfaces and a plan for what happens after launch.",
     eyebrow: "Development",
     summary: "Build intuitive mobile experiences for iOS and Android with scalable backend systems.",
     blurb: "Mobile apps designed with the API, accounts and operations behind them.",
@@ -109,9 +109,9 @@ export const services: ServiceRecord[] = [
     group: "Development",
     filter: "AI",
     title: "AI that earns a place in the product",
-    seoTitle: "AI Development & AI Integration Services | ELYVANTA",
+    seoTitle: "AI Development & AI Integration Services | Farolab Systems",
     seoDescription:
-      "ELYVANTA integrates AI into products and workflows to automate work, support decisions and create useful new experiences.",
+      "Farolab Systems integrates AI into products and workflows to automate work, support decisions and create useful new experiences.",
     eyebrow: "Development",
     summary:
       "Integrate AI into products and business workflows to automate processes, improve decisions and create new experiences.",
@@ -144,9 +144,9 @@ export const services: ServiceRecord[] = [
     group: "Design",
     filter: "Product Design",
     title: "Product design for software people have to use",
-    seoTitle: "UI/UX & Product Design | ELYVANTA",
+    seoTitle: "UI/UX & Product Design | Farolab Systems",
     seoDescription:
-      "ELYVANTA designs digital products that are clear, accessible and tied to the job users and the business need done.",
+      "Farolab Systems designs digital products that are clear, accessible and tied to the job users and the business need done.",
     eyebrow: "Design",
     summary: "Design digital products that are intuitive, accessible and aligned with real user needs.",
     blurb: "Interfaces and product decisions grounded in the job to be done.",
@@ -178,9 +178,9 @@ export const services: ServiceRecord[] = [
     group: "Delivery",
     filter: "Cloud & DevOps",
     title: "Cloud foundations your product can live on",
-    seoTitle: "Cloud & DevOps Services | ELYVANTA",
+    seoTitle: "Cloud & DevOps Services | Farolab Systems",
     seoDescription:
-      "ELYVANTA sets up cloud infrastructure, automated deployments, monitoring and production environments that a team can operate.",
+      "Farolab Systems sets up cloud infrastructure, automated deployments, monitoring and production environments that a team can operate.",
     eyebrow: "Delivery",
     summary: "Build reliable cloud infrastructure, automated deployments, monitoring and scalable production environments.",
     blurb: "Environments, pipelines and monitoring that match the product.",
@@ -212,9 +212,9 @@ export const services: ServiceRecord[] = [
     group: "Development",
     filter: "Product Engineering",
     title: "From product intent to production software",
-    seoTitle: "Product Engineering Services | ELYVANTA",
+    seoTitle: "Product Engineering Services | Farolab Systems",
     seoDescription:
-      "ELYVANTA takes products from concept to production, combining product thinking, design and engineering in one team.",
+      "Farolab Systems takes products from concept to production, combining product thinking, design and engineering in one team.",
     eyebrow: "Development",
     summary: "Take products from concept to production with a combination of product thinking, design and engineering.",
     blurb: "Discovery, design and engineering kept in one delivery team.",
@@ -246,9 +246,9 @@ export const services: ServiceRecord[] = [
     group: "Delivery",
     filter: "Dedicated Teams",
     title: "A team that works as part of yours",
-    seoTitle: "Dedicated Development Teams | ELYVANTA",
+    seoTitle: "Dedicated Development Teams | Farolab Systems",
     seoDescription:
-      "ELYVANTA provides dedicated engineers and specialists who join your product team and stay with the work over time.",
+      "Farolab Systems provides dedicated engineers and specialists who join your product team and stay with the work over time.",
     eyebrow: "Delivery",
     summary: "Extend your engineering capacity with dedicated developers and technology specialists who integrate with your team.",
     blurb: "Engineers and designers who stay with your product, not a rotating bench.",
@@ -266,7 +266,7 @@ export const services: ServiceRecord[] = [
     faqs: [
       {
         question: "Is this the same as hiring freelancers one by one?",
-        answer: "No. A dedicated team has a shared responsibility for an area of the product, with ELYVANTA accountable for how that team works.",
+        answer: "No. A dedicated team has a shared responsibility for an area of the product, with Farolab Systems accountable for how that team works.",
       },
       {
         question: "Can the team work with engineers we already employ?",
@@ -280,9 +280,9 @@ export const services: ServiceRecord[] = [
     group: "Maintenance",
     filter: "Support",
     title: "Care for software after it ships",
-    seoTitle: "Software Support & Maintenance | ELYVANTA",
+    seoTitle: "Software Support & Maintenance | Farolab Systems",
     seoDescription:
-      "ELYVANTA keeps applications secure, stable and improving after launch, with maintenance, monitoring and ongoing development.",
+      "Farolab Systems keeps applications secure, stable and improving after launch, with maintenance, monitoring and ongoing development.",
     eyebrow: "Maintenance",
     summary: "Keep your applications secure, stable and continuously improving after launch.",
     blurb: "Maintenance, fixes and the small improvements that keep a product healthy.",

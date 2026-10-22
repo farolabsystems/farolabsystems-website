@@ -1,10 +1,10 @@
 "use client";
 
-export function LogoutButton() {
+export function LogoutButton({ className = "nav-link" }: { className?: string }) {
   return (
     <button
       type="button"
-      className="nav-link"
+      className={className}
       onClick={() => {
         void fetch("/api/auth/logout", { method: "POST" }).then(() => {
           window.location.href = "/admin/login";

@@ -1,0 +1,1 @@
+ALTER TABLE "Content" ADD COLUMN "coverAlt" TEXT NOT NULL DEFAULT '';

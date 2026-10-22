@@ -38,6 +38,10 @@ services:
       NEXT_PUBLIC_SITE_URL: http://localhost:3000
       ADMIN_EMAIL: admin@example.com
       ADMIN_PASSWORD: Farolab@2026
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_REGION: ${AWS_REGION:-ap-southeast-2}
+      AWS_S3_BUCKET: ${AWS_S3_BUCKET:-farolabsystems}
     ports:
       - "3000:3000"
     depends_on:

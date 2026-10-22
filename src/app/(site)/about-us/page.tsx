@@ -3,8 +3,8 @@ import { AboutPage } from "@/website-theme/pages/about/AboutPage";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About ELYVANTA | Technology & Software Development",
-  description: "ELYVANTA is a software company helping businesses turn ideas into scalable digital products through engineering and design.",
+  title: "About Farolab Systems | Technology & Software Development",
+  description: "Farolab Systems is a software company helping businesses turn ideas into scalable digital products through engineering and design.",
   path: "/about-us",
 });
 

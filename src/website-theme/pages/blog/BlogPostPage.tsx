@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/website-theme/config/site.config";
@@ -6,6 +5,7 @@ import { siteConfig, withLocale } from "@/website-theme/config/site.config";
 import { getPost, relatedPosts } from "@/modules/content/content.service";
 import { extractToc, readingTime } from "@/lib/slug";
 import { absoluteUrl } from "@/lib/seo";
+import { CoverImage } from "@/website-theme/ui/CoverImage";
 import { Markdown } from "@/website-theme/ui/Markdown";
 import { Container } from "@/website-theme/ui/Container";
 import { JsonLd } from "@/website-theme/ui/JsonLd";
@@ -22,10 +22,23 @@ export async function BlogPostPage({ slug, locale = "en" }: { slug: string; loca
         data={{
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: post.title,
+          headline: post.seoTitle || post.title,
+          description: post.seoDescription || post.excerpt,
           datePublished: post.publishedAt,
+          dateModified: post.updatedAt ?? post.publishedAt,
+          inLanguage: "en",
           author: { "@type": "Person", name: post.author },
-          image: absoluteUrl(post.coverImage),
+          publisher: {
+            "@type": "Organization",
+            name: siteConfig.name,
+            logo: { "@type": "ImageObject", url: absoluteUrl("/assets/brand/mark.png") },
+          },
+          image: {
+            "@type": "ImageObject",
+            url: absoluteUrl(post.coverImage),
+            caption: post.coverAlt || post.title,
+          },
+          keywords: post.tags.join(", "),
           mainEntityOfPage: url,
         }}
       />
@@ -42,7 +55,13 @@ export async function BlogPostPage({ slug, locale = "en" }: { slug: string; loca
       />
       <Container>
         <div className="blog-hero">
-          <Image src={post.coverImage} alt="" width={1600} height={900} priority className="blog-hero-media" />
+          <CoverImage
+            src={post.coverImage}
+            alt={post.coverAlt || post.title}
+            priority
+            className="blog-hero-media"
+            sizes="(max-width: 1200px) 100vw, 1088px"
+          />
           <div className="blog-hero-copy">
             <p className="caption">
               {post.category} · {new Date(post.publishedAt).toLocaleDateString("en-GB")} · {readingTime(post.body)} min read
@@ -79,7 +98,7 @@ export async function BlogPostPage({ slug, locale = "en" }: { slug: string; loca
             <li key={item.slug}>
               <Link href={withLocale(locale, `/blog/${item.slug}`)} className="card grid gap-3">
                 <div className="blog-cover">
-                  <Image src={item.coverImage} alt="" width={1600} height={900} className="h-full w-full object-cover" />
+                  <CoverImage src={item.coverImage} alt={item.coverAlt || item.title} className="h-full w-full object-cover" />
                 </div>
                 <span className="heading-6">{item.title}</span>
               </Link>

@@ -22,6 +22,7 @@
   --tc-shadow: 0 12px 40px rgba(51, 51, 51, 0.06);
   --tc-shadow-menu: 0 24px 60px rgba(51, 51, 51, 0.12);
 
+  --font-work-sans: "Work Sans";
   --tc-font: var(--font-work-sans), "Work Sans", sans-serif;
   --tc-h1: 80px;
   --tc-h2: 64px;

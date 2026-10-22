@@ -1,13 +1,13 @@
 import type { PostRecord } from "@/website-theme/data/types";
 
-const author = "ELYVANTA";
+const author = "Farolab Systems";
 
 export const posts: PostRecord[] = [
   {
     slug: "how-ai-is-changing-modern-software-development",
     title: "How AI Is Changing Modern Software Development",
     excerpt: "AI is useful in specific parts of the software lifecycle. The teams getting value from it are choosy about where it sits.",
-    seoTitle: "How AI Is Changing Modern Software Development | ELYVANTA",
+    seoTitle: "How AI Is Changing Modern Software Development | Farolab Systems",
     seoDescription:
       "Where AI helps software teams today, where it still needs a person, and how to introduce it without turning the product into a demo.",
     author,
@@ -46,7 +46,7 @@ That is a slower story than a launch announcement. It is also how AI becomes par
     slug: "building-scalable-web-applications",
     title: "Building Scalable Web Applications: What to Consider Early",
     excerpt: "Scale is not a server size. It is the set of decisions that let the next release happen without a rewrite.",
-    seoTitle: "Building Scalable Web Applications | ELYVANTA",
+    seoTitle: "Building Scalable Web Applications | Farolab Systems",
     seoDescription:
       "What to decide early in a web application so it can grow: boundaries, data, access, background work and a way to see production.",
     author,
@@ -85,7 +85,7 @@ None of this requires a large platform team. It requires choosing the few decisi
     slug: "when-to-modernize-legacy-software",
     title: "When Should a Business Modernize Its Legacy Software?",
     excerpt: "Modernization is justified when change has become the bottleneck. A rewrite is not the only way to start.",
-    seoTitle: "When to Modernize Legacy Software | ELYVANTA",
+    seoTitle: "When to Modernize Legacy Software | Farolab Systems",
     seoDescription:
       "Signals that legacy software is holding a business back, and a practical way to modernize it without stopping the operation.",
     author,
@@ -128,7 +128,7 @@ The businesses that modernize well treat it as a series of replacements they can
     slug: "mvp-development-what-to-build-first",
     title: "MVP Development: What to Build First",
     excerpt: "An MVP is the smallest product that lets a real user finish a real job. Everything else can wait.",
-    seoTitle: "MVP Development: What to Build First | ELYVANTA",
+    seoTitle: "MVP Development: What to Build First | Farolab Systems",
     seoDescription:
       "How to choose the first version of a product: one user, one job, and a clear way to know the release taught you something.",
     author,
@@ -167,7 +167,7 @@ Teams that ship a tight first version learn faster than teams that spend the sam
     slug: "how-to-choose-a-technology-stack",
     title: "How to Choose the Right Technology Stack for Your Product",
     excerpt: "The right stack is the one your team can run, hire for, and change. Novelty is not a requirement.",
-    seoTitle: "How to Choose a Technology Stack | ELYVANTA",
+    seoTitle: "How to Choose a Technology Stack | Farolab Systems",
     seoDescription:
       "A practical way to choose a product stack: team skill, operational cost, the shape of the problem, and what you can change later.",
     author,
@@ -179,7 +179,7 @@ Teams that ship a tight first version learn faster than teams that spend the sam
 
 A technology stack is a set of bets about hiring, operations and change. The safest bet for most business software is a boring one: a typed web frontend, a small API, a relational database, and a cloud a new engineer can learn from the documentation.
 
-At ELYVANTA that often means React or Next.js, TypeScript, Node.js or Python, and PostgreSQL. It is a default, not a rule. The reason to leave it should be the product, not taste.
+At Farolab Systems that often means React or Next.js, TypeScript, Node.js or Python, and PostgreSQL. It is a default, not a rule. The reason to leave it should be the product, not taste.
 
 ## Ask four questions
 
@@ -206,7 +206,7 @@ The right stack is the one that lets the team ship the next change with confiden
     slug: "from-idea-to-product-roadmap",
     title: "From Idea to Product: A Practical Software Development Roadmap",
     excerpt: "A roadmap is a sequence of decisions. Each stage should leave something you can read, try, or ship.",
-    seoTitle: "From Idea to Product: A Software Roadmap | ELYVANTA",
+    seoTitle: "From Idea to Product: A Software Roadmap | Farolab Systems",
     seoDescription:
       "A practical roadmap from idea to a maintained product: discover the problem, shape a slice, build it, release it, and learn.",
     author,

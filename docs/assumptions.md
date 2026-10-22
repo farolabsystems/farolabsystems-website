@@ -1,6 +1,6 @@
 # Assumptions and placeholders
 
-The public site is written for **ELYVANTA**. Unknown business details are not invented.
+The public site is written for **Farolab Systems**. Unknown business details are not invented.
 
 ## TODO: Replace with actual company information
 

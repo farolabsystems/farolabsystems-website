@@ -6,21 +6,21 @@ export const legalPages: PostRecord[] = [
   {
     slug: "privacy-policy",
     title: "Privacy policy",
-    excerpt: "How ELYVANTA handles personal data sent through this website.",
-    seoTitle: "Privacy Policy | ELYVANTA",
-    seoDescription: "How ELYVANTA collects, uses and stores personal data submitted through this website contact form.",
-    author: "ELYVANTA",
+    excerpt: "How Farolab Systems handles personal data sent through this website.",
+    seoTitle: "Privacy Policy | Farolab Systems",
+    seoDescription: "How Farolab Systems collects, uses and stores personal data submitted through this website contact form.",
+    author: "Farolab Systems",
     category: "Legal",
     tags: ["legal"],
     coverImage: cover,
     publishedAt: "2026-01-15T00:00:00.000Z",
     body: `## Status of this policy
 
-TODO: Replace with actual company information. This is a draft privacy notice for the ELYVANTA website. Have it reviewed by counsel before you collect real enquiries.
+TODO: Replace with actual company information. This is a draft privacy notice for the Farolab Systems website. Have it reviewed by counsel before you collect real enquiries.
 
 ## Who we are
 
-ELYVANTA operates this website. The contact details published in the site configuration are the details to use for privacy requests once they are confirmed.
+Farolab Systems operates this website. The contact details published in the site configuration are the details to use for privacy requests once they are confirmed.
 
 ## What we collect
 
@@ -45,9 +45,9 @@ You can ask what we hold about you, ask us to correct it, or ask us to delete it
     slug: "cookie-policy",
     title: "Cookie policy",
     excerpt: "The cookies this website uses and how to change your choice.",
-    seoTitle: "Cookie Policy | ELYVANTA",
-    seoDescription: "Which cookies the ELYVANTA website uses, why they are set, and how you can accept or reject them.",
-    author: "ELYVANTA",
+    seoTitle: "Cookie Policy | Farolab Systems",
+    seoDescription: "Which cookies the Farolab Systems website uses, why they are set, and how you can accept or reject them.",
+    author: "Farolab Systems",
     category: "Legal",
     tags: ["legal"],
     coverImage: cover,

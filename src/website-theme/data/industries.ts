@@ -6,9 +6,9 @@ export const industries: IndustryRecord[] = [
     navLabel: "FinTech",
     filter: "FinTech",
     title: "Software for financial products and digital services",
-    seoTitle: "FinTech Software Development | ELYVANTA",
+    seoTitle: "FinTech Software Development | Farolab Systems",
     seoDescription:
-      "ELYVANTA designs and builds secure, scalable software for financial products, payments and digital financial services.",
+      "Farolab Systems designs and builds secure, scalable software for financial products, payments and digital financial services.",
     eyebrow: "FinTech",
     summary: "Secure and scalable platforms for financial products, payments and digital services.",
     bullets: [
@@ -33,9 +33,9 @@ export const industries: IndustryRecord[] = [
     navLabel: "Healthcare",
     filter: "Healthcare",
     title: "Digital healthcare tools people can actually use",
-    seoTitle: "Healthcare Software Development | ELYVANTA",
+    seoTitle: "Healthcare Software Development | Farolab Systems",
     seoDescription:
-      "ELYVANTA builds healthcare software focused on access, communication and operations, without claiming certifications we do not hold.",
+      "Farolab Systems builds healthcare software focused on access, communication and operations, without claiming certifications we do not hold.",
     eyebrow: "Healthcare",
     summary: "Digital solutions designed around accessibility, security and better user experiences.",
     bullets: [
@@ -60,9 +60,9 @@ export const industries: IndustryRecord[] = [
     navLabel: "Logistics",
     filter: "Logistics",
     title: "Software that connects logistics operations",
-    seoTitle: "Logistics Software Development | ELYVANTA",
+    seoTitle: "Logistics Software Development | Farolab Systems",
     seoDescription:
-      "ELYVANTA builds logistics software that connects workflows, operational data and real-time visibility for teams on the ground.",
+      "Farolab Systems builds logistics software that connects workflows, operational data and real-time visibility for teams on the ground.",
     eyebrow: "Logistics",
     summary: "Technology that connects operations, workflows, data and real-time visibility.",
     bullets: [
@@ -87,9 +87,9 @@ export const industries: IndustryRecord[] = [
     navLabel: "E-commerce",
     filter: "E-commerce",
     title: "Commerce platforms that support the whole operation",
-    seoTitle: "E-commerce Software Development | ELYVANTA",
+    seoTitle: "E-commerce Software Development | Farolab Systems",
     seoDescription:
-      "ELYVANTA builds commerce experiences and the operational software behind them, from catalog and checkout to fulfillment workflows.",
+      "Farolab Systems builds commerce experiences and the operational software behind them, from catalog and checkout to fulfillment workflows.",
     eyebrow: "E-commerce",
     summary: "Scalable commerce experiences designed to improve customer journeys and operational efficiency.",
     bullets: [
@@ -114,9 +114,9 @@ export const industries: IndustryRecord[] = [
     navLabel: "Education",
     filter: "Education",
     title: "Learning platforms that stay simple to run",
-    seoTitle: "Education Software Development | ELYVANTA",
+    seoTitle: "Education Software Development | Farolab Systems",
     seoDescription:
-      "ELYVANTA designs education platforms for learning, administration and engagement, with software your team can keep improving.",
+      "Farolab Systems designs education platforms for learning, administration and engagement, with software your team can keep improving.",
     eyebrow: "Education",
     summary: "Digital platforms that make learning, administration and engagement more accessible.",
     bullets: [
@@ -141,9 +141,9 @@ export const industries: IndustryRecord[] = [
     navLabel: "SaaS",
     filter: "SaaS",
     title: "Product engineering for growing SaaS products",
-    seoTitle: "SaaS Product Engineering | ELYVANTA",
+    seoTitle: "SaaS Product Engineering | Farolab Systems",
     seoDescription:
-      "ELYVANTA partners with SaaS teams on architecture, product engineering and the releases that keep a product reliable as it grows.",
+      "Farolab Systems partners with SaaS teams on architecture, product engineering and the releases that keep a product reliable as it grows.",
     eyebrow: "SaaS",
     summary: "Product engineering for SaaS companies that need reliable architecture and continuous growth.",
     bullets: [

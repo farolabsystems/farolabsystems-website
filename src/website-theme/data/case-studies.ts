@@ -1,7 +1,7 @@
 import type { CaseStudyRecord } from "@/website-theme/data/types";
 
 const note =
-  "This is a concept project. It shows the kind of product ELYVANTA designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.";
+  "This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.";
 
 function study(input: Omit<CaseStudyRecord, "gallery"> & { gallery?: string[] }): CaseStudyRecord {
   return { ...input, gallery: input.gallery ?? [input.cover] };

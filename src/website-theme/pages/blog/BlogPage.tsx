@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
 import { listPosts } from "@/modules/content/content.service";
 import { Container } from "@/website-theme/ui/Container";
+import { CoverImage } from "@/website-theme/ui/CoverImage";
 import { blogSection } from "@/website-theme/data/home";
 import { readingTime } from "@/lib/slug";
 
@@ -57,10 +57,16 @@ export async function BlogPage({
             <li key={post.slug}>
               <Link href={withLocale(locale, `/blog/${post.slug}`)} className="card grid gap-3">
                 <div className="blog-cover">
-                  <Image src={post.coverImage} alt="" width={1600} height={900} className="h-full w-full object-cover" />
+                  <CoverImage src={post.coverImage} alt={post.coverAlt || post.title} className="h-full w-full object-cover" />
                 </div>
                 <p className="caption">
-                  {post.category} · {readingTime(post.body)} min
+                  {post.category} ·{" "}
+                  {new Date(post.publishedAt).toLocaleDateString("en-GB", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  })}{" "}
+                  · {readingTime(post.body)} min
                 </p>
                 <h2 className="heading-6">{post.title}</h2>
                 <p className="body-sm muted">{post.excerpt}</p>

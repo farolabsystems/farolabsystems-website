@@ -13,7 +13,7 @@ export function ConsultationPage({
   const body =
     kind === "technical"
       ? "Bring an architecture question, a system you need to modernize, or a release that is getting harder to ship. We will help you see the next practical step."
-      : "This conversation is with ELYVANTA. It is not a profile of a named advisor. Tell us the product decision you need to make.";
+      : "This conversation is with Farolab Systems. It is not a profile of a named advisor. Tell us the product decision you need to make.";
   return (
     <>
       <PageHero locale={locale} eyebrow="Consultation" title={title} body={body} />

@@ -1,10 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
 import { blogSection } from "@/website-theme/data/home";
 import type { PostRecord } from "@/website-theme/data/types";
 import { Container } from "@/website-theme/ui/Container";
+import { CoverImage } from "@/website-theme/ui/CoverImage";
 import { Section } from "@/website-theme/ui/Section";
 
 export function BlogTeaser({ locale, posts }: { locale: Locale; posts: PostRecord[] }) {
@@ -24,7 +24,7 @@ export function BlogTeaser({ locale, posts }: { locale: Locale; posts: PostRecor
           {posts.map((post) => (
             <Link key={post.slug} href={withLocale(locale, `/blog/${post.slug}`)} className="card grid gap-3">
               <div className="blog-cover">
-                <Image src={post.coverImage} alt="" width={1600} height={900} className="h-full w-full object-cover" />
+                <CoverImage src={post.coverImage} alt={post.coverAlt || post.title} className="h-full w-full object-cover" />
               </div>
               <p className="caption">
                 {post.category} · {new Date(post.publishedAt).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}

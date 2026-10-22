@@ -35,6 +35,7 @@ model Content {
   excerpt        String        @default("")
   body           String
   coverImage     String?
+  coverAlt       String        @default("")
   author         String?
   category       String?
   tags           String[]

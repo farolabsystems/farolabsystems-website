@@ -20,6 +20,7 @@ export default async function EditPageAdmin({ params }: { params: Promise<{ id: 
           excerpt: page.excerpt,
           body: page.body,
           coverImage: page.coverImage ?? "",
+          coverAlt: page.coverAlt ?? "",
           author: page.author ?? "",
           category: page.category ?? "",
           tags: page.tags.join(", "),

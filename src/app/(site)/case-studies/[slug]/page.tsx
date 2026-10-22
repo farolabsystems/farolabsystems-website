@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const study = caseStudies.find((item) => item.slug === slug);
   if (!study) return {};
   return buildMetadata({
-    title: `${study.title} | Demo Case Study | ELYVANTA`,
+    title: `${study.title} | Demo Case Study | Farolab Systems`,
     description: study.summary,
     path: `/case-studies/${slug}`,
   });

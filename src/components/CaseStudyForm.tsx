@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Editor } from "@/components/Editor";
+import { ImageDrop, uploadAdminImage } from "@/components/ImageDrop";
 import { Button } from "@/website-theme/ui/Button";
 
 export type CaseDraft = {
@@ -26,6 +27,7 @@ export function CaseStudyForm({ initial }: { initial: CaseDraft }) {
   const router = useRouter();
   const [draft, setDraft] = useState(initial);
   const [error, setError] = useState("");
+  const [uploading, setUploading] = useState(false);
 
   function set<K extends keyof CaseDraft>(key: K, value: CaseDraft[K]) {
     setDraft((current) => ({ ...current, [key]: value }));
@@ -59,6 +61,24 @@ export function CaseStudyForm({ initial }: { initial: CaseDraft }) {
     }
     router.push("/admin/case-studies");
     router.refresh();
+  }
+
+  async function uploadCover(file: File) {
+    const alt = draft.title.trim();
+    if (alt.length < 2) {
+      setError("Add a title before uploading the cover.");
+      return;
+    }
+    setError("");
+    setUploading(true);
+    try {
+      const url = await uploadAdminImage(file, alt, draft.slug || alt);
+      setDraft((current) => ({ ...current, cover: url }));
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "Could not upload the image");
+    } finally {
+      setUploading(false);
+    }
   }
 
   async function remove() {
@@ -101,8 +121,17 @@ export function CaseStudyForm({ initial }: { initial: CaseDraft }) {
         </label>
       </div>
       <Editor id="case-body" label="Body (markdown)" value={draft.body} onChange={(value) => set("body", value)} />
+      <ImageDrop
+        label="Drag a cover image here"
+        hint="16:9 crop, then compressed WebP upload for a faster page load."
+        cropTitle="Crop case study cover"
+        preview={draft.cover}
+        previewAlt={draft.title || "Case study cover"}
+        busy={uploading}
+        onFile={(file) => void uploadCover(file)}
+      />
       <label className="grid gap-2 body-sm">
-        Cover
+        Cover address
         <input className="field" value={draft.cover} onChange={(event) => set("cover", event.target.value)} />
       </label>
       <label className="grid gap-2 body-sm">

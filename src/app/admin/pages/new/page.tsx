@@ -12,6 +12,7 @@ export default function NewPageAdmin() {
           excerpt: "",
           body: "## Section\n\nPage body in markdown.",
           coverImage: "",
+          coverAlt: "",
           author: "",
           category: "",
           tags: "",

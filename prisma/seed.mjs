@@ -37,9 +37,6 @@ async function main() {
     },
   });
 
-  const postSlugs = data.posts.map((post) => post.slug);
-  await prisma.content.deleteMany({ where: { type: "POST", slug: { notIn: postSlugs } } });
-
   for (const post of data.posts) {
     await prisma.content.upsert({
       where: { type_slug_locale: { type: "POST", slug: post.slug, locale: "en" } },
@@ -47,7 +44,6 @@ async function main() {
         title: post.title,
         excerpt: post.excerpt,
         body: post.body,
-        coverImage: post.coverImage,
         author: post.author,
         category: post.category,
         tags: post.tags,
@@ -96,7 +92,7 @@ async function main() {
         seoDescription: page.seoDescription,
         status: "PUBLISHED",
         publishedAt: new Date("2026-01-15T00:00:00.000Z"),
-        author: "ELYVANTA",
+        author: "Farolab Systems",
         category: "Legal",
       },
     });

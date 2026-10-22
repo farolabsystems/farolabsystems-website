@@ -2,10 +2,13 @@
 
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
+import { contactSchema } from "@/lib/validators";
 import { siteConfig } from "@/website-theme/config/site.config";
 import { projectIntents } from "@/website-theme/data/contact";
 import { Button } from "@/website-theme/ui/Button";
 import { Input } from "@/website-theme/ui/Input";
+import { PhoneField } from "@/website-theme/ui/PhoneField";
+import { Toaster, type ToastItem } from "@/website-theme/ui/Toaster";
 
 type Field = "firstName" | "lastName" | "email" | "company" | "phone" | "startingFrom" | "budget" | "timeline" | "message";
 type Errors = Partial<Record<Field, string>>;
@@ -15,6 +18,7 @@ export function ContactForm() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
+  const [country, setCountry] = useState("IN");
   const [phone, setPhone] = useState("");
   const [startingFrom, setStartingFrom] = useState("");
   const [budget, setBudget] = useState("");
@@ -23,45 +27,86 @@ export function ContactForm() {
   const [newsletter, setNewsletter] = useState(false);
   const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState<Errors>({});
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [sending, setSending] = useState(false);
+  const [toasts, setToasts] = useState<ToastItem[]>([]);
+
+  function pushToast(toast: Omit<ToastItem, "id">) {
+    const id = Date.now() + Math.floor(Math.random() * 1000);
+    setToasts((current) => [...current, { ...toast, id }]);
+    window.setTimeout(() => setToasts((current) => current.filter((item) => item.id !== id)), 5000);
+  }
+
+  function fieldErrorsFrom(issues: { path: PropertyKey[]; message: string }[]): Errors {
+    const next: Errors = {};
+    for (const issue of issues) {
+      const key = String(issue.path[0] ?? "") as Field;
+      if (key && !next[key]) next[key] = issue.message;
+    }
+    return next;
+  }
+
+  function resetForm() {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setCompany("");
+    setCountry("IN");
+    setPhone("");
+    setStartingFrom("");
+    setBudget("");
+    setTimeline("");
+    setMessage("");
+    setNewsletter(false);
+  }
 
   async function onSubmit(event: FormEvent) {
     event.preventDefault();
-    setStatus("sending");
-    setErrors({});
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        company,
-        phone,
-        startingFrom,
-        budget,
-        timeline,
-        message,
-        newsletter,
-        company_website: honeypot,
-      }),
-    });
-    const payload = (await response.json().catch(() => null)) as { error?: string; fieldErrors?: Errors } | null;
-    if (response.ok) {
-      setStatus("success");
+    const payload = {
+      firstName,
+      lastName,
+      email,
+      company,
+      country,
+      phone,
+      startingFrom,
+      budget,
+      timeline,
+      message,
+      newsletter,
+      company_website: honeypot,
+    };
+    const parsed = contactSchema.safeParse(payload);
+    if (!parsed.success) {
+      setErrors(fieldErrorsFrom(parsed.error.issues));
+      pushToast({ tone: "error", title: "Check the form", body: "A few fields need a correction before this inquiry can be sent." });
       return;
     }
-    setStatus("error");
-    setErrors(payload?.fieldErrors ?? {});
-  }
 
-  if (status === "success") {
-    return (
-      <div className="card grid gap-3" role="status">
-        <h3 className="heading-5">Thanks for reaching out.</h3>
-        <p className="body muted">We&apos;ve received your message and will get back to you soon.</p>
-      </div>
-    );
+    setSending(true);
+    setErrors({});
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = (await response.json().catch(() => null)) as { error?: string; fieldErrors?: Errors } | null;
+      if (response.ok) {
+        resetForm();
+        pushToast({ tone: "success", title: "Inquiry sent", body: "We received your message. It is now in the inquiry list." });
+        return;
+      }
+      setErrors(result?.fieldErrors ?? {});
+      pushToast({
+        tone: "error",
+        title: "Inquiry not sent",
+        body: result?.error || "Something went wrong. Please try again.",
+      });
+    } catch {
+      pushToast({ tone: "error", title: "Inquiry not sent", body: "Something went wrong. Please try again." });
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -81,7 +126,7 @@ export function ContactForm() {
         <Input id="company" name="company" label="Company" placeholder="Company name" value={company} error={errors.company} onChange={setCompany} />
       </div>
       <div className="grid gap-4 md:grid-cols-2">
-        <Input id="phone" name="phone" type="tel" label="Phone number" placeholder="Optional" value={phone} error={errors.phone} onChange={setPhone} />
+        <PhoneField country={country} number={phone} error={errors.phone} onCountry={setCountry} onNumber={setPhone} />
         <label className="grid gap-2" htmlFor="looking-for">
           <span className="body-sm">What are you looking for?</span>
           <select
@@ -121,21 +166,17 @@ export function ContactForm() {
       </div>
       <label className="flex items-start gap-2 body-sm">
         <input type="checkbox" checked={newsletter} onChange={(event) => setNewsletter(event.target.checked)} />
-        <span>Send me occasional notes about {siteConfig.name}&apos;s work. This is optional.</span>
+        <span>Send me occasional notes about {siteConfig.name}&apos; work. This is optional.</span>
       </label>
-      {status === "error" && Object.keys(errors).length === 0 ? (
-        <p className="body-sm" role="alert" style={{ color: "var(--tc-danger)" }}>
-          Something went wrong while submitting the form. Please try again.
-        </p>
-      ) : null}
       <div className="flex flex-wrap items-center gap-4">
-        <Button type="submit" disabled={status === "sending"}>
-          {status === "sending" ? "Sending…" : "Start a conversation"}
+        <Button type="submit" disabled={sending}>
+          {sending ? "Sending…" : "Start a conversation"}
         </Button>
         <Link href="/schedule-meeting" className="body-sm" style={{ color: "var(--tc-primary-active)" }}>
           Schedule a meeting
         </Link>
       </div>
+      <Toaster toasts={toasts} onDismiss={(id) => setToasts((current) => current.filter((item) => item.id !== id))} />
     </form>
   );
 }

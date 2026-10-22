@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Locale } from "@/website-theme/config/site.config";
@@ -9,6 +8,7 @@ import { withLocale } from "@/website-theme/config/site.config";
 import { siteConfig } from "@/website-theme/config/site.config";
 import { industryFilters, serviceFilters } from "@/website-theme/data/taxonomy";
 import type { CaseStudyRecord } from "@/website-theme/data/types";
+import { CoverImage } from "@/website-theme/ui/CoverImage";
 
 function readList(params: URLSearchParams, key: string) {
   const raw = params.get(key);
@@ -78,7 +78,9 @@ export function CaseStudiesExplorer({ locale, studies }: { locale: Locale; studi
         {visible.map((study) => (
           <li key={study.slug}>
             <Link href={withLocale(locale, `/case-studies/${study.slug}`)} className="card grid gap-3">
-              <Image src={study.cover} alt="" width={640} height={400} className="h-40 w-full rounded-[var(--tc-radius-sm)] object-cover" />
+              <div className="media-frame">
+                <CoverImage src={study.cover} alt={study.title} sizes="(max-width: 768px) 100vw, 360px" />
+              </div>
               <p className="caption">{siteConfig.demoCaseStudyLabel}</p>
               <h2 className="heading-6">{study.title}</h2>
               <p className="body-sm muted">{study.summary}</p>

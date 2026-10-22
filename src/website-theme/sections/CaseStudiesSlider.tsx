@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { Locale } from "@/website-theme/config/site.config";
@@ -9,6 +8,7 @@ import { siteConfig, withLocale } from "@/website-theme/config/site.config";
 import { caseStudiesSection } from "@/website-theme/data/home";
 import type { CaseStudyRecord } from "@/website-theme/data/types";
 import { Container } from "@/website-theme/ui/Container";
+import { CoverImage } from "@/website-theme/ui/CoverImage";
 import { StatCounter } from "@/website-theme/ui/StatCounter";
 
 export function CaseStudiesSlider({ locale, studies }: { locale: Locale; studies: CaseStudyRecord[] }) {
@@ -48,7 +48,9 @@ export function CaseStudiesSlider({ locale, studies }: { locale: Locale; studies
             transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             className="mt-8 grid items-center gap-8 lg:grid-cols-2"
           >
-            <Image src={slide.cover} alt="" width={900} height={640} className="w-full rounded-[var(--tc-radius-card-lg)] object-cover" />
+            <div className="media-frame media-frame--lg">
+              <CoverImage src={slide.cover} alt={slide.title} sizes="(max-width: 1024px) 100vw, 540px" />
+            </div>
             <div className="grid gap-4">
               <p className="caption">{siteConfig.demoCaseStudyLabel}</p>
               <h3 className="heading-3">{slide.title}</h3>

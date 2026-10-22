@@ -13,12 +13,14 @@ function toRecord(row: Content): PostRecord {
     excerpt: row.excerpt,
     body: row.body,
     coverImage: row.coverImage || "/assets/covers/cover-1.png",
+    coverAlt: row.coverAlt || row.title,
     author: row.author || "Editorial team",
     category: row.category || "Notes",
     tags: row.tags,
     seoTitle: row.seoTitle || row.title,
     seoDescription: row.seoDescription || row.excerpt,
     publishedAt: (row.publishedAt ?? row.createdAt).toISOString(),
+    updatedAt: row.updatedAt.toISOString(),
   };
 }
 
@@ -89,6 +91,7 @@ export async function saveContent(input: ContentInput, id?: string) {
     excerpt: input.excerpt ?? "",
     body: input.body,
     coverImage: input.coverImage || null,
+    coverAlt: input.coverAlt ?? "",
     author: input.author || null,
     category: input.category || null,
     tags: input.tags ?? [],

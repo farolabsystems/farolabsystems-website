@@ -4,9 +4,9 @@
       "slug": "how-ai-is-changing-modern-software-development",
       "title": "How AI Is Changing Modern Software Development",
       "excerpt": "AI is useful in specific parts of the software lifecycle. The teams getting value from it are choosy about where it sits.",
-      "seoTitle": "How AI Is Changing Modern Software Development | ELYVANTA",
+      "seoTitle": "How AI Is Changing Modern Software Development | Farolab Systems",
       "seoDescription": "Where AI helps software teams today, where it still needs a person, and how to introduce it without turning the product into a demo.",
-      "author": "ELYVANTA",
+      "author": "Farolab Systems",
       "category": "AI & Automation",
       "tags": [
         "AI",
@@ -20,9 +20,9 @@
       "slug": "building-scalable-web-applications",
       "title": "Building Scalable Web Applications: What to Consider Early",
       "excerpt": "Scale is not a server size. It is the set of decisions that let the next release happen without a rewrite.",
-      "seoTitle": "Building Scalable Web Applications | ELYVANTA",
+      "seoTitle": "Building Scalable Web Applications | Farolab Systems",
       "seoDescription": "What to decide early in a web application so it can grow: boundaries, data, access, background work and a way to see production.",
-      "author": "ELYVANTA",
+      "author": "Farolab Systems",
       "category": "Cloud & DevOps",
       "tags": [
         "web",
@@ -36,9 +36,9 @@
       "slug": "when-to-modernize-legacy-software",
       "title": "When Should a Business Modernize Its Legacy Software?",
       "excerpt": "Modernization is justified when change has become the bottleneck. A rewrite is not the only way to start.",
-      "seoTitle": "When to Modernize Legacy Software | ELYVANTA",
+      "seoTitle": "When to Modernize Legacy Software | Farolab Systems",
       "seoDescription": "Signals that legacy software is holding a business back, and a practical way to modernize it without stopping the operation.",
-      "author": "ELYVANTA",
+      "author": "Farolab Systems",
       "category": "Software Development",
       "tags": [
         "modernization",
@@ -52,9 +52,9 @@
       "slug": "mvp-development-what-to-build-first",
       "title": "MVP Development: What to Build First",
       "excerpt": "An MVP is the smallest product that lets a real user finish a real job. Everything else can wait.",
-      "seoTitle": "MVP Development: What to Build First | ELYVANTA",
+      "seoTitle": "MVP Development: What to Build First | Farolab Systems",
       "seoDescription": "How to choose the first version of a product: one user, one job, and a clear way to know the release taught you something.",
-      "author": "ELYVANTA",
+      "author": "Farolab Systems",
       "category": "Product Engineering",
       "tags": [
         "MVP",
@@ -68,9 +68,9 @@
       "slug": "how-to-choose-a-technology-stack",
       "title": "How to Choose the Right Technology Stack for Your Product",
       "excerpt": "The right stack is the one your team can run, hire for, and change. Novelty is not a requirement.",
-      "seoTitle": "How to Choose a Technology Stack | ELYVANTA",
+      "seoTitle": "How to Choose a Technology Stack | Farolab Systems",
       "seoDescription": "A practical way to choose a product stack: team skill, operational cost, the shape of the problem, and what you can change later.",
-      "author": "ELYVANTA",
+      "author": "Farolab Systems",
       "category": "Software Development",
       "tags": [
         "architecture",
@@ -78,15 +78,15 @@
       ],
       "coverImage": "/assets/covers/banner-5.png",
       "publishedAt": "2026-08-20T00:00:00.000Z",
-      "body": "## Choose for the next three years, not for a talk\n\nA technology stack is a set of bets about hiring, operations and change. The safest bet for most business software is a boring one: a typed web frontend, a small API, a relational database, and a cloud a new engineer can learn from the documentation.\n\nAt ELYVANTA that often means React or Next.js, TypeScript, Node.js or Python, and PostgreSQL. It is a default, not a rule. The reason to leave it should be the product, not taste.\n\n## Ask four questions\n\n**Who will maintain it?** A stack your team already knows will beat a fashionable one that only the original authors can operate. If you are hiring, prefer technologies with a deep hiring pool over a language you would have to teach from scratch.\n\n**What does the product actually do?** Heavy document workflows, real-time collaboration, mobile device features, and data analysis pull the stack in different directions. Name the hard part. Choose for that, and keep the rest ordinary.\n\n**What does it cost to run?** Managed databases, simple deploys and fewer services are usually cheaper to operate than a diagram with twelve boxes. Add a piece of infrastructure when a measured problem asks for it.\n\n**What is expensive to reverse?** Language and database choices linger. A UI library does not. Spend the debate on the decisions you will still be living with after the first rewrite of the interface.\n\n## When to leave the default\n\nUse Python and FastAPI or Django when the product is close to data work, automation, or a team that already thinks in Python. Use a document database when the data is genuinely document-shaped, not because a tutorial started there. Reach for a specialised mobile stack when the device is the product. Add an AI API when a workflow has earned it, and keep the rest of the system unaware of which vendor you chose, so you can change it.\n\n## Write the choice down\n\nA short architecture note is enough: what you picked, what you rejected, and what would make you revisit it. Future you, and the next engineer, should not have to infer the strategy from the package file.\n\nThe right stack is the one that lets the team ship the next change with confidence. Everything else is optional.\n"
+      "body": "## Choose for the next three years, not for a talk\n\nA technology stack is a set of bets about hiring, operations and change. The safest bet for most business software is a boring one: a typed web frontend, a small API, a relational database, and a cloud a new engineer can learn from the documentation.\n\nAt Farolab Systems that often means React or Next.js, TypeScript, Node.js or Python, and PostgreSQL. It is a default, not a rule. The reason to leave it should be the product, not taste.\n\n## Ask four questions\n\n**Who will maintain it?** A stack your team already knows will beat a fashionable one that only the original authors can operate. If you are hiring, prefer technologies with a deep hiring pool over a language you would have to teach from scratch.\n\n**What does the product actually do?** Heavy document workflows, real-time collaboration, mobile device features, and data analysis pull the stack in different directions. Name the hard part. Choose for that, and keep the rest ordinary.\n\n**What does it cost to run?** Managed databases, simple deploys and fewer services are usually cheaper to operate than a diagram with twelve boxes. Add a piece of infrastructure when a measured problem asks for it.\n\n**What is expensive to reverse?** Language and database choices linger. A UI library does not. Spend the debate on the decisions you will still be living with after the first rewrite of the interface.\n\n## When to leave the default\n\nUse Python and FastAPI or Django when the product is close to data work, automation, or a team that already thinks in Python. Use a document database when the data is genuinely document-shaped, not because a tutorial started there. Reach for a specialised mobile stack when the device is the product. Add an AI API when a workflow has earned it, and keep the rest of the system unaware of which vendor you chose, so you can change it.\n\n## Write the choice down\n\nA short architecture note is enough: what you picked, what you rejected, and what would make you revisit it. Future you, and the next engineer, should not have to infer the strategy from the package file.\n\nThe right stack is the one that lets the team ship the next change with confidence. Everything else is optional.\n"
     },
     {
       "slug": "from-idea-to-product-roadmap",
       "title": "From Idea to Product: A Practical Software Development Roadmap",
       "excerpt": "A roadmap is a sequence of decisions. Each stage should leave something you can read, try, or ship.",
-      "seoTitle": "From Idea to Product: A Software Roadmap | ELYVANTA",
+      "seoTitle": "From Idea to Product: A Software Roadmap | Farolab Systems",
       "seoDescription": "A practical roadmap from idea to a maintained product: discover the problem, shape a slice, build it, release it, and learn.",
-      "author": "ELYVANTA",
+      "author": "Farolab Systems",
       "category": "Business & Technology",
       "tags": [
         "roadmap",
@@ -127,7 +127,7 @@
       "cover": "/assets/covers/cover-1.png",
       "featured": true,
       "sortOrder": 1,
-      "body": "## Challenge\n\nThe business needed a simpler way to manage digital financial workflows and customer interactions. The work was split across tools that did not share a clear model of the customer.\n\n## Approach\n\nWe designed a modular platform focused on usability, security and an architecture that can accept new products without a rewrite. Regulatory approvals were treated as the client's responsibility, not as something the software vendor can claim.\n\n## Solution\n\nA modern web platform with API-driven backend services, a clear separation between customer activity and back-office review, and an extensible place for later automation.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Docker.\n\n## Outcome\n\nA scalable foundation designed for future product expansion. This is a concept project. It shows the kind of product ELYVANTA designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
+      "body": "## Challenge\n\nThe business needed a simpler way to manage digital financial workflows and customer interactions. The work was split across tools that did not share a clear model of the customer.\n\n## Approach\n\nWe designed a modular platform focused on usability, security and an architecture that can accept new products without a rewrite. Regulatory approvals were treated as the client's responsibility, not as something the software vendor can claim.\n\n## Solution\n\nA modern web platform with API-driven backend services, a clear separation between customer activity and back-office review, and an extensible place for later automation.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Docker.\n\n## Outcome\n\nA scalable foundation designed for future product expansion. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
         "/assets/covers/cover-1.png"
       ]
@@ -162,7 +162,7 @@
       "cover": "/assets/covers/cover-2.png",
       "featured": true,
       "sortOrder": 2,
-      "body": "## Challenge\n\nOperations teams were coordinating work through messages and spreadsheets. Status existed, but not in one place the floor and the office could both trust.\n\n## Approach\n\nWe mapped the handoffs that actually happen in a day, then designed a system around those states instead of a generic tracking template.\n\n## Solution\n\nA web platform for planning, status and exceptions, with an API for the tools that should stay in place and a cloud setup the team can deploy repeatedly.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Docker, CI/CD.\n\n## Outcome\n\nA single operational picture the team can extend as routes, partners and volumes change. This is a concept project. It shows the kind of product ELYVANTA designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
+      "body": "## Challenge\n\nOperations teams were coordinating work through messages and spreadsheets. Status existed, but not in one place the floor and the office could both trust.\n\n## Approach\n\nWe mapped the handoffs that actually happen in a day, then designed a system around those states instead of a generic tracking template.\n\n## Solution\n\nA web platform for planning, status and exceptions, with an API for the tools that should stay in place and a cloud setup the team can deploy repeatedly.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Docker, CI/CD.\n\n## Outcome\n\nA single operational picture the team can extend as routes, partners and volumes change. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
         "/assets/covers/cover-2.png"
       ]
@@ -197,7 +197,7 @@
       "cover": "/assets/covers/cover-3.png",
       "featured": true,
       "sortOrder": 3,
-      "body": "## Challenge\n\nPatients and staff were using different channels to do a simple job: find information, ask a question, and know what happens next. The operational side of that work was manual.\n\n## Approach\n\nWe designed the product around access and communication first, with explicit boundaries around sensitive information. No medical certification is claimed for this concept.\n\n## Solution\n\nA web and mobile experience on one API, with roles for staff, a record of the conversation, and an interface that does not assume a trained operator.\n\n## Technology\n\nReact, Next.js, Node.js, PostgreSQL.\n\n## Outcome\n\nA foundation for a healthcare product that can add workflows without mixing patient communication and internal tools. This is a concept project. It shows the kind of product ELYVANTA designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
+      "body": "## Challenge\n\nPatients and staff were using different channels to do a simple job: find information, ask a question, and know what happens next. The operational side of that work was manual.\n\n## Approach\n\nWe designed the product around access and communication first, with explicit boundaries around sensitive information. No medical certification is claimed for this concept.\n\n## Solution\n\nA web and mobile experience on one API, with roles for staff, a record of the conversation, and an interface that does not assume a trained operator.\n\n## Technology\n\nReact, Next.js, Node.js, PostgreSQL.\n\n## Outcome\n\nA foundation for a healthcare product that can add workflows without mixing patient communication and internal tools. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
         "/assets/covers/cover-3.png"
       ]
@@ -231,7 +231,7 @@
       "cover": "/assets/covers/cover-4.png",
       "featured": false,
       "sortOrder": 4,
-      "body": "## Challenge\n\nThe storefront and the team fulfilling orders were looking at different versions of the truth. Standard commerce tools covered the ordinary case and strained on the rules that made the business different.\n\n## Approach\n\nWe kept the customer journey short and designed the catalog and order model so operations could see the same order the customer placed.\n\n## Solution\n\nA web commerce experience with a clear checkout, an API for catalog and orders, and an operational view for the people who ship.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Redis.\n\n## Outcome\n\nA commerce foundation that can grow into more channels without copying product data into another tool. This is a concept project. It shows the kind of product ELYVANTA designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
+      "body": "## Challenge\n\nThe storefront and the team fulfilling orders were looking at different versions of the truth. Standard commerce tools covered the ordinary case and strained on the rules that made the business different.\n\n## Approach\n\nWe kept the customer journey short and designed the catalog and order model so operations could see the same order the customer placed.\n\n## Solution\n\nA web commerce experience with a clear checkout, an API for catalog and orders, and an operational view for the people who ship.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Redis.\n\n## Outcome\n\nA commerce foundation that can grow into more channels without copying product data into another tool. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
         "/assets/covers/cover-4.png"
       ]
@@ -265,7 +265,7 @@
       "cover": "/assets/covers/cover-5.png",
       "featured": false,
       "sortOrder": 5,
-      "body": "## Challenge\n\nLearners and the people running the programme did not share a simple view of progress. Content lived in files, and administration lived in a separate tool.\n\n## Approach\n\nWe designed one content model for the lesson, the learner and the administrator, and kept the first release to a single programme.\n\n## Solution\n\nA web and mobile learning experience with authoring tools, progress that a person can explain, and an admin area that does not require a separate system.\n\n## Technology\n\nNext.js, TypeScript, PostgreSQL.\n\n## Outcome\n\nA learning product that can add the next programme without redesigning the record of progress. This is a concept project. It shows the kind of product ELYVANTA designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
+      "body": "## Challenge\n\nLearners and the people running the programme did not share a simple view of progress. Content lived in files, and administration lived in a separate tool.\n\n## Approach\n\nWe designed one content model for the lesson, the learner and the administrator, and kept the first release to a single programme.\n\n## Solution\n\nA web and mobile learning experience with authoring tools, progress that a person can explain, and an admin area that does not require a separate system.\n\n## Technology\n\nNext.js, TypeScript, PostgreSQL.\n\n## Outcome\n\nA learning product that can add the next programme without redesigning the record of progress. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
         "/assets/covers/cover-5.png"
       ]
@@ -299,7 +299,7 @@
       "cover": "/assets/covers/cover-6.png",
       "featured": false,
       "sortOrder": 6,
-      "body": "## Challenge\n\nThe product had early customers and a codebase that made every new account a special case. Shipping depended on a few people who knew the deploy by heart.\n\n## Approach\n\nWe treated tenancy, roles and the path to production as product decisions, then staffed a small team to own that area with the client's engineers.\n\n## Solution\n\nA console for accounts and roles, a clearer separation between tenants, and a deployment pipeline the team can run without a private checklist.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Docker, AWS.\n\n## Outcome\n\nA SaaS foundation that can take the next customer without inventing a new setup for each one. This is a concept project. It shows the kind of product ELYVANTA designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
+      "body": "## Challenge\n\nThe product had early customers and a codebase that made every new account a special case. Shipping depended on a few people who knew the deploy by heart.\n\n## Approach\n\nWe treated tenancy, roles and the path to production as product decisions, then staffed a small team to own that area with the client's engineers.\n\n## Solution\n\nA console for accounts and roles, a clearer separation between tenants, and a deployment pipeline the team can run without a private checklist.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Docker, AWS.\n\n## Outcome\n\nA SaaS foundation that can take the next customer without inventing a new setup for each one. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
         "/assets/covers/cover-6.png"
       ]

@@ -51,7 +51,9 @@ export type PostRecord = {
   excerpt: string;
   body: string;
   coverImage: string;
+  coverAlt?: string;
   author: string;
+  updatedAt?: string;
   category: string;
   tags: string[];
   seoTitle: string;

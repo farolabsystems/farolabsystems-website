@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import type { Locale } from "@/website-theme/config/site.config";
 import { localizeHref } from "@/website-theme/data/navigation";
@@ -26,13 +27,37 @@ export function MegaMenu({
   onOpen: () => void;
   onClose: () => void;
 }) {
+  const closeTimer = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    };
+  }, []);
+
+  function openMenu() {
+    if (closeTimer.current) {
+      window.clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+    onOpen();
+  }
+
+  function scheduleClose() {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    closeTimer.current = window.setTimeout(() => {
+      closeTimer.current = null;
+      onClose();
+    }, 160);
+  }
+
   return (
-    <div className="relative" onMouseEnter={onOpen} onMouseLeave={onClose}>
-      <button type="button" className="nav-link" aria-expanded={open} aria-haspopup="true" onClick={() => (open ? onClose() : onOpen())}>
+    <div className="mega-item relative" onMouseEnter={openMenu} onMouseLeave={scheduleClose}>
+      <button type="button" className="nav-link" aria-expanded={open} aria-haspopup="true" onClick={() => (open ? onClose() : openMenu())}>
         {label} <span aria-hidden="true">{open ? "▴" : "▾"}</span>
       </button>
       {open ? (
-        <div className="mega" role="region" aria-label={label}>
+        <div className="mega" role="region" aria-label={label} onMouseEnter={openMenu}>
           <div className="container grid items-start gap-8 lg:grid-cols-[1.4fr_1fr]">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {groups.map((group) => (

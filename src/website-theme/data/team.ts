@@ -1,7 +1,7 @@
 export const aboutPage = {
   eyebrow: "About",
   title: "We build technology with purpose.",
-  body: "ELYVANTA is a software development and technology solutions company helping businesses transform ideas into scalable digital products.",
+  body: "Farolab Systems is a software development and technology solutions company helping businesses transform ideas into scalable digital products.",
   approachTitle: "Our approach",
   approach:
     "We combine product thinking, engineering expertise and modern technology to build solutions that are practical today and ready for tomorrow.",

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/website-theme/config/site.config";
 import { siteConfig, withLocale } from "@/website-theme/config/site.config";
@@ -6,6 +5,7 @@ import { hero, heroCategories } from "@/website-theme/data/home";
 import type { CaseStudyRecord } from "@/website-theme/data/types";
 import { Button } from "@/website-theme/ui/Button";
 import { Container } from "@/website-theme/ui/Container";
+import { CoverImage } from "@/website-theme/ui/CoverImage";
 import { Eyebrow } from "@/website-theme/ui/Eyebrow";
 
 export function Hero({ locale, cards }: { locale: Locale; cards: CaseStudyRecord[] }) {
@@ -30,7 +30,9 @@ export function Hero({ locale, cards }: { locale: Locale; cards: CaseStudyRecord
             href={withLocale(locale, `/case-studies/${card.slug}`)}
             className="card card-lg grid min-w-[260px] flex-1 gap-3"
           >
-            <Image src={card.cover} alt="" width={640} height={400} className="h-40 w-full rounded-[var(--tc-radius-sm)] object-cover" />
+            <div className="media-frame">
+              <CoverImage src={card.cover} alt={card.title} sizes="280px" />
+            </div>
             <p className="caption">{siteConfig.demoCaseStudyLabel}</p>
             <div className="flex items-end justify-between gap-3">
               <span className="heading-6">{card.title}</span>

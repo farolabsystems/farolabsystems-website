@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import type { Components } from "react-markdown";
 import ReactMarkdown from "react-markdown";
 import { slugify } from "@/lib/slug";
+import { CoverImage } from "@/website-theme/ui/CoverImage";
 
 function headingText(children: ReactNode) {
   if (typeof children === "string") return children;
@@ -27,10 +28,18 @@ const components: Components = {
     );
   },
   a: ({ href, children }) => (
-    <a href={href} rel={href?.startsWith("http") ? "noreferrer" : undefined}>
+    <a href={href} rel={href?.startsWith("http") ? "noreferrer noopener" : undefined}>
       {children}
     </a>
   ),
+  img: ({ src, alt }) => {
+    if (!src || typeof src !== "string") return null;
+    return (
+      <span className="media-frame media-frame--inline">
+        <CoverImage src={src} alt={alt ?? ""} sizes="(max-width: 768px) 100vw, 720px" />
+      </span>
+    );
+  },
 };
 
 export function Markdown({ source }: { source: string }) {

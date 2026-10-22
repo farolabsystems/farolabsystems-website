@@ -3,7 +3,7 @@ import type { FaqItem } from "@/website-theme/data/types";
 export const hero = {
   eyebrow: "Software development & digital innovation",
   title: "We build digital products that move businesses forward.",
-  body: "ELYVANTA helps startups and businesses turn ideas into reliable digital products through modern software engineering, thoughtful design and intelligent technology.",
+  body: "Farolab Systems helps startups and businesses turn ideas into reliable digital products through modern software engineering, thoughtful design and intelligent technology.",
   support: "From first idea to long-term product growth, we work as your technology partner.",
   primary: { label: "Start a project", href: "/contact" },
   secondary: { label: "Explore our services", href: "/services/custom-software-development" },

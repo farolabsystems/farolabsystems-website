@@ -3,10 +3,10 @@
 export type Locale = "en" | "pl";
 
 export const siteConfig = {
-  name: "ELYVANTA",
-  legalName: "ELYVANTA",
+  name: "Farolab Systems",
+  legalName: "Farolab Systems",
   description:
-    "ELYVANTA helps startups and businesses design, build, and scale reliable digital products through software engineering, design, and practical AI.",
+    "Farolab Systems helps startups and businesses design, build, and scale reliable digital products through software engineering, design, and practical AI.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   email: "hello@example.com",
   phone: "",

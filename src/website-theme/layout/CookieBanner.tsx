@@ -33,8 +33,8 @@ export function CookieBanner({ locale }: { locale: Locale }) {
     <div
       role="dialog"
       aria-labelledby="cookie-title"
-      className="card"
-      style={{ position: "fixed", left: "var(--tc-space-4)", bottom: "var(--tc-space-4)", zIndex: 50, maxWidth: "420px" }}
+      className="card cookie-banner"
+      style={{ position: "fixed", left: "var(--tc-space-4)", bottom: "var(--tc-space-4)", zIndex: 50 }}
     >
       <h2 id="cookie-title" className="heading-6">
         {copy.cookieTitle}
@@ -51,7 +51,7 @@ export function CookieBanner({ locale }: { locale: Locale }) {
           Analytics cookies
         </label>
       ) : null}
-      <div className="mt-5 flex flex-wrap gap-2">
+      <div className="cookie-actions mt-5">
         <button type="button" className="btn btn-ghost" style={{ border: "1px solid var(--tc-text)" }} onClick={() => setCustom((value) => !value)}>
           {copy.customize}
         </button>

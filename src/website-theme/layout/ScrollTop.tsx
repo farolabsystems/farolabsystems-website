@@ -1,14 +1,17 @@
 "use client";
 
+import { ArrowUp } from "lucide-react";
+
 export function ScrollTop({ label }: { label: string }) {
   return (
     <button
       type="button"
-      className="btn"
-      style={{ position: "fixed", right: "var(--tc-space-4)", bottom: "var(--tc-space-4)", zIndex: 30 }}
+      className="btn scroll-top"
+      aria-label={label}
+      title={label}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
-      {label}
+      <ArrowUp size={20} strokeWidth={2.25} aria-hidden="true" />
     </button>
   );
 }
