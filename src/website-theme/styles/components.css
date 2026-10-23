@@ -504,7 +504,7 @@ a.chip-link:hover,
 }
 
 .footer {
-  --tc-logo: var(--tc-space-7);
+  --tc-logo: 56px;
   background: var(--tc-footer);
   color: var(--tc-footer-text);
   padding: var(--tc-space-10) 0 var(--tc-space-6);

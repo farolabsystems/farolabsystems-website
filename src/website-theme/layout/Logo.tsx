@@ -17,10 +17,10 @@ export function Logo({ locale = "en" }: { locale?: Locale }) {
         style={logoStyle}
       />
       <Image
-        src="/assets/brand/logo-footer-v2.png"
+        src="/assets/brand/logo-wordmark.png"
         alt=""
-        width={1024}
-        height={341}
+        width={886}
+        height={250}
         className="logo-on-dark"
         style={logoStyle}
       />
