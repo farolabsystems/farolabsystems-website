@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/website-theme/config/site.config";
+import { getSiteSettings } from "@/modules/settings/site-settings.service";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: {
-    default: `${siteConfig.name} | Software Development & Technology Solutions`,
-    template: "%s",
-  },
-  description: siteConfig.description,
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSiteSettings();
+  return {
+    metadataBase: new URL(siteConfig.url),
+    title: {
+      default: settings.seoTitle,
+      template: "%s",
+    },
+    description: settings.seoDescription,
+  };
+}
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

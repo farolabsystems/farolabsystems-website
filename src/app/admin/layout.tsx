@@ -1,12 +1,13 @@
-"use client";
-
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { usePathname } from "next/navigation";
-import { AdminShell } from "@/components/AdminShell";
+import { AdminGate } from "@/components/AdminGate";
 import "./admin.css";
 
+export const metadata: Metadata = {
+  title: "Admin | Farolab Systems",
+  robots: { index: false, follow: false },
+};
+
 export default function AdminLayout({ children }: { children: ReactNode }) {
-  const pathname = usePathname();
-  if (pathname === "/admin/login") return <div className="admin-login">{children}</div>;
-  return <AdminShell>{children}</AdminShell>;
+  return <AdminGate>{children}</AdminGate>;
 }

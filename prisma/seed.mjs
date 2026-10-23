@@ -47,6 +47,7 @@ async function main() {
         author: post.author,
         category: post.category,
         tags: post.tags,
+        coverImage: post.coverImage,
         seoTitle: post.seoTitle,
         seoDescription: post.seoDescription,
         status: "PUBLISHED",

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Editor } from "@/components/Editor";
 import { ImageDrop, uploadAdminImage } from "@/components/ImageDrop";
+import { SeoFields } from "@/components/SeoFields";
 import { Button } from "@/website-theme/ui/Button";
 
 export type ContentDraft = {
@@ -150,15 +151,15 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
           Tags
           <input className="field" value={draft.tags} onChange={(event) => set("tags", event.target.value)} />
         </label>
-        <label className="grid gap-2 body-sm">
-          SEO title
-          <input className="field" value={draft.seoTitle} onChange={(event) => set("seoTitle", event.target.value)} />
-        </label>
-        <label className="grid gap-2 body-sm">
-          SEO description
-          <input className="field" value={draft.seoDescription} onChange={(event) => set("seoDescription", event.target.value)} />
-        </label>
       </div>
+      <SeoFields
+        title={draft.seoTitle}
+        description={draft.seoDescription}
+        slug={draft.slug}
+        path={draft.type === "POST" ? `/blog/${draft.slug || "slug"}` : `/${draft.slug || "slug"}`}
+        onTitle={(value) => set("seoTitle", value)}
+        onDescription={(value) => set("seoDescription", value)}
+      />
       <label className="grid gap-2 body-sm">
         Status
         <select className="field" value={draft.status} onChange={(event) => set("status", event.target.value as ContentDraft["status"])}>

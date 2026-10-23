@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Editor } from "@/components/Editor";
 import { ImageDrop, uploadAdminImage } from "@/components/ImageDrop";
+import { SeoFields } from "@/components/SeoFields";
 import { Button } from "@/website-theme/ui/Button";
 
 export type CaseDraft = {
@@ -17,7 +18,10 @@ export type CaseDraft = {
   statLabel: string;
   body: string;
   cover: string;
+  coverAlt: string;
   gallery: string;
+  seoTitle: string;
+  seoDescription: string;
   featured: boolean;
   sortOrder: number;
   status: "DRAFT" | "PUBLISHED";
@@ -44,7 +48,10 @@ export function CaseStudyForm({ initial }: { initial: CaseDraft }) {
       stats: [{ value: draft.statValue || "+00%", label: draft.statLabel || "Placeholder metric" }],
       body: draft.body,
       cover: draft.cover || undefined,
+      coverAlt: draft.coverAlt || undefined,
       gallery: draft.gallery.split(",").map((item) => item.trim()).filter(Boolean),
+      seoTitle: draft.seoTitle || undefined,
+      seoDescription: draft.seoDescription || undefined,
       featured: draft.featured,
       sortOrder: Number(draft.sortOrder) || 0,
       status: draft.status,
@@ -131,9 +138,21 @@ export function CaseStudyForm({ initial }: { initial: CaseDraft }) {
         onFile={(file) => void uploadCover(file)}
       />
       <label className="grid gap-2 body-sm">
+        Cover description
+        <input className="field" value={draft.coverAlt} onChange={(event) => set("coverAlt", event.target.value)} />
+      </label>
+      <label className="grid gap-2 body-sm">
         Cover address
         <input className="field" value={draft.cover} onChange={(event) => set("cover", event.target.value)} />
       </label>
+      <SeoFields
+        title={draft.seoTitle}
+        description={draft.seoDescription}
+        slug={draft.slug}
+        path={`/case-studies/${draft.slug || "slug"}`}
+        onTitle={(value) => set("seoTitle", value)}
+        onDescription={(value) => set("seoDescription", value)}
+      />
       <label className="grid gap-2 body-sm">
         Gallery (comma separated)
         <input className="field" value={draft.gallery} onChange={(event) => set("gallery", event.target.value)} />

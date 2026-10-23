@@ -23,3 +23,11 @@ export async function createLead(input: ContactInput, ip: string) {
 export async function listLeads() {
   return prisma.lead.findMany({ orderBy: { createdAt: "desc" } });
 }
+
+export async function getLead(id: string) {
+  return prisma.lead.findUnique({ where: { id } });
+}
+
+export async function deleteLead(id: string) {
+  return prisma.lead.delete({ where: { id } });
+}

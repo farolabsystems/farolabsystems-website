@@ -3,7 +3,7 @@ import { CaseStudiesPage } from "@/website-theme/pages/case-studies/CaseStudiesP
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Demo Case Studies | Farolab Systems",
+  title: "Case Studies | Farolab Systems",
   description: "Concept projects that show how Farolab Systems approaches product design and software engineering. These are not client engagements.",
   path: "/case-studies",
 });

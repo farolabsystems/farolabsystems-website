@@ -1,8 +1,5 @@
 import type { CaseStudyRecord } from "@/website-theme/data/types";
 
-const note =
-  "This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.";
-
 function study(input: Omit<CaseStudyRecord, "gallery"> & { gallery?: string[] }): CaseStudyRecord {
   return { ...input, gallery: input.gallery ?? [input.cover] };
 }
@@ -19,7 +16,7 @@ export const caseStudies: CaseStudyRecord[] = [
       { value: "API-led", label: "Service design" },
       { value: "Extensible", label: "Next release" },
     ],
-    cover: "/assets/covers/cover-1.jpg",
+    cover: "/media/blog/covers/cover-1.jpg",
     featured: true,
     sortOrder: 1,
     body: `## Challenge
@@ -40,7 +37,7 @@ Next.js, Node.js, PostgreSQL, Docker.
 
 ## Outcome
 
-A scalable foundation designed for future product expansion. ${note}`,
+A scalable foundation designed for future product expansion.`,
   }),
   study({
     slug: "logiflow",
@@ -53,7 +50,7 @@ A scalable foundation designed for future product expansion. ${note}`,
       { value: "Visible", label: "Work status" },
       { value: "Operable", label: "After launch" },
     ],
-    cover: "/assets/covers/cover-2.jpg",
+    cover: "/media/blog/covers/cover-2.jpg",
     featured: true,
     sortOrder: 2,
     body: `## Challenge
@@ -74,7 +71,7 @@ Next.js, Node.js, PostgreSQL, Docker, CI/CD.
 
 ## Outcome
 
-A single operational picture the team can extend as routes, partners and volumes change. ${note}`,
+A single operational picture the team can extend as routes, partners and volumes change.`,
   }),
   study({
     slug: "mediconnect",
@@ -87,7 +84,7 @@ A single operational picture the team can extend as routes, partners and volumes
       { value: "Careful", label: "Data boundaries" },
       { value: "Shared", label: "Web and mobile" },
     ],
-    cover: "/assets/covers/cover-3.jpg",
+    cover: "/media/blog/covers/cover-3.jpg",
     featured: true,
     sortOrder: 3,
     body: `## Challenge
@@ -108,7 +105,7 @@ React, Next.js, Node.js, PostgreSQL.
 
 ## Outcome
 
-A foundation for a healthcare product that can add workflows without mixing patient communication and internal tools. ${note}`,
+A foundation for a healthcare product that can add workflows without mixing patient communication and internal tools.`,
   }),
   study({
     slug: "storelane",
@@ -121,7 +118,7 @@ A foundation for a healthcare product that can add workflows without mixing pati
       { value: "Owned", label: "Catalog data" },
       { value: "Linked", label: "Fulfillment" },
     ],
-    cover: "/assets/covers/cover-4.jpg",
+    cover: "/media/blog/covers/cover-4.jpg",
     featured: false,
     sortOrder: 4,
     body: `## Challenge
@@ -142,7 +139,7 @@ Next.js, Node.js, PostgreSQL, Redis.
 
 ## Outcome
 
-A commerce foundation that can grow into more channels without copying product data into another tool. ${note}`,
+A commerce foundation that can grow into more channels without copying product data into another tool.`,
   }),
   study({
     slug: "learnbase",
@@ -155,7 +152,7 @@ A commerce foundation that can grow into more channels without copying product d
       { value: "Editable", label: "Content tools" },
       { value: "Shared", label: "Learner and admin" },
     ],
-    cover: "/assets/covers/cover-5.jpg",
+    cover: "/media/blog/covers/cover-5.jpg",
     featured: false,
     sortOrder: 5,
     body: `## Challenge
@@ -176,7 +173,7 @@ Next.js, TypeScript, PostgreSQL.
 
 ## Outcome
 
-A learning product that can add the next programme without redesigning the record of progress. ${note}`,
+A learning product that can add the next programme without redesigning the record of progress.`,
   }),
   study({
     slug: "relayboard",
@@ -189,7 +186,7 @@ A learning product that can add the next programme without redesigning the recor
       { value: "Repeatable", label: "Deploys" },
       { value: "Staffed", label: "Product area" },
     ],
-    cover: "/assets/covers/cover-6.jpg",
+    cover: "/media/blog/covers/cover-6.jpg",
     featured: false,
     sortOrder: 6,
     body: `## Challenge
@@ -210,6 +207,6 @@ Next.js, Node.js, PostgreSQL, Docker, AWS.
 
 ## Outcome
 
-A SaaS foundation that can take the next customer without inventing a new setup for each one. ${note}`,
+A SaaS foundation that can take the next customer without inventing a new setup for each one.`,
   }),
 ];

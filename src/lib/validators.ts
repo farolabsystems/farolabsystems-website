@@ -79,12 +79,21 @@ export const caseStudySchema = z.object({
     .max(6),
   body: z.string().trim().min(1),
   cover: z.string().trim().max(300).optional(),
+  coverAlt: z.string().trim().max(180).optional(),
   gallery: z.array(z.string().trim().max(300)).max(8).optional(),
+  seoTitle: z.string().trim().max(180).optional(),
+  seoDescription: z.string().trim().max(300).optional(),
   featured: z.boolean().optional(),
   sortOrder: z.number().int().min(0).max(999).optional(),
   status: z.enum(["DRAFT", "PUBLISHED"]),
 });
 
+export const siteSettingsSchema = z.object({
+  seoTitle: z.string().trim().min(10, "Add a site title").max(70, "Keep the site title under 70 characters"),
+  seoDescription: z.string().trim().min(50, "Add a fuller site description").max(170, "Keep the site description under 170 characters"),
+});
+
 export type ContactInput = z.infer<typeof contactSchema>;
 export type ContentInput = z.infer<typeof contentSchema>;
 export type CaseStudyInput = z.infer<typeof caseStudySchema>;
+export type SiteSettingsInput = z.infer<typeof siteSettingsSchema>;

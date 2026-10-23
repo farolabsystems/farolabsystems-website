@@ -51,22 +51,32 @@ model Content {
 }
 
 model CaseStudy {
-  id          String        @id @default(cuid())
-  slug        String        @unique
-  title       String
-  summary     String
-  industries  String[]
-  services    String[]
-  stats       Json
-  body        String
-  cover       String?
-  gallery     String[]
-  featured    Boolean       @default(false)
-  sortOrder   Int           @default(0)
-  status      PublishStatus @default(PUBLISHED)
-  publishedAt DateTime?
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
+  id             String        @id @default(cuid())
+  slug           String        @unique
+  title          String
+  summary        String
+  industries     String[]
+  services       String[]
+  stats          Json
+  body           String
+  cover          String?
+  coverAlt       String        @default("")
+  gallery        String[]
+  seoTitle       String?
+  seoDescription String?
+  featured       Boolean       @default(false)
+  sortOrder      Int           @default(0)
+  status         PublishStatus @default(PUBLISHED)
+  publishedAt    DateTime?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+model SiteSetting {
+  id             String   @id @default("site")
+  seoTitle       String
+  seoDescription String
+  updatedAt      DateTime @updatedAt
 }
 
 model Lead {

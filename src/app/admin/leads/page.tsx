@@ -1,53 +1,40 @@
+import { AdminTable, type AdminRow } from "@/components/AdminTable";
 import { listLeads } from "@/modules/leads/lead.service";
 
 export const dynamic = "force-dynamic";
 
 export default async function LeadsPage() {
   const leads = await listLeads();
+  const rows: AdminRow[] = leads.map((lead) => ({
+    id: lead.id,
+    href: `/admin/leads/${lead.id}`,
+    deleteUrl: `/api/admin/leads/${lead.id}`,
+    search: `${lead.firstName} ${lead.lastName} ${lead.email} ${lead.company} ${lead.message}`,
+    cells: {
+      when: lead.createdAt.toISOString().slice(0, 16).replace("T", " "),
+      name: `${lead.firstName} ${lead.lastName}`.trim(),
+      email: lead.email,
+      company: lead.company || "—",
+      looking: lead.startingFrom || "—",
+    },
+  }));
   return (
     <div className="grid gap-4">
-      <h1 className="heading-4">Inquiries</h1>
-      <div className="overflow-x-auto">
-        <table className="w-full text-left" style={{ borderCollapse: "collapse" }}>
-          <thead>
-            <tr>
-              {["When", "Name", "Email", "Phone", "Company", "Looking for", "Message"].map((heading) => (
-                <th key={heading} className="body-sm" style={{ padding: "var(--tc-space-3)", borderBottom: "1px solid var(--tc-border)", whiteSpace: "nowrap" }}>
-                  {heading}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {leads.map((lead) => (
-              <tr key={lead.id}>
-                <td className="body-sm" style={{ padding: "var(--tc-space-3)", whiteSpace: "nowrap" }}>
-                  {lead.createdAt.toISOString().slice(0, 16).replace("T", " ")}
-                </td>
-                <td className="body-sm" style={{ padding: "var(--tc-space-3)", whiteSpace: "nowrap" }}>
-                  {lead.firstName} {lead.lastName}
-                </td>
-                <td className="body-sm" style={{ padding: "var(--tc-space-3)" }}>
-                  {lead.email}
-                </td>
-                <td className="body-sm" style={{ padding: "var(--tc-space-3)", whiteSpace: "nowrap" }}>
-                  {lead.phone || "—"}
-                </td>
-                <td className="body-sm" style={{ padding: "var(--tc-space-3)" }}>
-                  {lead.company || "—"}
-                </td>
-                <td className="body-sm" style={{ padding: "var(--tc-space-3)" }}>
-                  {lead.startingFrom || "—"}
-                </td>
-                <td className="body-sm" style={{ padding: "var(--tc-space-3)", maxWidth: "360px" }}>
-                  {lead.message}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        {leads.length === 0 ? <p className="body muted mt-4">No inquiries yet.</p> : null}
+      <div>
+        <h1 className="heading-4">Inquiries</h1>
+        <p className="body-sm muted mt-1">Messages sent from the contact form.</p>
       </div>
+      <AdminTable
+        columns={[
+          { key: "when", label: "When" },
+          { key: "name", label: "Name" },
+          { key: "email", label: "Email" },
+          { key: "company", label: "Company" },
+          { key: "looking", label: "Looking for" },
+        ]}
+        rows={rows}
+        empty="No inquiries yet."
+      />
     </div>
   );
 }

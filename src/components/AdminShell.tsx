@@ -7,10 +7,12 @@ import { usePathname } from "next/navigation";
 import { LogoutButton } from "@/components/LogoutButton";
 
 const links = [
+  ["/admin", "Overview"],
   ["/admin/posts", "Posts"],
   ["/admin/pages", "Pages"],
   ["/admin/case-studies", "Case studies"],
   ["/admin/leads", "Inquiries"],
+  ["/admin/settings", "SEO"],
 ];
 
 export function AdminShell({ children }: { children: ReactNode }) {
@@ -54,11 +56,14 @@ export function AdminShell({ children }: { children: ReactNode }) {
       </header>
       <div className="admin-frame">
         <nav id="admin-menu" className={open ? "admin-nav is-open" : "admin-nav"} aria-label="Admin">
-          {links.map(([href, label]) => (
-            <Link key={href} href={href} className="admin-link" aria-current={pathname.startsWith(href) ? "page" : undefined}>
-              {label}
-            </Link>
-          ))}
+          {links.map(([href, label]) => {
+            const current = href === "/admin" ? pathname === "/admin" : pathname.startsWith(href);
+            return (
+              <Link key={href} href={href} className="admin-link" aria-current={current ? "page" : undefined}>
+                {label}
+              </Link>
+            );
+          })}
           <span className="admin-nav-spacer" />
           <Link className="admin-link" href="/">
             View site

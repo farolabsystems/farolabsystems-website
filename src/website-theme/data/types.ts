@@ -58,7 +58,10 @@ export type CaseStudyRecord = {
   stats: Stat[];
   body: string;
   cover: string;
+  coverAlt?: string;
   gallery: string[];
+  seoTitle?: string;
+  seoDescription?: string;
   featured: boolean;
   sortOrder: number;
 };
