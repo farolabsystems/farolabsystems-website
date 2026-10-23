@@ -170,29 +170,6 @@ export const industryTabs = [
 export const technology = {
   title: "Built with modern technology",
   body: "We choose technology based on the product requirements, scalability, security and long-term business goals — not trends alone.",
-  items: [
-    "React",
-    "Next.js",
-    "TypeScript",
-    "JavaScript",
-    "Node.js",
-    "Python",
-    "Django",
-    "FastAPI",
-    "REST APIs",
-    "PostgreSQL",
-    "MySQL",
-    "MongoDB",
-    "Redis",
-    "AWS",
-    "Microsoft Azure",
-    "Docker",
-    "CI/CD",
-    "OpenAI",
-    "Gemini",
-    "AI APIs",
-    "LLM integrations",
-  ],
 };
 
 export const caseStudiesSection = {

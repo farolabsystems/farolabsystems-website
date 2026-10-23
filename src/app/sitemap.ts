@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/website-theme/config/site.config";
 import { services } from "@/website-theme/data/services";
 import { industries } from "@/website-theme/data/industries";
+import { technologies } from "@/website-theme/data/technologies";
 import { caseStudies } from "@/website-theme/data/case-studies";
 import { posts as fallbackPosts } from "@/website-theme/data/posts";
 import { absoluteUrl } from "@/lib/seo";
@@ -57,6 +58,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/blog",
     ...services.map((item) => `/services/${item.slug}`),
     ...industries.map((item) => `/industries/${item.slug}`),
+    ...technologies.map((item) => `/technologies/${item.slug}`),
     ...caseStudies.map((item) => `/case-studies/${item.slug}`),
   ];
   const pages: MetadataRoute.Sitemap = paths.flatMap((path) => [

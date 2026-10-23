@@ -31,6 +31,24 @@ export type IndustryRecord = {
   faqs: FaqItem[];
 };
 
+/** Brand icon slug from `simple-icons`, or a Lucide fallback for generic labels. */
+export type TechnologyIcon =
+  | { kind: "simple"; slug: string }
+  | { kind: "lucide"; name: "network" | "git-branch" | "sparkles" | "bot" | "cloud" | "server" };
+
+export type TechnologyRecord = {
+  slug: string;
+  navLabel: string;
+  title: string;
+  seoTitle: string;
+  seoDescription: string;
+  eyebrow: string;
+  summary: string;
+  bullets: string[];
+  faqs: FaqItem[];
+  icon: TechnologyIcon;
+};
+
 export type CaseStudyRecord = {
   slug: string;
   title: string;

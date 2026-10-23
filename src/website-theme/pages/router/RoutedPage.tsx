@@ -2,9 +2,11 @@ import { notFound } from "next/navigation";
 import type { Locale } from "@/website-theme/config/site.config";
 import { services } from "@/website-theme/data/services";
 import { industries } from "@/website-theme/data/industries";
+import { technologies } from "@/website-theme/data/technologies";
 import { HomePage } from "@/website-theme/pages/home/HomePage";
 import { ServicePage } from "@/website-theme/pages/services/ServicePage";
 import { IndustryPage } from "@/website-theme/pages/industries/IndustryPage";
+import { TechnologyPage } from "@/website-theme/pages/technologies/TechnologyPage";
 import { CaseStudiesPage } from "@/website-theme/pages/case-studies/CaseStudiesPage";
 import { CaseStudyPage } from "@/website-theme/pages/case-studies/CaseStudyPage";
 import { BlogPage } from "@/website-theme/pages/blog/BlogPage";
@@ -64,6 +66,9 @@ export async function RoutedPage({
   }
   if (head === "industries" && second && industries.some((item) => item.slug === second)) {
     return <IndustryPage slug={second} locale={locale} />;
+  }
+  if (head === "technologies" && second && technologies.some((item) => item.slug === second)) {
+    return <TechnologyPage slug={second} locale={locale} />;
   }
   if (head === "consultation" && second) return <ConsultationPage locale={locale} kind="advisor" />;
   if (!second) return <CmsPage slug={head} />;

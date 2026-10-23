@@ -163,6 +163,21 @@
   border-color: var(--tc-primary);
 }
 
+a.chip,
+a.chip-link {
+  text-decoration: none;
+}
+
+a.chip:hover,
+a.chip-link:hover {
+  background: var(--tc-primary-soft);
+  border-color: var(--tc-primary);
+}
+
+.chip svg {
+  flex-shrink: 0;
+}
+
 .field {
   width: 100%;
   border: 1px solid var(--tc-border);

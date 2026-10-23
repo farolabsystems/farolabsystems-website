@@ -54,7 +54,7 @@ export async function HomePage({ locale = "en" }: { locale?: Locale }) {
       <ForStartups />
       <WhatMakesUsDifferent />
       <Industries locale={locale} studies={studies} />
-      <BuiltTags />
+      <BuiltTags locale={locale} />
       <CaseStudiesSlider locale={locale} studies={studies} />
       <Testimonial />
       <BlogTeaser locale={locale} posts={posts.slice(0, 3)} />

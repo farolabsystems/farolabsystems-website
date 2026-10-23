@@ -9,6 +9,7 @@ const reserved = new Set([
   "blog",
   "services",
   "industries",
+  "technologies",
   "case-studies",
   "about-us",
   "career",
