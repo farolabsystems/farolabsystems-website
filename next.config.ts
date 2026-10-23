@@ -2,7 +2,23 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
-  serverExternalPackages: ["@aws-sdk/client-s3"],
+  serverExternalPackages: ["@aws-sdk/client-s3", "@genspark/cli"],
+  outputFileTracingIncludes: {
+    "/api/admin/blog/generate": [
+      "./node_modules/@genspark/cli/**/*",
+      "./node_modules/commander/**/*",
+      "./node_modules/ws/**/*",
+      "./node_modules/yazl/**/*",
+      "./node_modules/buffer-crc32/**/*",
+    ],
+    "/api/cron/daily-blog": [
+      "./node_modules/@genspark/cli/**/*",
+      "./node_modules/commander/**/*",
+      "./node_modules/ws/**/*",
+      "./node_modules/yazl/**/*",
+      "./node_modules/buffer-crc32/**/*",
+    ],
+  },
   images: {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",

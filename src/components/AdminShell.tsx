@@ -4,15 +4,17 @@ import { useEffect, useState, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Briefcase, ExternalLink, FileText, Files, Inbox, LayoutDashboard, LogOut, Menu, Search, X } from "lucide-react";
+import { AdminToastProvider } from "@/components/AdminToast";
 import { LogoutButton } from "@/components/LogoutButton";
 
 const links = [
-  ["/admin", "Overview"],
-  ["/admin/posts", "Posts"],
-  ["/admin/pages", "Pages"],
-  ["/admin/case-studies", "Case studies"],
-  ["/admin/leads", "Inquiries"],
-  ["/admin/settings", "SEO"],
+  { href: "/admin", label: "Overview", icon: LayoutDashboard },
+  { href: "/admin/posts", label: "Posts", icon: FileText },
+  { href: "/admin/pages", label: "Pages", icon: Files },
+  { href: "/admin/case-studies", label: "Case studies", icon: Briefcase },
+  { href: "/admin/leads", label: "Inquiries", icon: Inbox },
+  { href: "/admin/settings", label: "SEO", icon: Search },
 ];
 
 export function AdminShell({ children }: { children: ReactNode }) {
@@ -41,13 +43,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
           onClick={() => setOpen((current) => !current)}
         >
           <span className="sr-only">{open ? "Close menu" : "Menu"}</span>
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-            {open ? (
-              <path d="M6 6 L18 18 M18 6 L6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            ) : (
-              <path d="M4 7 H20 M4 12 H20 M4 17 H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            )}
-          </svg>
+          {open ? <X size={22} strokeWidth={1.75} /> : <Menu size={22} strokeWidth={1.75} />}
         </button>
         <Link href="/admin/posts" className="admin-logo" aria-label="Farolab Systems">
           <Image src="/assets/brand/logo-header.png" alt="" width={942} height={224} priority />
@@ -56,21 +52,28 @@ export function AdminShell({ children }: { children: ReactNode }) {
       </header>
       <div className="admin-frame">
         <nav id="admin-menu" className={open ? "admin-nav is-open" : "admin-nav"} aria-label="Admin">
-          {links.map(([href, label]) => {
+          {links.map(({ href, label, icon: Icon }) => {
             const current = href === "/admin" ? pathname === "/admin" : pathname.startsWith(href);
             return (
               <Link key={href} href={href} className="admin-link" aria-current={current ? "page" : undefined}>
+                <Icon size={18} strokeWidth={1.75} aria-hidden="true" />
                 {label}
               </Link>
             );
           })}
           <span className="admin-nav-spacer" />
           <Link className="admin-link" href="/">
+            <ExternalLink size={18} strokeWidth={1.75} aria-hidden="true" />
             View site
           </Link>
-          <LogoutButton className="admin-link" />
+          <LogoutButton className="admin-link">
+            <LogOut size={18} strokeWidth={1.75} aria-hidden="true" />
+            Log out
+          </LogoutButton>
         </nav>
-        <main className="admin-main">{children}</main>
+        <main className="admin-main">
+          <AdminToastProvider>{children}</AdminToastProvider>
+        </main>
       </div>
     </div>
   );

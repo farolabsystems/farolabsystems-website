@@ -7,14 +7,12 @@ import { uiCopy } from "@/website-theme/config/site.config";
 import { SiteHeader } from "@/website-theme/layout/SiteHeader";
 import { SiteFooter } from "@/website-theme/layout/SiteFooter";
 import { CookieBanner } from "@/website-theme/layout/CookieBanner";
-import { GoogleAnalytics } from "@/website-theme/layout/GoogleAnalytics";
 
 export function SiteChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname() || "/";
   const locale: Locale = pathname === "/pl" || pathname.startsWith("/pl/") ? "pl" : "en";
   return (
     <>
-      <GoogleAnalytics />
       <a className="skip-link" href="#content">
         Skip to content
       </a>

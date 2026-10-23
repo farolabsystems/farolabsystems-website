@@ -3,6 +3,9 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { ChevronLeft, ChevronRight, Eye, Pencil, Trash2 } from "lucide-react";
+import { useAdminToast } from "@/components/AdminToast";
+import { ConfirmModal } from "@/components/ConfirmModal";
 
 export type AdminColumn = { key: string; label: string };
 
@@ -27,10 +30,12 @@ export function AdminTable({
   empty: string;
 }) {
   const router = useRouter();
+  const toast = useAdminToast();
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState("all");
   const [page, setPage] = useState(1);
   const [busy, setBusy] = useState("");
+  const [pending, setPending] = useState<AdminRow | null>(null);
   const hasStatus = rows.some((row) => row.status);
 
   const filtered = useMemo(() => {
@@ -48,12 +53,18 @@ export function AdminTable({
   const from = filtered.length === 0 ? 0 : (current - 1) * PAGE_SIZE + 1;
   const to = Math.min(current * PAGE_SIZE, filtered.length);
 
-  async function remove(row: AdminRow) {
-    if (!row.deleteUrl || !confirm("Delete this item?")) return;
-    setBusy(row.id);
-    const response = await fetch(row.deleteUrl, { method: "DELETE" });
+  async function remove() {
+    if (!pending?.deleteUrl) return;
+    setBusy(pending.id);
+    const response = await fetch(pending.deleteUrl, { method: "DELETE" });
     setBusy("");
-    if (!response.ok) return;
+    if (!response.ok) {
+      toast({ tone: "error", title: "Could not delete", body: "Try again in a moment." });
+      return;
+    }
+    const name = pending.cells.title || "Item";
+    setPending(null);
+    toast({ tone: "success", title: "Deleted", body: name });
     router.refresh();
   }
 
@@ -112,11 +123,13 @@ export function AdminTable({
                   <div className="admin-row-actions">
                     {row.href ? (
                       <Link className="btn btn-ghost admin-mini" href={row.href}>
+                        {row.href.includes("/leads/") ? <Eye size={15} strokeWidth={1.75} aria-hidden="true" /> : <Pencil size={15} strokeWidth={1.75} aria-hidden="true" />}
                         {row.href.includes("/leads/") ? "View" : "Edit"}
                       </Link>
                     ) : null}
                     {row.deleteUrl ? (
-                      <button type="button" className="btn btn-ghost admin-mini" disabled={busy === row.id} onClick={() => void remove(row)}>
+                      <button type="button" className="btn btn-ghost admin-mini" disabled={busy === row.id} onClick={() => setPending(row)}>
+                        <Trash2 size={15} strokeWidth={1.75} aria-hidden="true" />
                         Delete
                       </button>
                     ) : null}
@@ -134,13 +147,23 @@ export function AdminTable({
         </p>
         <div className="admin-pager-buttons">
           <button type="button" className="btn btn-ghost admin-mini" disabled={current <= 1} onClick={() => setPage(current - 1)}>
+            <ChevronLeft size={16} strokeWidth={1.75} aria-hidden="true" />
             Previous
           </button>
           <button type="button" className="btn btn-ghost admin-mini" disabled={current >= pages} onClick={() => setPage(current + 1)}>
             Next
+            <ChevronRight size={16} strokeWidth={1.75} aria-hidden="true" />
           </button>
         </div>
       </div>
+      <ConfirmModal
+        open={Boolean(pending)}
+        title="Delete this item?"
+        body={pending ? `“${pending.cells.title || "This item"}” will be removed. This cannot be undone.` : ""}
+        busy={Boolean(pending && busy === pending.id)}
+        onCancel={() => !busy && setPending(null)}
+        onConfirm={() => void remove()}
+      />
     </div>
   );
 }

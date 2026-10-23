@@ -46,6 +46,10 @@ services:
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
       AWS_REGION: ${AWS_REGION:-ap-southeast-2}
       AWS_S3_BUCKET: ${AWS_S3_BUCKET:-farolabsystems}
+      GSK_API_KEY: ${GSK_API_KEY}
+      GSK_BASE_URL: ${GSK_BASE_URL:-https://www.genspark.ai}
+      CRON_SECRET: ${CRON_SECRET}
+      BLOG_CRON_TZ: ${BLOG_CRON_TZ:-Asia/Kolkata}
     ports:
       - "3000:3000"
     depends_on:

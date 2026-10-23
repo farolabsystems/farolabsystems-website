@@ -5,7 +5,10 @@ import { useRouter } from "next/navigation";
 import { Editor } from "@/components/Editor";
 import { ImageDrop, uploadAdminImage } from "@/components/ImageDrop";
 import { SeoFields } from "@/components/SeoFields";
+import { ConfirmModal } from "@/components/ConfirmModal";
+import { useAdminToast } from "@/components/AdminToast";
 import { Button } from "@/website-theme/ui/Button";
+import { Trash2 } from "lucide-react";
 
 export type CaseDraft = {
   id?: string;
@@ -29,9 +32,12 @@ export type CaseDraft = {
 
 export function CaseStudyForm({ initial }: { initial: CaseDraft }) {
   const router = useRouter();
+  const toast = useAdminToast();
   const [draft, setDraft] = useState(initial);
   const [error, setError] = useState("");
   const [uploading, setUploading] = useState(false);
+  const [confirming, setConfirming] = useState(false);
+  const [deleting, setDeleting] = useState(false);
 
   function set<K extends keyof CaseDraft>(key: K, value: CaseDraft[K]) {
     setDraft((current) => ({ ...current, [key]: value }));
@@ -63,9 +69,12 @@ export function CaseStudyForm({ initial }: { initial: CaseDraft }) {
     });
     if (!response.ok) {
       const body = (await response.json().catch(() => null)) as { error?: string } | null;
-      setError(body?.error ?? "Could not save");
+      const message = body?.error ?? "Could not save";
+      setError(message);
+      toast({ tone: "error", title: "Could not save", body: message });
       return;
     }
+    toast({ tone: "success", title: draft.status === "PUBLISHED" ? "Published" : "Saved" });
     router.push("/admin/case-studies");
     router.refresh();
   }
@@ -89,8 +98,16 @@ export function CaseStudyForm({ initial }: { initial: CaseDraft }) {
   }
 
   async function remove() {
-    if (!draft.id || !confirm("Delete this case study?")) return;
-    await fetch(`/api/admin/case-studies/${draft.id}`, { method: "DELETE" });
+    if (!draft.id) return;
+    setDeleting(true);
+    const response = await fetch(`/api/admin/case-studies/${draft.id}`, { method: "DELETE" });
+    setDeleting(false);
+    if (!response.ok) {
+      toast({ tone: "error", title: "Could not delete" });
+      return;
+    }
+    toast({ tone: "success", title: "Deleted", body: draft.title });
+    setConfirming(false);
     router.push("/admin/case-studies");
     router.refresh();
   }
@@ -174,11 +191,20 @@ export function CaseStudyForm({ initial }: { initial: CaseDraft }) {
           Save
         </Button>
         {draft.id ? (
-          <Button type="button" variant="ghost" onClick={() => void remove()}>
+          <Button type="button" variant="ghost" onClick={() => setConfirming(true)}>
+            <Trash2 size={16} strokeWidth={1.75} aria-hidden="true" />
             Delete
           </Button>
         ) : null}
       </div>
+      <ConfirmModal
+        open={confirming}
+        title="Delete this case study?"
+        body={`“${draft.title || "This case study"}” will be removed. This cannot be undone.`}
+        busy={deleting}
+        onCancel={() => !deleting && setConfirming(false)}
+        onConfirm={() => void remove()}
+      />
     </div>
   );
 }

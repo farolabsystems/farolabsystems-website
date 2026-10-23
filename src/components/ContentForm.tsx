@@ -5,7 +5,10 @@ import { useRouter } from "next/navigation";
 import { Editor } from "@/components/Editor";
 import { ImageDrop, uploadAdminImage } from "@/components/ImageDrop";
 import { SeoFields } from "@/components/SeoFields";
+import { ConfirmModal } from "@/components/ConfirmModal";
+import { useAdminToast } from "@/components/AdminToast";
 import { Button } from "@/website-theme/ui/Button";
+import { Sparkles, Trash2 } from "lucide-react";
 
 export type ContentDraft = {
   id?: string;
@@ -26,10 +29,16 @@ export type ContentDraft = {
 
 export function ContentForm({ initial }: { initial: ContentDraft }) {
   const router = useRouter();
+  const toast = useAdminToast();
   const [draft, setDraft] = useState(initial);
   const [error, setError] = useState("");
   const [imageAlt, setImageAlt] = useState("");
   const [uploading, setUploading] = useState<"" | "cover" | "body">("");
+  const [prompt, setPrompt] = useState("");
+  const [generating, setGenerating] = useState(false);
+  const [notice, setNotice] = useState("");
+  const [confirming, setConfirming] = useState(false);
+  const [deleting, setDeleting] = useState(false);
 
   function set<K extends keyof ContentDraft>(key: K, value: ContentDraft[K]) {
     setDraft((current) => ({ ...current, [key]: value }));
@@ -54,11 +63,74 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
     });
     if (!response.ok) {
       const body = (await response.json().catch(() => null)) as { error?: string } | null;
-      setError(body?.error ?? "Could not save");
+      const message = body?.error ?? "Could not save";
+      setError(message);
+      toast({ tone: "error", title: "Could not save", body: message });
       return;
     }
+    toast({ tone: "success", title: draft.status === "PUBLISHED" ? "Published" : "Saved" });
     router.push(draft.type === "POST" ? "/admin/posts" : "/admin/pages");
     router.refresh();
+  }
+
+  async function generateFromPrompt() {
+    const subject = prompt.trim();
+    if (subject.length < 8) {
+      setError("Enter a prompt first.");
+      return;
+    }
+    setError("");
+    setNotice("");
+    setGenerating(true);
+    try {
+      const started = await fetch("/api/admin/blog/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt: subject }),
+      });
+      const startBody = (await started.json()) as { id?: string; error?: string };
+      if (!started.ok || !startBody.id) throw new Error(startBody.error || "Could not start generation");
+      const deadline = Date.now() + 12 * 60 * 1000;
+      while (Date.now() < deadline) {
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        const response = await fetch(`/api/admin/blog/generate?id=${encodeURIComponent(startBody.id)}`);
+        const job = (await response.json()) as {
+          status?: string;
+          message?: string;
+          error?: string;
+          draft?: ContentDraft | null;
+        };
+        if (!response.ok) throw new Error(job.error || "Lost track of the generation");
+        if (job.status === "running") continue;
+        if (job.status === "error") throw new Error(job.message || "Could not generate the post.");
+        if (!job.draft) throw new Error("The draft did not come back.");
+        const next = job.draft;
+        setDraft((current) => ({
+          ...current,
+          title: next.title,
+          slug: next.slug,
+          excerpt: next.excerpt,
+          body: next.body,
+          coverImage: next.coverImage,
+          coverAlt: next.coverAlt,
+          author: next.author,
+          category: next.category,
+          tags: next.tags,
+          seoTitle: next.seoTitle,
+          seoDescription: next.seoDescription,
+          status: "DRAFT",
+        }));
+        setNotice("Draft is in the form. Set the status to Published and save when you want it live.");
+        toast({ tone: "success", title: "Draft ready", body: "Review it, then save." });
+        return;
+      }
+      throw new Error("Generation is still running. Try again in a minute.");
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "Could not generate the post.");
+      toast({ tone: "error", title: "Could not generate", body: cause instanceof Error ? cause.message : "Try again in a moment." });
+    } finally {
+      setGenerating(false);
+    }
   }
 
   async function uploadImage(file: File, alt: string, kind: "cover" | "body") {
@@ -86,14 +158,44 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
   }
 
   async function remove() {
-    if (!draft.id || !confirm("Delete this item?")) return;
-    await fetch(`/api/admin/content/${draft.id}`, { method: "DELETE" });
+    if (!draft.id) return;
+    setDeleting(true);
+    const response = await fetch(`/api/admin/content/${draft.id}`, { method: "DELETE" });
+    setDeleting(false);
+    if (!response.ok) {
+      toast({ tone: "error", title: "Could not delete" });
+      return;
+    }
+    toast({ tone: "success", title: "Deleted", body: draft.title });
+    setConfirming(false);
     router.push(draft.type === "POST" ? "/admin/posts" : "/admin/pages");
     router.refresh();
   }
 
   return (
     <div className="grid max-w-3xl gap-4">
+      {draft.type === "POST" ? (
+        <div className="grid gap-2">
+          <label className="grid gap-2 body-sm">
+            Prompt
+            <textarea
+              className="field"
+              rows={3}
+              value={prompt}
+              placeholder="What should this article cover?"
+              onChange={(event) => setPrompt(event.target.value)}
+            />
+          </label>
+          <div>
+            <button type="button" className="btn" onClick={() => void generateFromPrompt()} disabled={generating}>
+              <Sparkles size={16} strokeWidth={1.75} aria-hidden="true" />
+              {generating ? "Generating…" : "Generate"}
+            </button>
+            <p className="admin-status">Fills this form from your prompt. Nothing is published until you save.</p>
+            {notice ? <p className="admin-status">{notice}</p> : null}
+          </div>
+        </div>
+      ) : null}
       <label className="grid gap-2 body-sm">
         Title
         <input className="field" value={draft.title} onChange={(event) => set("title", event.target.value)} />
@@ -173,11 +275,20 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
           Save
         </Button>
         {draft.id ? (
-          <Button type="button" variant="ghost" onClick={() => void remove()}>
+          <Button type="button" variant="ghost" onClick={() => setConfirming(true)}>
+            <Trash2 size={16} strokeWidth={1.75} aria-hidden="true" />
             Delete
           </Button>
         ) : null}
       </div>
+      <ConfirmModal
+        open={confirming}
+        title="Delete this item?"
+        body={`“${draft.title || "This item"}” will be removed. This cannot be undone.`}
+        busy={deleting}
+        onCancel={() => !deleting && setConfirming(false)}
+        onConfirm={() => void remove()}
+      />
     </div>
   );
 }

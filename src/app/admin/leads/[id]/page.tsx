@@ -38,7 +38,7 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
         <p className="caption">Message</p>
         <p className="body mt-2 whitespace-pre-wrap">{lead.message}</p>
       </div>
-      <LeadActions id={lead.id} />
+      <LeadActions id={lead.id} title={`${lead.firstName} ${lead.lastName}`.trim() || lead.email} />
     </div>
   );
 }

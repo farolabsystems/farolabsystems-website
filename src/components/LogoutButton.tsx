@@ -1,6 +1,8 @@
 "use client";
 
-export function LogoutButton({ className = "nav-link" }: { className?: string }) {
+import type { ReactNode } from "react";
+
+export function LogoutButton({ className = "nav-link", children = "Log out" }: { className?: string; children?: ReactNode }) {
   return (
     <button
       type="button"
@@ -11,7 +13,7 @@ export function LogoutButton({ className = "nav-link" }: { className?: string })
         });
       }}
     >
-      Log out
+      {children}
     </button>
   );
 }

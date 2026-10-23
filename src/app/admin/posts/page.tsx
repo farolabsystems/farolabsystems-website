@@ -25,7 +25,9 @@ export default async function PostsAdminPage() {
       <div className="admin-toolbar">
         <div>
           <h1 className="heading-4">Posts</h1>
-          <p className="body-sm muted mt-1">Articles, covers, and search listings.</p>
+          <p className="body-sm muted mt-1">
+            Articles, covers, and search listings. Each day at 12:00 IST a new post is published from current market trends, skipping topics already on the blog.
+          </p>
         </div>
         <Link className="btn" href="/admin/posts/new">
           New post

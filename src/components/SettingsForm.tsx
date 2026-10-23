@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { SeoFields } from "@/components/SeoFields";
+import { useAdminToast } from "@/components/AdminToast";
 import { Button } from "@/website-theme/ui/Button";
 
 export function SettingsForm({ initial }: { initial: { seoTitle: string; seoDescription: string } }) {
+  const toast = useAdminToast();
   const [seoTitle, setSeoTitle] = useState(initial.seoTitle);
   const [seoDescription, setSeoDescription] = useState(initial.seoDescription);
   const [error, setError] = useState("");
@@ -20,10 +22,13 @@ export function SettingsForm({ initial }: { initial: { seoTitle: string; seoDesc
     });
     if (!response.ok) {
       const body = (await response.json().catch(() => null)) as { error?: string } | null;
-      setError(body?.error ?? "Could not save");
+      const message = body?.error ?? "Could not save";
+      setError(message);
+      toast({ tone: "error", title: "Could not save", body: message });
       return;
     }
     setSaved(true);
+    toast({ tone: "success", title: "Saved", body: "The public site title and description now use these values." });
   }
 
   return (
