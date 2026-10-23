@@ -239,6 +239,26 @@ async function freshArticle(items: CatalogItem[], brief: string) {
   return article;
 }
 
+const LIBRARY_COVERS = [
+  "/media/blog/covers/cover-1.jpg",
+  "/media/blog/covers/cover-2.jpg",
+  "/media/blog/covers/cover-3.jpg",
+  "/media/blog/covers/cover-4.jpg",
+  "/media/blog/covers/cover-5.jpg",
+  "/media/blog/covers/cover-6.jpg",
+  "/media/blog/covers/banner-1.jpg",
+  "/media/blog/covers/banner-2.jpg",
+  "/media/blog/covers/banner-3.jpg",
+  "/media/blog/covers/banner-4.jpg",
+  "/media/blog/covers/banner-5.jpg",
+  "/media/blog/covers/banner-6.jpg",
+];
+
+function libraryCover(slug: string) {
+  const index = [...slug].reduce((sum, char) => sum + char.charCodeAt(0), 0) % LIBRARY_COVERS.length;
+  return LIBRARY_COVERS[index];
+}
+
 async function createCover(prompt: string, slug: string) {
   const query = `Editorial photograph, 16:9, natural light, quiet and specific, off-white paper, black metal, and warm wood. No text, no letters, no logos, no watermark, no collage. ${prompt}`;
   const payload = await geminiGenerate(
@@ -257,6 +277,17 @@ async function createCover(prompt: string, slug: string) {
   return uploaded.url;
 }
 
+async function coverFor(prompt: string, slug: string) {
+  try {
+    return { url: await createCover(prompt, slug), library: false };
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "";
+    if (!/free quota|rate limiting|did not return a cover|took too long/i.test(message)) throw error;
+    console.error(`[blog] ${message}`);
+    return { url: libraryCover(slug), library: true };
+  }
+}
+
 async function publish(article: Article, daily: boolean): Promise<GeneratedPost> {
   const category = CATEGORIES.includes(article.category as (typeof CATEGORIES)[number])
     ? article.category
@@ -268,7 +299,8 @@ async function publish(article: Article, daily: boolean): Promise<GeneratedPost>
     ...(daily ? [`daily:${blogDayKey()}`] : []),
   ];
   const title = clip(article.title, 180);
-  const coverImage = await createCover(article.coverPrompt || title, slug);
+  const cover = await coverFor(article.coverPrompt || title, slug);
+  const coverImage = cover.url;
   const row = await saveContent({
     type: "POST",
     slug,
@@ -295,19 +327,19 @@ async function publishedToday() {
   });
 }
 
-async function draftFromArticle(article: Article): Promise<GeneratedDraft> {
+async function draftFromArticle(article: Article) {
   const category = CATEGORIES.includes(article.category as (typeof CATEGORIES)[number])
     ? article.category
     : "Software Development";
   const slug = await uniqueSlug(article.slug || article.title);
   const title = clip(article.title, 180);
-  const coverImage = await createCover(article.coverPrompt || title, slug);
-  return {
+  const cover = await coverFor(article.coverPrompt || title, slug);
+  const draft: GeneratedDraft = {
     title,
     slug,
     excerpt: clip(article.excerpt || title, 400),
     body: article.body.trim(),
-    coverImage,
+    coverImage: cover.url,
     coverAlt: clip(title, 180),
     author: "Farolab Systems",
     category,
@@ -316,6 +348,7 @@ async function draftFromArticle(article: Article): Promise<GeneratedDraft> {
     seoDescription: clip(article.seoDescription || article.excerpt || title, 300),
     status: "DRAFT",
   };
+  return { draft, library: cover.library };
 }
 
 function track<T>(work: () => Promise<T>) {
@@ -352,10 +385,12 @@ export function startManualGeneration(prompt: string) {
     );
     return draftFromArticle(article);
   })
-    .then((draft) => {
+    .then(({ draft, library }) => {
       job.status = "done";
       job.draft = draft;
-      job.message = "Draft is in the form. Set the status to Published and save when you want it live.";
+      job.message = library
+        ? "Draft is in the form. Gemini's free quota did not include a new cover, so this one uses an existing site image. Replace it if you want, then save."
+        : "Draft is in the form. Set the status to Published and save when you want it live.";
     })
     .catch((error: unknown) => {
       job.status = "error";

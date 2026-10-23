@@ -120,8 +120,9 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
           seoDescription: next.seoDescription,
           status: "DRAFT",
         }));
-        setNotice("Draft is in the form. Set the status to Published and save when you want it live.");
-        toast({ tone: "success", title: "Draft ready", body: "Review it, then save." });
+        const message = job.message || "Draft is in the form. Set the status to Published and save when you want it live.";
+        setNotice(message);
+        toast({ tone: "success", title: "Draft ready", body: message });
         return;
       }
       throw new Error("Generation is still running. Try again in a minute.");
