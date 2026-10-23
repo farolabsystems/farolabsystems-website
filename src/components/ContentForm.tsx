@@ -176,11 +176,15 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
   return (
     <div className="grid max-w-3xl gap-4">
       {draft.type === "POST" ? (
-        <section className="generate-card">
+        <section className="generate-card" aria-labelledby="generate-heading">
           <div className="generate-card-copy">
-            <p className="caption">Draft</p>
-            <h2 className="heading-6">Start from a prompt</h2>
-            <p className="body-sm muted">Describe the article. Generate fills the fields below and leaves the post as a draft until you save.</p>
+            <span className="generate-mark" aria-hidden="true">
+              <Sparkles size={16} strokeWidth={1.75} />
+            </span>
+            <div>
+              <h2 id="generate-heading" className="heading-6">Start from a prompt</h2>
+              <p className="body-sm muted">Describe the article. Generate fills the fields below. The post stays a draft until you save it.</p>
+            </div>
           </div>
           <label className="grid gap-2 body-sm">
             Prompt
@@ -199,7 +203,7 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
               <Sparkles size={16} strokeWidth={1.75} aria-hidden="true" />
               {generating ? "Writing the draft…" : "Generate draft"}
             </button>
-            {generating ? <p className="body-sm muted">This usually takes about a minute.</p> : null}
+            <p className="body-sm muted">{generating ? "This usually takes about a minute." : "Nothing is published until you save."}</p>
           </div>
           {notice ? <p className="generate-note">{notice}</p> : null}
         </section>

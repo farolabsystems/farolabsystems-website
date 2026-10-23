@@ -5,7 +5,7 @@ export default function NewPostPage() {
     <div className="grid gap-4">
       <div>
         <h1 className="heading-4">New post</h1>
-        <p className="body-sm muted mt-1">Write the draft here, then publish it when you are ready.</p>
+        <p className="body-sm muted mt-1">Start with a prompt, or write the fields yourself. Save it as published when it should go live.</p>
       </div>
       <ContentForm
         initial={{
