@@ -24,12 +24,12 @@ export function SchedulePage({ locale = "en" }: { locale?: Locale }) {
     <>
       <PageHero locale={locale} eyebrow={schedulePage.eyebrow} title={schedulePage.title} body={schedulePage.body} />
       {calUrl ? (
-        <section className="section" style={{ paddingTop: 0 }}>
+        <section className="section" style={{ paddingTop: 0, paddingBottom: "var(--tc-space-10)" }}>
           <Container>
             <div className="cal-embed">
               <iframe title={copy.schedule} src={calUrl} loading="lazy" allow="camera; microphone; fullscreen; payment" />
             </div>
-            <p className="body-sm muted mt-4">
+            <p className="body-sm muted mt-5" style={{ paddingBottom: "var(--tc-space-4)" }}>
               Prefer a new tab?{" "}
               <a href={calUrl} target="_blank" rel="noreferrer noopener" style={{ color: "var(--tc-primary-active)" }}>
                 {copy.schedule}

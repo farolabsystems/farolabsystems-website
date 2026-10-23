@@ -353,33 +353,43 @@
 }
 
 .cal-embed {
+  --cal-brand-clip: 36px;
   position: relative;
   width: 100%;
-  min-height: 680px;
+  /* Tall enough for the event list; grows with the viewport instead of clipping cards. */
+  height: clamp(720px, calc(100dvh - var(--tc-header) - 32px), 960px);
   overflow: hidden;
   border: 1px solid var(--tc-border);
   border-radius: var(--tc-radius-card);
   background: var(--tc-white);
 }
 
-/* Clip Cal’s “Powered by Cal ID” footer (cross-origin; can’t style inside the iframe). */
+/* Clip only the thin “Powered by Cal ID” strip (cross-origin; can’t style inside the iframe). */
 .cal-embed iframe {
   display: block;
   width: 100%;
-  min-height: calc(680px + 52px);
-  height: calc(75vh + 52px);
-  margin-bottom: -52px;
+  height: calc(100% + var(--cal-brand-clip));
   border: 0;
+  margin: 0 0 calc(var(--cal-brand-clip) * -1);
 }
 
 .cal-embed::after {
   content: "";
   position: absolute;
   inset: auto 0 0;
-  height: 52px;
+  height: var(--cal-brand-clip);
   background: var(--tc-white);
-  pointer-events: auto;
+  pointer-events: none;
   z-index: 1;
+  border-radius: 0 0 var(--tc-radius-card) var(--tc-radius-card);
+}
+
+@media (max-width: 767px) {
+  .cal-embed {
+    --cal-brand-clip: 32px;
+    height: calc(100dvh - var(--tc-header) - 16px);
+    max-height: none;
+  }
 }
 
 .media-frame,
