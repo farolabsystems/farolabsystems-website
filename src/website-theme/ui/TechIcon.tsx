@@ -1,41 +1,11 @@
 import type { SVGProps } from "react";
-import {
-  siDjango,
-  siDocker,
-  siFastapi,
-  siGooglegemini,
-  siJavascript,
-  siMongodb,
-  siMysql,
-  siNextdotjs,
-  siNodedotjs,
-  siPostgresql,
-  siPython,
-  siReact,
-  siRedis,
-  siTypescript,
-} from "simple-icons";
 import { Bot, Cloud, GitBranch, Network, Server, Sparkles } from "lucide-react";
 import type { TechnologyIcon } from "@/website-theme/data/types";
+import brandIcons from "@/website-theme/ui/brand-icons.json";
 
-type SimpleIcon = { title: string; slug: string; hex: string; path: string };
+type BrandIcon = { title: string; hex: string; path: string };
 
-const simpleIcons: Record<string, SimpleIcon> = {
-  react: siReact,
-  nextdotjs: siNextdotjs,
-  typescript: siTypescript,
-  javascript: siJavascript,
-  nodedotjs: siNodedotjs,
-  python: siPython,
-  django: siDjango,
-  fastapi: siFastapi,
-  postgresql: siPostgresql,
-  mysql: siMysql,
-  mongodb: siMongodb,
-  redis: siRedis,
-  docker: siDocker,
-  googlegemini: siGooglegemini,
-};
+const brands = brandIcons as Record<string, BrandIcon>;
 
 const lucideMap = {
   network: Network,
@@ -60,7 +30,7 @@ export function TechIcon({
     return <Lucide size={size} className={className} aria-hidden="true" strokeWidth={1.75} />;
   }
 
-  const brand = simpleIcons[icon.slug];
+  const brand = brands[icon.slug];
   if (!brand) {
     return <Sparkles size={size} className={className} aria-hidden="true" strokeWidth={1.75} />;
   }
