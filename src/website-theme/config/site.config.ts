@@ -3,12 +3,35 @@
 
 export type Locale = "en" | "pl";
 
+const PRODUCTION_ORIGIN = "https://farolabsystem.com";
+
+function configuredOrigin() {
+  const value = (process.env.NEXT_PUBLIC_SITE_URL ?? "").trim().replace(/\/$/, "");
+  return value || "http://localhost:3000";
+}
+
+function isLocalOrigin(value: string) {
+  try {
+    const host = new URL(value).hostname;
+    return host === "localhost" || host === "127.0.0.1";
+  } catch {
+    return true;
+  }
+}
+
+/** Public origin used in the sitemap, canonical URLs, and Open Graph. */
+export function siteOrigin() {
+  const configured = configuredOrigin();
+  if (process.env.NODE_ENV === "production" && isLocalOrigin(configured)) return PRODUCTION_ORIGIN;
+  return configured;
+}
+
 export const siteConfig = {
   name: "Farolab Systems",
   legalName: "Farolab Systems",
   description:
     "Farolab Systems helps startups and businesses design, build, and scale reliable digital products through software engineering, design, and practical AI.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: siteOrigin(),
   email: "hello@example.com",
   phone: "",
   addressLines: [] as string[],
