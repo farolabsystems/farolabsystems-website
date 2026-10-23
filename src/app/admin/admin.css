@@ -109,6 +109,37 @@
   align-items: center;
 }
 
+.generate-card {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  background: var(--tc-white);
+  border: 1px solid var(--tc-border);
+  border-radius: var(--tc-radius-card);
+}
+
+.generate-card-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.generate-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.generate-note {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--tc-radius-sm);
+  background: var(--tc-page-alt);
+  color: var(--tc-text);
+  font-size: var(--tc-body-sm, 14px);
+  line-height: 1.45;
+}
+
 .admin-status {
   margin: 8px 0 0;
   max-width: 360px;

@@ -176,27 +176,35 @@ export function ContentForm({ initial }: { initial: ContentDraft }) {
   return (
     <div className="grid max-w-3xl gap-4">
       {draft.type === "POST" ? (
-        <div className="grid gap-2">
+        <section className="generate-card">
+          <div className="generate-card-copy">
+            <p className="caption">Draft</p>
+            <h2 className="heading-6">Start from a prompt</h2>
+            <p className="body-sm muted">Describe the article. Generate fills the fields below and leaves the post as a draft until you save.</p>
+          </div>
           <label className="grid gap-2 body-sm">
             Prompt
             <textarea
               className="field"
-              rows={3}
+              rows={4}
               value={prompt}
-              placeholder="What should this article cover?"
+              spellCheck={false}
+              disabled={generating}
+              placeholder="A practical note on how a small team should introduce warehouse robots."
               onChange={(event) => setPrompt(event.target.value)}
             />
           </label>
-          <div>
+          <div className="generate-card-actions">
             <button type="button" className="btn" onClick={() => void generateFromPrompt()} disabled={generating}>
               <Sparkles size={16} strokeWidth={1.75} aria-hidden="true" />
-              {generating ? "Generating…" : "Generate"}
+              {generating ? "Writing the draft…" : "Generate draft"}
             </button>
-            <p className="admin-status">Fills this form from your prompt. Nothing is published until you save.</p>
-            {notice ? <p className="admin-status">{notice}</p> : null}
+            {generating ? <p className="body-sm muted">This usually takes about a minute.</p> : null}
           </div>
-        </div>
+          {notice ? <p className="generate-note">{notice}</p> : null}
+        </section>
       ) : null}
+      {draft.type === "POST" ? <p className="caption">Article</p> : null}
       <label className="grid gap-2 body-sm">
         Title
         <input className="field" value={draft.title} onChange={(event) => set("title", event.target.value)} />
