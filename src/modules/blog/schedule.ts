@@ -1,6 +1,25 @@
-import { runDailyBlog } from "@/modules/blog/generate-blog";
-
 const marker = globalThis as typeof globalThis & { __blogSchedule?: boolean };
+
+function cronUrl() {
+  const port = process.env.PORT?.trim() || "3000";
+  return `http://127.0.0.1:${port}/api/cron/daily-blog`;
+}
+
+async function triggerDailyBlog() {
+  const secret = process.env.CRON_SECRET?.trim();
+  if (!secret) {
+    console.error("[blog] CRON_SECRET is not set, so the daily post was skipped");
+    return;
+  }
+  const response = await fetch(cronUrl(), {
+    method: "POST",
+    headers: { authorization: `Bearer ${secret}` },
+  });
+  if (!response.ok) {
+    const text = await response.text();
+    console.error(`[blog] daily post failed (${response.status}) ${text.slice(0, 300)}`);
+  }
+}
 
 function timeZone() {
   return process.env.BLOG_CRON_TZ?.trim() || "Asia/Kolkata";
@@ -24,7 +43,7 @@ function arm() {
   const zone = timeZone();
   const delay = msUntilNoon(zone);
   const timer = setTimeout(() => {
-    void runDailyBlog().catch((error: unknown) => {
+    void triggerDailyBlog().catch((error: unknown) => {
       const message = error instanceof Error ? error.message : "Daily blog failed";
       console.error(`[blog] ${message}`);
     });

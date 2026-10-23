@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
-  serverExternalPackages: ["@aws-sdk/client-s3", "@genspark/cli"],
+  serverExternalPackages: ["@aws-sdk/client-s3", "@genspark/cli", "@prisma/adapter-pg", "pg"],
   outputFileTracingIncludes: {
     "/api/admin/blog/generate": [
       "./node_modules/@genspark/cli/**/*",
