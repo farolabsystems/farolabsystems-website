@@ -44,8 +44,9 @@ Copy `.env.example` to `.env` and fill in what you need.
 | Variable | Purpose |
 |---|---|
 | `DATABASE_URL` | Postgres connection string |
-| `AUTH_SECRET` | Signs the admin session cookie |
-| `NEXT_PUBLIC_SITE_URL` | Canonical site URL (sitemap, robots, SEO) |
+| `AUTH_SECRET` | Signs the admin session cookie (must match at runtime for login + middleware) |
+| `COOKIE_SECURE` | Optional. Force cookie Secure (`true`/`false`). Default follows `NEXT_PUBLIC_SITE_URL` |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL (sitemap, robots, SEO). Use `https://` in production so the admin cookie is Secure |
 | `NEXT_PUBLIC_CAL_URL` | Cal.com / cal.id booking URL for `/schedule-meeting` |
 | `ADMIN_EMAIL` / `ADMIN_PASSWORD` | Seeded admin login |
 | `AWS_*` | Private S3 bucket for blog / case study images |

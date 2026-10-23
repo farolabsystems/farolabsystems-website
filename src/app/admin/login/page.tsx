@@ -2,30 +2,37 @@
 
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { adminDefaults } from "@/lib/admin-defaults";
 import { Button } from "@/website-theme/ui/Button";
 
 export default function LoginPage() {
-  const router = useRouter();
   const [email, setEmail] = useState<string>(adminDefaults.email);
   const [password, setPassword] = useState<string>(adminDefaults.password);
   const [error, setError] = useState("");
+  const [sending, setSending] = useState(false);
 
   async function onSubmit(event: FormEvent) {
     event.preventDefault();
     setError("");
-    const response = await fetch("/api/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-    if (!response.ok) {
+    setSending(true);
+    try {
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+        credentials: "same-origin",
+      });
+      if (!response.ok) {
+        setError("Those details were not recognised.");
+        return;
+      }
+      // Full navigation so the new session cookie is always sent to middleware.
+      window.location.assign("/admin/posts");
+    } catch {
       setError("Those details were not recognised.");
-      return;
+    } finally {
+      setSending(false);
     }
-    router.push("/admin/posts");
-    router.refresh();
   }
 
   return (
@@ -44,7 +51,9 @@ export default function LoginPage() {
           <input className="field" type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
         </label>
         {error ? <p style={{ color: "var(--tc-danger)" }}>{error}</p> : null}
-        <Button type="submit">Sign in</Button>
+        <Button type="submit" disabled={sending}>
+          {sending ? "Signing in…" : "Sign in"}
+        </Button>
       </form>
     </main>
   );

@@ -1,7 +1,14 @@
-import { clearAdminCookie } from "@/lib/auth";
-import { json } from "@/lib/http";
+import { NextResponse } from "next/server";
+import { ADMIN_COOKIE } from "@/lib/auth-shared";
 
 export async function POST() {
-  await clearAdminCookie();
-  return json({ ok: true });
+  const response = NextResponse.json({ ok: true });
+  response.cookies.set(ADMIN_COOKIE, "", {
+    httpOnly: true,
+    sameSite: "lax",
+    secure: false,
+    path: "/",
+    maxAge: 0,
+  });
+  return response;
 }

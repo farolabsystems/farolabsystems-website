@@ -483,7 +483,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
   const token = request.cookies.get("admin_token")?.value;
-  const secret = process.env.AUTH_SECRET ?? "dev-only-secret-change-me";
+  const secret = process.env.AUTH_SECRET?.trim() || "dev-secret-change-me";
   if (!token) return NextResponse.redirect(new URL("/admin/login", request.url));
   try {
     await jwtVerify(token, new TextEncoder().encode(secret));

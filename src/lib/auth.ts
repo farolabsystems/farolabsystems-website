@@ -1,11 +1,11 @@
 import { cookies } from "next/headers";
 import { SignJWT, jwtVerify } from "jose";
+import { ADMIN_COOKIE, adminCookieOptions, authSecret } from "@/lib/auth-shared";
 
-const COOKIE = "admin_token";
+export { ADMIN_COOKIE, adminCookieOptions, authSecret, cookieSecure } from "@/lib/auth-shared";
 
 function secretKey() {
-  const secret = process.env.AUTH_SECRET ?? "dev-only-secret-change-me";
-  return new TextEncoder().encode(secret);
+  return new TextEncoder().encode(authSecret());
 }
 
 export async function signAdminToken(email: string) {
@@ -22,25 +22,19 @@ export async function verifyAdminToken(token: string) {
   return typeof payload.email === "string" ? payload.email : null;
 }
 
-export async function setAdminCookie(token: string) {
+export async function setAdminCookie(token: string, request?: Request) {
   const jar = await cookies();
-  jar.set(COOKIE, token, {
-    httpOnly: true,
-    sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
-    path: "/",
-    maxAge: 60 * 60 * 24 * 7,
-  });
+  jar.set(ADMIN_COOKIE, token, adminCookieOptions(request));
 }
 
 export async function clearAdminCookie() {
   const jar = await cookies();
-  jar.delete(COOKIE);
+  jar.delete(ADMIN_COOKIE);
 }
 
 export async function getAdminEmail() {
   const jar = await cookies();
-  const token = jar.get(COOKIE)?.value;
+  const token = jar.get(ADMIN_COOKIE)?.value;
   if (!token) return null;
   try {
     return await verifyAdminToken(token);

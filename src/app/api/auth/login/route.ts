@@ -1,7 +1,9 @@
+import { NextResponse } from "next/server";
 import { compare } from "bcryptjs";
 import { prisma } from "@/lib/db";
-import { setAdminCookie, signAdminToken } from "@/lib/auth";
-import { error, json } from "@/lib/http";
+import { signAdminToken } from "@/lib/auth";
+import { ADMIN_COOKIE, adminCookieOptions } from "@/lib/auth-shared";
+import { error } from "@/lib/http";
 import { loginSchema } from "@/lib/validators";
 
 export async function POST(request: Request) {
@@ -12,7 +14,10 @@ export async function POST(request: Request) {
   if (!user) return error("Invalid login", 401);
   const ok = await compare(parsed.data.password, user.passwordHash);
   if (!ok) return error("Invalid login", 401);
+
   const token = await signAdminToken(user.email);
-  await setAdminCookie(token);
-  return json({ ok: true });
+  const response = NextResponse.json({ ok: true });
+  // Set on the response object so Set-Cookie is never dropped in production.
+  response.cookies.set(ADMIN_COOKIE, token, adminCookieOptions(request));
+  return response;
 }

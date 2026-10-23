@@ -37,7 +37,7 @@ services:
         NEXT_PUBLIC_CAL_URL: ${NEXT_PUBLIC_CAL_URL:-}
     environment:
       DATABASE_URL: postgresql://app:app@db:5432/app
-      AUTH_SECRET: dev-secret-change-me
+      AUTH_SECRET: ${AUTH_SECRET:-dev-secret-change-me}
       NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
       NEXT_PUBLIC_CAL_URL: ${NEXT_PUBLIC_CAL_URL:-}
       ADMIN_EMAIL: admin@example.com
