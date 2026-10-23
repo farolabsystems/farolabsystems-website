@@ -4,18 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { Locale } from "@/website-theme/config/site.config";
 import { uiCopy, withLocale } from "@/website-theme/config/site.config";
-
-const COOKIE = "cookie_consent";
-
-function readConsent() {
-  if (typeof document === "undefined") return "";
-  const hit = document.cookie.split("; ").find((part) => part.startsWith(`${COOKIE}=`));
-  return hit ? decodeURIComponent(hit.split("=").slice(1).join("=")) : "";
-}
-
-function writeConsent(value: string) {
-  document.cookie = `${COOKIE}=${encodeURIComponent(value)}; Path=/; Max-Age=31536000; SameSite=Lax`;
-}
+import { readConsent, writeConsent } from "@/website-theme/layout/cookie-consent";
 
 export function CookieBanner({ locale }: { locale: Locale }) {
   const copy = uiCopy[locale];
