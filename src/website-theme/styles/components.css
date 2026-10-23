@@ -779,12 +779,21 @@ a:hover .blog-cover picture img {
   }
 
   .blog-hero {
-    min-height: 240px;
+    aspect-ratio: auto;
+    min-height: 280px;
     max-height: none;
   }
 
   .blog-hero h1 {
+    max-width: none;
     font-size: var(--tc-h4-sm);
+  }
+
+  .blog-hero-copy .body-lg {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
   }
 }
 

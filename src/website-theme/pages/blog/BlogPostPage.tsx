@@ -66,7 +66,7 @@ export async function BlogPostPage({ slug, locale = "en" }: { slug: string; loca
             <p className="caption">
               {post.category} · {new Date(post.publishedAt).toLocaleDateString("en-GB")} · {readingTime(post.body)} min read
             </p>
-            <h1 className="heading-3 mt-3 max-w-[18ch]">{post.title}</h1>
+            <h1 className="heading-3 mt-3 max-w-[18ch] max-sm:max-w-none">{post.title}</h1>
             <p className="body-lg mt-4 max-w-[46ch]">{post.excerpt}</p>
           </div>
         </div>
