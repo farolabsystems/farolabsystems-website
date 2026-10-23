@@ -32,9 +32,9 @@ export const siteConfig = {
   description:
     "Farolab Systems helps startups and businesses design, build, and scale reliable digital products through software engineering, design, and practical AI.",
   url: siteOrigin(),
-  email: "hello@example.com",
+  email: "hey@farolabsystem.com",
   phone: "",
-  addressLines: [] as string[],
+  addressLines: ["Vijay Nagar, Scheme No 54", "Indore, Madhya Pradesh 452010"],
   taxNumber: "",
   /** Cal.com / cal.id booking link, e.g. https://cal.com/your-team/30min */
   meetingUrl: process.env.NEXT_PUBLIC_CAL_URL?.trim() || "",

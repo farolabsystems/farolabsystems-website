@@ -8,22 +8,24 @@ export function Logo({ locale = "en" }: { locale?: Locale }) {
   return (
     <Link href={withLocale(locale, "/")} className="inline-flex items-center" aria-label="Farolab Systems">
       <Image
-        src="/assets/brand/logo-header.png"
+        src="/assets/brand/logo.png"
         alt=""
-        width={1024}
-        height={341}
+        width={2172}
+        height={724}
         priority
         className="logo-on-light"
         style={logoStyle}
       />
-      <Image
-        src="/assets/brand/logo-wordmark-v2.png"
-        alt=""
-        width={818}
-        height={197}
-        className="logo-on-dark"
-        style={logoStyle}
-      />
+      <span className="logo-mark">
+        <Image
+          src="/assets/brand/logo.png"
+          alt=""
+          width={2172}
+          height={724}
+          priority
+          className="logo-on-dark"
+        />
+      </span>
     </Link>
   );
 }

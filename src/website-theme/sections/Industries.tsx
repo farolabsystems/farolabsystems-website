@@ -20,7 +20,8 @@ export function Industries({ locale, studies }: { locale: Locale; studies: CaseS
         <Eyebrow>{industrySection.eyebrow}</Eyebrow>
         <h2 className="heading-2 max-w-[18ch]">{industrySection.title}</h2>
         <p className="body-lg muted mt-4 max-w-[62ch]">{industrySection.body}</p>
-        <div className="mt-8 flex gap-2 overflow-x-auto" role="tablist" aria-label="Industries">
+        <div className="chip-rail mt-8">
+          <div className="chip-rail-track" role="tablist" aria-label="Industries">
           {industryTabs.map((item) => (
             <button
               key={item.id}
@@ -35,6 +36,7 @@ export function Industries({ locale, studies }: { locale: Locale; studies: CaseS
               {item.label}
             </button>
           ))}
+          </div>
         </div>
         <div
           role="tabpanel"

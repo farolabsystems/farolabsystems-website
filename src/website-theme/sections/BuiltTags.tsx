@@ -13,7 +13,8 @@ export function BuiltTags({ locale = "en" }: { locale?: Locale }) {
       <Container>
         <h2 className="heading-4">{technology.title}</h2>
         <p className="body muted mt-3 max-w-[68ch]">{technology.body}</p>
-        <ul className="tech-cloud">
+        <div className="chip-rail mt-6">
+          <ul className="chip-rail-track">
           {technologies.map((item) => (
             <li key={item.slug}>
               <Link href={withLocale(locale, `/technologies/${item.slug}`)} className="chip tech-chip">
@@ -22,7 +23,8 @@ export function BuiltTags({ locale = "en" }: { locale?: Locale }) {
               </Link>
             </li>
           ))}
-        </ul>
+          </ul>
+        </div>
       </Container>
     </Section>
   );

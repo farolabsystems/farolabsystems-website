@@ -46,7 +46,9 @@ export function AdminShell({ children }: { children: ReactNode }) {
           {open ? <X size={22} strokeWidth={1.75} /> : <Menu size={22} strokeWidth={1.75} />}
         </button>
         <Link href="/admin/posts" className="admin-logo" aria-label="Farolab Systems">
-          <Image src="/assets/brand/logo-header.png" alt="" width={942} height={224} priority />
+          <span className="admin-logo-mark">
+            <Image src="/assets/brand/logo.png" alt="" width={2172} height={724} priority />
+          </span>
         </Link>
         <p className="caption admin-header-note">Admin</p>
       </header>

@@ -34,7 +34,7 @@ export async function HomePage({ locale = "en" }: { locale?: Locale }) {
           "@type": "Organization",
           name: siteConfig.name,
           url: siteConfig.url,
-          logo: absoluteUrl("/assets/brand/mark.png"),
+          logo: absoluteUrl("/assets/brand/fav.png"),
         }}
       />
       <JsonLd

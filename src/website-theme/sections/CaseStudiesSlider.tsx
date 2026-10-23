@@ -47,7 +47,8 @@ export function CaseStudiesSlider({ locale, studies }: { locale: Locale; studies
       <Container>
         <h2 className="heading-2 max-w-[16ch]">{caseStudiesSection.title}</h2>
         <p className="body-lg muted mt-4 max-w-[62ch]">{caseStudiesSection.body}</p>
-        <div className="mt-6 flex flex-wrap gap-2" role="tablist" aria-label="Case studies">
+        <div className="chip-rail mt-6">
+          <div className="chip-rail-track" role="tablist" aria-label="Case studies">
           {slides.map((item, itemIndex) => (
             <button
               key={item.slug}
@@ -60,6 +61,7 @@ export function CaseStudiesSlider({ locale, studies }: { locale: Locale; studies
               {item.title}
             </button>
           ))}
+          </div>
         </div>
         <AnimatePresence mode="wait">
           <motion.article

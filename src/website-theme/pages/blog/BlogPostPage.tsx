@@ -31,7 +31,7 @@ export async function BlogPostPage({ slug, locale = "en" }: { slug: string; loca
           publisher: {
             "@type": "Organization",
             name: siteConfig.name,
-            logo: { "@type": "ImageObject", url: absoluteUrl("/assets/brand/mark.png") },
+            logo: { "@type": "ImageObject", url: absoluteUrl("/assets/brand/fav.png") },
           },
           image: {
             "@type": "ImageObject",

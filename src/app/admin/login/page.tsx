@@ -39,7 +39,9 @@ export default function LoginPage() {
     <main className="admin-login-card">
       <form className="card grid gap-4" onSubmit={(event) => void onSubmit(event)}>
         <div className="admin-login-logo">
-          <Image src="/assets/brand/logo-header.png" alt="Farolab Systems" width={942} height={224} priority />
+          <span className="admin-logo-mark">
+            <Image src="/assets/brand/logo.png" alt="Farolab Systems" width={2172} height={724} priority />
+          </span>
         </div>
         <h1 className="heading-4">Admin login</h1>
         <label className="grid gap-2 body-sm">

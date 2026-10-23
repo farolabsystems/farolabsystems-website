@@ -13,10 +13,9 @@
   gap: 12px;
   min-height: 68px;
   padding: 10px 16px;
-  background: color-mix(in srgb, var(--tc-white) 90%, transparent);
-  border-bottom: 1px solid var(--tc-border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: var(--tc-footer);
+  color: var(--tc-footer-text);
+  border-bottom: 1px solid color-mix(in srgb, #fff 14%, transparent);
 }
 
 .admin-logo {
@@ -25,14 +24,28 @@
   min-width: 0;
 }
 
-.admin-logo img {
-  height: 36px;
-  width: auto;
+.admin-logo-mark {
+  --tc-logo: 36px;
+  position: relative;
+  display: block;
+  height: var(--tc-logo);
+  width: calc(var(--tc-logo) * 1831 / 483);
+  overflow: hidden;
+}
+
+.admin-logo-mark img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  width: calc(var(--tc-logo) * 2172 / 483);
+  height: calc(var(--tc-logo) * 724 / 483);
+  left: calc(var(--tc-logo) * -210 / 483);
+  top: calc(var(--tc-logo) * -141 / 483);
 }
 
 .admin-header-note {
   margin-left: auto;
-  color: var(--tc-text-muted);
+  color: color-mix(in srgb, var(--tc-footer-text) 72%, transparent);
 }
 
 .admin-burger {
@@ -46,7 +59,7 @@
   border: 0;
   border-radius: 50%;
   background: transparent;
-  color: var(--tc-text);
+  color: var(--tc-footer-text);
   cursor: pointer;
 }
 
@@ -346,15 +359,21 @@
   width: min(100%, 420px);
 }
 
+.admin-login-card .card {
+  overflow: hidden;
+  padding: 0 0 var(--tc-space-5);
+}
+
+.admin-login-card .card > :not(.admin-login-logo) {
+  margin-inline: var(--tc-space-5);
+}
+
 .admin-login-logo {
   display: flex;
   justify-content: center;
   margin-bottom: 8px;
-}
-
-.admin-login-logo img {
-  height: 42px;
-  width: auto;
+  padding: 18px 16px;
+  background: var(--tc-footer);
 }
 
 .admin-stats {
@@ -617,8 +636,8 @@
 }
 
 @media (max-width: 640px) {
-  .admin-logo img {
-    height: 30px;
+  .admin-logo-mark {
+    --tc-logo: 30px;
   }
 
   .admin-toolbar .btn {

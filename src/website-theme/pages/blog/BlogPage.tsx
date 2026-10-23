@@ -42,7 +42,8 @@ export async function BlogPage({
           <h1 className="heading-2 max-w-[14ch]">{blogSection.title}</h1>
           <p className="body-lg mt-4 max-w-[46ch]">{blogSection.body}</p>
         </div>
-        <div className="mt-6 flex flex-wrap gap-2" aria-label="Categories">
+        <div className="chip-rail mt-6" aria-label="Categories">
+          <div className="chip-rail-track">
           <Link href={hrefFor(1)} className="chip" aria-current={!category ? "page" : undefined}>
             All
           </Link>
@@ -51,6 +52,7 @@ export async function BlogPage({
               {item}
             </Link>
           ))}
+          </div>
         </div>
         <ul className="mt-8 grid gap-4 md:grid-cols-3">
           {slice.map((post) => (
