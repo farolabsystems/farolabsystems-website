@@ -8,6 +8,7 @@ coverage
 .DS_Store
 .env
 .env.local
+*.pem
 .env.development.local
 .env.test.local
 .env.production.local
