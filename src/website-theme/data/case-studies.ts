@@ -19,7 +19,7 @@ export const caseStudies: CaseStudyRecord[] = [
       { value: "API-led", label: "Service design" },
       { value: "Extensible", label: "Next release" },
     ],
-    cover: "/assets/covers/cover-1.png",
+    cover: "/assets/covers/cover-1.jpg",
     featured: true,
     sortOrder: 1,
     body: `## Challenge
@@ -53,7 +53,7 @@ A scalable foundation designed for future product expansion. ${note}`,
       { value: "Visible", label: "Work status" },
       { value: "Operable", label: "After launch" },
     ],
-    cover: "/assets/covers/cover-2.png",
+    cover: "/assets/covers/cover-2.jpg",
     featured: true,
     sortOrder: 2,
     body: `## Challenge
@@ -87,7 +87,7 @@ A single operational picture the team can extend as routes, partners and volumes
       { value: "Careful", label: "Data boundaries" },
       { value: "Shared", label: "Web and mobile" },
     ],
-    cover: "/assets/covers/cover-3.png",
+    cover: "/assets/covers/cover-3.jpg",
     featured: true,
     sortOrder: 3,
     body: `## Challenge
@@ -121,7 +121,7 @@ A foundation for a healthcare product that can add workflows without mixing pati
       { value: "Owned", label: "Catalog data" },
       { value: "Linked", label: "Fulfillment" },
     ],
-    cover: "/assets/covers/cover-4.png",
+    cover: "/assets/covers/cover-4.jpg",
     featured: false,
     sortOrder: 4,
     body: `## Challenge
@@ -155,7 +155,7 @@ A commerce foundation that can grow into more channels without copying product d
       { value: "Editable", label: "Content tools" },
       { value: "Shared", label: "Learner and admin" },
     ],
-    cover: "/assets/covers/cover-5.png",
+    cover: "/assets/covers/cover-5.jpg",
     featured: false,
     sortOrder: 5,
     body: `## Challenge
@@ -189,7 +189,7 @@ A learning product that can add the next programme without redesigning the recor
       { value: "Repeatable", label: "Deploys" },
       { value: "Staffed", label: "Product area" },
     ],
-    cover: "/assets/covers/cover-6.png",
+    cover: "/assets/covers/cover-6.jpg",
     featured: false,
     sortOrder: 6,
     body: `## Challenge

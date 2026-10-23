@@ -18,15 +18,15 @@ export function SiteFooter({ locale }: { locale: Locale }) {
   const copy = uiCopy[locale];
   return (
     <footer className="footer">
-      <div className="container grid gap-10">
-        <div className="flex flex-wrap items-end justify-between gap-6">
+      <div className="container grid gap-8">
+        <div className="flex flex-wrap items-end justify-between gap-5">
           <h2 className="heading-4 max-w-[22ch]" style={{ color: "var(--tc-footer-text)" }}>
             {siteConfig.footerHeadline}
           </h2>
           <Button href={withLocale(locale, "/contact")}>{siteConfig.footerCta}</Button>
         </div>
         <div className="grid gap-8 lg:grid-cols-[1.1fr_2fr]">
-          <div className="grid content-start gap-4">
+          <div className="grid content-start gap-3">
             <div className="[&_span]:text-[var(--tc-footer-text)]">
               <Logo locale={locale} />
             </div>
@@ -56,7 +56,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {columns.map((column) => (
               <div key={column.title} className="grid content-start gap-3">
-                <p className="caption" style={{ color: "var(--tc-primary)", letterSpacing: "var(--tc-tracking-eyebrow)", textTransform: "uppercase" }}>
+                <p className="caption" style={{ color: "color-mix(in srgb, var(--tc-footer-text) 68%, transparent)", letterSpacing: "var(--tc-tracking-eyebrow)", textTransform: "uppercase" }}>
                   {column.title}
                 </p>
                 {column.links.map((link) => (

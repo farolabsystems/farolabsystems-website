@@ -98,8 +98,9 @@
 
 .eyebrow::after {
   content: "";
-  width: var(--tc-space-8);
-  height: 3px;
+  width: var(--tc-space-7);
+  height: 2px;
   border-radius: var(--tc-radius-pill);
   background: var(--tc-primary);
+  transition: width var(--tc-duration-slow) var(--tc-ease-out);
 }

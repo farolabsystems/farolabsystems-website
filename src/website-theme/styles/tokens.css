@@ -1,26 +1,27 @@
 :root {
-  --tc-page: #f3f1eb;
-  --tc-page-alt: #ede9e2;
-  --tc-background: #f2f2f2;
+  --tc-page: #f5f5f5;
+  --tc-page-alt: #ebebeb;
+  --tc-background: #f0f0f0;
   --tc-white: #ffffff;
-  --tc-text: #333333;
-  --tc-text-muted: #5b5953;
-  --tc-text-faint: #949494;
-  --tc-primary: #00d286;
-  --tc-primary-hover: #03bf7b;
-  --tc-primary-active: #009c63;
-  --tc-primary-soft: #ccffec;
-  --tc-primary-softer: #80f4ca;
-  --tc-border: #d7d7d7;
-  --tc-border-strong: #e4e4de;
+  --tc-text: #0a0a0a;
+  --tc-text-muted: #525252;
+  --tc-text-faint: #8a8a8a;
+  --tc-primary: #0a0a0a;
+  --tc-primary-hover: #262626;
+  --tc-primary-active: #000000;
+  --tc-primary-soft: #ececec;
+  --tc-primary-softer: #e0e0e0;
+  --tc-border: #d4d4d4;
+  --tc-border-strong: #e5e5e5;
   --tc-danger: #ea384c;
   --tc-danger-bg: #ffdede;
-  --tc-success: #009c63;
-  --tc-footer: #333333;
-  --tc-footer-text: #f3f1eb;
-  --tc-focus: #00d286;
-  --tc-shadow: 0 12px 40px rgba(51, 51, 51, 0.06);
-  --tc-shadow-menu: 0 24px 60px rgba(51, 51, 51, 0.12);
+  --tc-success: #0a0a0a;
+  --tc-footer: #0a0a0a;
+  --tc-footer-text: #f5f5f5;
+  --tc-focus: #0a0a0a;
+  --tc-shadow: 0 1px 2px rgba(10, 10, 10, 0.04);
+  --tc-shadow-hover: 0 6px 20px rgba(10, 10, 10, 0.06);
+  --tc-shadow-menu: 0 8px 28px rgba(10, 10, 10, 0.08);
 
   --font-work-sans: "Work Sans";
   --tc-font: var(--font-work-sans), "Work Sans", sans-serif;
@@ -69,21 +70,23 @@
   --tc-space-11: 96px;
   --tc-space-12: 128px;
 
-  --tc-section-y: var(--tc-space-12);
-  --tc-section-y-md: var(--tc-space-11);
-  --tc-section-y-sm: var(--tc-space-9);
+  --tc-section-y: var(--tc-space-11);
+  --tc-section-y-md: var(--tc-space-10);
+  --tc-section-y-sm: var(--tc-space-8);
   --tc-container: min(85vw, 1088px);
   --tc-container-wide: min(82vw, 1184px);
   --tc-header: 88px;
   --tc-gap: var(--tc-space-5);
 
   --tc-radius-pill: 125px;
-  --tc-radius-input: 8px;
-  --tc-radius-card: 32px;
-  --tc-radius-card-lg: 48px;
-  --tc-radius-sm: 16px;
+  --tc-radius-input: 10px;
+  --tc-radius-card: 24px;
+  --tc-radius-card-lg: 32px;
+  --tc-radius-sm: 14px;
   --tc-ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --tc-duration: 200ms;
+  --tc-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --tc-duration: 220ms;
+  --tc-duration-slow: 420ms;
 }
 
 @media (max-width: 991px) {
@@ -106,7 +109,7 @@
     --tc-h3: var(--tc-h3-sm);
     --tc-tracking-h1: -0.21px;
     --tc-section-y: var(--tc-section-y-sm);
-    --tc-radius-card: 24px;
-    --tc-radius-card-lg: 32px;
+    --tc-radius-card: 20px;
+    --tc-radius-card-lg: 24px;
   }
 }

@@ -11,10 +11,10 @@ export function Faq({ items, locale }: { items: FaqItem[]; locale: Locale }) {
   return (
     <Section tight>
       <Container>
-        <div className="grid gap-8 lg:grid-cols-[1fr_2fr]">
+        <div className="grid gap-6 lg:grid-cols-[1fr_2fr] lg:gap-10">
           <div>
             <h2 className="heading-3">{faqSection.title}</h2>
-            <p className="body muted mt-4">{faqSection.body}</p>
+            <p className="body muted mt-3">{faqSection.body}</p>
             <div className="mt-5">
               <Button href={withLocale(locale, "/contact")} variant="ghost">
                 {faqSection.cta}

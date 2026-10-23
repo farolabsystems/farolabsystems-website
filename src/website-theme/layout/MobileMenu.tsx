@@ -36,7 +36,7 @@ export function MobileMenu({
   if (!open) return null;
   return (
     <div id="mobile-menu" className="mobile-menu lg:hidden">
-      <div className="container grid gap-2 py-6">
+      <div className="container grid gap-1 py-5">
         {groups.map((group) => (
           <div key={group.title} style={{ borderBottom: "1px solid var(--tc-border-strong)" }}>
             <button

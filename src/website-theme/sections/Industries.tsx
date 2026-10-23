@@ -40,7 +40,7 @@ export function Industries({ locale, studies }: { locale: Locale; studies: CaseS
           role="tabpanel"
           id={`panel-${tab.id}`}
           aria-labelledby={`tab-${tab.id}`}
-          className="mt-8 grid items-center gap-8 lg:grid-cols-2"
+          className="mt-8 grid items-center gap-6 lg:grid-cols-2"
         >
           <div className="grid gap-4">
             <h3 className="heading-4">{tab.title}</h3>
@@ -51,17 +51,17 @@ export function Industries({ locale, studies }: { locale: Locale; studies: CaseS
                 </li>
               ))}
             </ul>
-            <Link href={withLocale(locale, tab.href)} style={{ color: "var(--tc-primary-active)" }}>
+            <Link href={withLocale(locale, tab.href)} className="text-link body-sm w-fit">
               Explore this industry →
             </Link>
             {related ? (
-              <Link href={withLocale(locale, `/case-studies/${related.slug}`)} className="body-sm">
+              <Link href={withLocale(locale, `/case-studies/${related.slug}`)} className="text-link body-sm w-fit">
                 Related work: {related.title}
               </Link>
             ) : null}
           </div>
           <Image
-            src={related?.cover ?? "/assets/covers/cover-1.png"}
+            src={related?.cover ?? "/assets/covers/cover-1.jpg"}
             alt=""
             width={800}
             height={560}

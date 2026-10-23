@@ -12,7 +12,7 @@
         "AI",
         "engineering"
       ],
-      "coverImage": "/assets/covers/banner-1.png",
+      "coverImage": "/assets/covers/banner-1.jpg",
       "publishedAt": "2026-10-14T00:00:00.000Z",
       "body": "## Start with a job, not a model\n\nAI has changed how software gets written and what software can do. It has not removed the need to know which problem you are solving. A useful starting point is a repeated task: drafting a first version, summarising a long record, classifying incoming requests, or answering a question from documents you already trust.\n\nIf you cannot name the person who checks the result, the feature is not ready.\n\n## Where teams are seeing real help\n\nInside the engineering team, AI assistants are good at first drafts. They speed up tests, migrations, and the boring translation of a ticket into a starting point. They are weaker when the codebase has no clear boundaries, because the assistant then copies the confusion.\n\nInside the product, the useful features are usually narrow. A support tool that proposes a reply from the last ten similar tickets. A back office that extracts fields from a document and asks a person to confirm them. A search box that can tolerate the way customers actually phrase a question.\n\nThese are integrations. They need logs, a limit on what the system is allowed to do, and a path that still works when the model is wrong.\n\n## Where the claims run ahead of the work\n\nAI does not repair an unclear product. If two departments disagree about the workflow, a model will not settle it. It also does not remove responsibility for customer data. Sending a record to an API is a product decision, not a prompt detail.\n\nTraining your own model is rarely the first step. Most products should start with an existing AI API, a small evaluation set of real examples, and a human review step. Fine-tuning or a private model is justified when that simpler version has already proved the workflow.\n\n## A practical way to introduce it\n\nPick one workflow. Write down what a good answer looks like. Run the current process and the AI-assisted process on the same examples. Keep the change if people are faster and the error rate is acceptable. Leave it out if the team spends the saved time checking the model.\n\nThat is a slower story than a launch announcement. It is also how AI becomes part of the product instead of a tab nobody opens twice.\n"
     },
@@ -28,7 +28,7 @@
         "web",
         "architecture"
       ],
-      "coverImage": "/assets/covers/banner-2.png",
+      "coverImage": "/assets/covers/banner-2.jpg",
       "publishedAt": "2026-10-02T00:00:00.000Z",
       "body": "## Scale is a direction, not a number\n\nA web application does not need the architecture of a global platform on day one. It does need a shape that will not punish you for the second customer, the second team, or the second year. The expensive mistakes are usually structural: data that cannot be queried, permissions painted on at the end, and a deploy that only one person understands.\n\n## Draw the boundaries before the folders multiply\n\nDecide what the application is responsible for, and what it should ask another system to do. A billing provider, an identity provider, and a search index are ordinary neighbours. Copying their jobs into your database is how a small app becomes a private platform nobody wanted.\n\nInside your own code, keep the user-facing application and the rules of the business distinguishable. When every screen reaches into every table, the next feature has to understand the whole system.\n\n## Treat data and access as product decisions\n\nThe data model is the product. Names, statuses and ownership should match the words the business already uses. Add the fields you know you will filter and audit. Leave speculative columns out.\n\nAccess belongs in the same conversation. Who can see a record, who can change it, and what happens when someone leaves the company. Retrofitting roles onto a finished app is slower than agreeing them while the first screens are still movable.\n\n## Leave room for work that is not a click\n\nExports, emails, image processing and integrations should not live inside the request that rendered the page. A simple queue or background job is enough. What matters is that a slow partner does not freeze the interface, and that a failure can be retried without a developer at a keyboard.\n\n## Make production visible\n\nYou cannot scale what you cannot see. Logs, a health check, and an alert when the main job fails are part of the first release, not a later hardening project. So is a repeatable deploy. If shipping requires a checklist in someone's head, the application is already harder to grow than its traffic suggests.\n\nNone of this requires a large platform team. It requires choosing the few decisions that are costly to reverse, and leaving the rest until the product has earned them.\n"
     },
@@ -44,7 +44,7 @@
         "modernization",
         "architecture"
       ],
-      "coverImage": "/assets/covers/banner-3.png",
+      "coverImage": "/assets/covers/banner-3.jpg",
       "publishedAt": "2026-09-18T00:00:00.000Z",
       "body": "## The useful question is not \"how old is it?\"\n\nAge is a weak signal. Plenty of older systems are clear, owned, and cheap to change. The systems that need attention are the ones where a small business change takes a release cycle, or where only one person knows how to ship it safely.\n\n## Signs the software is now the constraint\n\nLook for these, not for a technology fashion:\n\n- A change that the business considers small requires a project.\n- Integrations fail quietly and someone reconciles them by hand.\n- You avoid touching a module because the last change caused an outage.\n- New hires take months to become useful in the codebase.\n- Reporting is a separate, fragile copy of the data.\n\nIf none of those are true, modernization can wait. Spend the effort on the product instead.\n\n## Do not start with a rewrite\n\nA full rewrite feels clean and usually arrives late, because the old system contains rules nobody wrote down. Those rules surface as bugs in the new one. The safer pattern is to put a boundary around one capability, build the replacement beside the old path, and move traffic when the new path is boring.\n\nThat might be one integration, one customer workflow, or the deploy pipeline itself. The first modernization project is often the thing that makes the next project possible: a test suite around the risky module, a documented deploy, or an API in front of a database that every screen queries differently.\n\n## Decide what \"done\" means before you fund it\n\nA modernization roadmap should name the risk being removed. Faster changes. Fewer manual reconciliations. A system a new engineer can run. If the goal is only \"a modern stack\", the project has no finish line.\n\nWrite the sequence. Say what stays. Say what is deliberately left in the old system for now. Then staff the first slice, not the imagined end state.\n\nThe businesses that modernize well treat it as a series of replacements they can survive, not as a single leap they have to hope for.\n"
     },
@@ -60,7 +60,7 @@
         "MVP",
         "startups"
       ],
-      "coverImage": "/assets/covers/banner-4.png",
+      "coverImage": "/assets/covers/banner-4.jpg",
       "publishedAt": "2026-09-04T00:00:00.000Z",
       "body": "## An MVP is a learning tool that has to work\n\nThe point of a first release is not to look finished. It is to put a real workflow in front of the people who have the problem, and to learn whether your guess about that problem was right. A slide deck can test interest. It cannot test whether someone will complete the job when the data is messy and they are in a hurry.\n\n## Choose one user and one job\n\nWrite a single sentence: this person can finish this task without help. If the sentence needs three users and a platform, it is not the first release. Secondary roles, admin elegance, and the settings page can wait until someone has used the core.\n\nList what you will not build. That list is as useful as the backlog. It is how the team says no to work that feels productive and does not answer the question.\n\n## Build the path, including the unhappy parts\n\nThe first version still needs the pieces that make the job real. Sign-in if the data is private. A way to correct a mistake. An empty state that tells the truth. A record of what happened, so you can see whether people returned.\n\nIt does not need every channel, every integration, or a design for an audience you do not have. If a step can be done manually behind the scenes for the first ten customers, do that, and be honest that it is manual.\n\n## Know what you are trying to learn\n\nBefore you fund the build, agree the signal. Do people finish the task? Do they come back without being asked? Does the workflow replace the spreadsheet, or sit beside it? A launch without a question is just a release.\n\n## After the MVP\n\nIf the signal is weak, change the product or stop. If it is strong, the next release should make the manual parts reliable and give the team a foundation they can keep. That is the moment for the architecture you postponed, not the moment to invent a second product.\n\nTeams that ship a tight first version learn faster than teams that spend the same months making a wide one feel complete.\n"
     },
@@ -76,7 +76,7 @@
         "architecture",
         "stack"
       ],
-      "coverImage": "/assets/covers/banner-5.png",
+      "coverImage": "/assets/covers/banner-5.jpg",
       "publishedAt": "2026-08-20T00:00:00.000Z",
       "body": "## Choose for the next three years, not for a talk\n\nA technology stack is a set of bets about hiring, operations and change. The safest bet for most business software is a boring one: a typed web frontend, a small API, a relational database, and a cloud a new engineer can learn from the documentation.\n\nAt Farolab Systems that often means React or Next.js, TypeScript, Node.js or Python, and PostgreSQL. It is a default, not a rule. The reason to leave it should be the product, not taste.\n\n## Ask four questions\n\n**Who will maintain it?** A stack your team already knows will beat a fashionable one that only the original authors can operate. If you are hiring, prefer technologies with a deep hiring pool over a language you would have to teach from scratch.\n\n**What does the product actually do?** Heavy document workflows, real-time collaboration, mobile device features, and data analysis pull the stack in different directions. Name the hard part. Choose for that, and keep the rest ordinary.\n\n**What does it cost to run?** Managed databases, simple deploys and fewer services are usually cheaper to operate than a diagram with twelve boxes. Add a piece of infrastructure when a measured problem asks for it.\n\n**What is expensive to reverse?** Language and database choices linger. A UI library does not. Spend the debate on the decisions you will still be living with after the first rewrite of the interface.\n\n## When to leave the default\n\nUse Python and FastAPI or Django when the product is close to data work, automation, or a team that already thinks in Python. Use a document database when the data is genuinely document-shaped, not because a tutorial started there. Reach for a specialised mobile stack when the device is the product. Add an AI API when a workflow has earned it, and keep the rest of the system unaware of which vendor you chose, so you can change it.\n\n## Write the choice down\n\nA short architecture note is enough: what you picked, what you rejected, and what would make you revisit it. Future you, and the next engineer, should not have to infer the strategy from the package file.\n\nThe right stack is the one that lets the team ship the next change with confidence. Everything else is optional.\n"
     },
@@ -92,7 +92,7 @@
         "roadmap",
         "product"
       ],
-      "coverImage": "/assets/covers/banner-6.png",
+      "coverImage": "/assets/covers/banner-6.jpg",
       "publishedAt": "2026-08-06T00:00:00.000Z",
       "body": "## A roadmap should produce evidence\n\nSoftware projects stall when the plan is a list of features and a date. A more useful roadmap is a sequence of stages, each with an artefact someone can react to. You do not need a heavy process. You need to know what \"finished\" means before the next stage starts.\n\n## Discover\n\nThe goal is a shared description of the problem. Who has it, what they do today, and what would be different if the software existed. Talk to the people who do the work. Read the spreadsheet they actually use. Write the constraints: regulation, integrations, deadlines, and the things you will not solve.\n\nThe output is a short brief, not a specification of every screen.\n\n## Shape\n\nTurn the brief into one release. Name the user, the job, and the pieces you are postponing. Sketch the main flow, including failure. Estimate the slice in language a non-engineer can compare with another option. If two stakeholders cannot agree this release, more design will not save the project. The disagreement is the work.\n\n## Build\n\nDesign and engineering should move on the same slice. Show working software often enough that a wrong turn is still cheap. Keep a staging environment the business can touch. Do not hide integration work in a final month. The connections to other systems are usually the project.\n\n## Release\n\nA release includes access, monitoring, a way to undo a bad deploy, and a person who owns the first week. Write down what you hoped to learn. Then watch whether users do the job you designed, or route around it.\n\n## Learn, then continue\n\nThe next slice should come from what the release taught you. Sometimes that is reliability. Sometimes it is the manual step you hid behind the interface. Sometimes it is a decision to stop.\n\nTeams that treat this as a partnership, rather than a handoff at the end of a contract, keep the context that makes the second release faster than the first. That continuity is the part most roadmaps forget to draw.\n"
     }
@@ -124,12 +124,12 @@
           "label": "Next release"
         }
       ],
-      "cover": "/assets/covers/cover-1.png",
+      "cover": "/assets/covers/cover-1.jpg",
       "featured": true,
       "sortOrder": 1,
       "body": "## Challenge\n\nThe business needed a simpler way to manage digital financial workflows and customer interactions. The work was split across tools that did not share a clear model of the customer.\n\n## Approach\n\nWe designed a modular platform focused on usability, security and an architecture that can accept new products without a rewrite. Regulatory approvals were treated as the client's responsibility, not as something the software vendor can claim.\n\n## Solution\n\nA modern web platform with API-driven backend services, a clear separation between customer activity and back-office review, and an extensible place for later automation.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Docker.\n\n## Outcome\n\nA scalable foundation designed for future product expansion. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
-        "/assets/covers/cover-1.png"
+        "/assets/covers/cover-1.jpg"
       ]
     },
     {
@@ -159,12 +159,12 @@
           "label": "After launch"
         }
       ],
-      "cover": "/assets/covers/cover-2.png",
+      "cover": "/assets/covers/cover-2.jpg",
       "featured": true,
       "sortOrder": 2,
       "body": "## Challenge\n\nOperations teams were coordinating work through messages and spreadsheets. Status existed, but not in one place the floor and the office could both trust.\n\n## Approach\n\nWe mapped the handoffs that actually happen in a day, then designed a system around those states instead of a generic tracking template.\n\n## Solution\n\nA web platform for planning, status and exceptions, with an API for the tools that should stay in place and a cloud setup the team can deploy repeatedly.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Docker, CI/CD.\n\n## Outcome\n\nA single operational picture the team can extend as routes, partners and volumes change. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
-        "/assets/covers/cover-2.png"
+        "/assets/covers/cover-2.jpg"
       ]
     },
     {
@@ -194,12 +194,12 @@
           "label": "Web and mobile"
         }
       ],
-      "cover": "/assets/covers/cover-3.png",
+      "cover": "/assets/covers/cover-3.jpg",
       "featured": true,
       "sortOrder": 3,
       "body": "## Challenge\n\nPatients and staff were using different channels to do a simple job: find information, ask a question, and know what happens next. The operational side of that work was manual.\n\n## Approach\n\nWe designed the product around access and communication first, with explicit boundaries around sensitive information. No medical certification is claimed for this concept.\n\n## Solution\n\nA web and mobile experience on one API, with roles for staff, a record of the conversation, and an interface that does not assume a trained operator.\n\n## Technology\n\nReact, Next.js, Node.js, PostgreSQL.\n\n## Outcome\n\nA foundation for a healthcare product that can add workflows without mixing patient communication and internal tools. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
-        "/assets/covers/cover-3.png"
+        "/assets/covers/cover-3.jpg"
       ]
     },
     {
@@ -228,12 +228,12 @@
           "label": "Fulfillment"
         }
       ],
-      "cover": "/assets/covers/cover-4.png",
+      "cover": "/assets/covers/cover-4.jpg",
       "featured": false,
       "sortOrder": 4,
       "body": "## Challenge\n\nThe storefront and the team fulfilling orders were looking at different versions of the truth. Standard commerce tools covered the ordinary case and strained on the rules that made the business different.\n\n## Approach\n\nWe kept the customer journey short and designed the catalog and order model so operations could see the same order the customer placed.\n\n## Solution\n\nA web commerce experience with a clear checkout, an API for catalog and orders, and an operational view for the people who ship.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Redis.\n\n## Outcome\n\nA commerce foundation that can grow into more channels without copying product data into another tool. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
-        "/assets/covers/cover-4.png"
+        "/assets/covers/cover-4.jpg"
       ]
     },
     {
@@ -262,12 +262,12 @@
           "label": "Learner and admin"
         }
       ],
-      "cover": "/assets/covers/cover-5.png",
+      "cover": "/assets/covers/cover-5.jpg",
       "featured": false,
       "sortOrder": 5,
       "body": "## Challenge\n\nLearners and the people running the programme did not share a simple view of progress. Content lived in files, and administration lived in a separate tool.\n\n## Approach\n\nWe designed one content model for the lesson, the learner and the administrator, and kept the first release to a single programme.\n\n## Solution\n\nA web and mobile learning experience with authoring tools, progress that a person can explain, and an admin area that does not require a separate system.\n\n## Technology\n\nNext.js, TypeScript, PostgreSQL.\n\n## Outcome\n\nA learning product that can add the next programme without redesigning the record of progress. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
-        "/assets/covers/cover-5.png"
+        "/assets/covers/cover-5.jpg"
       ]
     },
     {
@@ -296,12 +296,12 @@
           "label": "Product area"
         }
       ],
-      "cover": "/assets/covers/cover-6.png",
+      "cover": "/assets/covers/cover-6.jpg",
       "featured": false,
       "sortOrder": 6,
       "body": "## Challenge\n\nThe product had early customers and a codebase that made every new account a special case. Shipping depended on a few people who knew the deploy by heart.\n\n## Approach\n\nWe treated tenancy, roles and the path to production as product decisions, then staffed a small team to own that area with the client's engineers.\n\n## Solution\n\nA console for accounts and roles, a clearer separation between tenants, and a deployment pipeline the team can run without a private checklist.\n\n## Technology\n\nNext.js, Node.js, PostgreSQL, Docker, AWS.\n\n## Outcome\n\nA SaaS foundation that can take the next customer without inventing a new setup for each one. This is a concept project. It shows the kind of product Farolab Systems designs and builds. It is not a client engagement, and the figures you might expect in a case study are intentionally omitted.",
       "gallery": [
-        "/assets/covers/cover-6.png"
+        "/assets/covers/cover-6.jpg"
       ]
     }
   ]

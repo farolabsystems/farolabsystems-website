@@ -22,10 +22,8 @@ export function StatCounter({ value, label }: { value: string; label: string }) 
 
   const shown = match ? `${match[1]}${current}${match[3]}` : value;
   return (
-    <div>
-      <p className="heading-3" style={{ color: "var(--tc-primary-active)" }}>
-        {shown}
-      </p>
+    <div className="stat">
+      <p className="stat-value">{shown}</p>
       <p className="body-sm muted">{label}</p>
     </div>
   );

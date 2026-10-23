@@ -13,7 +13,7 @@ export const posts: PostRecord[] = [
     author,
     category: "AI & Automation",
     tags: ["AI", "engineering"],
-    coverImage: "/assets/covers/banner-1.png",
+    coverImage: "/assets/covers/banner-1.jpg",
     publishedAt: "2026-10-14T00:00:00.000Z",
     body: `## Start with a job, not a model
 
@@ -52,7 +52,7 @@ That is a slower story than a launch announcement. It is also how AI becomes par
     author,
     category: "Cloud & DevOps",
     tags: ["web", "architecture"],
-    coverImage: "/assets/covers/banner-2.png",
+    coverImage: "/assets/covers/banner-2.jpg",
     publishedAt: "2026-10-02T00:00:00.000Z",
     body: `## Scale is a direction, not a number
 
@@ -91,7 +91,7 @@ None of this requires a large platform team. It requires choosing the few decisi
     author,
     category: "Software Development",
     tags: ["modernization", "architecture"],
-    coverImage: "/assets/covers/banner-3.png",
+    coverImage: "/assets/covers/banner-3.jpg",
     publishedAt: "2026-09-18T00:00:00.000Z",
     body: `## The useful question is not "how old is it?"
 
@@ -134,7 +134,7 @@ The businesses that modernize well treat it as a series of replacements they can
     author,
     category: "Product Engineering",
     tags: ["MVP", "startups"],
-    coverImage: "/assets/covers/banner-4.png",
+    coverImage: "/assets/covers/banner-4.jpg",
     publishedAt: "2026-09-04T00:00:00.000Z",
     body: `## An MVP is a learning tool that has to work
 
@@ -173,7 +173,7 @@ Teams that ship a tight first version learn faster than teams that spend the sam
     author,
     category: "Software Development",
     tags: ["architecture", "stack"],
-    coverImage: "/assets/covers/banner-5.png",
+    coverImage: "/assets/covers/banner-5.jpg",
     publishedAt: "2026-08-20T00:00:00.000Z",
     body: `## Choose for the next three years, not for a talk
 
@@ -212,7 +212,7 @@ The right stack is the one that lets the team ship the next change with confiden
     author,
     category: "Business & Technology",
     tags: ["roadmap", "product"],
-    coverImage: "/assets/covers/banner-6.png",
+    coverImage: "/assets/covers/banner-6.jpg",
     publishedAt: "2026-08-06T00:00:00.000Z",
     body: `## A roadmap should produce evidence
 

@@ -41,7 +41,7 @@ export function CookieBanner({ locale }: { locale: Locale }) {
       </h2>
       <p className="body-sm muted mt-3">
         {copy.cookieBody}{" "}
-        <Link href={withLocale(locale, "/cookie-policy")} style={{ color: "var(--tc-primary-active)" }}>
+        <Link href={withLocale(locale, "/cookie-policy")} className="text-link">
           {copy.cookies}
         </Link>
       </p>

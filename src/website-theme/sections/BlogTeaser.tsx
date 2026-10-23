@@ -16,7 +16,7 @@ export function BlogTeaser({ locale, posts }: { locale: Locale; posts: PostRecor
             <h2 className="heading-2 max-w-[16ch]">{blogSection.title}</h2>
             <p className="body muted mt-3 max-w-[52ch]">{blogSection.body}</p>
           </div>
-          <Link href={withLocale(locale, "/blog")} style={{ color: "var(--tc-primary-active)" }}>
+          <Link href={withLocale(locale, "/blog")} className="text-link body-sm shrink-0">
             All articles
           </Link>
         </div>

@@ -36,7 +36,7 @@ export async function CaseStudyPage({ slug, locale = "en" }: { slug: string; loc
         <div className="media-frame media-frame--lg mt-8">
           <CoverImage src={study.cover} alt={study.title} priority sizes="(max-width: 1200px) 100vw, 1088px" />
         </div>
-        <div className="mt-8 grid grid-cols-3 gap-4">
+        <div className="stat-row mt-8">
           {study.stats.map((stat) => (
             <StatCounter key={stat.label} value={stat.value} label={stat.label} />
           ))}

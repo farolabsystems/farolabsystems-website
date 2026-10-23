@@ -10,7 +10,7 @@ export function TrustedBy() {
         <h2 className="heading-4 max-w-[24ch]">{trustedBy.title}</h2>
         <p className="body muted mt-3 max-w-[68ch]">{trustedBy.body}</p>
       </Container>
-      <div className="mt-6">
+      <div className="mt-8">
         <Marquee items={trustedBy.items} />
       </div>
     </Section>

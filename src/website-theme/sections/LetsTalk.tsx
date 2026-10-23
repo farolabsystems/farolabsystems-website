@@ -9,12 +9,12 @@ export function LetsTalk() {
   return (
     <Section id="contact" tone="white">
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
+        <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-12">
           <div>
             <Eyebrow>{contactIntro.eyebrow}</Eyebrow>
             <h2 className="heading-3">{contactIntro.title}</h2>
-            <p className="body muted mt-4">{contactIntro.body}</p>
-            <ul className="mt-8 grid gap-3">
+            <p className="body muted mt-3">{contactIntro.body}</p>
+            <ul className="mt-6 grid gap-3">
               {siteConfig.founders.map((founder) => (
                 <li key={founder.name} className="flex items-center gap-3">
                   <span

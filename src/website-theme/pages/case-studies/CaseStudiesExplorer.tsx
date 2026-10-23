@@ -50,7 +50,7 @@ export function CaseStudiesExplorer({ locale, studies }: { locale: Locale; studi
   }
 
   return (
-    <div className="grid gap-8">
+    <div className="grid gap-6">
       <div className="grid gap-3">
         <p className="caption" style={{ letterSpacing: "var(--tc-tracking-eyebrow)", textTransform: "uppercase" }}>
           Industry

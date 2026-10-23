@@ -162,7 +162,7 @@ export function ContactForm() {
       />
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2" htmlFor="budget">
-          <span className="body-sm">Budget (USD)</span>
+          <span className="body-sm">Budget (₹)</span>
           <select
             id="budget"
             name="budget"
@@ -214,7 +214,7 @@ export function ContactForm() {
         <Button type="submit" disabled={sending}>
           {sending ? "Sending…" : "Start a conversation"}
         </Button>
-        <Link href="/schedule-meeting" className="body-sm" style={{ color: "var(--tc-primary-active)" }}>
+        <Link href="/schedule-meeting" className="text-link body-sm">
           Schedule a meeting
         </Link>
       </div>

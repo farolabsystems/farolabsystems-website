@@ -3,22 +3,24 @@ import { siteConfig, uiCopy } from "@/website-theme/config/site.config";
 import { schedulePage } from "@/website-theme/data/contact";
 import { PageHero } from "@/website-theme/sections/PageHero";
 import { Container } from "@/website-theme/ui/Container";
+import { CalEmbed } from "@/website-theme/pages/schedule-meeting/CalEmbed";
 
-/** Force Cal.com / cal.id light theme via query param (embed reads `theme`). */
-function withCalTheme(url: string, theme: "light" | "dark" = "light") {
+/** Cal.id reads these so the booker stays in the light embed layout. */
+function withCalEmbed(url: string) {
   try {
     const parsed = new URL(url);
-    parsed.searchParams.set("theme", theme);
+    parsed.searchParams.set("theme", "light");
+    parsed.searchParams.set("embed", "true");
     return parsed.toString();
   } catch {
     const join = url.includes("?") ? "&" : "?";
-    return `${url}${join}theme=${theme}`;
+    return `${url}${join}theme=light&embed=true`;
   }
 }
 
 export function SchedulePage({ locale = "en" }: { locale?: Locale }) {
   const copy = uiCopy[locale];
-  const calUrl = siteConfig.meetingUrl ? withCalTheme(siteConfig.meetingUrl, "light") : "";
+  const calUrl = siteConfig.meetingUrl ? withCalEmbed(siteConfig.meetingUrl) : "";
 
   return (
     <>
@@ -26,12 +28,10 @@ export function SchedulePage({ locale = "en" }: { locale?: Locale }) {
       {calUrl ? (
         <section className="section" style={{ paddingTop: 0, paddingBottom: "var(--tc-space-10)" }}>
           <Container>
-            <div className="cal-embed">
-              <iframe title={copy.schedule} src={calUrl} loading="lazy" allow="camera; microphone; fullscreen; payment" />
-            </div>
+            <CalEmbed title={copy.schedule} src={calUrl} />
             <p className="body-sm muted mt-5" style={{ paddingBottom: "var(--tc-space-4)" }}>
               Prefer a new tab?{" "}
-              <a href={calUrl} target="_blank" rel="noreferrer noopener" style={{ color: "var(--tc-primary-active)" }}>
+              <a href={calUrl} target="_blank" rel="noreferrer noopener" className="text-link">
                 {copy.schedule}
               </a>
             </p>

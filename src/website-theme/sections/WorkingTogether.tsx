@@ -9,7 +9,7 @@ export function WorkingTogether() {
       <Container>
         <Eyebrow>{workingTogether.eyebrow}</Eyebrow>
         <h2 className="heading-2 max-w-[16ch]">{workingTogether.title}</h2>
-        <ol className="mt-8 grid gap-4 md:grid-cols-3">
+        <ol className="mt-8 grid gap-3 md:grid-cols-3">
           {workingTogether.steps.map((step) => (
             <li key={step.index} className="card grid gap-2">
               <span className="heading-5" style={{ color: "var(--tc-primary-active)" }}>

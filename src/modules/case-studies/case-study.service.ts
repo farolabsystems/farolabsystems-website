@@ -26,8 +26,8 @@ function toRecord(row: CaseStudy): CaseStudyRecord {
     services: row.services,
     stats: asStats(row.stats),
     body: row.body,
-    cover: row.cover || "/assets/covers/cover-1.png",
-    gallery: row.gallery.length ? row.gallery : [row.cover || "/assets/covers/cover-1.png"],
+    cover: row.cover || "/assets/covers/cover-1.jpg",
+    gallery: row.gallery.length ? row.gallery : [row.cover || "/assets/covers/cover-1.jpg"],
     featured: row.featured,
     sortOrder: row.sortOrder,
   };

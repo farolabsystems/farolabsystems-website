@@ -173,7 +173,7 @@ const caseStudies = inventory
   .map((item, index) => {
     const slug = item.path.split("/")[2];
     const title = decode(item.h1) || slug;
-    const cover = `/assets/covers/cover-${(index % 6) + 1}.png`;
+    const cover = `/assets/covers/cover-${(index % 6) + 1}.jpg`;
     return {
       slug,
       title,
@@ -187,7 +187,7 @@ const caseStudies = inventory
       ],
       body: `## The problem\n\nPlaceholder narrative for ${title}. Describe the constraint the client felt before any software was discussed.\n\n## What we shipped\n\nPlaceholder description of the product slice. Name the users, the main workflow, and what you deliberately left out.\n\n## What changed\n\nReplace these lines with outcomes you can stand behind. The figures in the header are placeholders and must not be published as facts.\n`,
       cover,
-      gallery: [cover, `/assets/covers/cover-${((index + 1) % 6) + 1}.png`],
+      gallery: [cover, `/assets/covers/cover-${((index + 1) % 6) + 1}.jpg`],
       featured: featured.has(slug),
       sortOrder: featured.has(slug) ? index : 100 + index,
     };
@@ -210,7 +210,7 @@ const posts = inventory
       title,
       excerpt: "Placeholder excerpt. Replace it with your own introduction. This is not the original article.",
       body: `## Why this matters\n\nPlaceholder article for “${title}”. Write your own argument here. This text exists so the route, table of contents, and related posts have something to render.\n\n## What to decide first\n\nName the constraint, the people involved, and the smallest release that would teach you something.\n\n## A practical next step\n\nClose with the decision a reader can make this week. Replace every paragraph before launch.\n`,
-      coverImage: `/assets/covers/cover-${(index % 6) + 1}.png`,
+      coverImage: `/assets/covers/cover-${(index % 6) + 1}.jpg`,
       author: "Editorial team",
       category,
       tags: [category.toLowerCase()],

@@ -13,11 +13,11 @@ export function BuiltTags({ locale = "en" }: { locale?: Locale }) {
       <Container>
         <h2 className="heading-4">{technology.title}</h2>
         <p className="body muted mt-3 max-w-[68ch]">{technology.body}</p>
-        <ul className="mt-5 flex flex-wrap gap-2">
+        <ul className="tech-cloud">
           {technologies.map((item) => (
             <li key={item.slug}>
-              <Link href={withLocale(locale, `/technologies/${item.slug}`)} className="chip chip-link">
-                <TechIcon icon={item.icon} />
+              <Link href={withLocale(locale, `/technologies/${item.slug}`)} className="chip tech-chip">
+                <TechIcon icon={item.icon} size={22} />
                 <span>{item.navLabel}</span>
               </Link>
             </li>

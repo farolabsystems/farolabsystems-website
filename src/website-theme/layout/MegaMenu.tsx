@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import type { Locale } from "@/website-theme/config/site.config";
 import { localizeHref } from "@/website-theme/data/navigation";
@@ -28,12 +29,23 @@ export function MegaMenu({
   onClose: () => void;
 }) {
   const closeTimer = useRef<number | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     return () => {
       if (closeTimer.current) window.clearTimeout(closeTimer.current);
     };
   }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [open]);
 
   function openMenu() {
     if (closeTimer.current) {
@@ -51,13 +63,8 @@ export function MegaMenu({
     }, 160);
   }
 
-  return (
-    <div className="mega-item relative" onMouseEnter={openMenu} onMouseLeave={scheduleClose}>
-      <button type="button" className="nav-link" aria-expanded={open} aria-haspopup="true" onClick={() => (open ? onClose() : openMenu())}>
-        {label} <span aria-hidden="true">{open ? "▴" : "▾"}</span>
-      </button>
-      {open ? (
-        <div className="mega" role="region" aria-label={label} onMouseEnter={openMenu}>
+  const panel = open ? (
+    <div className="mega" role="region" aria-label={label} onMouseEnter={openMenu} onMouseLeave={scheduleClose}>
           <div className="container grid items-start gap-8 lg:grid-cols-[1.4fr_1fr]">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {groups.map((group) => (
@@ -87,15 +94,22 @@ export function MegaMenu({
                   </Link>
                 ))}
                 {seeAll ? (
-                  <Link href={localizeHref(locale, seeAll.href)} className="body-sm" style={{ color: "var(--tc-primary-active)" }} onClick={onClose}>
+                  <Link href={localizeHref(locale, seeAll.href)} className="text-link body-sm w-fit" onClick={onClose}>
                     {seeAll.label} →
                   </Link>
                 ) : null}
               </div>
             ) : null}
           </div>
-        </div>
-      ) : null}
+    </div>
+  ) : null;
+
+  return (
+    <div className="mega-item relative" onMouseEnter={openMenu} onMouseLeave={scheduleClose}>
+      <button type="button" className="nav-link" aria-expanded={open} aria-haspopup="true" onClick={() => (open ? onClose() : openMenu())}>
+        {label} <span aria-hidden="true">{open ? "▴" : "▾"}</span>
+      </button>
+      {mounted && panel ? createPortal(panel, document.body) : null}
     </div>
   );
 }

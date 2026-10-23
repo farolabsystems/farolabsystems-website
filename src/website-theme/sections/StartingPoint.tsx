@@ -13,9 +13,9 @@ export function StartingPoint({ locale }: { locale: Locale }) {
         <Eyebrow>{startingPoint.eyebrow}</Eyebrow>
         <h2 className="heading-2 max-w-[16ch]">{startingPoint.title}</h2>
         <p className="body-lg muted mt-4 max-w-[62ch]">{startingPoint.intro}</p>
-        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+        <div className="mt-8 grid gap-4 lg:grid-cols-2">
           {startingPoint.columns.map((column) => (
-            <article key={column.index} className="card grid gap-4">
+            <article key={column.index} className="card grid gap-3">
               <p className="heading-4" style={{ color: "var(--tc-primary-active)" }}>
                 {column.index}
               </p>
@@ -24,7 +24,7 @@ export function StartingPoint({ locale }: { locale: Locale }) {
               <ul className="grid gap-2">
                 {column.links.map((link) => (
                   <li key={link.href + link.label}>
-                    <Link href={withLocale(locale, link.href)} style={{ color: "var(--tc-primary-active)" }}>
+                    <Link href={withLocale(locale, link.href)} className="text-link body-sm">
                       {link.label} →
                     </Link>
                   </li>

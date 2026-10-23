@@ -12,7 +12,7 @@ function toRecord(row: Content): PostRecord {
     title: row.title,
     excerpt: row.excerpt,
     body: row.body,
-    coverImage: row.coverImage || "/assets/covers/cover-1.png",
+    coverImage: row.coverImage || "/assets/covers/cover-1.jpg",
     coverAlt: row.coverAlt || row.title,
     author: row.author || "Editorial team",
     category: row.category || "Notes",

@@ -10,8 +10,8 @@ export function Logo({ locale = "en" }: { locale?: Locale }) {
       <Image
         src="/assets/brand/logo-header.png"
         alt=""
-        width={942}
-        height={224}
+        width={1024}
+        height={341}
         priority
         className="logo-on-light"
         style={logoStyle}
@@ -19,8 +19,8 @@ export function Logo({ locale = "en" }: { locale?: Locale }) {
       <Image
         src="/assets/brand/logo-footer-v2.png"
         alt=""
-        width={904}
-        height={212}
+        width={1024}
+        height={341}
         className="logo-on-dark"
         style={logoStyle}
       />

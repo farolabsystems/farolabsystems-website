@@ -35,14 +35,14 @@ export async function BlogPage({
   }
 
   return (
-    <section className="section" style={{ paddingTop: "var(--tc-space-9)" }}>
+    <section className="section" style={{ paddingTop: "var(--tc-space-8)" }}>
       <Container>
         <div className="blog-index-banner">
           <p className="eyebrow">Journal</p>
           <h1 className="heading-2 max-w-[14ch]">{blogSection.title}</h1>
           <p className="body-lg mt-4 max-w-[46ch]">{blogSection.body}</p>
         </div>
-        <div className="mt-8 flex flex-wrap gap-2" aria-label="Categories">
+        <div className="mt-6 flex flex-wrap gap-2" aria-label="Categories">
           <Link href={hrefFor(1)} className="chip" aria-current={!category ? "page" : undefined}>
             All
           </Link>

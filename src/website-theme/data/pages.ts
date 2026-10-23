@@ -1,6 +1,6 @@
 import type { PostRecord } from "@/website-theme/data/types";
 
-const cover = "/assets/covers/cover-1.png";
+const cover = "/assets/covers/cover-1.jpg";
 
 export const legalPages: PostRecord[] = [
   {

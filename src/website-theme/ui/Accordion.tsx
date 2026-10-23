@@ -16,13 +16,21 @@ export function Accordion({ items }: { items: FaqItem[] }) {
             <h3 className="m-0">
               <button
                 type="button"
-                className="flex w-full items-center justify-between gap-4 bg-transparent py-5 text-left"
+                className="flex w-full items-center justify-between gap-4 bg-transparent py-4 text-left transition-opacity duration-200 hover:opacity-70"
                 aria-expanded={expanded}
                 onClick={() => setOpen(expanded ? null : index)}
               >
                 <span className="heading-6">{item.question}</span>
-                <span aria-hidden="true" className="body">
-                  {expanded ? "–" : "+"}
+                <span
+                  aria-hidden="true"
+                  className="body inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full"
+                  style={{
+                    border: "1px solid var(--tc-border-strong)",
+                    transition: "transform var(--tc-duration) var(--tc-ease)",
+                    transform: expanded ? "rotate(45deg)" : "none",
+                  }}
+                >
+                  +
                 </span>
               </button>
             </h3>
@@ -32,7 +40,7 @@ export function Accordion({ items }: { items: FaqItem[] }) {
                   initial={reduce ? false : { height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={reduce ? undefined : { height: 0, opacity: 0 }}
-                  transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+                  transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
                   className="overflow-hidden"
                 >
                   <p className="body muted" style={{ paddingBottom: "var(--tc-space-5)", maxWidth: "70ch" }}>

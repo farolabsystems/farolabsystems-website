@@ -11,7 +11,7 @@ export default function NewPostPage() {
           title: "",
           excerpt: "",
           body: "## First heading\n\nWrite the article in markdown.",
-          coverImage: "/assets/covers/cover-1.png",
+          coverImage: "/assets/covers/cover-1.jpg",
           coverAlt: "",
           author: "Editorial team",
           category: "Notes",
