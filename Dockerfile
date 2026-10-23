@@ -30,10 +30,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends openssl ca-cert
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
-COPY --from=builder /app/node_modules/@genspark ./node_modules/@genspark
-COPY --from=builder /app/node_modules/commander ./node_modules/commander
-COPY --from=builder /app/node_modules/ws ./node_modules/ws
-COPY --from=builder /app/node_modules/yazl ./node_modules/yazl
-COPY --from=builder /app/node_modules/buffer-crc32 ./node_modules/buffer-crc32
 EXPOSE 3000
 CMD ["node", "server.js"]

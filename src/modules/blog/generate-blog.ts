@@ -1,8 +1,5 @@
-import { mkdtemp, rm } from "node:fs/promises";
-import { tmpdir } from "node:os";
-import path from "node:path";
 import { prisma } from "@/lib/db";
-import { readGeneratedFile, runGsk, withArgsFile } from "@/lib/gsk";
+import { geminiGenerate, geminiImage, geminiText } from "@/lib/gemini";
 import { uploadBlogImage } from "@/lib/s3";
 import { saveContent } from "@/modules/content/content.service";
 import { posts as fallbackPosts } from "@/website-theme/data/posts";
@@ -14,9 +11,6 @@ const CATEGORIES = [
   "Product Engineering",
   "Business & Technology",
 ] as const;
-
-const IMAGE_MODEL = "xai/grok-imagine-image";
-const TERMINAL = new Set(["succeeded", "success", "completed", "complete", "failed", "error", "cancelled", "canceled", "stopped"]);
 
 export type GeneratedPost = {
   id: string;
@@ -91,17 +85,12 @@ function clip(value: string, max: number) {
   return value.trim().slice(0, max);
 }
 
-function findString(value: unknown, key: string): string | undefined {
-  if (!value || typeof value !== "object") return undefined;
-  if (!Array.isArray(value)) {
-    const record = value as Record<string, unknown>;
-    if (typeof record[key] === "string" && record[key]) return record[key] as string;
-  }
-  for (const child of Object.values(value)) {
-    const found = findString(child, key);
-    if (found) return found;
-  }
-  return undefined;
+function textModel() {
+  return process.env.GEMINI_TEXT_MODEL?.trim() || "gemini-2.5-flash";
+}
+
+function imageModel() {
+  return process.env.GEMINI_IMAGE_MODEL?.trim() || "gemini-2.5-flash-image";
 }
 
 function collectStrings(value: unknown, out: string[]) {
@@ -180,15 +169,19 @@ async function catalog(): Promise<CatalogItem[]> {
 }
 
 async function marketNotes() {
-  const result = await withArgsFile(
-    {
-      q: "What is trending this month in software engineering, practical AI products, cloud platforms, and how companies build digital products?",
-    },
-    (file) => runGsk(["web_search", "--args-file", file], 90_000),
-  );
-  const notes: string[] = [];
-  collectStrings(result.data, notes);
-  const text = notes.join("\n").replace(/\s+/g, " ").trim().slice(0, 5000);
+  const prompt =
+    "What is trending this month in software engineering, practical AI products, cloud platforms, and how companies build digital products? Summarize the concrete themes in plain prose. Do not invent statistics, client names, or quotes.";
+  const body = {
+    contents: [{ role: "user", parts: [{ text: prompt }] }],
+    tools: [{ google_search: {} }],
+  };
+  let payload;
+  try {
+    payload = await geminiGenerate(textModel(), body, 90_000);
+  } catch {
+    payload = await geminiGenerate(textModel(), { contents: body.contents }, 90_000);
+  }
+  const text = geminiText(payload).replace(/\s+/g, " ").trim().slice(0, 5000);
   if (text.length < 80) throw new Error("Could not read current market trends.");
   return text;
 }
@@ -219,35 +212,17 @@ async function writeArticle(items: CatalogItem[], brief: string) {
     "Do not copy an existing article. When the editor named a subject, follow that subject.",
   ].join("\n");
   const query = `${brief}\n\nAlready published, do not repeat these:\n${published}`;
-
-  const submitted = await withArgsFile({ task_name: "Farolab blog", query, instructions, wait: false }, (file) =>
-    runGsk(["task", "create", "super_agent", "--args-file", file], 120_000),
+  const payload = await geminiGenerate(
+    textModel(),
+    {
+      systemInstruction: { parts: [{ text: instructions }] },
+      contents: [{ role: "user", parts: [{ text: query }] }],
+      generationConfig: { responseMimeType: "application/json", temperature: 0.7 },
+    },
+    120_000,
   );
-  const runId = findString(submitted.data, "run_id") || findString(submitted.data, "project_id");
-  if (!runId) throw new Error("Genspark did not return a task id");
-
-  const deadline = Date.now() + 8 * 60 * 1000;
-  let latest: unknown = submitted.data;
-  let projectId = findString(submitted.data, "project_id");
-  let finished = false;
-  while (Date.now() < deadline) {
-    await new Promise((resolve) => setTimeout(resolve, 5000));
-    const status = await runGsk(["task", "status", projectId || runId], 60_000);
-    latest = status.data;
-    projectId = findString(status.data, "project_id") || projectId;
-    const state = (findString(status.data, "run_status") || findString(status.data, "status") || "").toLowerCase();
-    if (!TERMINAL.has(state)) continue;
-    finished = true;
-    if (state !== "succeeded" && state !== "success" && state !== "completed" && state !== "complete") {
-      throw new Error("Genspark stopped before the article was ready");
-    }
-    break;
-  }
-  if (!finished) throw new Error("The article took too long to generate");
-
-  const info = projectId ? await runGsk(["task", "info", projectId], 60_000) : null;
-  const article = parseArticle(info?.data) || parseArticle(latest);
-  if (!article) throw new Error("The model did not return an article.");
+  const article = parseArticle(geminiText(payload)) || parseArticle(payload);
+  if (!article) throw new Error("Gemini did not return an article.");
   return article;
 }
 
@@ -265,19 +240,21 @@ async function freshArticle(items: CatalogItem[], brief: string) {
 }
 
 async function createCover(prompt: string, slug: string) {
-  const dir = await mkdtemp(path.join(tmpdir(), "farolab-cover-"));
-  const file = path.join(dir, "cover.jpg");
-  try {
-    const query = `Editorial photograph, 16:9, natural light, quiet and specific, off-white paper, black metal, and warm wood. No text, no letters, no logos, no watermark, no collage. ${prompt}`;
-    await withArgsFile({ query, model: IMAGE_MODEL, aspect_ratio: "16:9", image_size: "2k" }, (args) =>
-      runGsk(["image_generation", "--args-file", args, "--output-file", file], 180_000),
-    );
-    const bytes = await readGeneratedFile(file);
-    const uploaded = await uploadBlogImage("cover.jpg", slug, bytes);
-    return uploaded.url;
-  } finally {
-    await rm(dir, { recursive: true, force: true });
-  }
+  const query = `Editorial photograph, 16:9, natural light, quiet and specific, off-white paper, black metal, and warm wood. No text, no letters, no logos, no watermark, no collage. ${prompt}`;
+  const payload = await geminiGenerate(
+    imageModel(),
+    {
+      contents: [{ role: "user", parts: [{ text: query }] }],
+      generationConfig: {
+        responseModalities: ["IMAGE"],
+        imageConfig: { aspectRatio: "16:9" },
+      },
+    },
+    180_000,
+    true,
+  );
+  const uploaded = await uploadBlogImage("cover.png", slug, geminiImage(payload));
+  return uploaded.url;
 }
 
 async function publish(article: Article, daily: boolean): Promise<GeneratedPost> {

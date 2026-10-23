@@ -21,7 +21,6 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1156.0",
     "@fontsource/work-sans": "^5.3.0",
-    "@genspark/cli": "^1.15.0",
     "@prisma/adapter-pg": "^6.19.3",
     "@prisma/client": "^6.16.2",
     "bcryptjs": "^2.4.3",
