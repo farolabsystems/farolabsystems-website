@@ -474,10 +474,13 @@ a.chip-link:hover,
 }
 
 .chip-rail {
-  container-type: inline-size;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  cursor: grab;
 }
 
 .chip-rail::-webkit-scrollbar {
@@ -493,7 +496,6 @@ a.chip-link:hover,
   margin: 0;
   padding: 0;
   list-style: none;
-  animation: chip-rail 16s ease-in-out infinite;
 }
 
 .chip-rail-track > .chip,
@@ -504,25 +506,6 @@ a.chip-link:hover,
 
 .chip-rail .tech-chip {
   width: auto;
-}
-
-.chip-rail:hover .chip-rail-track,
-.chip-rail:focus-within .chip-rail-track {
-  animation-play-state: paused;
-}
-
-@keyframes chip-rail {
-  0%,
-  14% {
-    transform: translateX(0);
-  }
-  50%,
-  64% {
-    transform: translateX(min(0px, calc(100cqw - 100%)));
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 
 .marquee:hover .marquee-track,

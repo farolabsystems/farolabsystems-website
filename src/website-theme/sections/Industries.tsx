@@ -7,6 +7,7 @@ import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
 import { industrySection, industryTabs } from "@/website-theme/data/home";
 import type { CaseStudyRecord } from "@/website-theme/data/types";
+import { ChipRail } from "@/website-theme/ui/ChipRail";
 import { Container } from "@/website-theme/ui/Container";
 import { Eyebrow } from "@/website-theme/ui/Eyebrow";
 
@@ -20,8 +21,7 @@ export function Industries({ locale, studies }: { locale: Locale; studies: CaseS
         <Eyebrow>{industrySection.eyebrow}</Eyebrow>
         <h2 className="heading-2 max-w-[18ch]">{industrySection.title}</h2>
         <p className="body-lg muted mt-4 max-w-[62ch]">{industrySection.body}</p>
-        <div className="chip-rail mt-8">
-          <div className="chip-rail-track" role="tablist" aria-label="Industries">
+        <ChipRail className="mt-8" trackRole="tablist" label="Industries">
           {industryTabs.map((item) => (
             <button
               key={item.id}
@@ -36,8 +36,7 @@ export function Industries({ locale, studies }: { locale: Locale; studies: CaseS
               {item.label}
             </button>
           ))}
-          </div>
-        </div>
+        </ChipRail>
         <div
           role="tabpanel"
           id={`panel-${tab.id}`}

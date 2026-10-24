@@ -7,6 +7,7 @@ import type { Locale } from "@/website-theme/config/site.config";
 import { siteConfig, withLocale } from "@/website-theme/config/site.config";
 import { caseStudiesSection } from "@/website-theme/data/home";
 import type { CaseStudyRecord } from "@/website-theme/data/types";
+import { ChipRail } from "@/website-theme/ui/ChipRail";
 import { Container } from "@/website-theme/ui/Container";
 import { CoverImage } from "@/website-theme/ui/CoverImage";
 import { StatCounter } from "@/website-theme/ui/StatCounter";
@@ -47,8 +48,7 @@ export function CaseStudiesSlider({ locale, studies }: { locale: Locale; studies
       <Container>
         <h2 className="heading-2 max-w-[16ch]">{caseStudiesSection.title}</h2>
         <p className="body-lg muted mt-4 max-w-[62ch]">{caseStudiesSection.body}</p>
-        <div className="chip-rail mt-6">
-          <div className="chip-rail-track" role="tablist" aria-label="Case studies">
+        <ChipRail className="mt-6" trackRole="tablist" label="Case studies">
           {slides.map((item, itemIndex) => (
             <button
               key={item.slug}
@@ -61,8 +61,7 @@ export function CaseStudiesSlider({ locale, studies }: { locale: Locale; studies
               {item.title}
             </button>
           ))}
-          </div>
-        </div>
+        </ChipRail>
         <AnimatePresence mode="wait">
           <motion.article
             key={slide.slug}

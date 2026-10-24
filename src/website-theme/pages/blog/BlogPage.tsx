@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
 import { listPosts } from "@/modules/content/content.service";
+import { ChipRail } from "@/website-theme/ui/ChipRail";
 import { Container } from "@/website-theme/ui/Container";
 import { CoverImage } from "@/website-theme/ui/CoverImage";
 import { blogSection } from "@/website-theme/data/home";
@@ -42,8 +43,7 @@ export async function BlogPage({
           <h1 className="heading-2 max-w-[14ch]">{blogSection.title}</h1>
           <p className="body-lg mt-4 max-w-[46ch]">{blogSection.body}</p>
         </div>
-        <div className="chip-rail mt-6" aria-label="Categories">
-          <div className="chip-rail-track">
+        <ChipRail className="mt-6" label="Categories">
           <Link href={hrefFor(1)} className="chip" aria-current={!category ? "page" : undefined}>
             All
           </Link>
@@ -52,8 +52,7 @@ export async function BlogPage({
               {item}
             </Link>
           ))}
-          </div>
-        </div>
+        </ChipRail>
         <ul className="mt-8 grid gap-4 md:grid-cols-3">
           {slice.map((post) => (
             <li key={post.slug}>

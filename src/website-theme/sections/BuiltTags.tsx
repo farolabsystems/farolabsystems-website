@@ -3,6 +3,7 @@ import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
 import { technology } from "@/website-theme/data/home";
 import { technologies } from "@/website-theme/data/technologies";
+import { ChipRail } from "@/website-theme/ui/ChipRail";
 import { Container } from "@/website-theme/ui/Container";
 import { Section } from "@/website-theme/ui/Section";
 import { TechIcon } from "@/website-theme/ui/TechIcon";
@@ -13,8 +14,7 @@ export function BuiltTags({ locale = "en" }: { locale?: Locale }) {
       <Container>
         <h2 className="heading-4">{technology.title}</h2>
         <p className="body muted mt-3 max-w-[68ch]">{technology.body}</p>
-        <div className="chip-rail mt-6">
-          <ul className="chip-rail-track">
+        <ChipRail as="ul" className="mt-6">
           {technologies.map((item) => (
             <li key={item.slug}>
               <Link href={withLocale(locale, `/technologies/${item.slug}`)} className="chip tech-chip">
@@ -23,8 +23,7 @@ export function BuiltTags({ locale = "en" }: { locale?: Locale }) {
               </Link>
             </li>
           ))}
-          </ul>
-        </div>
+        </ChipRail>
       </Container>
     </Section>
   );
