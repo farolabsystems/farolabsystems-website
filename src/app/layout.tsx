@@ -12,6 +12,9 @@ export async function generateMetadata(): Promise<Metadata> {
       template: "%s",
     },
     description: settings.seoDescription,
+    icons: {
+      icon: [{ url: "/favicon.png", type: "image/png", sizes: "192x192" }],
+    },
   };
 }
 
