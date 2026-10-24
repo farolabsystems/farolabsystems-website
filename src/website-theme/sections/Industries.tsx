@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
 import { industrySection, industryTabs } from "@/website-theme/data/home";
@@ -13,6 +14,7 @@ import { Eyebrow } from "@/website-theme/ui/Eyebrow";
 
 export function Industries({ locale, studies }: { locale: Locale; studies: CaseStudyRecord[] }) {
   const [active, setActive] = useState(industryTabs[0]?.id ?? "");
+  const reduce = useReducedMotion();
   const tab = industryTabs.find((item) => item.id === active) ?? industryTabs[0];
   const related = studies.find((study) => study.slug === tab.caseSlug);
   return (
@@ -37,38 +39,51 @@ export function Industries({ locale, studies }: { locale: Locale; studies: CaseS
             </button>
           ))}
         </ChipRail>
-        <div
-          role="tabpanel"
-          id={`panel-${tab.id}`}
-          aria-labelledby={`tab-${tab.id}`}
-          className="mt-8 grid items-center gap-6 lg:grid-cols-2"
-        >
-          <div className="grid gap-4">
-            <h3 className="heading-4">{tab.title}</h3>
-            <ul className="grid gap-2">
-              {tab.bullets.map((bullet) => (
-                <li key={bullet} className="body">
-                  {bullet}
-                </li>
-              ))}
-            </ul>
-            <Link href={withLocale(locale, tab.href)} className="text-link body-sm w-fit">
-              Explore this industry →
-            </Link>
-            {related ? (
-              <Link href={withLocale(locale, `/case-studies/${related.slug}`)} className="text-link body-sm w-fit">
-                Related work: {related.title}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={tab.id}
+            role="tabpanel"
+            id={`panel-${tab.id}`}
+            aria-labelledby={`tab-${tab.id}`}
+            className="mt-8 grid items-center gap-6 lg:grid-cols-2"
+            initial={reduce ? false : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={reduce ? undefined : { opacity: 0, y: -8 }}
+            transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div className="grid gap-4">
+              <h3 className="heading-4">{tab.title}</h3>
+              <ul className="grid gap-2">
+                {tab.bullets.map((bullet) => (
+                  <li key={bullet} className="body">
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+              <Link href={withLocale(locale, tab.href)} className="text-link body-sm w-fit">
+                Explore this industry →
               </Link>
-            ) : null}
-          </div>
-          <Image
-            src={related?.cover ?? "/assets/covers/cover-1.jpg"}
-            alt=""
-            width={800}
-            height={560}
-            className="w-full rounded-[var(--tc-radius-card)] object-cover"
-          />
-        </div>
+              {related ? (
+                <Link href={withLocale(locale, `/case-studies/${related.slug}`)} className="text-link body-sm w-fit">
+                  Related work: {related.title}
+                </Link>
+              ) : null}
+            </div>
+            <motion.div
+              initial={reduce ? false : { opacity: 0, scale: 0.985 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <Image
+                src={related?.cover ?? "/assets/covers/cover-1.jpg"}
+                alt=""
+                width={800}
+                height={560}
+                className="w-full rounded-[var(--tc-radius-card)] object-cover"
+              />
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
       </Container>
     </section>
   );
