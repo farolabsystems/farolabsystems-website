@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ChevronLeft, ChevronRight, Eye, Pencil, Trash2 } from "lucide-react";
+import { Eye, Pencil, Trash2 } from "lucide-react";
 import { useAdminToast } from "@/components/AdminToast";
 import { ConfirmModal } from "@/components/ConfirmModal";
 
@@ -110,8 +110,16 @@ export function AdminTable({
               <tr key={row.id}>
                 {columns.map((column) => (
                   <td key={column.key}>
-                    {column.key === "status" ? (
-                      <span className={row.status === "PUBLISHED" ? "caption admin-status is-live" : "caption admin-status"}>
+                    {column.key === "status" || column.key === "origin" ? (
+                      <span
+                        className={
+                          row.status === "PUBLISHED" && column.key === "status"
+                            ? "caption admin-status is-live"
+                            : row.cells[column.key] === "Auto"
+                              ? "caption admin-status is-live"
+                              : "caption admin-status"
+                        }
+                      >
                         {row.cells[column.key] || "—"}
                       </span>
                     ) : (
@@ -145,16 +153,21 @@ export function AdminTable({
         <p className="caption">
           {from}–{to} of {filtered.length}
         </p>
-        <div className="admin-pager-buttons">
-          <button type="button" className="btn btn-ghost admin-mini" disabled={current <= 1} onClick={() => setPage(current - 1)}>
-            <ChevronLeft size={16} strokeWidth={1.75} aria-hidden="true" />
-            Previous
-          </button>
-          <button type="button" className="btn btn-ghost admin-mini" disabled={current >= pages} onClick={() => setPage(current + 1)}>
-            Next
-            <ChevronRight size={16} strokeWidth={1.75} aria-hidden="true" />
-          </button>
-        </div>
+        {pages > 1 ? (
+          <nav className="admin-pager-buttons" aria-label="Pages">
+            {Array.from({ length: pages }, (_, index) => index + 1).map((number) => (
+              <button
+                key={number}
+                type="button"
+                className={number === current ? "admin-page is-current" : "admin-page"}
+                aria-current={number === current ? "page" : undefined}
+                onClick={() => setPage(number)}
+              >
+                {number}
+              </button>
+            ))}
+          </nav>
+        ) : null}
       </div>
       <ConfirmModal
         open={Boolean(pending)}

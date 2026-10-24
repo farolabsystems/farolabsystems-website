@@ -355,6 +355,38 @@
     var(--tc-page);
 }
 
+.admin-password {
+  position: relative;
+  display: block;
+}
+
+.admin-password .field {
+  width: 100%;
+  padding-right: 44px;
+}
+
+.admin-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--tc-text-muted);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.admin-password-toggle:hover {
+  color: var(--tc-text);
+  background: var(--tc-primary-soft);
+}
+
 .admin-login-card {
   width: min(100%, 420px);
 }
@@ -397,6 +429,42 @@
 .admin-stat:hover {
   border-color: var(--tc-text);
   transform: translateY(-1px);
+}
+
+.admin-charts {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.admin-chart {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--tc-border-strong);
+  border-radius: var(--tc-radius-card);
+  background: var(--tc-white);
+}
+
+.admin-chart-svg {
+  width: 100%;
+  height: auto;
+}
+
+.admin-chart-grid {
+  stroke: var(--tc-border-strong);
+  stroke-width: 1;
+}
+
+.admin-chart-bar {
+  fill: var(--tc-text);
+}
+
+.admin-chart-tick,
+.admin-chart-label {
+  fill: var(--tc-text-muted);
+  font-size: 11px;
+  font-family: var(--tc-font);
 }
 
 .admin-table-wrap {
@@ -451,6 +519,32 @@
 
 .admin-pager {
   justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-pager-buttons {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.admin-page {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--tc-border);
+  border-radius: var(--tc-radius-pill);
+  background: var(--tc-white);
+  color: var(--tc-text);
+  font: inherit;
+  font-size: var(--tc-body-sm);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.admin-page.is-current {
+  background: var(--tc-text);
+  border-color: var(--tc-text);
+  color: var(--tc-white);
 }
 
 .admin-mini {

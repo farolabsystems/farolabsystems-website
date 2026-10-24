@@ -24,8 +24,9 @@ if (typeof hash !== "function") {
 }
 
 async function main() {
-  const email = (process.env.ADMIN_EMAIL || "admin@example.com").toLowerCase();
-  const password = process.env.ADMIN_PASSWORD || "Farolab@2026";
+  const email = process.env.ADMIN_EMAIL?.trim().toLowerCase();
+  const password = process.env.ADMIN_PASSWORD;
+  if (!email || !password) throw new Error("ADMIN_EMAIL and ADMIN_PASSWORD are required to seed the admin login.");
   const passwordHash = await hash(password, 10);
   await prisma.adminUser.upsert({
     where: { email },

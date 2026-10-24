@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/db";
+import { isBlogSlot, slotTag, type BlogSlot } from "@/modules/blog/slots";
 import { geminiGenerate, geminiImage, geminiText } from "@/lib/gemini";
 import { uploadBlogImage } from "@/lib/s3";
 import { saveContent } from "@/modules/content/content.service";
@@ -157,8 +158,6 @@ async function catalog(): Promise<CatalogItem[]> {
   try {
     const rows = await prisma.content.findMany({
       where: { type: "POST" },
-      orderBy: { createdAt: "desc" },
-      take: 100,
       select: { title: true, slug: true },
     });
     for (const row of rows) items.set(normalize(row.title), { title: row.title, slug: row.slug });
@@ -288,7 +287,7 @@ async function coverFor(prompt: string, slug: string) {
   }
 }
 
-async function publish(article: Article, daily: boolean): Promise<GeneratedPost> {
+async function publish(article: Article, daily: string | false): Promise<GeneratedPost> {
   const category = CATEGORIES.includes(article.category as (typeof CATEGORIES)[number])
     ? article.category
     : "Software Development";
@@ -296,7 +295,8 @@ async function publish(article: Article, daily: boolean): Promise<GeneratedPost>
   const tags = [
     ...article.tags.map((tag) => clip(tag, 40)).filter(Boolean).slice(0, 6),
     "generated",
-    ...(daily ? [`daily:${blogDayKey()}`] : []),
+    "source:auto",
+    ...(daily ? [daily] : []),
   ];
   const title = clip(article.title, 180);
   const cover = await coverFor(article.coverPrompt || title, slug);
@@ -319,10 +319,9 @@ async function publish(article: Article, daily: boolean): Promise<GeneratedPost>
   return { id: row.id, slug: row.slug, title: row.title };
 }
 
-async function publishedToday() {
-  const tag = `daily:${blogDayKey()}`;
+async function publishedSlot(slot: BlogSlot) {
   return prisma.content.findFirst({
-    where: { type: "POST", tags: { has: tag } },
+    where: { type: "POST", tags: { has: slotTag(blogDayKey(), slot) } },
     select: { id: true, slug: true, title: true },
   });
 }
@@ -404,14 +403,15 @@ export function getGenerationJob(id: string) {
   return state.__blogJob;
 }
 
-export async function runDailyBlog(): Promise<GeneratedPost> {
+export async function runDailyBlog(slot: number): Promise<GeneratedPost> {
+  if (!isBlogSlot(slot)) throw new Error("Unknown blog slot.");
   if (state.__blogWork) await state.__blogWork.catch(() => undefined);
-  const existing = await publishedToday();
+  const existing = await publishedSlot(slot);
   if (existing) {
-    console.log("[blog] daily post already published");
+    console.log(`[blog] ${String(slot).padStart(2, "0")}:00 post already published`);
     return { ...existing, skipped: true };
   }
-  if (state.__blogWork) return runDailyBlog();
+  if (state.__blogWork) return runDailyBlog(slot);
   const post = await track(async () => {
     const items = await catalog();
     const trends = await marketNotes();
@@ -419,8 +419,8 @@ export async function runDailyBlog(): Promise<GeneratedPost> {
       items,
       `Read these current market notes and choose one trend that is not already a published title. Analyze what it changes for a team building software, then write the article from that analysis.\n\nMarket notes:\n${trends}`,
     );
-    return publish(article, true);
+    return publish(article, slotTag(blogDayKey(), slot));
   });
-  console.log(`[blog] published ${post.slug}`);
+  console.log(`[blog] published ${post.slug} for ${String(slot).padStart(2, "0")}:00`);
   return post;
 }

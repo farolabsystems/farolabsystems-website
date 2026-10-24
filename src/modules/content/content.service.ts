@@ -16,7 +16,7 @@ function toRecord(row: Content): PostRecord {
     coverAlt: row.coverAlt || row.title,
     author: row.author || "Editorial team",
     category: row.category || "Notes",
-    tags: row.tags,
+    tags: row.tags.filter((tag) => tag !== "generated" && !tag.startsWith("daily:") && !tag.startsWith("source:")),
     seoTitle: row.seoTitle || row.title,
     seoDescription: row.seoDescription || row.excerpt,
     publishedAt: (row.publishedAt ?? row.createdAt).toISOString(),

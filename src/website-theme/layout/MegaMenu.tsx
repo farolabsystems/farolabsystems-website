@@ -8,12 +8,20 @@ import { localizeHref } from "@/website-theme/data/navigation";
 
 type Item = { href: string; label: string; description?: string };
 type Group = { title: string; items: Item[] };
+type ServiceItem = {
+  href: string;
+  label: string;
+  title: string;
+  summary: string;
+  technologies: { href: string; label: string }[];
+};
 
 export function MegaMenu({
   label,
   groups,
   featured,
   seeAll,
+  services,
   locale,
   open,
   onOpen,
@@ -23,6 +31,7 @@ export function MegaMenu({
   groups: Group[];
   featured?: { href: string; title: string; summary: string }[];
   seeAll?: { href: string; label: string };
+  services?: ServiceItem[];
   locale: Locale;
   open: boolean;
   onOpen: () => void;
@@ -30,6 +39,8 @@ export function MegaMenu({
 }) {
   const closeTimer = useRef<number | null>(null);
   const [mounted, setMounted] = useState(false);
+  const [activeHref, setActiveHref] = useState(services?.[0]?.href ?? "");
+  const active = services?.find((item) => item.href === activeHref) ?? services?.[0];
 
   useEffect(() => {
     setMounted(true);
@@ -39,13 +50,13 @@ export function MegaMenu({
   }, []);
 
   useEffect(() => {
-    if (!open) return;
+    if (!open || services?.length) return;
     const previous = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = previous;
     };
-  }, [open]);
+  }, [open, services]);
 
   function openMenu() {
     if (closeTimer.current) {
@@ -64,7 +75,55 @@ export function MegaMenu({
   }
 
   const panel = open ? (
-    <div className="mega" role="region" aria-label={label} onMouseEnter={openMenu} onMouseLeave={scheduleClose}>
+    <div
+      className={services?.length ? "mega mega-services" : "mega"}
+      role="region"
+      aria-label={label}
+      onMouseEnter={openMenu}
+      onMouseLeave={scheduleClose}
+    >
+      {services?.length && active ? (
+        <div className="mega-services-card">
+          <div className="mega-services-list" role="list">
+            {services.map((item) => (
+              <Link
+                key={item.href}
+                href={localizeHref(locale, item.href)}
+                role="listitem"
+                className={item.href === active.href ? "is-active" : undefined}
+                onMouseEnter={() => setActiveHref(item.href)}
+                onFocus={() => setActiveHref(item.href)}
+                onClick={onClose}
+              >
+                <span>{item.label}</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M6 3.5 L10.5 8 L6 12.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
+            ))}
+          </div>
+          <div key={active.href} className="mega-services-detail">
+            <Link href={localizeHref(locale, active.href)} onClick={onClose}>
+              <h3 className="heading-6">{active.title}</h3>
+            </Link>
+            <p className="body muted mt-3 max-w-[52ch]">{active.summary}</p>
+            <ul className="mega-services-tech">
+              {active.technologies.map((item) => (
+                <li key={item.href + item.label}>
+                  <Link href={localizeHref(locale, item.href)} onClick={onClose}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            {seeAll ? (
+              <Link href={localizeHref(locale, seeAll.href)} className="text-link body-sm mt-6 inline-flex" onClick={onClose}>
+                {seeAll.label} →
+              </Link>
+            ) : null}
+          </div>
+        </div>
+      ) : (
           <div className="container grid items-start gap-8 lg:grid-cols-[1.4fr_1fr]">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {groups.map((group) => (
@@ -101,6 +160,7 @@ export function MegaMenu({
               </div>
             ) : null}
           </div>
+      )}
     </div>
   ) : null;
 

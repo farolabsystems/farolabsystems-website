@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import type { Locale } from "@/website-theme/config/site.config";
 import { uiCopy, withLocale } from "@/website-theme/config/site.config";
 import { portfolioIndustries } from "@/website-theme/data/navigation";
+import { portfolioMenu } from "@/website-theme/data/portfolio-menu";
+import { serviceMenu } from "@/website-theme/data/service-menu";
 import { services } from "@/website-theme/data/services";
 import { caseStudies } from "@/website-theme/data/case-studies";
 import { Button } from "@/website-theme/ui/Button";
@@ -59,11 +61,6 @@ export function SiteHeader({ locale }: { locale: Locale }) {
     .filter((group) => group.items.length > 0);
 
   const featuredStudies = caseStudies.filter((study) => study.featured).slice(0, 2);
-  const featured = featuredStudies.map((study) => ({
-    href: `/case-studies/${study.slug}`,
-    title: study.title,
-    summary: study.summary,
-  }));
 
   const mobileGroups = [
     ...serviceGroups,
@@ -85,6 +82,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           <MegaMenu
             label={copy.services}
             groups={serviceGroups}
+            services={serviceMenu}
             locale={locale}
             open={openMenu === "services"}
             onOpen={() => setOpenMenu("services")}
@@ -93,7 +91,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           <MegaMenu
             label={copy.portfolio}
             groups={[{ title: "Industries", items: portfolioIndustries }]}
-            featured={featured}
+            services={portfolioMenu}
             seeAll={{ href: "/case-studies", label: copy.seeAll }}
             locale={locale}
             open={openMenu === "portfolio"}

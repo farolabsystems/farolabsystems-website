@@ -21,8 +21,8 @@ services:
       target: migrate
     environment:
       DATABASE_URL: postgresql://app:app@db:5432/app
-      ADMIN_EMAIL: admin@example.com
-      ADMIN_PASSWORD: Farolab@2026
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
     depends_on:
       db:
         condition: service_healthy
@@ -40,8 +40,8 @@ services:
       AUTH_SECRET: ${AUTH_SECRET:-dev-secret-change-me}
       NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://farolabsystem.com}
       NEXT_PUBLIC_CAL_URL: ${NEXT_PUBLIC_CAL_URL:-}
-      ADMIN_EMAIL: admin@example.com
-      ADMIN_PASSWORD: Farolab@2026
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
       AWS_REGION: ${AWS_REGION:-ap-southeast-2}

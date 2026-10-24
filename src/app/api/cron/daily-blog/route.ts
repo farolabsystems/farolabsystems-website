@@ -20,8 +20,15 @@ function authorized(request: Request) {
 
 export async function POST(request: Request) {
   if (!authorized(request)) return error("Unauthorized", 401);
+  let slot = Number.NaN;
   try {
-    const post = await runDailyBlog();
+    const body = (await request.json()) as { slot?: unknown };
+    slot = Number(body?.slot);
+  } catch {
+    slot = Number.NaN;
+  }
+  try {
+    const post = await runDailyBlog(slot);
     return json({ ok: true, ...post });
   } catch (cause) {
     console.error(cause);

@@ -17,6 +17,7 @@ export default async function PostsAdminPage() {
       slug: post.slug,
       category: post.category || "—",
       status: post.status === "PUBLISHED" ? "Published" : "Draft",
+      origin: post.tags.some((tag) => tag === "source:auto" || tag === "generated" || tag.startsWith("daily:")) ? "Auto" : "Manual",
       updated: post.updatedAt.toISOString().slice(0, 10),
     },
   }));
@@ -26,7 +27,7 @@ export default async function PostsAdminPage() {
         <div>
           <h1 className="heading-4">Posts</h1>
           <p className="body-sm muted mt-1">
-            Articles, covers, and search listings. Each day at 12:00 IST a new post is published from current market trends, skipping topics already on the blog.
+            Articles, covers, and search listings. Four posts publish each day at 8:00, 13:00, 17:00 and 21:00 IST, skipping titles already in the database. Auto means the scheduler wrote it. Manual means it was written or generated in this admin.
           </p>
         </div>
         <Link className="btn" href="/admin/posts/new">
@@ -39,6 +40,7 @@ export default async function PostsAdminPage() {
           { key: "slug", label: "Slug" },
           { key: "category", label: "Category" },
           { key: "status", label: "Status" },
+          { key: "origin", label: "Source" },
           { key: "updated", label: "Updated" },
         ]}
         rows={rows}
