@@ -18,7 +18,7 @@ export const heroCategories: Record<string, string> = {
 export const trustedBy = {
   title: "Technology built for ambitious teams",
   body: "We collaborate with startups, growing businesses and established organizations to turn complex technology challenges into practical digital solutions.",
-  items: ["Startups", "Growing businesses", "Enterprises", "Product teams", "Operations teams", "Founders"],
+  items: ["Web applications", "Mobile products", "SaaS platforms", "AI products", "Cloud systems", "Custom software"],
 };
 
 export const startingPoint = {
