@@ -43,7 +43,7 @@ function recentDays() {
   });
 }
 
-function counts(dates: Date[], days: { key: string; label: string }[]) {
+function counts(dates: Date[], days: { key: string; label: string; axis: string }[]) {
   const totals = new Map(days.map((day) => [day.key, 0]));
   for (const date of dates) {
     const key = dayKey(istDate(date));
