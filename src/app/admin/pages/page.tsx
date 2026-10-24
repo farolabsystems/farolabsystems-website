@@ -9,6 +9,7 @@ export default async function PagesAdminPage() {
   const rows: AdminRow[] = pages.map((page) => ({
     id: page.id,
     href: `/admin/pages/${page.id}`,
+    viewHref: page.status === "PUBLISHED" ? `/${page.slug}` : undefined,
     deleteUrl: `/api/admin/content/${page.id}`,
     search: `${page.title} ${page.slug}`,
     status: page.status,

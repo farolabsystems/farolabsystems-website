@@ -12,6 +12,7 @@ export type AdminColumn = { key: string; label: string };
 export type AdminRow = {
   id: string;
   href?: string;
+  viewHref?: string;
   search: string;
   status?: "PUBLISHED" | "DRAFT" | "";
   cells: Record<string, string>;
@@ -129,6 +130,12 @@ export function AdminTable({
                 ))}
                 <td>
                   <div className="admin-row-actions">
+                    {row.viewHref ? (
+                      <a className="btn btn-ghost admin-mini" href={row.viewHref} target="_blank" rel="noreferrer">
+                        <Eye size={15} strokeWidth={1.75} aria-hidden="true" />
+                        View
+                      </a>
+                    ) : null}
                     {row.href ? (
                       <Link className="btn btn-ghost admin-mini" href={row.href}>
                         {row.href.includes("/leads/") ? <Eye size={15} strokeWidth={1.75} aria-hidden="true" /> : <Pencil size={15} strokeWidth={1.75} aria-hidden="true" />}

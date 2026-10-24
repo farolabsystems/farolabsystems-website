@@ -9,6 +9,7 @@ export default async function PostsAdminPage() {
   const rows: AdminRow[] = posts.map((post) => ({
     id: post.id,
     href: `/admin/posts/${post.id}`,
+    viewHref: post.status === "PUBLISHED" ? `/blog/${post.slug}` : undefined,
     deleteUrl: `/api/admin/content/${post.id}`,
     search: `${post.title} ${post.slug} ${post.category ?? ""}`,
     status: post.status,

@@ -9,6 +9,7 @@ export default async function CaseStudiesAdminPage() {
   const rows: AdminRow[] = studies.map((study) => ({
     id: study.id,
     href: `/admin/case-studies/${study.id}`,
+    viewHref: study.status === "PUBLISHED" ? `/case-studies/${study.slug}` : undefined,
     deleteUrl: `/api/admin/case-studies/${study.id}`,
     search: `${study.title} ${study.slug} ${study.industries.join(" ")}`,
     status: study.status,
