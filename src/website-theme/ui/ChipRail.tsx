@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 
-const SPEED = 16;
+const SPEED = 28;
 
 export function ChipRail({
   children,
@@ -30,7 +30,7 @@ export function ChipRail({
     let dir = 1;
     let hold = 1.6;
     let last = performance.now();
-    let fromAuto = false;
+    let expected = el.scrollLeft;
     const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
     const pauseFor = (ms: number) => {
@@ -38,7 +38,8 @@ export function ChipRail({
       resumeAt = performance.now() + ms;
     };
     const onScroll = () => {
-      if (fromAuto) return;
+      if (Math.abs(el.scrollLeft - expected) < 2) return;
+      expected = el.scrollLeft;
       pauseFor(4000);
     };
     const onDown = () => {
@@ -89,9 +90,8 @@ export function ChipRail({
         hold -= dt;
         return;
       }
-      fromAuto = true;
-      el.scrollLeft += dir * SPEED * dt;
-      fromAuto = false;
+      expected = el.scrollLeft + dir * SPEED * dt;
+      el.scrollLeft = expected;
       if (el.scrollLeft >= max - 1) {
         el.scrollLeft = max;
         dir = -1;
