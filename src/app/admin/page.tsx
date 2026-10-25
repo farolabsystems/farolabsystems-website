@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { AdminAnalytics } from "@/components/AdminAnalytics";
 import { AdminChart } from "@/components/AdminChart";
+import { getSiteAnalytics } from "@/lib/analytics";
 import { listAdminCaseStudies } from "@/modules/case-studies/case-study.service";
 import { listAdminContent } from "@/modules/content/content.service";
 import { listLeads } from "@/modules/leads/lead.service";
@@ -53,11 +55,12 @@ function counts(dates: Date[], days: { key: string; label: string; axis: string 
 }
 
 export default async function AdminHome() {
-  const [posts, pages, studies, leads] = await Promise.all([
+  const [posts, pages, studies, leads, analytics] = await Promise.all([
     listAdminContent("POST"),
     listAdminContent("PAGE"),
     listAdminCaseStudies(),
     listLeads(),
+    getSiteAnalytics(),
   ]);
   const days = recentDays();
   const published = counts(
@@ -90,6 +93,7 @@ export default async function AdminHome() {
           </Link>
         ))}
       </div>
+      <AdminAnalytics data={analytics} />
       <div className="admin-charts">
         <AdminChart title="Daily posted blogs" note="Published posts over the last 14 days, IST." points={published} />
         <AdminChart title="Daily activity" note="Inquiries, new pages, and new case studies over the last 14 days, IST." points={activity} />
