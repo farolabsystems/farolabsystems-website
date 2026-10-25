@@ -822,11 +822,13 @@ a:hover .blog-cover picture img {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
-  min-height: 320px;
-  max-height: 560px;
+  min-height: 440px;
   border-radius: var(--tc-radius-card-lg);
   background: var(--tc-page-alt);
+}
+
+.blog-hero h1 {
+  max-width: 14em;
 }
 
 .blog-hero-media {
@@ -846,10 +848,84 @@ a:hover .blog-cover picture img {
   padding: 40px 48px;
 }
 
+.author-byline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tc-space-4);
+  width: fit-content;
+  max-width: 100%;
+  padding: var(--tc-space-3) var(--tc-space-4);
+}
+
+.author-mark {
+  display: block;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: 12px;
+  background: #111;
+  object-fit: contain;
+}
+
 .blog-hero-copy .caption,
 .blog-hero-copy h1,
 .blog-hero-copy p {
   color: var(--tc-footer-text);
+}
+
+.blog-layout {
+  display: grid;
+  gap: 32px;
+  align-items: start;
+  margin-top: 40px;
+}
+
+.blog-toc {
+  display: grid;
+  gap: 10px;
+}
+
+.blog-toc ul {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blog-toc a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--tc-text-muted);
+  font-size: 15px;
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+
+.blog-toc a:hover {
+  background: var(--tc-white);
+  color: var(--tc-text);
+}
+
+.blog-toc .is-sub a {
+  padding-left: 24px;
+}
+
+@media (min-width: 1024px) {
+  .blog-layout {
+    grid-template-columns: minmax(320px, 360px) minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .blog-layout--solo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .blog-toc {
+    position: sticky;
+    top: 24px;
+  }
 }
 
 .footer a.btn {
@@ -887,6 +963,7 @@ a:hover .blog-cover picture img {
   font-weight: 400;
   line-height: var(--tc-leading-heading);
   margin: var(--tc-space-8) 0 var(--tc-space-3);
+  scroll-margin-top: 96px;
 }
 
 .prose h2 {
@@ -976,9 +1053,7 @@ a:hover .blog-cover picture img {
   }
 
   .blog-hero {
-    aspect-ratio: auto;
     min-height: 280px;
-    max-height: none;
   }
 
   .blog-hero h1 {

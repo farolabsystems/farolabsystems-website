@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/website-theme/config/site.config";
@@ -66,29 +67,31 @@ export async function BlogPostPage({ slug, locale = "en" }: { slug: string; loca
             <p className="caption">
               {post.category} · {new Date(post.publishedAt).toLocaleDateString("en-GB")} · {readingTime(post.body)} min read
             </p>
-            <h1 className="heading-3 mt-3 max-w-[18ch] max-sm:max-w-none">{post.title}</h1>
+            <h1 className="heading-3 mt-3">{post.title}</h1>
             <p className="body-lg mt-4 max-w-[46ch]">{post.excerpt}</p>
           </div>
         </div>
-        <div className="mt-10 grid gap-10 lg:grid-cols-[220px_1fr]">
+        <div className={toc.length ? "blog-layout" : "blog-layout blog-layout--solo"}>
           {toc.length ? (
-            <nav aria-label="On this page" className="grid content-start gap-2">
+            <nav aria-label="On this page" className="blog-toc">
               <p className="caption">On this page</p>
-              {toc.map((item) => (
-                <a key={item.id} href={`#${item.id}`} className="body-sm" style={{ paddingLeft: item.level === 3 ? "var(--tc-space-3)" : 0 }}>
-                  {item.text}
-                </a>
-              ))}
+              <ul>
+                {toc.map((item) => (
+                  <li key={item.id} className={item.level === 3 ? "is-sub" : undefined}>
+                    <a href={`#${item.id}`}>{item.text}</a>
+                  </li>
+                ))}
+              </ul>
             </nav>
-          ) : (
-            <div />
-          )}
+          ) : null}
           <div>
             <Markdown source={post.body} />
-            <aside className="card mt-10">
-              <p className="caption">Author</p>
-              <p className="heading-6 mt-2">{post.author}</p>
-              <p className="body-sm muted mt-2">Writing for {siteConfig.name}. Replace this block with a real byline.</p>
+            <aside className="card author-byline mt-10">
+              <Image src="/favicon.png" alt="" width={48} height={48} className="author-mark" />
+              <div>
+                <p className="caption">Author</p>
+                <p className="heading-6 mt-1">{post.author}</p>
+              </div>
             </aside>
           </div>
         </div>
