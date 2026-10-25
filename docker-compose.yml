@@ -51,6 +51,10 @@ services:
       GEMINI_IMAGE_MODEL: ${GEMINI_IMAGE_MODEL:-gemini-2.5-flash-image}
       CRON_SECRET: ${CRON_SECRET}
       BLOG_CRON_TZ: ${BLOG_CRON_TZ:-Asia/Kolkata}
+      GA_PROPERTY_ID: ${GA_PROPERTY_ID:-}
+      GA_CREDENTIALS_PATH: /run/secrets/ga.json
+    volumes:
+      - ./secrets/ga.json:/run/secrets/ga.json:ro
     ports:
       - "3000:3000"
     depends_on:
