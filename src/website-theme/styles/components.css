@@ -831,6 +831,11 @@ a:hover .blog-cover picture img {
   max-width: 14em;
 }
 
+.blog-hero-frame {
+  position: absolute;
+  inset: 0;
+}
+
 .blog-hero-media {
   object-fit: cover;
 }
@@ -875,12 +880,19 @@ a:hover .blog-cover picture img {
 
 .blog-layout {
   display: grid;
-  gap: 32px;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 40px;
   align-items: start;
   margin-top: 40px;
 }
 
+.blog-layout--solo {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .blog-toc {
+  position: sticky;
+  top: 24px;
   display: grid;
   gap: 10px;
 }
@@ -912,19 +924,14 @@ a:hover .blog-cover picture img {
   padding-left: 24px;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 720px) {
   .blog-layout {
-    grid-template-columns: minmax(320px, 360px) minmax(0, 1fr);
-    gap: 48px;
-  }
-
-  .blog-layout--solo {
     grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
   }
 
   .blog-toc {
-    position: sticky;
-    top: 24px;
+    position: static;
   }
 }
 
@@ -1038,9 +1045,50 @@ a:hover .blog-cover picture img {
   }
 }
 
-@media (max-width: 640px) {
-  .blog-index-banner,
+@media (max-width: 1023px) {
+  .blog-hero {
+    display: block;
+    min-height: 0;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .blog-hero-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: var(--tc-radius-card-lg);
+    background: var(--tc-page-alt);
+  }
+
+  .blog-hero::after {
+    display: none;
+  }
+
   .blog-hero-copy {
+    padding: 20px 0 0;
+  }
+
+  .blog-hero-copy .caption {
+    color: var(--tc-text-faint);
+  }
+
+  .blog-hero-copy h1 {
+    color: var(--tc-text);
+  }
+
+  .blog-hero-copy .body-lg {
+    color: var(--tc-text-muted);
+  }
+
+  .blog-hero h1 {
+    max-width: none;
+    font-size: var(--tc-h4);
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-index-banner {
     padding: 28px 22px;
   }
 
@@ -1052,20 +1100,12 @@ a:hover .blog-cover picture img {
     font-size: var(--tc-h2-sm);
   }
 
-  .blog-hero {
-    min-height: 280px;
+  .blog-hero-copy {
+    padding-top: 16px;
   }
 
   .blog-hero h1 {
-    max-width: none;
-    font-size: var(--tc-h4-sm);
-  }
-
-  .blog-hero-copy .body-lg {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
+    font-size: var(--tc-h3-sm);
   }
 }
 

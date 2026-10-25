@@ -56,13 +56,15 @@ export async function BlogPostPage({ slug, locale = "en" }: { slug: string; loca
       />
       <Container>
         <div className="blog-hero">
-          <CoverImage
-            src={post.coverImage}
-            alt={post.coverAlt || post.title}
-            priority
-            className="blog-hero-media"
-            sizes="(max-width: 1200px) 100vw, 1088px"
-          />
+          <div className="blog-hero-frame">
+            <CoverImage
+              src={post.coverImage}
+              alt={post.coverAlt || post.title}
+              priority
+              className="blog-hero-media"
+              sizes="(max-width: 1200px) 100vw, 1088px"
+            />
+          </div>
           <div className="blog-hero-copy">
             <p className="caption">
               {post.category} · {new Date(post.publishedAt).toLocaleDateString("en-GB")} · {readingTime(post.body)} min read
