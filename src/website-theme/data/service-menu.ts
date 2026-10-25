@@ -21,13 +21,20 @@ export type ServiceMenuItem = {
   technologies: { href: string; label: string }[];
 };
 
-export const serviceMenu: ServiceMenuItem[] = services.map((service) => ({
-  href: `/services/${service.slug}`,
-  label: service.navLabel,
-  title: service.title,
-  summary: service.summary,
-  technologies: (related[service.slug] ?? [])
-    .map((slug) => technologies.find((item) => item.slug === slug))
-    .filter((item) => item !== undefined)
-    .map((item) => ({ href: `/technologies/${item.slug}`, label: item.navLabel })),
-}));
+export function buildServiceMenu(
+  serviceList: typeof services = services,
+  technologyList: typeof technologies = technologies,
+): ServiceMenuItem[] {
+  return serviceList.map((service) => ({
+    href: `/services/${service.slug}`,
+    label: service.navLabel,
+    title: service.title,
+    summary: service.summary,
+    technologies: (related[service.slug] ?? [])
+      .map((slug) => technologyList.find((item) => item.slug === slug))
+      .filter((item) => item !== undefined)
+      .map((item) => ({ href: `/technologies/${item.slug}`, label: item.navLabel })),
+  }));
+}
+
+export const serviceMenu: ServiceMenuItem[] = buildServiceMenu();

@@ -1,8 +1,9 @@
 export { siteConfig } from "@/website-theme/config/site.config";
 export { HomePage } from "@/website-theme/pages/home/HomePage";
-export { ServicePage, getService } from "@/website-theme/pages/services/ServicePage";
-export { IndustryPage, getIndustry } from "@/website-theme/pages/industries/IndustryPage";
-export { TechnologyPage, getTechnology } from "@/website-theme/pages/technologies/TechnologyPage";
+export { ServicePage } from "@/website-theme/pages/services/ServicePage";
+export { IndustryPage } from "@/website-theme/pages/industries/IndustryPage";
+export { TechnologyPage } from "@/website-theme/pages/technologies/TechnologyPage";
+export { getIndustry, getService, getTechnology } from "@/modules/catalog/catalog.service";
 export { CaseStudiesPage } from "@/website-theme/pages/case-studies/CaseStudiesPage";
 export { CaseStudyPage } from "@/website-theme/pages/case-studies/CaseStudyPage";
 export { BlogPage } from "@/website-theme/pages/blog/BlogPage";

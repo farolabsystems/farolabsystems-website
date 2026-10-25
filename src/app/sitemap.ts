@@ -1,8 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/website-theme/config/site.config";
-import { services } from "@/website-theme/data/services";
-import { industries } from "@/website-theme/data/industries";
-import { technologies } from "@/website-theme/data/technologies";
+import { listIndustries, listServices, listTechnologies } from "@/modules/catalog/catalog.service";
 import { caseStudies } from "@/website-theme/data/case-studies";
 import { posts as fallbackPosts } from "@/website-theme/data/posts";
 import { absoluteUrl } from "@/lib/seo";
@@ -42,7 +40,12 @@ async function publishedPosts(): Promise<PostRecord[]> {
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteConfig.url.replace(/\/$/, "");
-  const articles = await publishedPosts();
+  const [articles, services, industries, technologies] = await Promise.all([
+    publishedPosts(),
+    listServices(),
+    listIndustries(),
+    listTechnologies(),
+  ]);
   const paths = [
     "/",
     "/about-us",

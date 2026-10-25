@@ -7,15 +7,22 @@ import { Logo } from "@/website-theme/layout/Logo";
 import { LanguageSwitcher } from "@/website-theme/layout/LanguageSwitcher";
 import { ScrollTop } from "@/website-theme/layout/ScrollTop";
 
-const columns = [
-  { title: "Services", links: footerColumns.services },
-  { title: "Solutions", links: footerColumns.solutions },
-  { title: "Industries", links: footerColumns.industries },
-  { title: "Company", links: footerColumns.company },
-] as const;
-
-export function SiteFooter({ locale }: { locale: Locale }) {
+export function SiteFooter({
+  locale,
+  services,
+  industries,
+}: {
+  locale: Locale;
+  services?: { label: string; href: string }[];
+  industries?: { label: string; href: string }[];
+}) {
   const copy = uiCopy[locale];
+  const columns = [
+    { title: "Services", links: services ?? [...footerColumns.services] },
+    { title: "Solutions", links: [...footerColumns.solutions] },
+    { title: "Industries", links: industries ?? [...footerColumns.industries] },
+    { title: "Company", links: [...footerColumns.company] },
+  ];
   return (
     <footer className="footer">
       <div className="container grid gap-8">

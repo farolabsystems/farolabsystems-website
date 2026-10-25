@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { technologies } from "@/website-theme/data/technologies";
-import { TechnologyPage, getTechnology } from "@/website-theme/pages/technologies/TechnologyPage";
+import { getTechnology } from "@/modules/catalog/catalog.service";
+import { TechnologyPage } from "@/website-theme/pages/technologies/TechnologyPage";
 import { buildMetadata } from "@/lib/seo";
+
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return technologies.map((item) => ({ slug: item.slug }));
@@ -10,7 +13,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const technology = getTechnology(slug);
+  const technology = await getTechnology(slug);
   if (!technology) return {};
   return buildMetadata({
     title: technology.seoTitle,
@@ -21,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  if (!getTechnology(slug)) notFound();
-  return <TechnologyPage slug={slug} />;
+  const technology = await getTechnology(slug);
+  if (!technology) notFound();
+  return <TechnologyPage technology={technology} />;
 }

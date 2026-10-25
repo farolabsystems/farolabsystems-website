@@ -10,7 +10,7 @@ export default async function EditPostPage({ params }: { params: Promise<{ id: s
   if (!post || post.type !== "POST") notFound();
   return (
     <div className="grid gap-4">
-      <h1 className="heading-4">Edit post</h1>
+      <h1 className="heading-4">Edit blog</h1>
       <ContentForm
         initial={{
           id: post.id,

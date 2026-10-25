@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Locale } from "@/website-theme/config/site.config";
-import { services } from "@/website-theme/data/services";
-import { industries } from "@/website-theme/data/industries";
-import { technologies } from "@/website-theme/data/technologies";
+import { getIndustry, getService, getTechnology } from "@/modules/catalog/catalog.service";
 import { HomePage } from "@/website-theme/pages/home/HomePage";
 import { ServicePage } from "@/website-theme/pages/services/ServicePage";
 import { IndustryPage } from "@/website-theme/pages/industries/IndustryPage";
@@ -61,14 +59,20 @@ export async function RoutedPage({
     if (!post) notFound();
     return <BlogPostPage slug={second} locale={locale} />;
   }
-  if (head === "services" && second && services.some((item) => item.slug === second)) {
-    return <ServicePage slug={second} locale={locale} />;
+  if (head === "services" && second) {
+    const service = await getService(second);
+    if (!service) notFound();
+    return <ServicePage service={service} locale={locale} />;
   }
-  if (head === "industries" && second && industries.some((item) => item.slug === second)) {
-    return <IndustryPage slug={second} locale={locale} />;
+  if (head === "industries" && second) {
+    const industry = await getIndustry(second);
+    if (!industry) notFound();
+    return <IndustryPage industry={industry} locale={locale} />;
   }
-  if (head === "technologies" && second && technologies.some((item) => item.slug === second)) {
-    return <TechnologyPage slug={second} locale={locale} />;
+  if (head === "technologies" && second) {
+    const technology = await getTechnology(second);
+    if (!technology) notFound();
+    return <TechnologyPage technology={technology} locale={locale} />;
   }
   if (head === "consultation" && second) return <ConsultationPage locale={locale} kind="advisor" />;
   if (!second) return <CmsPage slug={head} />;

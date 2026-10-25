@@ -3,7 +3,7 @@ import { ContentForm } from "@/components/ContentForm";
 export default function NewPageAdmin() {
   return (
     <div className="grid gap-4">
-      <h1 className="heading-4">New page</h1>
+      <h1 className="heading-4">New legal page</h1>
       <ContentForm
         initial={{
           type: "PAGE",

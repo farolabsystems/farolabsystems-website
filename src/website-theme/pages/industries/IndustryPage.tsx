@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
-import { industries } from "@/website-theme/data/industries";
+import type { IndustryRecord } from "@/website-theme/data/types";
 import { listCaseStudies } from "@/modules/case-studies/case-study.service";
 import { PageHero } from "@/website-theme/sections/PageHero";
 import { Faq } from "@/website-theme/sections/Faq";
@@ -10,13 +9,7 @@ import { CtaBanner } from "@/website-theme/sections/CtaBanner";
 import { Container } from "@/website-theme/ui/Container";
 import { Section } from "@/website-theme/ui/Section";
 
-export function getIndustry(slug: string) {
-  return industries.find((industry) => industry.slug === slug) ?? null;
-}
-
-export async function IndustryPage({ slug, locale = "en" }: { slug: string; locale?: Locale }) {
-  const industry = getIndustry(slug);
-  if (!industry) notFound();
+export async function IndustryPage({ industry, locale = "en" }: { industry: IndustryRecord; locale?: Locale }) {
   const studies = (await listCaseStudies()).filter((study) => study.industries.includes(industry.filter));
   return (
     <>

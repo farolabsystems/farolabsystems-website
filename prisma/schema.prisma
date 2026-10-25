@@ -18,6 +18,12 @@ enum PublishStatus {
   PUBLISHED
 }
 
+enum CatalogKind {
+  SERVICE
+  INDUSTRY
+  TECHNOLOGY
+}
+
 model AdminUser {
   id           String   @id @default(cuid())
   email        String   @unique
@@ -70,6 +76,33 @@ model CaseStudy {
   publishedAt    DateTime?
   createdAt      DateTime      @default(now())
   updatedAt      DateTime      @updatedAt
+}
+
+model CatalogPage {
+  id             String        @id @default(cuid())
+  kind           CatalogKind
+  slug           String
+  navLabel       String
+  group          String        @default("")
+  filter         String        @default("")
+  title          String
+  seoTitle       String        @default("")
+  seoDescription String        @default("")
+  eyebrow        String        @default("")
+  summary        String
+  blurb          String        @default("")
+  bullets        String[]
+  outcomes       Json          @default("[]")
+  steps          Json          @default("[]")
+  faqs           Json          @default("[]")
+  icon           Json?
+  sortOrder      Int           @default(0)
+  status         PublishStatus @default(PUBLISHED)
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  @@unique([kind, slug])
+  @@index([kind, status, sortOrder])
 }
 
 model SiteSetting {

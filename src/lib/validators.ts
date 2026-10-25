@@ -93,7 +93,50 @@ export const siteSettingsSchema = z.object({
   seoDescription: z.string().trim().min(50, "Add a fuller site description").max(170, "Keep the site description under 170 characters"),
 });
 
+const catalogPair = z.object({
+  title: z.string().trim().min(1).max(120),
+  body: z.string().trim().min(1).max(500),
+});
+
+export const catalogSchema = z.object({
+  kind: z.enum(["SERVICE", "INDUSTRY", "TECHNOLOGY"]),
+  slug: z
+    .string()
+    .trim()
+    .min(1)
+    .max(140)
+    .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Use a lowercase slug"),
+  navLabel: z.string().trim().min(1).max(120),
+  group: z.string().trim().max(40).optional(),
+  filter: z.string().trim().max(80).optional(),
+  title: z.string().trim().min(1).max(180),
+  seoTitle: z.string().trim().max(180).optional(),
+  seoDescription: z.string().trim().max(300).optional(),
+  eyebrow: z.string().trim().max(80).optional(),
+  summary: z.string().trim().min(1).max(500),
+  blurb: z.string().trim().max(240).optional(),
+  bullets: z.array(z.string().trim().min(1).max(240)).max(12).optional(),
+  outcomes: z.array(catalogPair).max(8).optional(),
+  steps: z.array(catalogPair).max(8).optional(),
+  faqs: z
+    .array(z.object({ question: z.string().trim().min(1).max(180), answer: z.string().trim().min(1).max(600) }))
+    .max(8)
+    .optional(),
+  icon: z
+    .union([
+      z.object({ kind: z.literal("simple"), slug: z.string().trim().min(1).max(80) }),
+      z.object({
+        kind: z.literal("lucide"),
+        name: z.enum(["network", "git-branch", "sparkles", "bot", "cloud", "server"]),
+      }),
+    ])
+    .optional(),
+  sortOrder: z.number().int().min(0).max(999).optional(),
+  status: z.enum(["DRAFT", "PUBLISHED"]),
+});
+
 export type ContactInput = z.infer<typeof contactSchema>;
 export type ContentInput = z.infer<typeof contentSchema>;
 export type CaseStudyInput = z.infer<typeof caseStudySchema>;
 export type SiteSettingsInput = z.infer<typeof siteSettingsSchema>;
+export type CatalogInput = z.infer<typeof catalogSchema>;

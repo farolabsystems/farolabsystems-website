@@ -4,14 +4,17 @@ import { useEffect, useState, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Briefcase, ExternalLink, FileText, Files, Inbox, LayoutDashboard, LogOut, Menu, Search, X } from "lucide-react";
+import { Briefcase, Building2, Cpu, ExternalLink, FileText, Inbox, LayoutDashboard, LogOut, Menu, Scale, Search, Wrench, X } from "lucide-react";
 import { AdminToastProvider } from "@/components/AdminToast";
 import { LogoutButton } from "@/components/LogoutButton";
 
 const links = [
   { href: "/admin", label: "Overview", icon: LayoutDashboard },
-  { href: "/admin/posts", label: "Posts", icon: FileText },
-  { href: "/admin/pages", label: "Pages", icon: Files },
+  { href: "/admin/posts", label: "Blogs", icon: FileText },
+  { href: "/admin/pages", label: "Terms & privacy", icon: Scale },
+  { href: "/admin/services", label: "Services", icon: Wrench },
+  { href: "/admin/industries", label: "Industries", icon: Building2 },
+  { href: "/admin/technologies", label: "Technologies", icon: Cpu },
   { href: "/admin/case-studies", label: "Case studies", icon: Briefcase },
   { href: "/admin/leads", label: "Inquiries", icon: Inbox },
   { href: "/admin/settings", label: "SEO", icon: Search },

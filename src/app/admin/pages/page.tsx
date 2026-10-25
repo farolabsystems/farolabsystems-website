@@ -24,8 +24,8 @@ export default async function PagesAdminPage() {
     <div className="grid gap-4">
       <div className="admin-toolbar">
         <div>
-          <h1 className="heading-4">Pages</h1>
-          <p className="body-sm muted mt-1">Legal pages and other static content.</p>
+          <h1 className="heading-4">Terms & privacy</h1>
+          <p className="body-sm muted mt-1">Privacy policy, terms and conditions, and the cookie policy.</p>
         </div>
         <Link className="btn" href="/admin/pages/new">
           New page

@@ -10,6 +10,7 @@ import { portfolioMenu } from "@/website-theme/data/portfolio-menu";
 import { serviceMenu } from "@/website-theme/data/service-menu";
 import { services } from "@/website-theme/data/services";
 import { caseStudies } from "@/website-theme/data/case-studies";
+import type { SiteNav } from "@/website-theme/layout/site-nav";
 import { Button } from "@/website-theme/ui/Button";
 import { Logo } from "@/website-theme/layout/Logo";
 import { MegaMenu } from "@/website-theme/layout/MegaMenu";
@@ -17,7 +18,12 @@ import { MobileMenu } from "@/website-theme/layout/MobileMenu";
 
 const groups = ["Development", "Design", "Maintenance", "Delivery"] as const;
 
-export function SiteHeader({ locale }: { locale: Locale }) {
+export function SiteHeader({ locale, nav }: { locale: Locale; nav?: SiteNav }) {
+  const serviceList = nav?.services ?? services;
+  const serviceMenuItems = nav?.serviceMenu ?? serviceMenu;
+  const portfolioMenuItems = nav?.portfolioMenu ?? portfolioMenu;
+  const industryLinks = nav?.portfolioIndustries ?? portfolioIndustries;
+  const featuredStudies = nav?.featuredStudies ?? caseStudies.filter((study) => study.featured).slice(0, 2).map((study) => ({ title: study.title, slug: study.slug }));
   const copy = uiCopy[locale];
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -50,7 +56,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   const serviceGroups = groups
     .map((title) => ({
       title,
-      items: services
+      items: serviceList
         .filter((service) => service.group === title)
         .map((service) => ({
           href: `/services/${service.slug}`,
@@ -60,14 +66,12 @@ export function SiteHeader({ locale }: { locale: Locale }) {
     }))
     .filter((group) => group.items.length > 0);
 
-  const featuredStudies = caseStudies.filter((study) => study.featured).slice(0, 2);
-
   const mobileGroups = [
     ...serviceGroups,
     {
       title: copy.portfolio,
       items: [
-        ...portfolioIndustries,
+        ...industryLinks,
         ...featuredStudies.map((study) => ({ label: study.title, href: `/case-studies/${study.slug}` })),
         { label: copy.seeAll, href: "/case-studies" },
       ],
@@ -82,7 +86,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           <MegaMenu
             label={copy.services}
             groups={serviceGroups}
-            services={serviceMenu}
+            services={serviceMenuItems}
             locale={locale}
             open={openMenu === "services"}
             onOpen={() => setOpenMenu("services")}
@@ -90,8 +94,8 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           />
           <MegaMenu
             label={copy.portfolio}
-            groups={[{ title: "Industries", items: portfolioIndustries }]}
-            services={portfolioMenu}
+            groups={[{ title: "Industries", items: industryLinks }]}
+            services={portfolioMenuItems}
             seeAll={{ href: "/case-studies", label: copy.seeAll }}
             locale={locale}
             open={openMenu === "portfolio"}

@@ -1,10 +1,8 @@
 import type { ReactNode } from "react";
-import { connection } from "next/server";
-import { SiteChrome } from "@/website-theme/layout/SiteChrome";
+import { SiteFrame } from "@/website-theme/layout/SiteFrame";
 
 export const dynamic = "force-dynamic";
 
 export default async function PolishLayout({ children }: { children: ReactNode }) {
-  await connection();
-  return <SiteChrome>{children}</SiteChrome>;
+  return <SiteFrame>{children}</SiteFrame>;
 }

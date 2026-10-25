@@ -10,7 +10,7 @@ export default async function EditPageAdmin({ params }: { params: Promise<{ id: 
   if (!page || page.type !== "PAGE") notFound();
   return (
     <div className="grid gap-4">
-      <h1 className="heading-4">Edit page</h1>
+      <h1 className="heading-4">Edit legal page</h1>
       <ContentForm
         initial={{
           id: page.id,

@@ -26,13 +26,13 @@ export default async function PostsAdminPage() {
     <div className="grid gap-4">
       <div className="admin-toolbar">
         <div>
-          <h1 className="heading-4">Posts</h1>
+          <h1 className="heading-4">Blogs</h1>
           <p className="body-sm muted mt-1">
             Articles, covers, and search listings. Four posts publish each day at 8:00, 13:00, 17:00 and 21:00 IST, skipping titles already in the database. Auto means the scheduler wrote it. Manual means it was written or generated in this admin.
           </p>
         </div>
         <Link className="btn" href="/admin/posts/new">
-          New post
+          New blog
         </Link>
       </div>
       <AdminTable

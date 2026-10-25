@@ -72,8 +72,8 @@ export default async function AdminHome() {
     days,
   );
   const cards = [
-    { href: "/admin/posts", label: "Posts", count: posts.length, note: `${posts.filter((item) => item.status === "PUBLISHED").length} published` },
-    { href: "/admin/pages", label: "Pages", count: pages.length, note: `${pages.filter((item) => item.status === "PUBLISHED").length} published` },
+    { href: "/admin/posts", label: "Blogs", count: posts.length, note: `${posts.filter((item) => item.status === "PUBLISHED").length} published` },
+    { href: "/admin/pages", label: "Terms & privacy", count: pages.length, note: `${pages.filter((item) => item.status === "PUBLISHED").length} published` },
     { href: "/admin/case-studies", label: "Case studies", count: studies.length, note: `${studies.filter((item) => item.featured).length} featured` },
     { href: "/admin/leads", label: "Inquiries", count: leads.length, note: "Contact form" },
     { href: "/admin/settings", label: "SEO", count: "Site", note: "Title and description" },

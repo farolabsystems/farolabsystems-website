@@ -1,6 +1,5 @@
-import { notFound } from "next/navigation";
 import type { Locale } from "@/website-theme/config/site.config";
-import { services } from "@/website-theme/data/services";
+import type { ServiceRecord } from "@/website-theme/data/types";
 import { listCaseStudies } from "@/modules/case-studies/case-study.service";
 import { PageHero } from "@/website-theme/sections/PageHero";
 import { Faq } from "@/website-theme/sections/Faq";
@@ -10,13 +9,7 @@ import { Section } from "@/website-theme/ui/Section";
 import Link from "next/link";
 import { withLocale } from "@/website-theme/config/site.config";
 
-export function getService(slug: string) {
-  return services.find((service) => service.slug === slug) ?? null;
-}
-
-export async function ServicePage({ slug, locale = "en" }: { slug: string; locale?: Locale }) {
-  const service = getService(slug);
-  if (!service) notFound();
+export async function ServicePage({ service, locale = "en" }: { service: ServiceRecord; locale?: Locale }) {
   const studies = (await listCaseStudies()).filter((study) => study.services.includes(service.filter));
   return (
     <>

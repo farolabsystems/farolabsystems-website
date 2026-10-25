@@ -1,13 +1,14 @@
 import Link from "next/link";
 import type { Locale } from "@/website-theme/config/site.config";
 import { withLocale } from "@/website-theme/config/site.config";
+import { listTechnologies } from "@/modules/catalog/catalog.service";
 import { technology } from "@/website-theme/data/home";
-import { technologies } from "@/website-theme/data/technologies";
 import { Container } from "@/website-theme/ui/Container";
 import { Section } from "@/website-theme/ui/Section";
 import { TechIcon } from "@/website-theme/ui/TechIcon";
 
-export function BuiltTags({ locale = "en" }: { locale?: Locale }) {
+export async function BuiltTags({ locale = "en" }: { locale?: Locale }) {
+  const technologies = await listTechnologies();
   return (
     <Section tight>
       <Container>

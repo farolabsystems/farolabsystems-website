@@ -1,6 +1,5 @@
-import { notFound } from "next/navigation";
 import type { Locale } from "@/website-theme/config/site.config";
-import { getTechnology } from "@/website-theme/data/technologies";
+import type { TechnologyRecord } from "@/website-theme/data/types";
 import { PageHero } from "@/website-theme/sections/PageHero";
 import { Faq } from "@/website-theme/sections/Faq";
 import { CtaBanner } from "@/website-theme/sections/CtaBanner";
@@ -8,11 +7,7 @@ import { Container } from "@/website-theme/ui/Container";
 import { Section } from "@/website-theme/ui/Section";
 import { TechIcon } from "@/website-theme/ui/TechIcon";
 
-export { getTechnology };
-
-export function TechnologyPage({ slug, locale = "en" }: { slug: string; locale?: Locale }) {
-  const technology = getTechnology(slug);
-  if (!technology) notFound();
+export function TechnologyPage({ technology, locale = "en" }: { technology: TechnologyRecord; locale?: Locale }) {
 
   return (
     <>
