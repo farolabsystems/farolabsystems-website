@@ -5,6 +5,14 @@ import { ADMIN_COOKIE, authSecret } from "@/lib/auth-shared";
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // Search Console reported https://farolabsystem.com/$ as a 404.
+  if (pathname.includes("$")) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.replace(/\$+/g, "") || "/";
+    return NextResponse.redirect(url, 301);
+  }
+
   if (!pathname.startsWith("/admin") || pathname.startsWith("/admin/login")) {
     return NextResponse.next();
   }
@@ -18,4 +26,6 @@ export async function middleware(request: NextRequest) {
   }
 }
 
-export const config = { matcher: ["/admin/:path*"] };
+export const config = {
+  matcher: ["/((?!_next/static|_next/image|.*\\..*).*)"],
+};

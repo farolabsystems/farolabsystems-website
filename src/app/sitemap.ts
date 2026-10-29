@@ -46,6 +46,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     listIndustries(),
     listTechnologies(),
   ]);
+  // English URLs only. Polish shells reuse English copy, so listing /pl creates
+  // duplicate-canonical conflicts in Search Console.
   const paths = [
     "/",
     "/about-us",
@@ -64,25 +66,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...technologies.map((item) => `/technologies/${item.slug}`),
     ...caseStudies.map((item) => `/case-studies/${item.slug}`),
   ];
-  const pages: MetadataRoute.Sitemap = paths.flatMap((path) => [
-    { url: `${base}${path}`, lastModified: new Date(), changeFrequency: "weekly", priority: path === "/" ? 1 : 0.6 },
-    { url: path === "/" ? `${base}/pl` : `${base}/pl${path}`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.4 },
-  ]);
-  const postEntries: MetadataRoute.Sitemap = articles.flatMap((post) => {
+  const pages: MetadataRoute.Sitemap = paths.map((path) => ({
+    url: `${base}${path}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: path === "/" ? 1 : 0.6,
+  }));
+  const postEntries: MetadataRoute.Sitemap = articles.map((post) => {
     const lastModified = post.updatedAt ?? post.publishedAt;
-    const images = [absoluteUrl(post.coverImage)];
-    return [
-      { url: `${base}/blog/${post.slug}`, lastModified, changeFrequency: "weekly" as const, priority: 0.7, images },
-      { url: `${base}/pl/blog/${post.slug}`, lastModified, changeFrequency: "weekly" as const, priority: 0.5, images },
-    ];
+    return {
+      url: `${base}/blog/${post.slug}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+      images: [absoluteUrl(post.coverImage)],
+    };
   });
-  const categories = [...new Set(articles.map((post) => post.category))];
-  const categoryEntries: MetadataRoute.Sitemap = categories.flatMap((category) => {
-    const query = `?category=${encodeURIComponent(category)}`;
-    return [
-      { url: `${base}/blog${query}`, changeFrequency: "weekly" as const, priority: 0.5 },
-      { url: `${base}/pl/blog${query}`, changeFrequency: "weekly" as const, priority: 0.4 },
-    ];
-  });
-  return [...pages, ...postEntries, ...categoryEntries];
+  return [...pages, ...postEntries];
 }

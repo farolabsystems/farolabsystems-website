@@ -3,6 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "standalone",
   serverExternalPackages: ["@aws-sdk/client-s3", "@prisma/adapter-pg", "pg"],
+  async rewrites() {
+    return [{ source: "/favicon.ico", destination: "/favicon.png" }];
+  },
   webpack: (config, { dev }) => {
     if (!dev) config.cache = false;
     return config;

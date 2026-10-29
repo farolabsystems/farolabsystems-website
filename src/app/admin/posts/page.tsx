@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { AdminTable, type AdminRow } from "@/components/AdminTable";
+import { BlogCronToggle } from "@/components/BlogCronToggle";
 import { listAdminContent } from "@/modules/content/content.service";
+import { getBlogCronEnabled } from "@/modules/settings/site-settings.service";
 
 export const dynamic = "force-dynamic";
 
 export default async function PostsAdminPage() {
-  const posts = await listAdminContent("POST");
+  const [posts, cronEnabled] = await Promise.all([listAdminContent("POST"), getBlogCronEnabled()]);
   const rows: AdminRow[] = posts.map((post) => ({
     id: post.id,
     href: `/admin/posts/${post.id}`,
@@ -28,12 +30,15 @@ export default async function PostsAdminPage() {
         <div>
           <h1 className="heading-4">Blogs</h1>
           <p className="body-sm muted mt-1">
-            Articles, covers, and search listings. Four posts publish each day at 8:00, 13:00, 17:00 and 21:00 IST, skipping titles already in the database. Auto means the scheduler wrote it. Manual means it was written or generated in this admin.
+            Articles, covers, and search listings. Four posts publish each day at 8:00, 13:00, 17:00 and 21:00 IST when Auto posts is on, skipping titles already in the database. Auto means the scheduler wrote it. Manual means it was written or generated in this admin.
           </p>
         </div>
-        <Link className="btn" href="/admin/posts/new">
-          New blog
-        </Link>
+        <div className="admin-actions">
+          <BlogCronToggle enabled={cronEnabled} />
+          <Link className="btn" href="/admin/posts/new">
+            New blog
+          </Link>
+        </div>
       </div>
       <AdminTable
         columns={[

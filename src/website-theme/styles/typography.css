@@ -5,10 +5,16 @@
 .heading-5,
 .heading-6 {
   font-family: var(--tc-font);
-  font-weight: 400;
+  font-weight: 600;
   line-height: var(--tc-leading-heading);
   color: var(--tc-text);
   margin: 0;
+  text-wrap: balance;
+}
+
+.heading-5,
+.heading-6 {
+  font-weight: 500;
 }
 
 .heading-1 {
@@ -86,10 +92,10 @@
 .eyebrow {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--tc-space-2);
   margin: 0 0 var(--tc-space-4);
-  color: var(--tc-text);
+  color: var(--tc-text-muted);
   font-size: var(--tc-caption);
   font-weight: 600;
   letter-spacing: var(--tc-tracking-eyebrow);
@@ -98,9 +104,13 @@
 
 .eyebrow::after {
   content: "";
-  width: var(--tc-space-7);
+  width: var(--tc-space-6);
   height: 2px;
   border-radius: var(--tc-radius-pill);
-  background: var(--tc-primary);
+  background: var(--tc-accent);
   transition: width var(--tc-duration-slow) var(--tc-ease-out);
+}
+
+.section-head .eyebrow {
+  margin-inline: auto;
 }

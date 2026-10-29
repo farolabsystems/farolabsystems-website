@@ -106,10 +106,11 @@ model CatalogPage {
 }
 
 model SiteSetting {
-  id             String   @id @default("site")
-  seoTitle       String
-  seoDescription String
-  updatedAt      DateTime @updatedAt
+  id              String   @id @default("site")
+  seoTitle        String
+  seoDescription  String
+  blogCronEnabled Boolean  @default(true)
+  updatedAt       DateTime @updatedAt
 }
 
 model Lead {

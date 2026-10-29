@@ -1,6 +1,7 @@
 import { timingSafeEqual } from "node:crypto";
 import { error, json } from "@/lib/http";
 import { runDailyBlog } from "@/modules/blog/generate-blog";
+import { getBlogCronEnabled } from "@/modules/settings/site-settings.service";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -20,6 +21,9 @@ function authorized(request: Request) {
 
 export async function POST(request: Request) {
   if (!authorized(request)) return error("Unauthorized", 401);
+  if (!(await getBlogCronEnabled())) {
+    return json({ ok: true, skipped: true, reason: "Blog cron is turned off in admin" });
+  }
   let slot = Number.NaN;
   try {
     const body = (await request.json()) as { slot?: unknown };

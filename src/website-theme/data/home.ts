@@ -1,10 +1,10 @@
 import type { FaqItem } from "@/website-theme/data/types";
 
 export const hero = {
-  eyebrow: "Software development & digital innovation",
-  title: "We build digital products that move businesses forward.",
-  body: "Farolab Systems helps startups and businesses turn ideas into reliable digital products through modern software engineering, thoughtful design and intelligent technology.",
-  support: "From first idea to long-term product growth, we work as your technology partner.",
+  eyebrow: "Custom software · AI · cloud engineering",
+  title: "Farolab Systems builds digital products that move businesses forward.",
+  body: "We help startups and growing companies design, develop and scale reliable web apps, mobile products and AI-enabled systems — with clear engineering and a path that lasts.",
+  support: "Trusted delivery across product, platform and engineering teams",
   primary: { label: "Start a project", href: "/contact" },
   secondary: { label: "Explore our services", href: "/services/custom-software-development" },
 };
@@ -168,6 +168,7 @@ export const industryTabs = [
 ];
 
 export const technology = {
+  eyebrow: "Technology stack",
   title: "Built with modern technology",
   body: "We choose technology based on the product requirements, scalability, security and long-term business goals — not trends alone.",
 };

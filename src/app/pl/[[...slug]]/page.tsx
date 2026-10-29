@@ -8,17 +8,22 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug?: string[] }>;
+  searchParams: Promise<{ page?: string; category?: string }>;
 }): Promise<Metadata> {
-  const { slug = [] } = await params;
+  const [{ slug = [] }, search] = await Promise.all([params, searchParams]);
   const path = slug.length ? `/pl/${slug.join("/")}` : "/pl";
   if (slug[0] === "blog" && slug[1]) {
     const post = await getPost(slug[1]);
     if (post) return articleMetadata(post, path);
     return { title: "Article not found", robots: { index: false, follow: false } };
   }
-  if (slug[0] === "blog" && !slug[1]) return blogIndexMetadata(path);
+  if (slug[0] === "blog" && !slug[1]) {
+    const page = Math.max(1, Number(search.page || 1) || 1);
+    return blogIndexMetadata(path, page, search.category);
+  }
   return buildMetadata({
     title: `${siteConfig.name} | Software Development & Technology Solutions`,
     description: siteConfig.description,

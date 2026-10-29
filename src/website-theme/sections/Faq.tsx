@@ -9,19 +9,19 @@ import { faqSection } from "@/website-theme/data/home";
 
 export function Faq({ items, locale }: { items: FaqItem[]; locale: Locale }) {
   return (
-    <Section tight>
+    <Section tight tone="alt">
       <Container>
-        <div className="grid gap-6 lg:grid-cols-[1fr_2fr] lg:gap-10">
-          <div>
-            <h2 className="heading-3">{faqSection.title}</h2>
-            <p className="body muted mt-3">{faqSection.body}</p>
-            <div className="mt-5">
-              <Button href={withLocale(locale, "/contact")} variant="ghost">
-                {faqSection.cta}
-              </Button>
-            </div>
-          </div>
+        <div className="section-head">
+          <h2 className="heading-3">{faqSection.title}</h2>
+          <p className="body muted mt-3">{faqSection.body}</p>
+        </div>
+        <div className="mx-auto mt-8 max-w-3xl">
           <Accordion items={items} />
+          <div className="mt-6 flex justify-center">
+            <Button href={withLocale(locale, "/contact")} variant="ghost">
+              {faqSection.cta}
+            </Button>
+          </div>
         </div>
       </Container>
     </Section>

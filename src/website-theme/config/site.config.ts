@@ -30,7 +30,7 @@ export const siteConfig = {
   name: "Farolab Systems",
   legalName: "Farolab Systems",
   description:
-    "Farolab Systems helps startups and businesses design, build, and scale reliable digital products through software engineering, design, and practical AI.",
+    "Farolab Systems is a software development company that designs, builds and scales web apps, mobile products, cloud platforms and practical AI for startups and growing businesses.",
   url: siteOrigin(),
   email: "hey@farolabsystem.com",
   phone: "",

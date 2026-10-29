@@ -12,7 +12,18 @@ type SeoInput = {
   modifiedTime?: string;
   authors?: string[];
   tags?: string[];
+  /** Override the canonical path. Defaults to the English form of `path`. */
+  canonicalPath?: string;
+  /** When false, search engines should not index this URL. */
+  index?: boolean;
 };
+
+function englishPath(path: string) {
+  const bare = path.split("?")[0] || "/";
+  if (bare === "/pl") return "/";
+  if (bare.startsWith("/pl/")) return bare.slice(3) || "/";
+  return bare || "/";
+}
 
 export function absoluteUrl(path: string) {
   const base = siteConfig.url.replace(/\/$/, "");
@@ -31,9 +42,12 @@ export function buildMetadata({
   modifiedTime,
   authors,
   tags,
+  canonicalPath,
+  index,
 }: SeoInput): Metadata {
-  const url = absoluteUrl(path);
-  const canonical = url;
+  const canonical = absoluteUrl(canonicalPath ?? englishPath(path));
+  const isPolishShell = path === "/pl" || path.startsWith("/pl/") || path.startsWith("/pl?");
+  const shouldIndex = index ?? !isPolishShell;
   const ogImage = absoluteUrl(image ?? "/assets/og.png");
   const alt = imageAlt || title;
   const article =
@@ -46,13 +60,14 @@ export function buildMetadata({
         }
       : {};
   return {
-    title: path === "/" ? { absolute: title } : title,
+    title: path === "/" || path === "/pl" ? { absolute: title } : title,
     description,
     alternates: { canonical },
+    robots: shouldIndex ? { index: true, follow: true } : { index: false, follow: true },
     openGraph: {
       title,
       description,
-      url,
+      url: canonical,
       siteName: siteConfig.name,
       type,
       images: [{ url: ogImage, width: 1200, height: 630, alt }],
@@ -101,5 +116,13 @@ export function blogIndexMetadata(path: string, page = 1, category?: string) {
   const description = category
     ? `Articles from Farolab Systems on ${category}: practical notes on software, product engineering, and technology.`
     : "Practical writing from Farolab Systems on software development, AI, product engineering, cloud technology and digital products.";
-  return buildMetadata({ title, description, path, type: "website" });
+  const filtered = Boolean(category) || page > 1;
+  return buildMetadata({
+    title,
+    description,
+    path,
+    type: "website",
+    canonicalPath: "/blog",
+    index: !filtered && !(path === "/pl/blog" || path.startsWith("/pl/blog")),
+  });
 }

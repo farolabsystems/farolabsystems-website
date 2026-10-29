@@ -5,18 +5,18 @@ import { Section } from "@/website-theme/ui/Section";
 
 export function WorkingTogether() {
   return (
-    <Section tone="white" tight>
+    <Section id="blueprint" tone="alt">
       <Container>
-        <Eyebrow>{workingTogether.eyebrow}</Eyebrow>
-        <h2 className="heading-2 max-w-[16ch]">{workingTogether.title}</h2>
-        <ol className="mt-8 grid gap-3 md:grid-cols-3">
+        <div className="section-head">
+          <Eyebrow>{workingTogether.eyebrow}</Eyebrow>
+          <h2 className="heading-2">{workingTogether.title}</h2>
+        </div>
+        <ol className="mt-10 grid gap-5 md:grid-cols-3">
           {workingTogether.steps.map((step) => (
-            <li key={step.index} className="card grid gap-2">
-              <span className="heading-5" style={{ color: "var(--tc-primary-active)" }}>
-                {step.index}
-              </span>
+            <li key={step.index} className="card grid gap-3">
+              <span className="step-badge">STEP {step.index}</span>
               <h3 className="heading-6">{step.title}</h3>
-              <p className="body muted">{step.body}</p>
+              <p className="body-sm muted">{step.body}</p>
             </li>
           ))}
         </ol>

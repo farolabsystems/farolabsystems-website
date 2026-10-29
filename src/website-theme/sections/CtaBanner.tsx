@@ -6,14 +6,19 @@ import { Section } from "@/website-theme/ui/Section";
 
 export function CtaBanner({ locale, title, body }: { locale: Locale; title: string; body: string }) {
   return (
-    <Section tone="soft" tight>
+    <Section tone="white" tight>
       <Container>
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div className="max-w-[40ch]">
+        <div className="cta-panel">
+          <div className="section-head" style={{ maxWidth: "36rem" }}>
             <h2 className="heading-3">{title}</h2>
             <p className="body muted mt-3">{body}</p>
           </div>
-          <Button href={withLocale(locale, "/contact")}>{uiCopy[locale].startProject}</Button>
+          <div className="hero-compose__actions" style={{ marginTop: "var(--tc-space-6)" }}>
+            <Button href={withLocale(locale, "/contact")}>{uiCopy[locale].startProject}</Button>
+            <Button href={withLocale(locale, "/schedule-meeting")} variant="ghost">
+              {uiCopy[locale].schedule}
+            </Button>
+          </div>
         </div>
       </Container>
     </Section>

@@ -8,18 +8,20 @@ import { Section } from "@/website-theme/ui/Section";
 
 export function StartingPoint({ locale }: { locale: Locale }) {
   return (
-    <Section>
+    <Section id="capabilities" tone="alt">
       <Container>
-        <Eyebrow>{startingPoint.eyebrow}</Eyebrow>
-        <h2 className="heading-2 max-w-[16ch]">{startingPoint.title}</h2>
-        <p className="body-lg muted mt-4 max-w-[62ch]">{startingPoint.intro}</p>
-        <div className="mt-8 grid gap-4 lg:grid-cols-2">
+        <div className="section-head">
+          <Eyebrow>{startingPoint.eyebrow}</Eyebrow>
+          <h2 className="heading-2">{startingPoint.title}</h2>
+          <p className="body-lg muted mt-3">{startingPoint.intro}</p>
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
           {startingPoint.columns.map((column) => (
             <article key={column.index} className="card grid gap-3">
-              <p className="heading-4" style={{ color: "var(--tc-primary-active)" }}>
+              <p className="caption" style={{ color: "var(--tc-accent)" }}>
                 {column.index}
               </p>
-              <h3 className="heading-4">{column.title}</h3>
+              <h3 className="heading-5">{column.title}</h3>
               <p className="body muted">{column.body}</p>
               <ul className="grid gap-2">
                 {column.links.map((link) => (

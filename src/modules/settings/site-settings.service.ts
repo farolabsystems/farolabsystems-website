@@ -17,6 +17,30 @@ export async function getSiteSettings() {
   }
 }
 
+export async function getBlogCronEnabled() {
+  try {
+    const row = await prisma.siteSetting.findUnique({ where: { id: "site" } });
+    if (!row) return true;
+    return row.blogCronEnabled;
+  } catch {
+    return true;
+  }
+}
+
+export async function setBlogCronEnabled(enabled: boolean) {
+  const current = await getSiteSettings();
+  return prisma.siteSetting.upsert({
+    where: { id: "site" },
+    create: {
+      id: "site",
+      seoTitle: current.seoTitle,
+      seoDescription: current.seoDescription,
+      blogCronEnabled: enabled,
+    },
+    update: { blogCronEnabled: enabled },
+  });
+}
+
 export async function saveSiteSettings(input: SiteSettingsInput) {
   return prisma.siteSetting.upsert({
     where: { id: "site" },
