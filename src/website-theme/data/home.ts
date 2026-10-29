@@ -168,7 +168,6 @@ export const industryTabs = [
 ];
 
 export const technology = {
-  eyebrow: "Technology stack",
   title: "Built with modern technology",
   body: "We choose technology based on the product requirements, scalability, security and long-term business goals — not trends alone.",
 };
